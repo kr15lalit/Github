@@ -271,7 +271,7 @@
       setTimeout(heroGo, 150);
       setTimeout(() => { intro.remove(); root.classList.remove("has-intro"); }, 650);
     };
-    const timer = setTimeout(finish, 3400); // + 0.6s curtain lift ≈ 4s total
+    const timer = setTimeout(finish, 2700); // + 0.6s curtain lift ≈ 3.3s total
     const skip = () => { clearTimeout(timer); finish(); };
     intro.addEventListener("click", skip);
     document.addEventListener("keydown", skip, { once: true });
