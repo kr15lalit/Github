@@ -246,6 +246,7 @@ def build_banners(packs):
     compose(pick("VS-MK-PP"), (600, 500), "#fde8e4", os.path.join(out, "banner-makhana.jpg"), area=(0.55, 1.02), height=0.78)
     compose(pick("VS-DF-AL500"), (600, 500), "#e5f0fb", os.path.join(out, "banner-dryfruits.jpg"), area=(0.55, 1.02), height=0.78)
     compose(pick("VS-JP-PP", "VS-BP-MM"), (900, 450), "#fff3d6", os.path.join(out, "banner-puffs.jpg"), area=(0.45, 0.99), height=0.95)
+    compose(pick("VS-OG-MO1", "VS-OG-AG500"), (900, 450), "#fff3d6", os.path.join(out, "banner-oils.jpg"), area=(0.45, 0.99), height=0.95)
     compose(pick("VS-GH-CP"), (900, 450), "#e5f0fb", os.path.join(out, "banner-corporate.jpg"), area=(0.6, 0.98), height=0.9)
 
 

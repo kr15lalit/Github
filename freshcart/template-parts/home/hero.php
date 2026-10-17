@@ -8,6 +8,12 @@
 ?>
 <section class="fc-hero">
 	<div class="fc-container fc-hero-grid">
+		<?php if ( freshcart_mod( 'hero_banner' ) ) : ?>
+		<a class="fc-hero-main fc-hero-main--image" href="<?php echo esc_url( freshcart_link( freshcart_mod( 'hero_banner_url' ) ) ); ?>">
+			<h1 class="screen-reader-text"><?php echo esc_html( freshcart_mod( 'hero_banner_alt' ) ? freshcart_mod( 'hero_banner_alt' ) : get_bloginfo( 'name' ) ); ?></h1>
+			<img src="<?php echo esc_url( freshcart_mod( 'hero_banner' ) ); ?>" alt="<?php echo esc_attr( freshcart_mod( 'hero_banner_alt' ) ); ?>" loading="eager" fetchpriority="high">
+		</a>
+		<?php else : ?>
 		<div class="fc-hero-main">
 			<div class="fc-hero-content">
 				<?php if ( freshcart_mod( 'hero_tagline' ) ) : ?>
@@ -36,6 +42,7 @@
 				<?php endif; ?>
 			</div>
 		</div>
+		<?php endif; ?>
 
 		<?php foreach ( array( 1, 2, 3 ) as $freshcart_i ) : ?>
 			<?php

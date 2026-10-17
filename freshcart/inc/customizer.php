@@ -25,6 +25,9 @@ function freshcart_defaults() {
 
 		// Hero.
 		'hero_enable'          => true,
+		'hero_banner'          => '',
+		'hero_banner_url'      => '',
+		'hero_banner_alt'      => '',
 		'hero_tagline'         => '100% Organic',
 		'hero_title'           => "Providing Fresh Healthy\n& Organic Food",
 		'hero_text'            => 'Save up to 30% — this offer is only for this week',
@@ -224,6 +227,9 @@ function freshcart_customize_register( $wp_customize ) {
 			__( 'Home: Hero', 'freshcart' ),
 			array(
 				'hero_enable'      => array( 'checkbox', __( 'Show section', 'freshcart' ) ),
+				'hero_banner'      => array( 'image', __( 'Ready-made banner image (optional). Replaces the text, button and image below. Best size: 1500 × 1000.', 'freshcart' ) ),
+				'hero_banner_url'  => array( 'url', __( 'Ready-made banner link (empty = shop page)', 'freshcart' ) ),
+				'hero_banner_alt'  => array( 'text', __( 'Ready-made banner description, for screen readers and Google', 'freshcart' ) ),
 				'hero_tagline'     => array( 'text', __( 'Tagline', 'freshcart' ) ),
 				'hero_title'       => array( 'textarea', __( 'Title (new line = line break)', 'freshcart' ) ),
 				'hero_text'        => array( 'text', __( 'Text', 'freshcart' ) ),
