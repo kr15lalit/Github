@@ -13,7 +13,7 @@
     {
       "step": "setSiteOptions",
       "options": {
-        "blogname": "FreshCart Demo",
+        "blogname": "Verda",
         "permalink_structure": "/%postname%/",
         "woocommerce_onboarding_profile": {
           "skipped": true
@@ -42,6 +42,14 @@
       },
       "options": {
         "activate": true
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/verda-logo.png",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/kr15lalit/Github/claude/funny-euler-c0bsfh/verda/images/verda-logo.png"
       }
     },
     {

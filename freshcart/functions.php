@@ -89,6 +89,7 @@ function freshcart_custom_colors_css() {
 		'--fc-secondary' => get_theme_mod( 'freshcart_color_secondary', '#1e6046' ),
 		'--fc-dark'      => get_theme_mod( 'freshcart_color_dark', '#161925' ),
 		'--fc-accent'    => get_theme_mod( 'freshcart_color_accent', '#eb5757' ),
+		'--fc-highlight' => get_theme_mod( 'freshcart_color_highlight', '#1b8057' ),
 	);
 	$css = ':root{';
 	foreach ( $vars as $name => $value ) {

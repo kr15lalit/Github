@@ -8,11 +8,13 @@
 	--fc-secondary: #1e6046;
 	--fc-dark: #161925;
 	--fc-accent: #eb5757;
+	--fc-highlight: #1b8057;
 	--fc-text: #626571;
 	--fc-muted: #b0b2b8;
 	--fc-border: #e8e9eb;
 	--fc-light: #f7f7f7;
 	--fc-soft: #eaf5ef;
+	--fc-soft: color-mix(in srgb, var(--fc-primary) 9%, #fff);
 	--fc-yellow: #fff3d6;
 	--fc-pink: #fde8e4;
 	--fc-blue: #e5f0fb;
@@ -128,7 +130,7 @@ input[type="submit"]:hover,
 .fc-tagline {
 	display: inline-block;
 	margin-bottom: 12px;
-	color: var(--fc-primary);
+	color: var(--fc-highlight);
 	font-weight: 600;
 	font-size: 15px;
 	letter-spacing: .02em;

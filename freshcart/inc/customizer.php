@@ -174,7 +174,8 @@ function freshcart_customize_register( $wp_customize ) {
 		'primary'   => array( __( 'Primary Colour', 'freshcart' ), '#1b8057' ),
 		'secondary' => array( __( 'Secondary (hover) Colour', 'freshcart' ), '#1e6046' ),
 		'dark'      => array( __( 'Heading / Dark Colour', 'freshcart' ), '#161925' ),
-		'accent'    => array( __( 'Sale Badge Colour', 'freshcart' ), '#eb5757' ),
+		'accent'    => array( __( 'Sale Badge & Countdown Colour', 'freshcart' ), '#eb5757' ),
+		'highlight' => array( __( 'Small Heading (Tagline) Colour', 'freshcart' ), '#1b8057' ),
 	);
 	foreach ( $colors as $key => $color ) {
 		$wp_customize->add_setting(
