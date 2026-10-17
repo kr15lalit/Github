@@ -734,6 +734,9 @@ span.onsale {
 	.fc-hero-content { display: flex; flex-direction: column; align-items: center; }
 	.fc-hero-main--image { padding: 0; }
 	.fc-hero-main--image img { height: auto; aspect-ratio: 3 / 2; }
+	/* Show ready-made banners whole (no cropping) once they stack. */
+	.fc-banner--image { min-height: 0; }
+	.fc-banner--image img { position: static; height: auto; }
 	.fc-price-badge { width: 90px; height: 90px; }
 	.fc-price-badge strong { font-size: 22px; }
 	.fc-carousel-track { --fc-cols: 3; }
