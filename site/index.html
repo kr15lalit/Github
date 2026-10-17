@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insightoholix — Deep Conversations. Powerful Insights.</title>
+  <meta name="description" content="Insightoholix is a podcast of candid conversations with professionals from diverse industries — their journeys, struggles and the lessons learned along the way.">
+  <meta name="theme-color" content="#f5b104">
+  <meta property="og:title" content="Insightoholix — Deep Conversations. Powerful Insights.">
+  <meta property="og:description" content="Candid conversations with professionals about resilience, growth and the power of failure.">
+  <meta property="og:image" content="assets/img/banner.jpg">
+  <link rel="icon" href="assets/img/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="nav" id="nav"></header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow reveal">The Insightoholix Podcast</span>
+          <h1 class="display hero-title reveal" data-delay="1">Insight<span class="outline">oholix</span></h1>
+          <p class="hand hero-tagline reveal" data-delay="2">
+            Deep Conversations.
+            <span class="squiggle">Powerful Insights.<svg viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9c40-8 70 4 110-2s70-6 110 0 60 2 76-3" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></span>
+          </p>
+          <p class="hero-intro reveal" data-delay="2" id="hero-intro"></p>
+          <div class="hero-actions reveal" data-delay="3">
+            <a class="btn btn-primary" data-subscribe target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>
+              Subscribe on YouTube
+            </a>
+            <a class="btn btn-ghost" href="#episodes">Browse episodes</a>
+          </div>
+          <div class="stats reveal" data-delay="3" id="hero-stats"></div>
+        </div>
+        <div class="feature-card reveal" data-delay="2" id="feature"></div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+    <!-- EPISODES -->
+    <section class="section" id="episodes">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">Latest episodes</span>
+            <h2 class="display section-title reveal" data-delay="1">Press <span class="mark">play</span></h2>
+          </div>
+          <p class="reveal" data-delay="2">Long-form conversations with doctors, officers, investors, believers and skeptics. Grab a chai and settle in.</p>
+        </div>
+        <div class="ep-grid" id="episodes-grid"></div>
+        <div class="center-cta reveal">
+          <a class="btn btn-ghost" data-youtube target="_blank" rel="noopener">See all episodes on YouTube ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICS -->
+    <section class="section topics" id="topics">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">What we talk about</span>
+            <h2 class="display section-title reveal" data-delay="1">Six rooms,<br>one table</h2>
+          </div>
+          <p class="reveal" data-delay="2">Every episode lands somewhere in these six worlds. The common thread: real people, honest stories and lessons you can use.</p>
+        </div>
+        <div class="topic-grid" id="topics-grid"></div>
+      </div>
+    </section>
+
+    <!-- JOURNAL -->
+    <section class="section" id="journal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow reveal">From the journal</span>
+            <h2 class="display section-title reveal" data-delay="1">Beyond the mic</h2>
+          </div>
+          <a class="link-arrow reveal" data-delay="2" href="blog.html">Read all stories <span>→</span></a>
+        </div>
+        <div class="post-grid" id="journal-grid"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section-tight" id="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <div class="logo-disc"><img src="assets/img/logo.jpg" alt="Insightoholix logo — a smiling character wearing headphones behind a microphone"></div>
+          <div class="note">fueled by<br>curiosity ☕</div>
+        </div>
+        <div class="about-copy">
+          <span class="eyebrow reveal">About the podcast</span>
+          <h2 class="reveal" data-delay="1" id="about-heading"></h2>
+          <div class="reveal" data-delay="2" id="about-body"></div>
+          <a class="btn btn-primary reveal" data-delay="3" data-subscribe target="_blank" rel="noopener">Join the conversation →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="cta reveal">
+        <span class="eyebrow" style="color:var(--ink)">New episodes, regularly</span>
+        <h2 class="display">Stay curious.</h2>
+        <p class="hand">Subscribe — and never miss a conversation.</p>
+        <a class="btn btn-primary" data-subscribe target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>
+          Subscribe to Insightoholix
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/posts.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
