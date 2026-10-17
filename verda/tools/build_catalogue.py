@@ -223,6 +223,7 @@ def compose(packs, size, bg, path, area=(0.42, 1.0), height=0.95):
     for _, x, y, im in sorted(placed, key=lambda t: t[0]):  # front pack drawn last
         canvas.alpha_composite(im, (x, y))
     if bg is None:
+        canvas = canvas.crop(canvas.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox())
         canvas.save(path, optimize=True)
     else:
         canvas.convert("RGB").save(path, "JPEG", quality=86, optimize=True, progressive=True)

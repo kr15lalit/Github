@@ -13,6 +13,12 @@ require_once ABSPATH . 'wp-admin/includes/media.php';
 // The blueprint copies the repo's verda/ folder here.
 const VERDA_DATA = '/wordpress/verda-data/';
 
+// The source images are already web-sized, so skip generating resized copies:
+// that is slow and memory-hungry in the in-browser PHP.
+ini_set( 'memory_limit', '1024M' );
+add_filter( 'intermediate_image_sizes_advanced', '__return_empty_array' );
+add_filter( 'big_image_size_threshold', '__return_false' );
+
 /**
  * Add an image from verda/images/ to the media library; returns the attachment ID (0 if missing).
  */
@@ -132,6 +138,8 @@ while ( ( $row = fgetcsv( $csv, 0, ',', '"', '' ) ) !== false ) {
 	}
 	// Sample sales numbers so "Trending Products" has an order; featured items sell most.
 	$product->set_total_sales( ( '1' === $r['Is featured?'] ? 200 : 60 ) - $i );
+	// Newest first follows the CSV order, so "Products With Discounts" starts with snacks.
+	$product->set_date_created( time() - $i * HOUR_IN_SECONDS );
 	$product->save();
 	$i++;
 }
@@ -349,7 +357,7 @@ $mods = array(
 	'feat2_text'         => 'Best prices, direct from us',
 	'feat3_text'         => 'Easy replacement on damaged items',
 	'feat4_text'         => 'Festive offers every week',
-	'feat5_text'         => $phones,
+	'feat5_text'         => 'Call +91-9266604099',
 
 	'footer_about'       => 'Verda brings you pure, natural and healthy foods — from wholesome staples to millet puffs, makhana, dry fruits and festive gift hampers.',
 	'footer_address'     => $address,

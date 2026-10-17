@@ -11,7 +11,9 @@ if ( 'trend' === $freshcart_type ) {
 	$freshcart_title = freshcart_mod( 'trend_title' );
 	$freshcart_query = array(
 		'limit'    => absint( freshcart_mod( 'trend_number' ) ),
-		'orderby'  => 'popularity',
+		// wc_get_products() ignores orderby=popularity, so sort by the sales counter directly.
+		'orderby'  => 'meta_value_num',
+		'meta_key' => 'total_sales', // phpcs:ignore WordPress.DB.SlowDBQuery
 		'order'    => 'DESC',
 	);
 } else {
