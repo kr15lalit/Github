@@ -1,0 +1,60 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/wp-admin/customize.php",
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": true
+  },
+  "login": true,
+  "steps": [
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "FreshCart Demo",
+        "permalink_structure": "/%postname%/",
+        "woocommerce_onboarding_profile": {
+          "skipped": true
+        },
+        "woocommerce_coming_soon": "no"
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "woocommerce"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "git:directory",
+        "url": "https://github.com/kr15lalit/Github",
+        "ref": "claude/funny-euler-c0bsfh",
+        "refType": "branch",
+        "path": "freshcart"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/freshcart-seed.php",
+      "data": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/kr15lalit/Github/claude/funny-euler-c0bsfh/playground/seed.php"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/freshcart-seed.php'; unlink('/wordpress/freshcart-seed.php');"
+    }
+  ]
+}
