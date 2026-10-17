@@ -10,14 +10,31 @@ require_once ABSPATH . 'wp-admin/includes/image.php';
 require_once ABSPATH . 'wp-admin/includes/file.php';
 require_once ABSPATH . 'wp-admin/includes/media.php';
 
-const VERDA_RAW = 'https://raw.githubusercontent.com/kr15lalit/Github/claude/funny-euler-c0bsfh/verda/';
+// The blueprint copies the repo's verda/ folder here.
+const VERDA_DATA = '/wordpress/verda-data/';
 
 /**
- * Download an image into the media library and return its attachment ID (0 on failure).
+ * Add an image from verda/images/ to the media library; returns the attachment ID (0 if missing).
  */
-function verda_image( $url, $title ) {
-	$id = media_sideload_image( $url, 0, $title, 'id' );
-	return is_wp_error( $id ) ? 0 : (int) $id;
+function verda_image( $relative, $title ) {
+	$file = VERDA_DATA . 'images/' . $relative;
+	if ( ! file_exists( $file ) ) {
+		return 0;
+	}
+	$upload = wp_upload_bits( basename( $file ), null, file_get_contents( $file ) );
+	if ( $upload['error'] ) {
+		return 0;
+	}
+	$id = wp_insert_attachment(
+		array(
+			'post_mime_type' => wp_check_filetype( $upload['file'] )['type'],
+			'post_title'     => $title,
+			'post_status'    => 'inherit',
+		),
+		$upload['file']
+	);
+	wp_update_attachment_metadata( $id, wp_generate_attachment_metadata( $id, $upload['file'] ) );
+	return $id;
 }
 
 // ---------------------------------------------------------------------------
@@ -82,7 +99,7 @@ foreach ( $category_names as $order => $name ) {
 // ---------------------------------------------------------------------------
 // Products from products.csv.
 // ---------------------------------------------------------------------------
-$csv = fopen( '/wordpress/verda-products.csv', 'r' );
+$csv = fopen( VERDA_DATA . 'products.csv', 'r' );
 $head = fgetcsv( $csv, 0, ',', '"', '' );
 $image_by_sku = array();
 $i = 0;
@@ -108,7 +125,7 @@ while ( ( $row = fgetcsv( $csv, 0, ',', '"', '' ) ) !== false ) {
 	$attribute->set_visible( true );
 	$product->set_attributes( array( $attribute ) );
 
-	$image = verda_image( $r['Images'], $r['Name'] );
+	$image = verda_image( 'products/' . basename( $r['Images'] ), $r['Name'] );
 	if ( $image ) {
 		$product->set_image_id( $image );
 		$image_by_sku[ strtolower( $r['SKU'] ) ] = $image;
@@ -264,14 +281,14 @@ set_theme_mod(
 // ---------------------------------------------------------------------------
 // Logo, colours and homepage content (Appearance → Customize).
 // ---------------------------------------------------------------------------
-$logo = verda_image( VERDA_RAW . 'images/verda-logo.png', 'Verda logo' );
+$logo = verda_image( 'verda-logo.png', 'Verda logo' );
 if ( $logo ) {
 	set_theme_mod( 'custom_logo', $logo );
 	update_option( 'site_icon', $logo );
 }
 
 $banner = function ( $file ) {
-	$id = verda_image( VERDA_RAW . 'images/banners/' . $file, 'Banner ' . $file );
+	$id = verda_image( 'banners/' . $file, 'Banner ' . $file );
 	return $id ? wp_get_attachment_url( $id ) : '';
 };
 
