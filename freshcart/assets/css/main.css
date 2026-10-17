@@ -526,7 +526,7 @@ span.onsale {
 .fc-promo p { margin: 0 0 24px; }
 .fc-promo-content { position: relative; }
 .fc-promo-media { position: relative; display: flex; justify-content: flex-end; }
-.fc-promo-media img { max-height: 300px; object-fit: contain; }
+.fc-promo-media img { max-height: 300px; object-fit: contain; border-radius: var(--fc-radius); }
 
 /* ---------- Deal of the week ---------- */
 .fc-deal-box { padding: 36px; border-radius: var(--fc-radius); background: var(--fc-light); }
