@@ -56,16 +56,19 @@
       }
     },
     {
-      "step": "writeFile",
-      "path": "/wordpress/freshcart-seed.php",
-      "data": {
-        "resource": "url",
-        "url": "https://raw.githubusercontent.com/kr15lalit/Github/claude/funny-euler-c0bsfh/playground/seed.php"
+      "step": "writeFiles",
+      "writeToPath": "/wordpress/verda-setup",
+      "filesTree": {
+        "resource": "git:directory",
+        "url": "https://github.com/kr15lalit/Github",
+        "ref": "claude/funny-euler-c0bsfh",
+        "refType": "branch",
+        "path": "playground"
       }
     },
     {
       "step": "runPHP",
-      "code": "<?php require '/wordpress/freshcart-seed.php'; unlink('/wordpress/freshcart-seed.php'); $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator('/wordpress/verda-data', FilesystemIterator::SKIP_DOTS), RecursiveIteratorIterator::CHILD_FIRST); foreach ($it as $f) { $f->isDir() ? rmdir($f) : unlink($f); } rmdir('/wordpress/verda-data');"
+      "code": "<?php require '/wordpress/verda-setup/seed.php'; foreach (array('/wordpress/verda-data', '/wordpress/verda-setup') as $dir) { $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS), RecursiveIteratorIterator::CHILD_FIRST); foreach ($it as $f) { $f->isDir() ? rmdir($f) : unlink($f); } rmdir($dir); }"
     }
   ]
 }
