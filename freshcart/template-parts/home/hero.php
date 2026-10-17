@@ -48,6 +48,10 @@
 			<?php
 			$freshcart_key = 'hero_b' . $freshcart_i . '_';
 			if ( ! freshcart_mod( $freshcart_key . 'title' ) ) {
+				// No title: show a ready-made image banner if there is one, otherwise nothing.
+				if ( freshcart_mod( $freshcart_key . 'image' ) ) {
+					freshcart_image_banner( 'fc-hero-banner fc-hero-banner-' . $freshcart_i, freshcart_mod( $freshcart_key . 'url' ), freshcart_mod( $freshcart_key . 'image' ), freshcart_mod( $freshcart_key . 'text' ) );
+				}
 				continue;
 			}
 			?>

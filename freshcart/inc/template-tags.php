@@ -114,6 +114,24 @@ function freshcart_bg( $url ) {
 }
 
 /**
+ * A banner that is just a linked image (for ready-made artwork that has its own text).
+ *
+ * @param string $classes Extra CSS classes.
+ * @param string $url     Link (empty = shop page).
+ * @param string $image   Image URL.
+ * @param string $alt     Image description.
+ */
+function freshcart_image_banner( $classes, $url, $image, $alt ) {
+	printf(
+		'<a class="fc-banner fc-banner--image %1$s" href="%2$s"><img src="%3$s" alt="%4$s" loading="lazy"></a>',
+		esc_attr( $classes ),
+		esc_url( freshcart_link( $url ) ),
+		esc_url( $image ),
+		esc_attr( $alt )
+	);
+}
+
+/**
  * Post meta line: date and author.
  */
 function freshcart_posted_on() {

@@ -12,6 +12,10 @@
 			<?php
 			$freshcart_key = 'dual' . $freshcart_i . '_';
 			if ( ! freshcart_mod( $freshcart_key . 'title' ) ) {
+				// No title: show a ready-made image banner if there is one, otherwise nothing.
+				if ( freshcart_mod( $freshcart_key . 'image' ) ) {
+					freshcart_image_banner( 'fc-dual-banner fc-dual-banner-' . $freshcart_i, freshcart_mod( $freshcart_key . 'url' ), freshcart_mod( $freshcart_key . 'image' ), freshcart_mod( $freshcart_key . 'text' ) );
+				}
 				continue;
 			}
 			?>
