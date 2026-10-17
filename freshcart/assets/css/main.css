@@ -390,7 +390,7 @@ body.fc-nav-open::after {
 	transition: transform .3s, box-shadow .3s;
 }
 .fc-banner:hover { transform: translateY(-3px); box-shadow: var(--fc-shadow); }
-.fc-banner--image { padding: 0; }
+.fc-banner.fc-banner--image { padding: 0; }
 .fc-banner--image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .fc-banner-body { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; max-width: 60%; }
 .fc-banner-title { color: var(--fc-dark); font-size: 24px; font-weight: 700; line-height: 1.25; }
@@ -735,7 +735,7 @@ span.onsale {
 	.fc-hero-main--image { padding: 0; }
 	.fc-hero-main--image img { height: auto; aspect-ratio: 3 / 2; }
 	/* Show ready-made banners whole (no cropping) once they stack. */
-	.fc-banner--image { min-height: 0; }
+	.fc-banner.fc-banner--image { min-height: 0; }
 	.fc-banner--image img { position: static; height: auto; }
 	.fc-price-badge { width: 90px; height: 90px; }
 	.fc-price-badge strong { font-size: 22px; }
