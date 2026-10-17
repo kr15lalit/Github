@@ -343,7 +343,9 @@ $mods = array(
 	'promo_title'        => "Wholesome Millets\nFor Your Family",
 	'promo_text'         => 'Jowar, bajra and ragi — the ancient grains for a healthier everyday diet.',
 	'promo_image'        => $banner( 'banner-millets.jpg' ),
-	'promo_btn_url'      => get_term_link( $ids['Millets'] ),
+	'promo_btn_url'      => get_term_link( $ids['Oils & Ghee'] ),
+	'promo_banner'       => $banner( 'promo-oils-pure.jpg' ),
+	'promo_banner_alt'   => 'Verda cold pressed oils – 100% pure, no adulteration',
 
 	'dual1_tagline'      => 'Healthy Snacks',
 	'dual1_title'        => 'Jowar & Bajra Puffs',
