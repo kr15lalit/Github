@@ -14,8 +14,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Decide before first paint whether the "On Air" intro plays: once per visit, never with reduced motion */
+    (function () {
+      var d = document.documentElement; d.classList.add("js");
+      try {
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!reduce && !sessionStorage.getItem("ix-intro")) d.classList.add("has-intro");
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body data-page="home">
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro-inner">
+      <img class="intro-logo" src="assets/img/logo.jpg" alt="" width="150" height="150">
+      <div class="intro-eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <span class="intro-onair"><b></b>On Air</span>
+      <p class="intro-tag">Deep Conversations. Powerful Insights.</p>
+    </div>
+    <span class="intro-skip">Tap to skip</span>
+  </div>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="nav" id="nav"></header>
 
@@ -25,10 +44,10 @@
       <div class="container hero-grid">
         <div>
           <span class="eyebrow reveal">The Insightoholix Podcast</span>
-          <h1 class="display hero-title reveal" data-delay="1">Insight<span class="outline">oholix</span></h1>
+          <h1 class="display hero-title" aria-label="Insightoholix">Insight<span class="outline">oholix</span></h1>
           <p class="hand hero-tagline reveal" data-delay="2">
             Deep Conversations.
-            <span class="squiggle">Powerful Insights.<svg viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9c40-8 70 4 110-2s70-6 110 0 60 2 76-3" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></span>
+            <span class="squiggle">Powerful Insights.<svg viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 9c40-8 70 4 110-2s70-6 110 0 60 2 76-3" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></span>
           </p>
           <p class="hero-intro reveal" data-delay="2" id="hero-intro"></p>
           <div class="hero-actions reveal" data-delay="3">

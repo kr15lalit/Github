@@ -200,12 +200,81 @@
 
   /* ---------------- Reveal ---------------- */
   function setupReveal() {
-    const els = document.querySelectorAll(".reveal:not(.in)");
+    // hero elements wait for heroGo() so they build in after the intro
+    const els = [...document.querySelectorAll(".reveal:not(.in)")].filter((el) => !el.closest(".hero"));
     if (!("IntersectionObserver" in window)) { els.forEach((el) => el.classList.add("in")); return; }
     const io = new IntersectionObserver((entries) => {
       entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
     els.forEach((el) => io.observe(el));
+  }
+
+  /* ---------------- Intro + hero entrance ---------------- */
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function splitLetters(el) {
+    let i = 0;
+    const walk = (node) => {
+      [...node.childNodes].forEach((n) => {
+        if (n.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          [...n.textContent].forEach((c) => {
+            const s = document.createElement("span");
+            s.className = "ch"; s.textContent = c; s.style.setProperty("--i", i++); s.setAttribute("aria-hidden", "true");
+            frag.appendChild(s);
+          });
+          n.replaceWith(frag);
+        } else if (n.nodeType === 1) walk(n);
+      });
+    };
+    walk(el);
+  }
+
+  function countUp(el) {
+    const m = el.textContent.trim().match(/^([\d.]+)(.*)$/);
+    if (!m || reduceMotion) return;
+    const target = parseFloat(m[1]), decimals = (m[1].split(".")[1] || "").length, suffix = m[2];
+    const t0 = performance.now(), dur = 1400;
+    const tick = (t) => {
+      const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target * e).toFixed(decimals) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    el.textContent = (0).toFixed(decimals) + suffix;
+    requestAnimationFrame(tick);
+  }
+
+  let heroStarted = false;
+  function heroGo() {
+    if (heroStarted) return;
+    heroStarted = true;
+    document.documentElement.classList.add("hero-go");
+    document.querySelectorAll(".hero .reveal").forEach((el) => el.classList.add("in"));
+    setTimeout(() => document.querySelectorAll(".hero .stat strong").forEach(countUp), 450);
+  }
+
+  function setupIntro() {
+    const root = document.documentElement;
+    const intro = $("#intro");
+    try { sessionStorage.setItem("ix-intro", "1"); } catch (_) {}
+    if (!intro || !root.classList.contains("has-intro")) {
+      if (intro) intro.remove();
+      root.classList.remove("has-intro");
+      heroGo();
+      return;
+    }
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      intro.classList.add("leave");
+      setTimeout(heroGo, 150);
+      setTimeout(() => { intro.remove(); root.classList.remove("has-intro"); }, 650);
+    };
+    const timer = setTimeout(finish, 850);
+    const skip = () => { clearTimeout(timer); finish(); };
+    intro.addEventListener("click", skip);
+    document.addEventListener("keydown", skip, { once: true });
   }
 
   /* ---------------- Home ---------------- */
@@ -362,8 +431,9 @@
   renderChrome();
   setupModal();
   const page = document.body.dataset.page;
-  if (page === "home") renderHome();
+  if (page === "home") { renderHome(); splitLetters($(".hero-title")); }
   if (page === "blog") renderBlog();
   if (page === "post") renderPost();
   setupReveal();
+  setupIntro();
 })();
