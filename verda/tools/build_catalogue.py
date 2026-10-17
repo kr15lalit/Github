@@ -53,6 +53,8 @@ PRODUCTS = [
     ("VS-AR-BR5", "Basmati Rice – Long Grain", "Atta, Rice & Dals", "Basmati Rice", "Long Grain · Aged", "5 kg", 699, 629, 80, "#c9b27c", "bag", 0, "Aged long-grain basmati rice with a delicate aroma and fluffy texture."),
     ("VS-AR-TD1", "Unpolished Toor Dal", "Atta, Rice & Dals", "Toor Dal", "Unpolished", "1 kg", 189, None, 120, "#e3b23c", "pouch", 0, "Naturally unpolished arhar dal — more protein, more taste."),
     ("VS-AR-MD1", "Unpolished Moong Dal", "Atta, Rice & Dals", "Moong Dal", "Unpolished · Split", "1 kg", 179, 165, 110, "#9bbf4b", "pouch", 0, "Easy-to-digest yellow moong dal, cleaned and unpolished."),
+    ("VS-AR-CD1", "Unpolished Chana Dal", "Atta, Rice & Dals", "Chana Dal", "Unpolished", "1 kg", 149, 135, 110, "#e8b93a", "pouch", 0, "Nutty, protein-rich split Bengal gram for dal, halwa and snacks."),
+    ("VS-AR-MS1", "Unpolished Masoor Dal", "Atta, Rice & Dals", "Masoor Dal", "Unpolished · Split", "1 kg", 159, None, 100, "#d9673a", "pouch", 0, "Quick-cooking red lentils, cleaned and unpolished for everyday dal."),
     ("VS-AR-KC1", "Kabuli Chana", "Atta, Rice & Dals", "Kabuli Chana", "Bold Size", "1 kg", 169, None, 90, "#d8b57a", "pouch", 0, "Bold, creamy white chickpeas for chole and salads."),
     # Oils & Ghee
     ("VS-OG-MO1", "Cold Pressed Mustard Oil", "Oils & Ghee", "Mustard Oil", "Cold Pressed · Kachi Ghani", "1 L", 249, 225, 90, "#d9a520", "bottle", 1, "Pungent, pure kachi ghani mustard oil, cold pressed to keep nutrients intact."),
