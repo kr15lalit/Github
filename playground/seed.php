@@ -332,10 +332,10 @@ $mods = array(
 	'hero_b2_text'       => 'Verda premium pulses – Chana, Toor, Moong and Masoor Dal',
 	'hero_b2_image'      => $banner( 'banner-pulses.jpg' ),
 	'hero_b2_url'        => get_term_link( $ids['Atta, Rice & Dals'] ),
-	'hero_b3_title'      => "Dry Fruits\n& Nuts",
-	'hero_b3_text'       => 'Premium quality',
-	'hero_b3_image'      => $banner( 'banner-dryfruits.jpg' ),
-	'hero_b3_url'        => get_term_link( $ids['Dry Fruits & Nuts'] ),
+	'hero_b3_title'      => '',
+	'hero_b3_text'       => 'Verda Pure Desi Ghee – traditional bilona process',
+	'hero_b3_image'      => $banner( 'banner-ghee.jpg' ),
+	'hero_b3_url'        => get_permalink( wc_get_product_id_by_sku( 'VS-OG-AG500' ) ),
 
 	'cats_include'       => 'healthy-snacks,makhana,dry-fruits-nuts,diwali-gift-hampers,atta-rice-dals,oils-ghee,millets',
 
