@@ -528,6 +528,12 @@ span.onsale {
 .fc-promo-media { position: relative; display: flex; justify-content: flex-end; }
 .fc-promo-media img { max-height: 300px; object-fit: contain; border-radius: var(--fc-radius); }
 
+/* Ready-made full-width banner: artwork carries the text, the theme adds the button. */
+.fc-promo.fc-promo--banner { display: block; min-height: 0; padding: 0; background: var(--fc-light); }
+.fc-promo--banner::before { display: none; }
+.fc-promo-banner-img { width: 100%; aspect-ratio: 16 / 5; object-fit: cover; object-position: left center; }
+.fc-promo-banner-btn { position: absolute; left: 6%; bottom: 12%; box-shadow: 0 8px 20px rgba(0, 0, 0, .18); }
+
 /* ---------- Deal of the week ---------- */
 .fc-deal-box { padding: 36px; border-radius: var(--fc-radius); background: var(--fc-light); }
 .fc-deal-head-left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
@@ -745,6 +751,8 @@ span.onsale {
 	ul.products:not(.fc-carousel-track) { grid-template-columns: repeat(3, 1fr) !important; }
 	.fc-promo { grid-template-columns: 1fr; padding: 40px 30px; text-align: center; }
 	.fc-promo-media { justify-content: center; }
+	.fc-promo-banner-img { aspect-ratio: auto; height: 240px; }
+	.fc-promo-banner-btn { left: 50%; bottom: 20px; transform: translateX(-50%); }
 	.fc-dual { grid-template-columns: 1fr; }
 	.fc-layout.has-sidebar, .fc-layout.has-sidebar.sidebar-left { grid-template-columns: 1fr; }
 	.fc-layout.sidebar-left .fc-sidebar { order: 0; }

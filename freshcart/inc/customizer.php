@@ -69,6 +69,8 @@ function freshcart_defaults() {
 		'promo_btn_text'       => 'Shop Now',
 		'promo_btn_url'        => '',
 		'promo_image'          => '',
+		'promo_banner'         => '',
+		'promo_banner_alt'     => '',
 
 		// Trending.
 		'trend_enable'         => true,
@@ -280,6 +282,8 @@ function freshcart_customize_register( $wp_customize ) {
 				'promo_btn_text' => array( 'text', __( 'Button text', 'freshcart' ) ),
 				'promo_btn_url'  => array( 'url', __( 'Button link', 'freshcart' ) ),
 				'promo_image'    => array( 'image', __( 'Image', 'freshcart' ) ),
+				'promo_banner'     => array( 'image', __( 'Ready-made full-width banner (optional). Replaces the green strip; only the button above is shown on top, at the bottom left. Best size: 1920 × 600, text kept in the left 40%.', 'freshcart' ) ),
+				'promo_banner_alt' => array( 'text', __( 'Full-width banner description, for screen readers and Google', 'freshcart' ) ),
 			),
 		),
 		'trend'    => array(
