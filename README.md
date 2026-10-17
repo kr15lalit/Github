@@ -4,6 +4,8 @@ FreshCart is a WordPress theme for an online grocery and organic food store. It 
 
 The theme code is in the [`freshcart/`](freshcart) folder.
 
+**Try it live:** [open FreshCart in WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kr15lalit/Github/claude/funny-euler-c0bsfh/playground/blueprint.json). This runs a full WordPress site with WooCommerce, FreshCart and sample products in your browser, and opens the Customizer. Changes stay in your browser tab and are lost when you close it.
+
 ## 1. Install
 
 1. Zip the `freshcart` folder, so the zip contains `freshcart/style.css`, `freshcart/functions.php` and so on.
