@@ -165,7 +165,8 @@ input[type="submit"]:hover,
 	min-height: 90px;
 }
 
-.fc-logo img { max-height: 50px; width: auto; }
+.fc-logo img { max-height: 64px; width: auto; }
+.fc-footer .fc-logo img { max-height: 80px; }
 .fc-site-title { font-size: 28px; font-weight: 800; color: var(--fc-primary); letter-spacing: -.02em; }
 
 .fc-header-search {
