@@ -488,13 +488,13 @@ html.has-intro .intro {
   background: var(--saffron); color: var(--ink); cursor: pointer;
   transition: transform 0.6s cubic-bezier(0.7, 0, 0.2, 1);
   /* CSS safety net: never stay on screen, even if scripts fail */
-  animation: intro-safety 0s linear 7s forwards;
+  animation: intro-safety 0s linear 6s forwards;
 }
 html.has-intro .intro.leave { transform: translateY(-100%); }
 @keyframes intro-safety { to { visibility: hidden; pointer-events: none; } }
 .intro-inner { display: grid; justify-items: center; gap: 18px; text-align: center; padding: 0 20px; }
 .intro-logo { width: 170px; height: 170px; border-radius: 50%; animation: intro-pop 0.8s var(--ease) both; }
-.intro-eq { display: flex; align-items: flex-end; gap: 6px; height: 34px; animation: intro-fade 0.6s var(--ease) 0.5s both; }
+.intro-eq { display: flex; align-items: flex-end; gap: 6px; height: 34px; animation: intro-fade 0.6s var(--ease) 0.4s both; }
 .intro-eq i { display: block; width: 6px; height: 100%; border-radius: 3px; background: var(--ink); transform-origin: bottom; animation: intro-eq 0.7s ease-in-out infinite alternate; }
 .intro-eq i:nth-child(2) { animation-delay: -0.35s; } .intro-eq i:nth-child(3) { animation-delay: -0.15s; }
 .intro-eq i:nth-child(4) { animation-delay: -0.55s; } .intro-eq i:nth-child(5) { animation-delay: -0.25s; }
@@ -502,12 +502,12 @@ html.has-intro .intro.leave { transform: translateY(-100%); }
 .intro-onair {
   display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px;
   background: var(--ink); color: var(--cream); font-size: 12px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase;
-  animation: intro-fade 0.6s var(--ease) 1.1s both;
+  animation: intro-fade 0.6s var(--ease) 0.9s both;
 }
-.intro-onair b { width: 8px; height: 8px; border-radius: 50%; background: #e5322d; animation: intro-blink 1s steps(2, jump-none) 1.4s infinite; }
-.intro-tag { margin: 0; font-family: var(--font-hand); font-size: clamp(26px, 6vw, 34px); line-height: 1.1; animation: intro-fade 0.9s var(--ease) 1.9s both; }
+.intro-onair b { width: 8px; height: 8px; border-radius: 50%; background: #e5322d; animation: intro-blink 1s steps(2, jump-none) 1.1s infinite; }
+.intro-tag { margin: 0; font-family: var(--font-hand); font-size: clamp(26px, 6vw, 34px); line-height: 1.1; animation: intro-fade 0.8s var(--ease) 1.5s both; }
 .intro-progress { position: absolute; left: 50%; bottom: calc(64px + env(safe-area-inset-bottom, 0px)); width: 140px; height: 3px; margin-left: -70px; border-radius: 3px; background: rgba(20,18,16,.18); overflow: hidden; }
-.intro-progress i { display: block; height: 100%; background: var(--ink); transform-origin: left; animation: intro-progress 4.4s linear both; }
+.intro-progress i { display: block; height: 100%; background: var(--ink); transform-origin: left; animation: intro-progress 3.4s linear both; }
 @keyframes intro-progress { from { transform: scaleX(0); } }
 .intro-skip { position: absolute; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); left: 0; right: 0; text-align: center; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; opacity: .55; }
 @keyframes intro-pop { from { transform: scale(.6); opacity: 0; } }
