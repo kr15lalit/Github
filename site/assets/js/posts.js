@@ -223,6 +223,154 @@ This article is based on our conversation with Dr. Arun Tungaria and is for awar
 `,
   },
   {
+    slug: "can-destiny-be-changed",
+    title: "Can Destiny Be Changed? An Astrologer on Mangal Dosh, Matching Gunas and the Fear Trade",
+    date: "2026-10-17",
+    category: "Episode Notes",
+    excerpt:
+      "Mangal dosh, low guna scores, endless remedies and astrologers who scare you into paying. Astrologer Nitisha Malhotra on what destiny really decides, and why she married with just 12 gunas.",
+    cover: "",
+    video: "4ojqBPlD0Jo",
+    body: `
+"Your kundli has *mangal dosh*." For countless families in India, those few words have delayed a wedding, ended a relationship, or kept a young woman anxious for years. Others spend thousands on stones, *havans* and "remedies" prescribed by whichever astrologer they happened to find on TV or YouTube, without ever knowing whether that person was any good.
+
+So for our New Year episode, host Lalit Sharma asked the questions so many people quietly carry. Can destiny really be changed? Should a love marriage be stopped because the *gunas* don't match? How do you tell a genuine astrologer from one who's just frightening you into paying?
+
+Our guest was **Nitisha Malhotra**, an astrologer, numerologist, tarot reader and vastu consultant who says she approaches these subjects not as superstition but as awareness. Her answers were often surprising, and some of the most useful ones were warnings about her own field.
+
+:::summary In this conversation
+- Can destiny be changed? Her "40% destiny" answer
+- Mangal dosh, matching gunas and love marriages
+- How to spot a good astrologer, and a bad one
+- Names, spellings and the Lo Shu grid
+- Willpower, manifestation and the "sensitive" generation
+:::
+
+[[watch]]
+
+## 1. Can destiny be changed? Her "40% destiny" answer
+
+Lalit opened with the question behind every consultation: can *kismat* really be changed?
+
+Her answer was yes and no. In her view, your birth chart or numerology grid sets the field you play on, and you can't step outside it. But within it, she believes there is a lot you can do, using the example of nature itself: we eat *bajra* and dry fruits in winter for warmth, and *khus* and *bel* in summer to cool down. Stones, metals and remedies, she says, work on the same principle, strengthening the planets that are weak for you.
+
+Then she said something that surprised us coming from an astrologer:
+
+> "Destiny is only 40%. To become a Shah Rukh Khan or a Prime Minister, your willpower is working too. If you had to describe the earth in one word, it would be *karm pradhan*: here, whoever does the work moves ahead."
+> — Nitisha Malhotra
+
+The rest, as she breaks it down, comes from your willpower and from whether you're willing to take on challenges at all. Someone happy and settled in a comfortable job, she says, simply won't chase the challenges that would activate a strong chart. "If I'm satisfied, what *rajyog*?"
+
+:::context The bigger picture
+Interest in astrology isn't fading in modern India; it's booming. Astrology app Astrotalk reported income of about ₹1,214 crore in FY25, up roughly 85% in a year, with most of its activity coming from India's biggest cities.
+
+Whatever your view of astrology, it's worth noticing that one of its practitioners puts most of the weight on effort and choices. That's a message almost everyone can agree with.
+:::
+
+## 2. Mangal dosh, matching gunas and love marriages
+
+Few things cause more fear in Indian families than *mangal dosh*. Some astrologers now claim it doesn't exist at all. Nitisha disagrees. She believes the effects can be seen in real charts, even if the classical sages didn't describe it as a "dosh". But her overall approach to marriage matching was more relaxed than many people expect.
+
+**Should a love marriage still be matched?** Yes, she says, but not to stop it. Matching shows what challenges each partner's chart carries, so they can be addressed early. In her view, one partner's strengths can even balance what's missing in the other's chart.
+
+**What about gunas?** Guna matching, she explains, shows chemistry and compatibility of temperament, such as one partner being an early riser and calm, the other a night owl and louder. It is not a verdict on whether the marriage will survive.
+
+> "I'd say people with 36 gunas become too alike, and more problems come up. Even 20 to 30 gunas is very good. My husband and I match only 12 gunas. Any astrologer would say don't marry. But our marriage is working."
+> — Nitisha Malhotra
+
+What keeps a marriage going, she says, is confidence, understanding and the values you stand on, not a number on a chart.
+
+:::context The bigger picture
+That's a striking admission, and a reassuring one for couples who've been told their match is "too low". Low guna scores and manglik status are still among the most common reasons families reject a proposal. Hearing an astrologer say her own 12-guna marriage is working is a reminder that a chart describes tendencies, not a final judgement on two people.
+:::
+
+## 3. How to spot a good astrologer, and a bad one
+
+With so many astrologers on YouTube and TV, Lalit asked how ordinary people can know whom to trust. Nitisha's answer doubled as a checklist:
+
+- **A good astrologer doesn't scare you.** Fear-based predictions are a red flag.
+- **Beware of "just pay me" remedies.** Be wary of anyone who says you don't need to change anything, "just give us money and we'll do a *havan*, and you'll be fine."
+- **Nobody has all nine planets "bad".** At most two or three need attention, she says. If someone prescribes remedies for all nine, walk away.
+- **Small remedies work fastest.** Simple, consistent habits matter more than expensive rituals.
+- **Test them on your past.** "An astrologer who can tell you your past can predict your future." If they get around 80% of your past right, she'd trust them. Around 40–50% is just average.
+
+And perhaps her most practical advice:
+
+> "Don't go to an astrologer and ask, 'How is my future?' Ask, 'I want to become this. Can I? And if I can, what should I do?'"
+> — Nitisha Malhotra
+
+She even shared a story from the Puranas: when Narad predicted Parvati's future husband would be an ash-smeared ascetic living in cremation grounds, her mother Mainavati was so upset that she said astrology should never be *so* accurate that it frightens a person. Nitisha says an astrologer's job is to guide, not to terrify.
+
+:::context The bigger picture
+Psychologists offer one more test worth adding. In 1948, Bertram Forer gave all his students the same "personality report", and most rated it as remarkably accurate for them personally. This tendency to see ourselves in general statements is called the Barnum effect. It's a good reason to ask any reader for specific, checkable facts about your past, exactly as Nitisha suggests, rather than vague descriptions that could fit anyone.
+:::
+
+## 4. Names, spellings and the Lo Shu grid
+
+Ayushmann Khurrana's extra "n" and "r" are well known. Lalit also mentioned the numerologist Arviend Sud, who changed both his first name and surname spellings. So should you change yours?
+
+Usually not, says Nitisha. In her estimate, around **70% of people don't need a name change** at all. Only if your name number clashes with your driver and conductor numbers (the numbers from your birth date) does she recommend a change, and she warns strongly against adding letters just because it's fashionable: "The whole equation changes."
+
+She's also a firm believer in giving children names with meaning, including names of gods, because she feels the qualities behind a name like Ram (dignity, acceptance, patience) shape a child.
+
+**The Lo Shu grid.** She walked through how to build one from any date of birth. The classic 3×3 square is arranged:
+
+- Top row: **4 · 9 · 2**
+- Middle row: **3 · 5 · 7**
+- Bottom row: **8 · 1 · 6**
+
+You place each digit of your birth date in its square and mark the missing ones. In her system, each missing number points to something to work on, and she gave a practical, non-ritual way to "activate" many of them:
+
+- **Missing 1** (leadership, confidence): be disciplined, wake early, respect and serve your father
+- **Missing 2** (emotional balance): love your mother, help others, meditate
+- **Missing 3** (knowledge, expression): read and write something every day
+- **Missing 4** (time management): commit to doing one thing for a fixed hour, and do it
+- **Missing 5** (communication): speak up and express yourself, in a balanced way
+
+Notice how many of these are simply good habits.
+
+:::context The bigger picture
+On the question of a name for the country, Nitisha said she prefers "Bharat". It's worth knowing that India's Constitution already uses both. Article 1 begins: *"India, that is Bharat, shall be a Union of States."* Both names have been official since the Constitution was adopted.
+:::
+
+## 5. Willpower, manifestation and the "sensitive" generation
+
+The theme Nitisha returned to most was willpower, and she's worried about today's young people. In her view, Gen Z and Gen Alpha dream big but give up quickly when challenges come. Smaller families and single-child homes, she believes, have led to more pampering and more emotional sensitivity.
+
+She was also clear about what manifestation is not:
+
+> "Manifestation is not saying 'I'll become rich, I'll become rich' and expecting it to happen. It is how attentive you are, practically, to the thing you want to achieve."
+> — Nitisha Malhotra
+
+Her example was Shah Rukh Khan, who she says kept working through years of being called over-the-top or childish, and kept updating himself until his dream came true. The contrast she drew is painfully relevant: some people face a flop or a failure and turn to addiction, or even suicide. "How strong your willpower is *after* you lose is what decides everything."
+
+She spoke from experience. As a woman entering astrology, she was told it was "*₹11 wali kamai*" (a pittance), and called a *jaadugarni* (sorceress). "If we had cried that day and quit, where would we be? We cried, and then we said: let them talk. We'll do it anyway."
+
+Her advice for the year ahead was refreshingly practical: sleep on time, wake up early, build discipline, and stop waiting for the stars to do the work.
+
+:::help If you're going through a hard time
+Nitisha spoke about people who give up after a failure. If you or someone you know is struggling, please reach out. Call **Tele-MANAS on 14416**, India's free, confidential, 24×7 mental health helpline. In an emergency, call **112**.
+:::
+
+## What we took away
+
+You may come to this episode as a believer, a skeptic, or simply curious, and you'll leave with something either way. What stood out to us wasn't a prediction. It was an astrologer telling people to stop being afraid: of mangal dosh, of low guna scores, of astrologers who demand money for fear-based remedies, and of a future that, in her own words, is only 40% written.
+
+:::takeaways Key takeaways
+1. In Nitisha's view, destiny is only part of the story. Effort, willpower and choices count for more.
+2. Don't cancel a relationship over guna scores alone. Her own 12-guna marriage is working.
+3. Be wary of any astrologer who frightens you, prescribes remedies for all nine planets, or simply asks for money.
+4. Ask "Can I become this, and how?" instead of "What's my future?"
+5. Most people don't need a name change. Never change a spelling just because it's fashionable.
+6. Manifestation means practical, consistent effort, not repeating wishes.
+:::
+
+:::note
+This article summarises the views our guest shared on the show. Quotes are translated and lightly condensed from the original Hindi conversation. Insightoholix does not scientifically endorse astrological or numerological claims, and nothing here should replace professional medical, financial or legal advice.
+:::
+`,
+  },
+  {
     slug: "why-upsc-aspirants-fail",
     title: "Don't Make the Exam Bigger Than You: Aditya Nath Das on Failing UPSC, Burnout and the Real IAS",
     date: "2026-10-15",

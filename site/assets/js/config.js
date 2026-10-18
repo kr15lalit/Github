@@ -58,7 +58,7 @@ window.SITE = {
     { name: "Aditya Nath Das", role: "Former IAS Officer", episode: "dM9CqdQ6ApI", topic: "Why 90% of UPSC aspirants fail" },
     { name: "Dr. Arun Tungaria", role: "Neurosurgeon", episode: "Db8uUA9dlYA", topic: "Anxiety, depression & mobile addiction" },
     { name: "Sanddeep Bajaj", role: "Numerologist", episode: "_TPYlhVhpy4", topic: "Does your birth date decide success?" },
-    { name: "Nitisha Malhotra", role: "Astrologer", episode: "4ojqBPlD0Jo", topic: "Can destiny really be changed?" }, // name taken from the YouTube handle; please confirm
+    { name: "Nitisha Malhotra", role: "Astrologer & Numerologist", episode: "4ojqBPlD0Jo", topic: "Can destiny really be changed?" },
   ],
 
   // Featured episode in the hero (ID from https://www.youtube.com/watch?v=THIS_PART)
