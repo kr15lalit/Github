@@ -681,6 +681,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .callout-takeaways { background: var(--saffron); color: var(--ink); }
 .callout-takeaways li::marker { color: var(--ink); }
 .callout-takeaways strong, .callout-takeaways em { color: var(--ink); }
+.callout-help { background: var(--paper); box-shadow: inset 0 0 0 2px var(--ink); }
+.callout-help .callout-label { color: var(--ink); }
+.callout-help .callout-label::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: #2f9e44; box-shadow: 0 0 0 4px rgba(47,158,68,.2); }
+.callout-help strong { font-size: 1.08em; }
 .callout-note { padding: 18px 22px; background: transparent; box-shadow: inset 0 0 0 1.5px var(--line); color: var(--muted); font-size: .82em; }
 .callout-note .callout-label { color: var(--ink-2); margin-bottom: 8px; }
 

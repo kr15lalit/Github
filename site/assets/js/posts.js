@@ -19,10 +19,209 @@
                > quote (add a last line "> — Name" to credit the speaker),
                ![alt](image-url), blank line between paragraphs
                Boxes for long articles:  :::summary Title  /  :::context Title  /
-               :::takeaways Title  /  :::note Title   …text…   :::
+               :::takeaways Title  /  :::note Title  /  :::help Title   …text…   :::
    ========================================================================== */
 
 window.POSTS = [
+  {
+    slug: "screens-sleep-and-mental-health",
+    title: "Why Are We So Anxious? A Neurosurgeon on Screens, Sleep and the Mental Health We Ignore",
+    date: "2026-10-18",
+    category: "Episode Notes",
+    excerpt:
+      "Back pain at 19, sleepless scrolling, children glued to phones and worry that won't switch off. Neurosurgeon Dr. Arun Tungaria on what our screens are doing to our brains, and what actually helps.",
+    cover: "",
+    video: "Db8uUA9dlYA",
+    body: `
+You go to bed tired but lie awake, scrolling. You wake up with a stiff neck and a heavy head. Your mind keeps running through things that haven't happened yet. Your child won't eat unless a video is playing. And when someone asks how you are, you say "fine", because saying anything else feels like admitting something is wrong with you.
+
+If any of that sounds familiar, you're far from alone. India's National Mental Health Survey found that roughly one in ten adults lives with a mental health condition, and that for common problems like anxiety and depression, more than 80% never get any treatment.
+
+In this episode, host Lalit Sharma sat down with **Dr. Arun Tungaria**, a senior neurosurgeon with over 15 years of experience and more than 5,000 surgeries behind him. He runs Shri Krishna Neurospine Hospital in Bikaner and spends his spare time explaining brain and spine health in plain language through his channel, *Neuromate Talks*. He has seen these modern problems turn up in his own clinic, in patients who are getting younger every year.
+
+:::summary In this conversation
+- Back pain at 19 and the headache that isn't "just a headache"
+- The dopamine "bomb blast": how our phones feed anxiety
+- When worry won't switch off: the link between anxiety and depression
+- Children and screens: when does normal use become addiction?
+- Sleep: the most underrated medicine we have
+:::
+
+[[watch]]
+
+## 1. Back pain at 19, and the headache that isn't "just a headache"
+
+Fifteen or twenty years ago, Dr. Tungaria's spine patients were mostly older people whose discs and joints had worn down with age. That has changed.
+
+> "In the last few years, young patients — college-going students, young working adults — have started coming very commonly. In the last five years I've operated on five or six patients who were under 20, for back pain and disc problems."
+> — Dr. Arun Tungaria
+
+The reasons he sees are depressingly ordinary: very little physical activity, long hours sitting in front of screens, poor posture, fast food, not drinking enough water, and furniture that isn't built for the body. Neck pain from bending over phones is now the second most common complaint.
+
+**Signs your spine needs attention:**
+
+- Back or neck pain that keeps coming back
+- Pain that travels from the lower back into the buttocks, the back of the thighs or the legs
+- Tingling or numbness in the hands or feet
+
+He has also seen brain strokes and brain haemorrhages become more common.
+
+Then there's migraine. Migraine is one of the most common conditions in the world, affecting roughly one in seven people, and Lalit pointed to surveys showing it is common among teenagers and young adults in India too. Dr. Tungaria believes rising screen time is making it worse: bright screens and loud music through earphones are classic triggers.
+
+**How to tell it might be migraine:** headache comes in attacks, often with nausea, vomiting, flashing lights or visual disturbances, or numbness, and then goes away completely. It's called *aadha seesi* (half-head) in Hindi, but he stresses it can affect the whole head too.
+
+**What helps:**
+
+- Watch the **"three Cs"**: chocolate, coffee and cheese (especially cheese that isn't fresh).
+- Avoid smoking and alcohol.
+- Drink 3 to 4 litres of water a day.
+- Never stay on an empty stomach for long. Skipped meals and long fasts trigger attacks.
+
+If attacks become frequent, see a doctor. There are medicines that can control them.
+
+## 2. The dopamine "bomb blast": how our phones feed anxiety
+
+Every notification, every like and every new reel gives your brain a small hit of dopamine, the chemical behind the feeling of instant reward. Dr. Tungaria compares it with the "slow dopamine" we used to get from cleaning the house, working in the fields, reading a book or spending time in nature.
+
+> "What's happening now is a kind of bomb blast of dopamine, with constant notifications, short content and reels one after another. It is disturbing the brain's balance. Our anxiety is increasing, mental stress is increasing, and procrastination has gone up enormously, because people get so much gratification from the phone that they don't want to do any real work."
+> — Dr. Arun Tungaria
+
+In his clinic, the effects show up as stress, anxiety, low mood, headaches, spine problems and, especially in students, an inability to focus.
+
+He's realistic: nobody can give up their phone entirely today. His practical "dopamine detox":
+
+- Delete the apps you overuse, or set timers on them.
+- Decide in advance how much time social media gets, and give the rest of your time to real work, physical activity and people.
+
+He's equally worried about what he calls **social health**. "The parks in front of our houses are beautiful, but you don't see children in them anymore. Fifteen or twenty years ago they were full; kids fought over who would play cricket where." He reminds us that the WHO defines health as physical, mental *and* social well-being.
+
+:::context The bigger picture
+Governments are starting to act. Dr. Tungaria pointed to India's Fit India Movement, and to Australia, where a law banning social media accounts for children under 16 came into force in December 2025. Platforms there, including Instagram, TikTok, Snapchat and YouTube, now have to verify users' ages.
+
+But he puts just as much responsibility on families and schools: "In our schools, all the competition is about marks: 90%, above 90%. Physical fitness gets almost no attention. Children should learn how to strengthen their back and neck muscles from the very beginning. People are discovering the gym at 30 or 40. That should have started in childhood."
+:::
+
+## 3. When worry won't switch off: anxiety and depression
+
+Stress, he explains, is a broad term, and a small amount of it helps us grow. Anxiety is one part of it, and it becomes a problem when worry is constant and starts to affect your body and your daily life.
+
+**Early signs of anxiety:**
+
+- Restlessness and an inability to be at peace
+- Constant worry about real or imagined situations
+- Fast breathing, a racing heart, a dry throat and a sense of panic
+
+> "They say 90% of the things we worry about never actually happen. Anxiety is an exaggeration of that."
+> — Dr. Arun Tungaria
+
+Lalit raised research showing that around half of people with chronic anxiety also experience depression. Dr. Tungaria explained the vicious circle. Constant fear chips away at your self-confidence and self-esteem. You start to feel worthless, and that low feeling in turn creates more anxiety. Chronic back pain works the same way: he cited a large US study in which around 40% of people with long-term low back pain also had depression, each condition making the other worse.
+
+**Signs of depression:**
+
+- Feeling low and sad most of the time
+- Losing joy in things you used to enjoy
+- Sleeping much more than usual, or much less
+- Eating more than usual, and gaining weight
+- In major depression, suicidal thoughts
+
+**His three tools for anxiety** (which also help with depression):
+
+1. **Journaling.** Write down exactly what you fear, and the pros and cons of each outcome. A student anxious about a result, for example, should write down every possible rank, college or branch, and what they'd do in each case, including the options if it doesn't work out.
+2. **Mindfulness.** Stay in the present moment. "If I sit here worrying about tomorrow's brain tumour surgery, I'll ruin this conversation, and I won't be able to do tomorrow's work any better."
+3. **Meditation.** It helps regulate your mental and emotional health, and he believes it can dramatically improve how well your brain works.
+
+When symptoms are serious, doctors often prescribe a combination of anti-anxiety and antidepressant medicines, alongside these habits.
+
+**If suicidal thoughts appear:** tell someone you trust right away, whether family or a friend if family feels hard to talk to, and get professional help. "Mental health is the most neglected part of health in our society. There's so much taboo that people get labelled *paagal* (mad) far too quickly."
+
+:::help If you are struggling right now
+You don't have to go through it alone. Call **Tele-MANAS on 14416** (or 1-800-891-4416). It is the Government of India's free, confidential mental health helpline, open 24×7 in many Indian languages. If you or someone near you is in immediate danger, call **112**.
+:::
+
+## 4. Children and screens: when does normal use become addiction?
+
+Lalit described a scene many of us know: young parents playing videos on a phone just to get a toddler to sit still and eat. Dr. Tungaria didn't soften his answer.
+
+A child's brain is still building its pathways, which is called neuroplasticity. Fill those years with fast, loud, colourful short content (and sometimes vulgar content no parent can fully control), and the results show up early: **poor focus**, weak social skills and early spectacles. "Give them a storybook, and they'd rather watch the film made from it."
+
+His own view is strict: ideally no screens before the age of 10, and after that only limited, supervised use with parental controls, restricted mode and app timers switched on.
+
+**Normal use vs. addiction.** He compares screens to food: a balanced amount keeps you healthy, too much shows up in your body. A little gaming can keep a child's brain active and even improve hand-eye coordination. But watch for these signs:
+
+- Grades falling below the child's usual level
+- Less time with friends and outdoor play
+- Talking less with parents
+- Sleep problems or late nights with the phone
+- More processed food and sugary drinks
+- Constantly demanding the phone the moment homework is done
+
+**What parents can do:**
+
+- **Be aware first.** If you're both on your phones at dinner, your child is learning from you.
+- **Be firm when needed.** Treat overuse as seriously as you would any other harmful habit.
+- **Give a basic keypad phone** for staying in touch, instead of a smartphone.
+- **Most of all, give your time.** "If we don't make ourselves available to our children, they'll seek that time and attention elsewhere, and today the easiest place is the phone."
+
+He shared a recent case. A 15- or 16-year-old came to him with frequent headaches and falling grades. Gently questioning the family revealed that the teenager was taking the phone to bed every night without the parents realising. Once they took firm steps, the headaches eased and the grades started coming back.
+
+:::context The bigger picture
+Dr. Tungaria's age-10 view is stricter than the formal guidance, but the direction is the same. The Indian Academy of Pediatrics recommends no screen exposure at all for children under 2, at most one hour a day of supervised screen time between ages 2 and 5, and less than two hours a day between 5 and 10. It also says screens must never replace outdoor play, sleep, family time or study.
+:::
+
+## 5. Sleep: the most underrated medicine we have
+
+Lalit cited the National Sleep Foundation's guidance: 8 to 10 hours of sleep for teenagers and 7 to 9 for adults. Dr. Tungaria explained why that sleep is non-negotiable.
+
+Sleep repairs the body, the muscles, bones and joints you've used all day, and it's when the brain **consolidates what you learned**. That's why the all-nighter doesn't work:
+
+> "If you think you'll study 16 hours and sleep 5, you won't remember what you studied. Five hours of focused study with proper sleep will help you far more."
+> — Dr. Arun Tungaria
+
+Nature built in a simple switch. When it gets dark, the pineal gland releases melatonin, the hormone that makes us sleepy. But we've overridden it: lights stay on until 11 p.m., and when they finally go off, the phone screen lights up.
+
+> "As long as light keeps reaching the brain through our eyes, the signal that brings on sleep will not switch on."
+> — Dr. Arun Tungaria
+
+**His sleep prescription:**
+
+- Take an evening walk somewhere with dim light, so your brain registers that night has come.
+- Sleep in a completely dark room. Even a small night light can disturb sleep.
+- Avoid tea and coffee for six to seven hours before bed.
+- Don't rely on sleeping pills. "Our society has developed a knee-jerk reaction of asking for a pill for everything. There is no magic pill." Sleep medicines should be taken only on prescription and under a doctor's supervision, because the biggest risk is dependence. Lifestyle changes last.
+
+Many of his patients find that once their sleep is fixed, their concentration improves, and even long-standing body pain eases.
+
+## Put your own oxygen mask on first
+
+Lalit's last question was practical: what should someone do first if they're worried about their brain, spine or mental health?
+
+Not Google, says Dr. Tungaria, and not ChatGPT or unqualified "health influencers". He suggests going to a qualified doctor, in person or through one of the many online consultation platforms now available. "Twenty years ago we said *neem hakeem khatra-e-jaan* (a half-trained healer is a danger to life). The same applies to social media today."
+
+His final message was about priorities.
+
+:::context The bigger picture
+He pointed to Zerodha co-founder Nithin Kamath, a famously fit entrepreneur who shared in 2024 that he'd had a mild stroke. Kamath himself suggested that poor sleep, exhaustion, dehydration and overexertion may have played a part. It was a reminder that chasing short-term goals at the cost of health can stop you from reaching them at all.
+:::
+
+> "When the oxygen level drops on a plane, you put the mask on yourself first. Only then can you help others. Your parents, your spouse, your children depend on you. Be a responsible person: make your health your top priority — physical, mental, social and emotional."
+> — Dr. Arun Tungaria
+
+And don't wait until you're very ill to see a doctor. Early signs are reason enough.
+
+:::takeaways Key takeaways
+1. Back and neck pain in your teens or twenties is a warning sign, not a normal part of studying or work.
+2. Phones deliver constant "fast dopamine". Set limits, and make room for slow, real-world rewards.
+3. Anxiety and depression feed each other. Journaling, mindfulness and meditation help, and professional help is not a weakness.
+4. Children need your time more than they need a screen. Watch for slipping grades, sleep and friendships.
+5. Darkness, no late caffeine and a phone-free bedroom do more for sleep than any pill.
+6. Check symptoms with a qualified doctor, not with Google or influencers.
+:::
+
+:::note
+This article is based on our conversation with Dr. Arun Tungaria and is for awareness only. It is not a substitute for medical advice, diagnosis or treatment. Quotes are translated and lightly condensed from the original Hindi conversation.
+:::
+`,
+  },
   {
     slug: "why-upsc-aspirants-fail",
     title: "Don't Make the Exam Bigger Than You: Aditya Nath Das on Failing UPSC, Burnout and the Real IAS",
