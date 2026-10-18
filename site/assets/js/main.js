@@ -623,13 +623,6 @@
         </section>
       </div>`;
 
-    // always open an article at its top (browsers and embedded viewers may restore an old scroll position)
-    if (!location.hash) {
-      if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-      window.scrollTo(0, 0);
-      requestAnimationFrame(() => window.scrollTo(0, 0));
-    }
-
     // table of contents (desktop) + reading progress
     const heads = [...root.querySelectorAll(".prose > h2[id]")];
     const toc = $(".toc", root);
@@ -867,4 +860,15 @@
   if (page === "post") renderPost();
   setupReveal();
   setupIntro();
+
+  // Open pages at their top. Browsers can restore an old scroll position, and when the site is shown
+  // inside another page (an iframe preview) the outer page keeps its own scroll. scrollIntoView also
+  // scrolls those outer containers, which window.scrollTo cannot.
+  if (!location.hash) {
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    const toTop = () => { window.scrollTo(0, 0); document.body.scrollIntoView({ block: "start" }); };
+    toTop();
+    requestAnimationFrame(toTop);
+    window.addEventListener("load", toTop, { once: true });
+  }
 })();
