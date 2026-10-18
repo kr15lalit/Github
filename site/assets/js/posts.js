@@ -313,13 +313,21 @@ Usually not, says Nitisha. In her estimate, around **70% of people don't need a 
 
 She's also a firm believer in giving children names with meaning, including names of gods, because she feels the qualities behind a name like Ram (dignity, acceptance, patience) shape a child.
 
-**The Lo Shu grid.** She walked through how to build one from any date of birth. The classic 3×3 square is arranged:
+**The Lo Shu grid.** She walked through how to build one from any date of birth. The classic 3×3 square always has the numbers in the same positions:
 
-- Top row: **4 · 9 · 2**
-- Middle row: **3 · 5 · 7**
-- Bottom row: **8 · 1 · 6**
+:::loshu
+4 9 2
+3 5 7
+8 1 6
+The Lo Shu square: every row, column and diagonal adds up to 15
+---
+4 - 22
+- - -
+8 - -
+Her example, 2 August 2004: 2 appears twice, 4 and 8 once; the rest are missing
+:::
 
-You place each digit of your birth date in its square and mark the missing ones. In her system, each missing number points to something to work on, and she gave a practical, non-ritual way to "activate" many of them:
+You write each digit of your birth date into its square, repeating a number as many times as it appears, and leave the missing ones empty. Zeros are ignored. In her system, each missing number points to something to work on, and she gave a practical, non-ritual way to "activate" many of them:
 
 - **Missing 1** (leadership, confidence): be disciplined, wake early, respect and serve your father
 - **Missing 2** (emotional balance): love your mother, help others, meditate
@@ -666,7 +674,21 @@ Big decisions such as buying property, investing or taking on debt deserve a pro
 
 ## 5. The missing numbers: stability, discipline and a child who speaks late
 
-Some of the most relatable moments in the episode came from the Lo Shu grid, a 3×3 square filled in with the digits of your date of birth. Almost nobody has every number from 1 to 9, and according to Sanddeep, each missing number shows up as a specific struggle:
+Some of the most relatable moments in the episode came from the Lo Shu grid, a 3×3 square filled in with the digits of your date of birth. Each number always sits in the same position, and you write in every digit of your birth date (ignoring zeros):
+
+:::loshu
+4 9 2
+3 5 7
+8 1 6
+The Lo Shu square
+---
+- 9 -
+- - 77
+- 11111 -
+Sanddeep's own date of birth, 17 November 1971: no 5
+:::
+
+Almost nobody has every number from 1 to 9, and according to Sanddeep, each missing number shows up as a specific struggle:
 
 - **Missing 1:** weak communication and leadership
 - **Missing 2:** weak intuition, misjudging people

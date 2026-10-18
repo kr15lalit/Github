@@ -47,6 +47,22 @@
       .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
       .replace(/\*([^*]+)\*/g, "<em>$1</em>");
   }
+  // Lo Shu grids: each grid is three rows of three cells ("4 9 2"; use "-" for an empty cell),
+  // optionally followed by a caption line. Separate several grids with a line of "---".
+  function loshuHTML(lines) {
+    const grids = lines.join("\n").split(/\n\s*---\s*\n/).map((part) => part.split("\n").map((l) => l.trim()).filter(Boolean));
+    return `<div class="loshu-set">${grids.map((g) => {
+      const rows = g.slice(0, 3).map((r) => r.split(/\s+/));
+      const caption = g[3] || "";
+      const cells = rows.flat().map((c) => {
+        const empty = c === "-";
+        const size = c.length >= 5 ? " xs" : c.length >= 3 ? " sm" : "";
+        return `<span class="loshu-cell${empty ? " empty" : size}" aria-label="${empty ? "missing" : esc(c)}">${empty ? "" : esc(c)}</span>`;
+      }).join("");
+      return `<figure class="loshu"><div class="loshu-grid" role="img" aria-label="Lo Shu grid: ${esc(rows.map((r) => r.join(" ")).join(", "))}">${cells}</div>${caption ? `<figcaption>${inline(caption)}</figcaption>` : ""}</figure>`;
+    }).join("")}</div>`;
+  }
+
   // Markdown subset. Extras for long-form articles:
   //   :::summary Title / :::context Title / :::takeaways Title / :::note Title  … :::   → styled boxes
   //   > quote lines followed by "> — Name"                                           → pull quote with credit
@@ -66,7 +82,10 @@
       const line = raw.trim();
       let m;
       if (block) {
-        if (line === ":::") {
+        if (line === ":::" && block.type === "loshu") {
+          html += loshuHTML(block.lines);
+          block = null;
+        } else if (line === ":::") {
           html += `<aside class="callout callout-${block.type}">${block.title ? `<span class="callout-label">${inline(block.title)}</span>` : ""}${markdown(block.lines.join("\n"), true)}</aside>`;
           block = null;
         } else block.lines.push(raw);
