@@ -234,7 +234,7 @@ This article is based on our conversation with Dr. Arun Tungaria and is for awar
     body: `
 "Your kundli has *mangal dosh*." For countless families in India, those few words have delayed a wedding, ended a relationship, or kept a young woman anxious for years. Others spend thousands on stones, *havans* and "remedies" prescribed by whichever astrologer they happened to find on TV or YouTube, without ever knowing whether that person was any good.
 
-So for our New Year episode, host Lalit Sharma asked the questions so many people quietly carry. Can destiny really be changed? Should a love marriage be stopped because the *gunas* don't match? How do you tell a genuine astrologer from one who's just frightening you into paying?
+In this episode, host Lalit Sharma asked the questions so many people quietly carry. Can destiny really be changed? Should a love marriage be stopped because the *gunas* don't match? How do you tell a genuine astrologer from one who's just frightening you into paying?
 
 Our guest was **Nitisha Malhotra**, an astrologer, numerologist, tarot reader and vastu consultant who says she approaches these subjects not as superstition but as awareness. Her answers were often surprising, and some of the most useful ones were warnings about her own field.
 
@@ -346,7 +346,7 @@ Her example was Shah Rukh Khan, who she says kept working through years of being
 
 She spoke from experience. As a woman entering astrology, she was told it was "*₹11 wali kamai*" (a pittance), and called a *jaadugarni* (sorceress). "If we had cried that day and quit, where would we be? We cried, and then we said: let them talk. We'll do it anyway."
 
-Her advice for the year ahead was refreshingly practical: sleep on time, wake up early, build discipline, and stop waiting for the stars to do the work.
+Her everyday advice was refreshingly practical: sleep on time, wake up early, build discipline, and stop waiting for the stars to do the work.
 
 :::help If you're going through a hard time
 Nitisha spoke about people who give up after a failure. If you or someone you know is struggling, please reach out. Call **Tele-MANAS on 14416**, India's free, confidential, 24×7 mental health helpline. In an emergency, call **112**.
