@@ -143,7 +143,6 @@
               <h4>Explore</h4>
               <ul>
                 <li><a href="index.html#episodes">Episodes</a></li>
-                <li><a href="index.html#topics">Topics</a></li>
                 <li><a href="index.html#guests">Guests</a></li>
                 <li><a href="blog.html">Journal</a></li>
                 <li><a href="index.html#about">Hosts</a></li>
@@ -442,12 +441,6 @@
           <h3>${esc(v.title)}</h3>
         </div>
       </article>`).join("");
-
-    const channelSearch = (q) => `${S.youtubeUrl.replace(/\/$/, "")}/search?query=${encodeURIComponent(q)}`;
-    $("#topic-pills").innerHTML = S.topics.map((t, i) => `
-      <a class="topic-pill reveal" data-delay="${i % 3}" href="${channelSearch(t.query || t.name)}" target="_blank" rel="noopener" title="${esc(t.note || "")}">
-        ${esc(t.name)}<span class="arr" aria-hidden="true">↗</span>
-      </a>`).join("");
 
     $("#guest-grid").innerHTML = (S.guests || []).map((g, i) => `
       <article class="guest-card reveal" data-delay="${i % 3}">

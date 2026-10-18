@@ -20,15 +20,14 @@ window.SITE = {
     { value: "∞", label: "Curiosity" },
   ],
 
-  // Topics: shown in the scrolling strip and as clickable pills.
-  // `query` is what each pill searches for on the YouTube channel.
+  // Topics shown in the scrolling strip under the hero
   topics: [
-    { name: "Health & Wellbeing", query: "health", note: "Women's health, mental health and the habits that shape both" },
-    { name: "Money & Markets", query: "trading investing insurance", note: "Trading, investing, insurance and the emotions behind every rupee" },
-    { name: "Careers & Ambition", query: "UPSC career", note: "UPSC, entrepreneurship and what it takes to succeed" },
-    { name: "Life Abroad", query: "Sweden", note: "Sweden, migration and the reality behind the dream destination" },
-    { name: "Tech & AI", query: "AI LLM", note: "LLMs, generative AI and building it responsibly" },
-    { name: "Mind & Meaning", query: "astrology spirituality", note: "Spirituality, astrology, numerology and the big questions" },
+    { name: "Health & Wellbeing" },
+    { name: "Money & Markets" },
+    { name: "Careers & Ambition" },
+    { name: "Life Abroad" },
+    { name: "Tech & AI" },
+    { name: "Mind & Meaning" },
   ],
 
   // Hosts. Add a `photo` path (e.g. "assets/img/lalit.jpg") to replace the initials,
