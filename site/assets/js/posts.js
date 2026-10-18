@@ -25,36 +25,177 @@
 window.POSTS = [
   {
     slug: "why-upsc-aspirants-fail",
-    title: "Why 90% of UPSC Aspirants Fail — and What the Other 10% Do Differently",
+    title: "Don't Make the Exam Bigger Than You: Aditya Nath Das on Failing UPSC, Burnout and the Real IAS",
     date: "2026-10-15",
     category: "Episode Notes",
     excerpt:
-      "Our longest conversation yet, with former IAS officer Aditya Nath Das. The big themes, the uncomfortable truths, and who should watch it.",
+      "He failed prelims, then mains, quit a secure bank job before his last attempt, and later survived 59 rounds of gunfire as a Collector. Aditya Nath Das on what UPSC aspirants really go through, and what the job is really like.",
     cover: "",
     video: "dM9CqdQ6ApI",
     body: `
-Lakhs of aspirants appear for the civil services exam every year. Only a tiny fraction make it to the final list. We wanted to understand why — from former IAS officer Aditya Nath Das, who has seen the system from the inside.
+You've given it two years. Maybe four. Your friends have jobs, salaries and weekends. Relatives ask "kab clear hoga?" at every wedding. Every time a result comes out without your name on it, something quietly shrinks inside you, and it isn't just your rank. It's how you see yourself.
 
-## The questions we asked
+That is the reality for a huge number of young Indians. Over 13 lakh people applied for the Civil Services Examination in 2024. About 14,600 cleared prelims, and only around a thousand made it to the final list. Former RBI Governor Duvvuri Subbarao recently called the current system of up to six attempts a "colossal waste of productive years".
 
-- Is it really about intelligence, or about strategy and stamina?
-- How much does coaching actually matter?
-- When should someone keep going — and when is it brave to stop?
+So for our Independence Day special, we didn't want a topper's highlight reel. We wanted someone who had failed and still made it, and who has spent nearly four decades inside the system those aspirants are trying to enter.
 
-## Themes that came up again and again
+**Aditya Nath Das** joined the Indian Administrative Service in 1987, served as Chief Secretary of Andhra Pradesh, and today advises the Irrigation Department of the Government of Telangana. He is also a poet. His collection *Dancing with Dreams* carries a line that sums up this conversation: *whatever life unfolds for you, welcome it with a smile.*
 
-1. **Consistency over intensity.** Preparation is a multi-year marathon, not a sprint before prelims.
-2. **Answer writing is a skill.** Knowing something and expressing it well in limited time are two different abilities.
-3. **Mental health is part of the syllabus.** Isolation, family pressure and repeated attempts take a real toll.
-4. **Have a Plan B — without guilt.** A backup isn't a lack of commitment; it's what lets you commit without fear.
+:::summary In this conversation
+- "I didn't even clear prelims": failing twice, and learning to judge yourself honestly
+- The bank job he quit: Plan B, family pressure and knowing yourself
+- Burnout, coaching and information overload
+- 59 rounds of gunfire: the ambush that gave him a "second life"
+- Power, pressure and ethics: what the job is really like
+:::
 
-## Who should watch
+[[watch]]
 
-Aspirants, obviously. But also parents of aspirants — understanding the pressure is the first step towards easing it.
+## 1. "I didn't even clear prelims"
 
-> Clearing the exam is one path to serving. It is not the only measure of a meaningful life.
+His path was anything but smooth. He studied at Sainik School Lucknow, finished school in Dehradun and enrolled at Banaras Hindu University for a BSc (Hons) in Geology. His real dream was the Indian Forest Service. He loved hills and nature.
 
-Watch the full conversation above, and share it with someone who's in the middle of their preparation.
+Then life intervened. The early 1980s were politically charged at BHU, and the university kept shutting down. A course meant to take two years stretched to three, and then to almost five. When the Forest Service exam finally came around, he fell ill and couldn't sit it. He moved to Jawaharlal Nehru University to study International Studies, where "everybody was writing civil services, so I also wrote civil services."
+
+- **First attempt:** he didn't clear prelims.
+- **Second attempt:** he cleared prelims but missed mains by a small margin.
+- **Last attempt:** he cleared everything and joined the IAS.
+
+What changed between attempts two and three wasn't luck. It was something he calls self-calibration.
+
+> "After you write the mains, give yourself marks for every paper. When your actual marks come, see how close you were. I had calibrated myself well. I knew I was writing well, but I lacked substance. I wasn't putting in the facts."
+> — Aditya Nath Das
+
+So he fixed exactly that. With facts added to the way he already wrote, he got through.
+
+:::context The bigger picture
+The number of attempts is now a live national debate. In 2025, Subbarao proposed cutting attempts to three and lowering the upper age limit to 27, arguing that candidates fall into a "sunk cost" trap: having invested so much, they feel unable to quit.
+
+Mr Das is more cautious. He says we can't fault young people for chasing the civil services; our history, our society and the respect the job carries all push them towards it. But he worries about what repeated failure does to a young mind, because with every failed attempt, a candidate's worth in their own eyes goes down.
+
+He welcomed a recent UPSC step in that direction. In June 2025 the Commission launched *Pratibha Setu*, which lets verified employers, including private companies, see the profiles of candidates who cleared every stage but missed the final list. Within weeks, over 100 organisations had signed up.
+:::
+
+> "This exam doesn't capture your whole life story. There's a lot still to come. Don't let one examination become the marker of your future."
+> — Aditya Nath Das
+
+## 2. The bank job he quit: Plan B, family pressure and knowing yourself
+
+Here's a part of his story most aspirants never hear. Before the IAS, he cleared the Probationary Officer exam for two or three banks and actually joined one.
+
+He quickly realised the work wasn't for him. So, with only his final UPSC attempt left, he resigned.
+
+> "Many people asked me, 'Have you gone mad, leaving such a good job?' I said: I don't know what will happen. But I know what I don't like, and I'm acting on what I know."
+> — Aditya Nath Das
+
+His advice to anyone without a clear roadmap is to start with yourself, not with what society calls a good job. Figure out what you enjoy, what you're good at and where you fall short, because "finally, you have to live with yourself." Get stuck in the wrong place, he warns, and it becomes very hard to get out.
+
+When our host pushed back, saying many young people take jobs they don't love to support their families, he agreed it's a real factor. But he held his ground on one thing: "If you aren't happy yourself, you can't keep anyone else happy."
+
+On Plan B, he was clear-eyed. This is a competitive exam, which means it's an elimination process: "You're not allowed to make mistakes." That's exactly why your sense of who you are can't depend on it.
+
+:::context The bigger picture
+His point about public service runs deeper than career advice. He insists that every level of public service matters: "Somebody working lower in the hierarchy is still contributing." For an aspirant who doesn't make the final list, that's a reminder that there are many ways to serve, and many respectable paths out of the preparation cycle.
+:::
+
+## 3. Burnout, coaching and information overload
+
+Burnout is one of the most common struggles aspirants describe, and his explanation of where it comes from was striking.
+
+> "Burnout happens because you're running towards a goal, running and running, and the goal doesn't come. Pass the exam, get the job: it all gets stacked up in your mind, and every time you can't reach it, you see despair."
+> — Aditya Nath Das
+
+His answer is counter-intuitive: **stop preparing for the exam, and start preparing to understand.** When you study with the exam in mind, he says, you remember only the last thing you read. When you study to understand, your mind naturally keeps what matters and lets go of the rest, which is also the answer to today's information overload, when every topic has a thousand YouTube videos.
+
+His practical habits:
+
+- **Recall, don't reread.** Study a topic, close the book, take a sheet of paper and see how much you can recall.
+- **Stop when understanding stops.** "Your eyes are still on the book, but your mind isn't working." That's the moment for a cup of tea.
+- **Don't cut off your social life.** When it gets too much, go out, meet friends, then come back and reassess. Isolation makes everything worse.
+- **Compete with yourself.** "You're not going to beat anybody. You're going to do yourself better. That's all."
+- **Choose your own path.** The most common mistake, he says, is listening to others, "even to us". Pick subjects on what you enjoy and score well in, and make mid-course corrections when needed.
+
+On coaching, he's neither for nor against. Preparing in complete isolation is hard, and being around other aspirants helps ideas flow. "The only danger is that you get stuck in a pattern. Coaching tries to fit you into a slot. Don't get slotted."
+
+The same goes for the interview. Boards can tell when answers are over-rehearsed. What they look for is sincerity, honesty and a candidate who is at ease. "Don't sit on the edge of the chair as if you're about to fall off. Don't try to bluff the board. Everyone makes mistakes. Let them see who you are."
+
+:::context The bigger picture
+For many aspirants, preparation means moving to a coaching hub and living in cramped rooms, often far from family. The risks of that life became painfully visible in July 2024, when three aspirants died after a coaching centre's basement library in Delhi's Old Rajinder Nagar flooded. It set off a national conversation about the conditions young people endure in pursuit of this one exam.
+
+That's why his advice about balance isn't a soft extra. A healthy routine, friends and a life outside the syllabus are part of preparing well.
+:::
+
+## 4. 59 rounds of gunfire: the ambush that gave him a "second life"
+
+Between 1999 and 2001, he served as Collector of Warangal, then a district badly affected by Naxalite violence. One evening in 2001, returning from a tribal-development council meeting deep in the forest, his car came under fire.
+
+Around 59 to 60 rounds hit the vehicle. A splinter struck him in the back. His driver was shot in the leg, and that driver saved his life. Bleeding, he pressed the accelerator down with his hand, slumped over the steering wheel, and kept the car moving until they were out of the firing zone.
+
+They later learned there had been two squads waiting, and claymore mines had been laid on the road. The person holding the trigger didn't press it, because the Collector wasn't the target. The Naxalites later sent an apology.
+
+Even in that moment, there was a decision to make. A nurse at a primary health centre gave them first aid. Back in Warangal, he sent his badly injured driver to a better-equipped hospital rather than taking him along to the same one, so the driver would get full attention. Doctors later said that decision saved the driver's leg. The driver went on to spend nearly two years in treatment and grafting.
+
+> "It is like a second life for me. It changed my perception of a lot of things. I realised how much time we waste on small things that we make into very big things."
+> — Aditya Nath Das
+
+He says the experience left him less stressed, not more, and much clearer about what's important and what isn't.
+
+## 5. Power, pressure and ethics: what the job is really like
+
+The IAS is heavily glorified in India by the media, by families and by coaching ads. So we asked directly: what are the real perks and powers?
+
+His answer is worth printing on every aspirant's wall:
+
+> "Power is like an electric bulb. You get power, and you give light. If you can't do that, you'll burst. Power is always for others. It is not for yourself."
+> — Aditya Nath Das
+
+The facilities officers get, he explains, exist only to help them do a job that runs 24×7: train accidents, floods and law-and-order emergencies at any hour. People don't resent those facilities when the work gets done. Resentment begins when they're misused.
+
+**Work-life balance.** By the time officers reach a district, many have working spouses and young children. His formula: stay physically active, meet people, clear your work every day so it doesn't pile up, and above all, decide. "Being stuck between yes and no, to be or not to be, is what increases stress. Our job is to take a call."
+
+**Political pressure.** He doesn't pretend it doesn't exist, nor does he demonise it. A bureaucracy's legitimacy comes from elected representatives, and politicians often bring accurate information from the ground. But: "Nobody holds your hand and makes you sign. Applying pressure is their dharma. Doing your work well is yours."
+
+**When you're asked to do something wrong,** his method is simple and practical:
+
+1. Say clearly that it isn't right, and explain the harm.
+2. If they insist, ask for the instruction in writing, and reply in writing with your objection.
+3. If it could cause serious, irreversible damage, be ready to walk away from that post.
+
+Often, he says, the matter is dropped long before step three. He gave his own juniors the same freedom: question any oral instruction, and ask for it in writing if they disagree. And he takes ownership at the top: "When I sign, the responsibility of everyone below me ends. If I can't defend it, why should I sign it?"
+
+The most satisfying moments of his career had nothing to do with power. In Shillong, he was sent, somewhat unwillingly, to a medical institute that simply wasn't getting off the ground; today it is a fully working institute. As Principal Secretary of Education, his goal was that no teacher should have to run around the secretariat to get a problem solved, and that teachers be allowed to teach instead of being pulled into every other government duty.
+
+:::context The bigger picture
+The conversation also turned to the economy facing today's young graduates. India produces around 1.5 million engineering graduates a year, yet many struggle to find work in their field. Mr Das points to uneven college quality, the need to stream students towards ITIs, polytechnics or degrees from Class 12, a manufacturing sector that isn't yet strong enough, and the case for giving states more economic autonomy to attract investment.
+
+And on global headwinds: around the time of recording, the US had announced a 25% tariff on Indian goods over India's purchases of Russian oil. Later in August 2025, a further 25% took the combined rate to 50%. His view: tariffs have become a tool of coercive diplomacy, India's rise is making bigger powers nervous, and the answer is an economy robust enough to withstand it, along with a bureaucracy that is decisive, fair and unbiased enough to attract investment.
+:::
+
+## "Don't make the exam bigger than yourself"
+
+We closed by asking for one piece of advice for someone just starting out. His answer covered the practical and the personal.
+
+Prepare with a calm mind. Know your capacity. Build a daily routine. Read one newspaper every day, especially the editorials, because they show how to make many points precisely and concisely. And understand an issue before you criticise it: "When we become critical first, we take a position, and our preparation becomes lopsided."
+
+Then came the line that, for us, defined the whole episode:
+
+> "Don't make the exam bigger than yourself. An exam is an exam. Don't let the balance sheet of your life rest on it. Nothing in life is bigger than you. Everything begins after you."
+> — Aditya Nath Das
+
+If you're in the middle of your preparation, or watching someone you love go through it, this is a conversation worth an hour of your time.
+
+:::takeaways Key takeaways
+1. Failing prelims or mains isn't the end. Calibrate yourself honestly and fix the specific gap.
+2. Know yourself before choosing a path. He walked away from a secure bank job because it wasn't right for him.
+3. Study to understand, not to "crack the exam". It's the best defence against burnout and information overload.
+4. Don't isolate yourself, and compete only with who you were yesterday.
+5. Power is for others. In the job, decide clearly, act ethically and ask for wrong instructions in writing.
+6. Nothing in life, including this exam, is bigger than you.
+:::
+
+:::note
+This article is based on our conversation with Aditya Nath Das. His quotes are translated and lightly condensed from a conversation in Hindi and English, and the views are his own.
+:::
 `,
   },
   {
