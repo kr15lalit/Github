@@ -277,6 +277,132 @@
     document.addEventListener("keydown", skip, { once: true });
   }
 
+  /* ---------------- Journal carousels (home) ---------------- */
+  const CAROUSEL_LABELS = { "Episode Notes": "From the episodes", Everyday: "Everyday life" };
+  const SLIDE_MS = 6000;
+
+  function renderCarousels(root) {
+    if (!root) return;
+    const cats = [...new Set(POSTS.map((p) => p.category))];
+    root.innerHTML = cats.map((cat, ci) => {
+      const posts = POSTS.filter((p) => p.category === cat);
+      const href = (p) => `post.html?p=${encodeURIComponent(p.slug)}`;
+      return `
+        <div class="carousel reveal ${ci % 2 ? "media-right" : ""}" role="region" aria-roledescription="carousel" aria-label="${esc(cat)} stories" data-offset="${ci % 2 ? SLIDE_MS / 2 : 0}">
+          <div class="car-media">
+            ${posts.map((p, i) => `<a href="${href(p)}" tabindex="-1" aria-hidden="true" class="${i ? "" : "active"}">
+              <span class="badge ${cat === "Everyday" ? "badge-ink" : ""}">${esc(cat)}</span>${coverHTML(p, ci + 1)}</a>`).join("")}
+          </div>
+          <div class="car-body">
+            <div class="car-top">
+              <span class="hand">${esc(CAROUSEL_LABELS[cat] || cat)}</span>
+              <span class="car-count" aria-hidden="true"><b>01</b> / ${String(posts.length).padStart(2, "0")}</span>
+            </div>
+            <div class="car-slides" aria-live="polite">
+              ${posts.map((p, i) => `
+                <article class="car-slide ${i ? "" : "active"}" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${posts.length}"${i ? " aria-hidden=\"true\"" : ""}>
+                  <div class="post-meta"><span>${fmtDate(p.date)}</span><span class="dot"></span><span>${readTime(p.body)}</span></div>
+                  <h3><a href="${href(p)}"${i ? ' tabindex="-1"' : ""}>${esc(p.title)}</a></h3>
+                  <p>${esc(p.excerpt)}</p>
+                  <a class="link-arrow" href="${href(p)}"${i ? ' tabindex="-1"' : ""}>Read the story <span>→</span></a>
+                </article>`).join("")}
+            </div>
+            ${posts.length > 1 ? `
+            <div class="car-nav">
+              <button class="car-btn prev" type="button" aria-label="Previous story">${ICON.arrow}</button>
+              <div class="car-dots">${posts.map((p, i) => `<button class="car-dot" type="button" aria-label="Show story ${i + 1}"${i ? "" : ' aria-current="true"'}></button>`).join("")}</div>
+              <button class="car-btn next" type="button" aria-label="Next story">${ICON.arrow}</button>
+            </div>
+            <div class="car-progress" aria-hidden="true"><i></i></div>` : ""}
+          </div>
+        </div>`;
+    }).join("");
+    root.querySelectorAll(".carousel").forEach(setupCarousel);
+  }
+
+  function setupCarousel(el) {
+    const media = [...el.querySelectorAll(".car-media > a")];
+    const slides = [...el.querySelectorAll(".car-slide")];
+    const dots = [...el.querySelectorAll(".car-dot")];
+    const bar = el.querySelector(".car-progress i");
+    const count = el.querySelector(".car-count b");
+    const n = slides.length;
+    if (n < 2) return;
+    let index = 0, timer = null, remaining = SLIDE_MS + Number(el.dataset.offset || 0), startedAt = 0;
+    let hovered = false, inView = false;
+
+    const go = (to, dir) => {
+      const next = (to + n) % n;
+      if (next === index) return;
+      dir = dir || (next > index ? 1 : -1);
+      [slides, media].forEach((list) => list[index].classList.remove("active"));
+      slides[index].setAttribute("aria-hidden", "true");
+      slides[index].querySelectorAll("a").forEach((a) => a.setAttribute("tabindex", "-1"));
+      slides[next].style.setProperty("--from", `${dir * 28}px`);
+      slides[index].style.setProperty("--from", `${-dir * 28}px`);
+      index = next;
+      slides[index].classList.add("active"); media[index].classList.add("active");
+      slides[index].removeAttribute("aria-hidden");
+      slides[index].querySelectorAll("a").forEach((a) => a.removeAttribute("tabindex"));
+      dots.forEach((d, i) => (i === index ? d.setAttribute("aria-current", "true") : d.removeAttribute("aria-current")));
+      if (count) count.textContent = String(index + 1).padStart(2, "0");
+      remaining = SLIDE_MS;
+      schedule();
+    };
+
+    const restartBar = (ms) => {
+      if (!bar) return;
+      bar.classList.remove("run"); void bar.offsetWidth;
+      bar.style.setProperty("--dur", `${ms}ms`);
+      bar.classList.add("run");
+    };
+    const running = () => !reduceMotion && !hovered && inView && !document.hidden;
+    function schedule() {
+      clearTimeout(timer);
+      el.classList.toggle("paused", !running());
+      if (!running()) return;
+      startedAt = performance.now();
+      restartBar(remaining);
+      timer = setTimeout(() => go(index + 1, 1), remaining);
+    }
+    const pause = () => {
+      if (timer) { clearTimeout(timer); timer = null; remaining = Math.max(400, remaining - (performance.now() - startedAt)); }
+      el.classList.add("paused");
+    };
+
+    el.querySelector(".prev").addEventListener("click", () => go(index - 1, -1));
+    el.querySelector(".next").addEventListener("click", () => go(index + 1, 1));
+    dots.forEach((d, i) => d.addEventListener("click", () => go(i)));
+    el.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") { e.preventDefault(); go(index + 1, 1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); go(index - 1, -1); }
+    });
+
+    // pause while the reader is hovering, focused inside or touching
+    el.addEventListener("pointerenter", (e) => { if (e.pointerType === "mouse") { hovered = true; pause(); } });
+    el.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") { hovered = false; schedule(); } });
+    el.addEventListener("focusin", () => { hovered = true; pause(); });
+    el.addEventListener("focusout", (e) => { if (!el.contains(e.relatedTarget)) { hovered = false; schedule(); } });
+
+    // swipe
+    let x0 = null, y0 = 0;
+    el.addEventListener("pointerdown", (e) => { if (e.pointerType !== "mouse") { x0 = e.clientX; y0 = e.clientY; pause(); } });
+    el.addEventListener("pointerup", (e) => {
+      if (x0 === null) return;
+      const dx = e.clientX - x0, dy = e.clientY - y0;
+      x0 = null;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) go(index + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
+      else schedule();
+    });
+    el.addEventListener("pointercancel", () => { x0 = null; schedule(); });
+
+    // only auto-advance while visible on screen and the tab is active
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(([en]) => { inView = en.isIntersecting; inView ? schedule() : pause(); }, { threshold: 0.35 }).observe(el);
+    } else { inView = true; schedule(); }
+    document.addEventListener("visibilitychange", () => (document.hidden ? pause() : schedule()));
+  }
+
   /* ---------------- Home ---------------- */
   function renderHome() {
     const f = S.featuredVideo;
@@ -323,7 +449,7 @@
         <p>${esc(t.note)}</p>
       </div>`).join("");
 
-    $("#journal-grid").innerHTML = POSTS.slice(0, 3).map(postCard).join("");
+    renderCarousels($("#journal-carousels"));
 
     $("#about-heading").textContent = S.about.heading;
     $("#about-body").innerHTML = S.about.body.map((p) => `<p>${esc(p)}</p>`).join("");

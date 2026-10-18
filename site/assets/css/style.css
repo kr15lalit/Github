@@ -309,6 +309,67 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .post-card:hover h3 a { background-size: 100% 3px; }
 .post-card p { margin: 0; color: var(--muted); font-size: 15.5px; }
 
+/* Journal carousels (home) — zig-zag: media left, then media right */
+.carousels { display: grid; gap: 36px; }
+.carousel {
+  position: relative; display: grid; grid-template-columns: 1.15fr 1fr; min-height: 420px;
+  background: var(--paper); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow);
+  touch-action: pan-y;
+}
+.carousel.media-right { grid-template-columns: 1fr 1.15fr; }
+.carousel.media-right .car-media { order: 2; }
+.car-media { position: relative; overflow: hidden; background: var(--ink); min-height: 300px; }
+.car-media > a {
+  position: absolute; inset: 0; opacity: 0; visibility: hidden;
+  transition: opacity 0.8s var(--ease), visibility 0s linear 0.8s;
+}
+.car-media > a.active { opacity: 1; visibility: visible; transition: opacity 0.8s var(--ease); }
+.car-media img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.08); transition: transform 7s linear; }
+.car-media > a.active img { transform: scale(1); }
+.car-media .gen-cover { padding: 36px; }
+.car-media .gen-cover .display { font-size: clamp(44px, 5vw, 72px); }
+.car-media .badge { position: absolute; left: 20px; top: 20px; z-index: 2; }
+.car-body { display: flex; flex-direction: column; gap: 22px; padding: 40px 44px 34px; min-width: 0; }
+.car-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.car-top .hand { font-size: 28px; line-height: 1; color: var(--saffron-deep); }
+.car-count { font-family: var(--font-display); font-size: 22px; letter-spacing: .06em; color: var(--muted); font-variant-numeric: tabular-nums; }
+.car-count b { color: var(--ink); font-weight: 400; }
+.car-slides { display: grid; flex: 1; align-content: center; }
+.car-slide {
+  grid-area: 1 / 1; display: flex; flex-direction: column; gap: 14px;
+  opacity: 0; visibility: hidden; transform: translateX(var(--from, 28px));
+  transition: opacity 0.5s var(--ease), transform 0.7s var(--ease), visibility 0s linear 0.5s;
+}
+.car-slide.active { opacity: 1; visibility: visible; transform: none; transition: opacity 0.6s var(--ease) 0.15s, transform 0.8s var(--ease) 0.15s; }
+.car-slide h3 { margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: clamp(28px, 2.6vw, 38px); line-height: 1.12; letter-spacing: -0.02em; text-wrap: balance; }
+.car-slide h3 a:hover { color: var(--saffron-deep); }
+.car-slide p { margin: 0; color: var(--muted); font-size: 16px; }
+.car-slide .link-arrow { align-self: flex-start; margin-top: 6px; }
+.car-nav { display: flex; align-items: center; gap: 14px; }
+.car-btn {
+  width: 46px; height: 46px; border-radius: 50%; border: 0; flex: none; display: grid; place-items: center;
+  background: transparent; box-shadow: inset 0 0 0 1.5px var(--line); transition: background .2s, box-shadow .2s, transform .2s;
+}
+.car-btn:hover { background: var(--ink); color: var(--cream); box-shadow: none; }
+.car-btn:active { transform: scale(.94); }
+.car-btn svg { width: 18px; height: 18px; }
+.car-btn.prev svg { transform: rotate(180deg); }
+.car-dots { display: flex; gap: 6px; flex: 1; flex-wrap: wrap; justify-content: center; }
+.car-dot { width: 26px; height: 26px; border: 0; padding: 0; background: transparent; display: grid; place-items: center; }
+.car-dot::before { content: ""; width: 8px; height: 8px; border-radius: 999px; background: var(--line); transition: width .4s var(--ease), background .3s; }
+.car-dot[aria-current="true"]::before { width: 24px; background: var(--ink); }
+.car-progress { height: 3px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.car-progress i { display: block; height: 100%; background: var(--saffron); transform-origin: left; transform: scaleX(0); }
+.car-progress i.run { animation: car-progress var(--dur, 6s) linear forwards; }
+.carousel.paused .car-progress i.run { animation-play-state: paused; }
+@keyframes car-progress { to { transform: scaleX(1); } }
+@media (max-width: 860px) {
+  .carousel, .carousel.media-right { grid-template-columns: 1fr; min-height: 0; }
+  .carousel.media-right .car-media { order: 0; }
+  .car-media { aspect-ratio: 16 / 10; min-height: 0; }
+  .car-body { padding: 26px 22px 24px; gap: 18px; }
+}
+
 /* Generated cover for posts without images */
 .gen-cover {
   position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px;
@@ -526,6 +587,7 @@ html.has-intro .intro.leave { transform: translateY(-100%); }
 .stat strong { font-variant-numeric: tabular-nums; }
 
 @media (prefers-reduced-motion: reduce) {
+  .car-progress { display: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
   html { scroll-behavior: auto; }
