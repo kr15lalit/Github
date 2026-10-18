@@ -22,10 +22,13 @@
   const esc = (s) =>
     String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
-  const fmtDate = (iso) =>
-    new Date(iso + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 
-  const readTime = (md) => Math.max(1, Math.round(md.trim().split(/\s+/).length / 220)) + " min read";
+  const readTime = (md, lang) => {
+    const mins = Math.max(1, Math.round(md.trim().split(/\s+/).length / 220));
+    return lang === "hi" ? `${mins} मिनट में पढ़ें` : `${mins} min read`;
+  };
+  const fmtDateFor = (iso, lang) =>
+    new Date(iso + "T00:00:00").toLocaleDateString(lang === "hi" ? "hi-IN" : "en-GB", { day: "numeric", month: "long", year: "numeric" });
 
   const thumbUrl = (id) => `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`;
   // maxres isn't generated for every upload — fall back to hq
@@ -44,17 +47,41 @@
       .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
       .replace(/\*([^*]+)\*/g, "<em>$1</em>");
   }
-  function markdown(md) {
+  // Markdown subset. Extras for long-form articles:
+  //   :::summary Title / :::context Title / :::takeaways Title / :::note Title  … :::   → styled boxes
+  //   > quote lines followed by "> — Name"                                           → pull quote with credit
+  function markdown(md, nested = false) {
     const lines = md.trim().split("\n");
-    let html = "", para = [], list = null;
+    let html = "", para = [], list = null, quote = null, block = null, h2 = 0;
     const flushPara = () => { if (para.length) { html += `<p>${inline(para.join(" "))}</p>`; para = []; } };
     const flushList = () => { if (list) { html += `<${list.type}>${list.items.map((i) => `<li>${inline(i)}</li>`).join("")}</${list.type}>`; list = null; } };
+    const flushQuote = () => {
+      if (!quote) return;
+      const cite = quote.length > 1 && /^[—–]\s*/.test(quote[quote.length - 1]) ? quote.pop().replace(/^[—–]\s*/, "") : "";
+      html += `<blockquote><p>${inline(quote.join(" "))}</p>${cite ? `<cite>${inline(cite)}</cite>` : ""}</blockquote>`;
+      quote = null;
+    };
+    const flushAll = () => { flushPara(); flushList(); flushQuote(); };
     for (const raw of lines) {
       const line = raw.trim();
       let m;
-      if (!line) { flushPara(); flushList(); continue; }
-      if ((m = line.match(/^(#{2,3})\s+(.*)/))) { flushPara(); flushList(); html += `<h${m[1].length}>${inline(m[2])}</h${m[1].length}>`; continue; }
-      if ((m = line.match(/^>\s?(.*)/))) { flushPara(); flushList(); html += `<blockquote><p>${inline(m[1])}</p></blockquote>`; continue; }
+      if (block) {
+        if (line === ":::") {
+          html += `<aside class="callout callout-${block.type}">${block.title ? `<span class="callout-label">${inline(block.title)}</span>` : ""}${markdown(block.lines.join("\n"), true)}</aside>`;
+          block = null;
+        } else block.lines.push(raw);
+        continue;
+      }
+      if ((m = line.match(/^:::(\w+)\s*(.*)$/))) { flushAll(); block = { type: m[1], title: m[2], lines: [] }; continue; }
+      if (!line) { flushAll(); continue; }
+      if ((m = line.match(/^(#{2,3})\s+(.*)/))) {
+        flushAll();
+        const id = m[1].length === 2 && !nested ? ` id="section-${++h2}"` : "";
+        html += `<h${m[1].length}${id}>${inline(m[2])}</h${m[1].length}>`;
+        continue;
+      }
+      if ((m = line.match(/^>\s?(.*)/))) { flushPara(); flushList(); (quote = quote || []).push(m[1]); continue; }
+      flushQuote();
       if ((m = line.match(/^[-*]\s+(.*)/)) || (m = line.match(/^\d+\.\s+(.*)/))) {
         flushPara();
         const type = /^\d/.test(line) ? "ol" : "ul";
@@ -65,7 +92,7 @@
       flushList();
       para.push(line);
     }
-    flushPara(); flushList();
+    flushAll();
     return html;
   }
 
@@ -80,12 +107,12 @@
 
   function postCard(p, i) {
     return `
-      <article class="post-card reveal" data-delay="${i % 3}">
+      <article class="post-card reveal" data-delay="${i % 3}" lang="${p.lang || "en"}">
         <a class="post-cover" href="post.html?p=${encodeURIComponent(p.slug)}" aria-hidden="true" tabindex="-1">
           <span class="badge ${p.category === "Everyday" ? "badge-ink" : ""}">${esc(p.category)}</span>
           ${coverHTML(p, i)}
         </a>
-        <div class="post-meta"><span>${fmtDate(p.date)}</span><span class="dot"></span><span>${readTime(p.body)}</span></div>
+        <div class="post-meta"><span>${fmtDateFor(p.date, p.lang)}</span><span class="dot"></span><span>${readTime(p.body, p.lang)}</span></div>
         <h3><a href="post.html?p=${encodeURIComponent(p.slug)}">${esc(p.title)}</a></h3>
         <p>${esc(p.excerpt)}</p>
       </article>`;
@@ -300,8 +327,8 @@
             </div>
             <div class="car-slides" aria-live="polite">
               ${posts.map((p, i) => `
-                <article class="car-slide ${i ? "" : "active"}" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${posts.length}"${i ? " aria-hidden=\"true\"" : ""}>
-                  <div class="post-meta"><span>${fmtDate(p.date)}</span><span class="dot"></span><span>${readTime(p.body)}</span></div>
+                <article class="car-slide ${i ? "" : "active"}" lang="${p.lang || "en"}" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${posts.length}"${i ? " aria-hidden=\"true\"" : ""}>
+                  <div class="post-meta"><span>${fmtDateFor(p.date, p.lang)}</span><span class="dot"></span><span>${readTime(p.body, p.lang)}</span></div>
                   <h3><a href="${href(p)}"${i ? ' tabindex="-1"' : ""}>${esc(p.title)}</a></h3>
                   <p>${esc(p.excerpt)}</p>
                   <a class="link-arrow" href="${href(p)}"${i ? ' tabindex="-1"' : ""}>Read the story <span>→</span></a>
@@ -497,12 +524,12 @@
       const list = active === "All" ? POSTS : POSTS.filter((p) => p.category === active);
       const [first, ...rest] = list;
       $("#featured-post").innerHTML = first ? `
-        <div class="featured-post reveal">
+        <div class="featured-post reveal" lang="${first.lang || "en"}">
           <a class="post-cover" href="post.html?p=${encodeURIComponent(first.slug)}" aria-hidden="true" tabindex="-1">
             <span class="badge ${first.category === "Everyday" ? "badge-ink" : ""}">${esc(first.category)}</span>${coverHTML(first, 0)}
           </a>
           <div>
-            <div class="post-meta"><span>Latest</span><span class="dot"></span><span>${fmtDate(first.date)}</span><span class="dot"></span><span>${readTime(first.body)}</span></div>
+            <div class="post-meta"><span>Latest</span><span class="dot"></span><span>${fmtDateFor(first.date, first.lang)}</span><span class="dot"></span><span>${readTime(first.body, first.lang)}</span></div>
             <h2>${esc(first.title)}</h2>
             <p>${esc(first.excerpt)}</p>
             <a class="btn btn-primary" href="post.html?p=${encodeURIComponent(first.slug)}">Read the story ${ICON.arrow}</a>
@@ -554,13 +581,16 @@
         <div class="container">
           <a class="back" href="blog.html">${ICON.back} All stories</a><br>
           <span class="badge ${p.category === "Everyday" ? "badge-ink" : ""}">${esc(p.category)}</span>
-          <h1>${esc(p.title)}</h1>
-          <div class="post-meta"><span>${fmtDate(p.date)}</span><span class="dot"></span><span>${readTime(p.body)}</span><span class="dot"></span><span>By ${esc(S.channelName)}</span></div>
+          <h1 lang="${p.lang || "en"}">${esc(p.title)}</h1>
+          <div class="post-meta"><span>${fmtDateFor(p.date, p.lang)}</span><span class="dot"></span><span>${readTime(p.body, p.lang)}</span><span class="dot"></span><span>${p.lang === "hi" ? "" : "By "}${esc(S.channelName)}</span></div>
         </div>
       </section>
       ${media}
       <div class="container">
-        <article class="prose">${markdown(p.body)}</article>
+        <div class="article-wrap">
+          <nav class="toc" lang="${p.lang || "en"}" aria-label="${p.lang === "hi" ? "इस लेख में" : "In this article"}" hidden></nav>
+          <article class="prose" lang="${p.lang || "en"}">${markdown(p.body)}</article>
+        </div>
         <div class="post-footer">
           <a class="btn btn-saffron" href="${esc(S.subscribeUrl)}" target="_blank" rel="noopener">${ICON.yt} Subscribe for new episodes</a>
           <div class="share">Share
@@ -574,6 +604,36 @@
           <div class="post-grid">${related.map(postCard).join("")}</div>
         </section>
       </div>`;
+
+    // table of contents (desktop) + reading progress
+    const heads = [...root.querySelectorAll(".prose > h2[id]")];
+    const toc = $(".toc", root);
+    if (heads.length >= 3) {
+      toc.innerHTML = `<span class="toc-label">${p.lang === "hi" ? "इस लेख में" : "In this article"}</span><ol>${heads.map((h) => `<li><a href="#${h.id}">${h.textContent.replace(/^\d+\.\s*/, "")}</a></li>`).join("")}</ol>`;
+      toc.hidden = false;
+      const links = [...toc.querySelectorAll("a")];
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((en) => {
+            if (!en.isIntersecting) return;
+            links.forEach((a) => a.classList.toggle("on", a.getAttribute("href") === "#" + en.target.id));
+          });
+        }, { rootMargin: "-20% 0px -70% 0px" });
+        heads.forEach((h) => io.observe(h));
+      }
+    }
+    const bar = document.createElement("div");
+    bar.className = "read-progress";
+    bar.setAttribute("aria-hidden", "true");
+    document.body.appendChild(bar);
+    const article = $(".prose", root);
+    const onScroll = () => {
+      const r = article.getBoundingClientRect();
+      const total = r.height - window.innerHeight * 0.6;
+      bar.style.transform = `scaleX(${Math.min(1, Math.max(0, -r.top / Math.max(1, total)))})`;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
 
     $("#copy-link").addEventListener("click", async (e) => {
       try { await navigator.clipboard.writeText(location.href); e.currentTarget.style.background = "var(--saffron)"; } catch (_) {}
