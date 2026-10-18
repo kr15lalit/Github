@@ -93,6 +93,7 @@
       }
       if ((m = line.match(/^:::(\w+)\s*(.*)$/))) { flushAll(); block = { type: m[1], title: m[2], lines: [] }; continue; }
       if (!line) { flushAll(); continue; }
+      if ((m = line.match(/^\[\[part\s+(.+)\]\]$/)) && !nested) { flushAll(); html += `<p class="part-mark"><span>${inline(m[1])}</span></p>`; continue; }
       if ((m = line.match(/^\[\[watch(?::([\w-]+))?\]\]$/))) { flushAll(); html += `<!--watch${m[1] ? ":" + m[1] : ""}-->`; continue; }
       if ((m = line.match(/^(#{2,3})\s+(.*)/))) {
         flushAll();
@@ -652,7 +653,11 @@
     const heads = [...root.querySelectorAll(".prose > h2[id]")];
     const toc = $(".toc", root);
     if (heads.length >= 3) {
-      toc.innerHTML = `<span class="toc-label">${p.lang === "hi" ? "इस लेख में" : "In this article"}</span><ol>${heads.map((h) => `<li><a href="#${h.id}">${h.textContent.replace(/^\d+\.\s*/, "")}</a></li>`).join("")}</ol>`;
+      // [[part …]] markers become un-numbered group labels in the contents list
+      const items = [...root.querySelectorAll(".prose > h2[id], .prose > .part-mark")].map((h) => h.id
+        ? `<li><a href="#${h.id}">${h.textContent.replace(/^\d+\.\s*/, "")}</a></li>`
+        : `<li class="toc-part">${h.textContent}</li>`);
+      toc.innerHTML = `<span class="toc-label">${p.lang === "hi" ? "इस लेख में" : "In this article"}</span><ol>${items.join("")}</ol>`;
       toc.hidden = false;
       const links = [...toc.querySelectorAll("a")];
       if ("IntersectionObserver" in window) {
