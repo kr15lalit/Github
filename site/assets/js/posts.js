@@ -604,33 +604,162 @@ Backups first, always. Then edits, teaser cuts, thumbnails and titles. One recor
   },
   {
     slug: "lost-3-lakhs-trading-lessons",
-    title: "Losing ₹3 Lakhs in 3 Months: The Lessons Worth More Than the Money",
+    title: "₹3 Lakh Gone in 3 Months: A Retired Banker on the Options Trap That Catches 9 in 10 Traders",
     date: "2026-09-28",
     category: "Episode Notes",
     excerpt:
-      "Trading looks easy on Instagram. This is the honest companion post to one of our most personal videos.",
+      "A ₹1,500 YouTube class, one lucky week, then three months of losing over ₹1 lakh a month. A retired banker's brutally honest story of options trading, and what SEBI's data says about why 91% of traders lose.",
     cover: "",
     video: "sDGD1Q-FGDk",
     body: `
-Nobody posts their losses. That's exactly why we made this video.
+The position was down ₹60,000. He couldn't bear to watch it anymore, so he cut the trade, put the phone down, and lay face-down on the bed.
 
-## Why it's so easy to start
+Fifteen minutes later he picked up the phone again. Had he held on, the loss would have been only ₹12,000. By 3:30 p.m., the market had closed at exactly the price where he had entered. The trade that cost him ₹60,000 would have cost him nothing.
 
-Apps make it frictionless, reels make it look glamorous, and a couple of early wins make it feel like skill. That combination is dangerous.
+That is one afternoon from the story of our guest: a retired bank employee who, in just three months of options trading, lost more than ₹3 lakh, including every rupee of the ₹4 lakh profit he had patiently made in stocks.
 
-## Lessons that stuck
+His story isn't rare. It's the norm. According to SEBI's own study, **91% of individual traders in India's futures and options (F&O) market lost money in FY25**, with combined losses of about **₹1.06 lakh crore**, roughly ₹1.1 lakh per trader. Put simply, only about 9 out of every 100 make money.
 
-1. **Decide your maximum loss before you enter a trade** — not during it.
-2. **Never trade money you need.** Rent, EMIs and emergency funds are off-limits.
-3. **Emotions are the real opponent.** Revenge trading after a loss is how small losses become big ones.
-4. **Learn before you earn.** Paper trade until your process is boring.
-5. **Write things down.** A trading journal shows patterns your memory hides.
+We asked him to tell the whole story honestly: the excitement, the panic, the mistakes he's embarrassed about, and what finally helped him stop the bleeding. He did. That's what makes this conversation worth your time.
 
-## The bigger point
+:::summary In this conversation
+- How it starts: a ₹1,500 YouTube class and an "easy" first week
+- The week it turned, and the moment he realised he knew nothing
+- The traps: revenge trading, greed and a ₹79,000 margin shock
+- The silent killer: brokerage, charges and overtrading
+- Climbing back: smaller size, fewer trades, more patience
+:::
 
-Losing money hurts. Losing it *without learning anything* hurts twice. If this post saves even one person from repeating the same mistakes, sharing it was worth it.
+[[watch]]
 
-*This is a personal story, not financial advice. Please speak to a registered advisor before making investment decisions.*
+## 1. How it starts: a ₹1,500 class and an "easy" first week
+
+After retiring from his bank job, he suddenly had empty days. He first tried selling life insurance, but people soon stopped picking up his calls, and even relatives began to avoid him. Trading seemed perfect: work from home, keep the mind busy, and, he told himself, never sell a stock at a loss.
+
+In stocks, it worked. He bought companies with steadily rising quarterly and yearly profits, and by June he was about **₹4 lakh in profit**.
+
+Then he found options. He watched a YouTube creator, paid ₹1,500 for a weekly online class, and learned two or three "strategies". What he really learned, he admits, was only how to press *buy* and *sell*. He bought weekly-expiry Nifty options, sold them a few minutes later for 10 or 15 points, and in the first week he made **₹17,000–18,000**.
+
+> "I thought: this needs less money, and there's profit every single day. Why not leave stocks and just do options?"
+> — Our guest
+
+:::context The bigger picture
+That first-week high is exactly what makes options so dangerous for beginners. A small amount of money controls a large position, and quick early wins feel like skill rather than luck. SEBI's three-year study (FY22 to FY24) found that **93% of individual F&O traders lost money, an average of about ₹2 lakh each, adding up to more than ₹1.8 lakh crore**. Only 1% made a profit of more than ₹1 lakh after costs.
+:::
+
+## 2. The week it turned, and the moment he realised he knew nothing
+
+In the second week, he lost **₹49,000**.
+
+For the next three months, July, August and September, he lost **more than ₹1 lakh every single month**. By October, the ₹4 lakh he had built up in stocks was gone.
+
+Part of it was pure guesswork. If the market had risen 50 or 70 points, he'd assume it "couldn't go higher" and bet on a fall, and then watch it run another 200 points. He didn't know what support or resistance meant. Some losses came from mistakes he'd rather forget: the trading app defaulted to *buy*, and more than once he swiped to place an order and ended up buying when he meant to sell.
+
+The turning point came from another YouTube video. The trader on screen listed what every options trader must know: stop-loss, swing high, swing low and a few other terms.
+
+> "He said: 'If you don't know these, then *bhagwan maalik* (God help you). I can't even teach you.' And I realised I didn't know any of it."
+> — Our guest
+
+He admits he still doesn't always set a proper stop-loss or target. That honesty is the point: most people who lose money in options are not reckless gamblers. They are ordinary, intelligent people who entered a professional arena with a few YouTube videos.
+
+## 3. The traps: revenge trading, greed and a ₹79,000 margin shock
+
+Three patterns caused most of his biggest losses. Anyone who has traded will recognise them.
+
+**Trap 1: Doubling up to "recover" a loss.** After a few small losing trades, say ₹2,000 down, he'd think: "If I buy 1,000 quantity, just 3 points will make it back." Sometimes it did. Often, he lost twice as much.
+
+**Trap 2: Selling options without understanding margin.** When buying two or four lots was making ₹2,000–3,000 a trade, he decided to go bigger and *sell* 300 quantity of calls. He had no idea how much margin selling requires. In minutes, almost his entire balance was blocked, and that day closed with a **₹79,000 loss**.
+
+**Trap 3: Greed on the way up, fear on the way down.** He described one trade with painful precision:
+
+> "₹5,000 profit, I'm happy. ₹10,000, very happy. ₹11,000, let it go higher. Then it dropped to ₹8,000, ₹7,000, ₹5,000. I said, I'll exit at ₹10,000. It came back to zero. Then I said, at least let the commission come out. Then it went into loss."
+> — Our guest
+
+And the mirror image, exiting too early out of fear: he'd buy at ₹110, panic at ₹103 because 1,000 quantity meant a ₹7,000 loss, cut the trade, and watch it rise to ₹120.
+
+> "Of course my heart goes *dhak-dhak*. Once the loss crossed ₹2,000, it would start. Past ₹5,000, I'd cut the trade."
+> — Our guest
+
+Without a plan decided *before* entering a trade, every decision is made by fear or greed in the middle of it.
+
+:::context The bigger picture
+His instinct to keep going after big losses is common too. SEBI found that **more than 75% of loss-making traders continued trading** despite losing money year after year. And his age didn't protect him: in SEBI's FY26 data, around **81% of traders above 60 still lost money**. Older traders do better than the under-30s (about 89% of whom lose), but four out of five losing is hardly a safe bet for retirement savings.
+:::
+
+## 4. The silent killer: brokerage, charges and overtrading
+
+This might be the most eye-opening part of the conversation.
+
+He'd heard that brokerage was "just ₹20 a trade", so he didn't worry about it. One day he made **29 trades**, buying and selling 58 times, and ended the day ₹6,500 up. He was thrilled. The next day, 24 trades and ₹4,500 up. The day after, ₹11,000 down.
+
+He didn't even know how to check his options P&L until three days later. When he finally did, the picture changed completely:
+
+- **Day 1:** ₹6,500 profit, about ₹5,000 in charges, so roughly **₹1,500** left
+- **Day 2:** ₹4,500 profit, about ₹5,500 in charges, so actually **₹1,000 lost**
+- **Day 3:** ₹11,000 loss plus ₹4,500 in charges, so **₹15,500 lost**
+
+Brokerage is only one part. Exchange fees, taxes and other charges add up on every single trade, and the more often you trade, the faster they eat whatever you make.
+
+:::context The bigger picture
+SEBI's data shows exactly the same pattern at national scale. Between FY22 and FY24, individual F&O traders spent **about ₹50,000 crore on transaction costs** alone, around ₹26,000 per trader in FY24.
+
+Meanwhile, the money doesn't disappear; it moves. In FY24, proprietary trading firms and foreign portfolio investors made gross trading profits of about ₹33,000 crore and ₹28,000 crore respectively, and **over 96% of those profits came from algorithmic trading**. When a retail trader taps *buy* on a phone, the person on the other side is very often a machine.
+:::
+
+## 5. Climbing back: smaller size, fewer trades, more patience
+
+After losing ₹1 lakh in the first week of October alone, he stopped trading for three days. Then he started changing things, one at a time:
+
+- **Cut position size:** from 1,000 quantity to 500, and later to a maximum of 200 (8 lots).
+- **Capped trades:** no more than five trades a day.
+- **Kept it simple:** only Nifty, no jumping between Nifty and Bank Nifty.
+- **Stopped double-trading** on the same big candle.
+
+October still ended with a loss, but a much smaller one. In December, at the time of recording, he was **in profit** for the month.
+
+His new philosophy came from a learning video, and it's the opposite of what drew him in:
+
+> "Whether you trade three times a month, five or ten, make them quality trades. If you trade five days and sit out the other 25, that's also good for you. And that's exactly what happened with me."
+> — Our guest
+
+:::context The bigger picture
+Regulators have also stepped in. From November 2024, SEBI raised the minimum size of index derivative contracts from ₹5 lakh to ₹15 lakh, allowed each exchange only one weekly-expiry index, and required option premiums to be paid upfront. In the quarters that followed, the number of individual F&O traders fell by about 20% to 30%. Even so, losses remained huge: total individual losses still rose to ₹1.06 lakh crore in FY25.
+:::
+
+## Before you place your first options trade
+
+We asked what he would tell anyone, of any age, who is thinking of starting. His advice was simple:
+
+> "First sit with someone for at least six months and understand it. My mistake was taking too much quantity at the start. If I'd started with one or two lots, I'd have lasted six or seven months instead of losing it all in three."
+> — Our guest
+
+Here is what his story teaches, in plain terms:
+
+1. **Learn before you earn.** Understand price action, trends, stop-loss, targets and margin before risking real money, and paper-trade first.
+2. **Decide your exit before you enter.** Know your stop-loss and target in advance, and stick to them.
+3. **Start tiny.** One or two lots. If you can't handle a small loss calmly, you can't handle a big one.
+4. **Never trade money you need.** Retirement savings, emergency funds, school fees and EMIs are off-limits.
+5. **Count every cost.** Check your real P&L, after brokerage and charges, every single day.
+6. **Fewer, better trades.** Overtrading feeds the broker, not you.
+7. **Take a break after a big loss.** Revenge trading is how small losses become big ones.
+
+:::note Important
+This article shares one person's real experience and publicly available SEBI data. It is not investment advice. F&O trading carries a high risk of loss. Please speak to a SEBI-registered investment adviser before making financial decisions.
+:::
+
+## The real lesson
+
+What stayed with us after this conversation wasn't the size of the losses. It was how ordinary the path was: a retired man with free time, a ₹1,500 online course, one lucky week, and then three months of learning the hardest way possible.
+
+He's still trading, more carefully now. He chose to share the embarrassing parts so that someone else might skip them. If you know someone who has just discovered options trading, a parent, a friend, a young colleague, this is the conversation to send them.
+
+:::takeaways Key takeaways
+1. About 9 in 10 individual F&O traders in India lose money. Assume you will be one of them until you've proven otherwise.
+2. A few winning days in options mean very little. Early wins often lead to bigger bets.
+3. Doubling up to recover, selling options without understanding margin, and holding on out of greed caused his biggest losses.
+4. Brokerage and charges quietly ate most of his profits on high-trade days.
+5. Smaller size, a daily trade limit and patience helped him stop the losses.
+:::
 `,
   },
   {
