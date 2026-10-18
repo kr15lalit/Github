@@ -93,4 +93,22 @@ window.SITE = {
   ],
 
   contactEmail: "hello@example.com",
+
+  // "Pitch your story" guest form. Answers go into your Google Form (and its Google Sheet).
+  // Setup steps: see GUEST-FORM-SETUP.md. Until googleFormId and the entry IDs are filled in,
+  // the form still works: it opens the visitor's email app with their answers filled in.
+  guestForm: {
+    googleFormId: "", // from your form's link: docs.google.com/forms/d/e/THIS_PART/viewform
+    entries: {
+      name: "", email: "", phone: "", city: "",
+      role: "", link: "", industry: "",
+      title: "", story: "", myth: "",
+      language: "", mode: "", source: "",
+    },
+    // These must match the options in the Google Form exactly
+    industries: ["Health & Medicine", "Money & Investing", "Government & Policy", "Tech & AI", "Business & Startups", "Careers & Education", "Spirituality & Wellbeing", "Arts, Media & Culture", "Something else"],
+    languages: ["Hindi", "English", "Hinglish"],
+    modes: ["In the studio", "Remote video call", "Either works"],
+    sources: ["YouTube", "Instagram", "LinkedIn", "A friend", "Somewhere else"],
+  },
 };

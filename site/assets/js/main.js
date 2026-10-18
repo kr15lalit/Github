@@ -156,7 +156,7 @@
           <div class="footer-big" aria-hidden="true">${esc(S.channelName)}</div>
           <div class="footer-bottom">
             <span>© ${new Date().getFullYear()} ${esc(S.channelName)}. All rights reserved.</span>
-            <span>Want to be a guest? <a href="mailto:${esc(S.contactEmail)}" style="color:var(--saffron)">${esc(S.contactEmail)}</a></span>
+            <span>Want to be a guest? <a href="#pitch" data-pitch style="color:var(--saffron)">Pitch your story →</a></span>
           </div>
         </div>`;
     }
@@ -460,7 +460,7 @@
         <span class="hand">Your story here?</span>
         <h3>Be our next guest</h3>
         <p>Built something, survived something or know something the rest of us should hear? We'd love to talk.</p>
-        <a class="btn btn-primary" href="mailto:${esc(S.contactEmail)}?subject=${encodeURIComponent("Guest on Insightoholix")}">Pitch your story →</a>
+        <a class="btn btn-primary" href="#pitch" data-pitch>Pitch your story →</a>
       </article>`;
 
     const initials = (name) => name.split(/\s+/).map((w) => w[0]).join("").slice(0, 2).toUpperCase();
@@ -580,9 +580,202 @@
     });
   }
 
+  /* ---------------- Guest pitch form ---------------- */
+  function setupPitch() {
+    const F = S.guestForm || {};
+    const chips = (name, options, type = "radio", required = false) => `
+      <div class="pf-chips" role="${type === "radio" ? "radiogroup" : "group"}">
+        ${options.map((o, i) => `<label class="pf-chip"><input type="${type}" name="${name}" value="${esc(o)}"${required && i === 0 ? " required" : ""}><span>${esc(o)}</span></label>`).join("")}
+      </div>`;
+    const steps = [
+      { title: "About you", hint: "Who's going to be in the chair?" },
+      { title: "Your story", hint: "The conversation only you can have." },
+      { title: "The details", hint: "Almost done. Just the practical bits." },
+    ];
+
+    const wrap = document.createElement("div");
+    wrap.className = "pitch";
+    wrap.hidden = true;
+    wrap.innerHTML = `
+      <div class="pitch-backdrop" data-close></div>
+      <div class="pitch-panel" role="dialog" aria-modal="true" aria-labelledby="pitch-title">
+        <aside class="pitch-side">
+          <img src="${esc(S.logo)}" alt="" width="64" height="64">
+          <p class="hand">Your story here?</p>
+          <h2 class="display" id="pitch-title">Be our next guest</h2>
+          <ol class="pitch-steps">${steps.map((s, i) => `<li data-step="${i}"><b>0${i + 1}</b><span>${s.title}</span></li>`).join("")}</ol>
+          <p class="pitch-note">Every pitch is read by the hosts.</p>
+        </aside>
+        <div class="pitch-main">
+          <button class="pitch-close" type="button" aria-label="Close" data-close>${ICON.close}</button>
+          <div class="pitch-progress" aria-hidden="true"><i></i></div>
+          <form class="pitch-form" novalidate>
+            <fieldset class="pf-step" data-step="0">
+              <legend><span class="pf-count">Step 1 of 3</span>${steps[0].title}<small>${steps[0].hint}</small></legend>
+              <div class="pf-row">
+                <label class="pf-field"><span>Full name *</span><input id="pf-name" name="name" autocomplete="name" required></label>
+                <label class="pf-field"><span>Email *</span><input id="pf-email" name="email" type="email" autocomplete="email" required></label>
+              </div>
+              <div class="pf-row">
+                <label class="pf-field"><span>WhatsApp / phone</span><input id="pf-phone" name="phone" type="tel" autocomplete="tel" placeholder="+91"></label>
+                <label class="pf-field"><span>City</span><input id="pf-city" name="city" autocomplete="address-level2"></label>
+              </div>
+              <label class="pf-field"><span>What do you do? *</span><input id="pf-role" name="role" required placeholder="e.g. Cardiologist, startup founder, retired IAS officer"></label>
+              <label class="pf-field"><span>LinkedIn, Instagram or website *</span><input id="pf-link" name="link" type="url" required placeholder="https://"></label>
+            </fieldset>
+
+            <fieldset class="pf-step" data-step="1" hidden>
+              <legend><span class="pf-count">Step 2 of 3</span>${steps[1].title}<small>${steps[1].hint}</small></legend>
+              <div class="pf-field"><span>Your world *</span>${chips("industry", F.industries || [], "radio", true)}</div>
+              <label class="pf-field"><span>If your episode had a title, what would it be? *</span><input id="pf-title" name="title" required maxlength="100" placeholder="e.g. I quit a ₹40 LPA job to farm, here's what happened"></label>
+              <label class="pf-field"><span>Tell us the story *</span><textarea id="pf-story" name="story" rows="5" maxlength="800" required placeholder="What happened, what you learned, and why our listeners should hear it."></textarea><em class="pf-counter" aria-live="polite">0 / 800</em></label>
+              <label class="pf-field"><span>One thing most people get wrong about your field</span><input id="pf-myth" name="myth" maxlength="160"></label>
+            </fieldset>
+
+            <fieldset class="pf-step" data-step="2" hidden>
+              <legend><span class="pf-count">Step 3 of 3</span>${steps[2].title}<small>${steps[2].hint}</small></legend>
+              <div class="pf-field"><span>Languages you're comfortable in *</span>${chips("language", F.languages || [], "checkbox")}</div>
+              <div class="pf-field"><span>How would you like to record? *</span>${chips("mode", F.modes || [], "radio", true)}</div>
+              <div class="pf-field"><span>How did you find us?</span>${chips("source", F.sources || [])}</div>
+              <label class="pf-consent"><input id="pf-consent" type="checkbox" name="consent" required><span>I'm happy for the Insightoholix team to contact me about this pitch.</span></label>
+            </fieldset>
+
+            <div class="pf-done" hidden>
+              <span class="hand">Pitch received</span>
+              <h3 class="display">Thank you<span class="pf-first"></span>!</h3>
+              <p>Every pitch is read by the hosts. If your story is a fit for an upcoming episode, we'll reach out by email or WhatsApp.</p>
+              <button class="btn btn-primary" type="button" data-close>Back to the site</button>
+            </div>
+
+            <p class="pf-error" role="alert" hidden></p>
+            <div class="pf-nav">
+              <button class="btn btn-ghost btn-sm" type="button" data-back hidden>← Back</button>
+              <button class="btn btn-primary" type="submit" data-next>Continue →</button>
+            </div>
+          </form>
+        </div>
+      </div>`;
+    document.body.appendChild(wrap);
+
+    const form = $(".pitch-form", wrap);
+    const stepEls = [...wrap.querySelectorAll(".pf-step")];
+    const sideSteps = [...wrap.querySelectorAll(".pitch-steps li")];
+    const next = $("[data-next]", wrap), back = $("[data-back]", wrap), err = $(".pf-error", wrap);
+    const bar = $(".pitch-progress i", wrap);
+    let step = 0, lastFocus = null;
+
+    const show = (i) => {
+      step = i;
+      stepEls.forEach((el, k) => (el.hidden = k !== i));
+      sideSteps.forEach((li, k) => { li.classList.toggle("on", k === i); li.classList.toggle("done", k < i); });
+      back.hidden = i === 0;
+      next.textContent = i === stepEls.length - 1 ? "Send my pitch →" : "Continue →";
+      bar.style.transform = `scaleX(${(i + 1) / stepEls.length})`;
+      err.hidden = true;
+      const first = stepEls[i].querySelector("input, textarea");
+      if (first) first.focus({ preventScroll: true });
+    };
+    const open = () => {
+      lastFocus = document.activeElement;
+      wrap.hidden = false;
+      document.body.style.overflow = "hidden";
+      requestAnimationFrame(() => wrap.classList.add("open"));
+      show(step);
+    };
+    const close = () => {
+      wrap.classList.remove("open");
+      document.body.style.overflow = "";
+      setTimeout(() => (wrap.hidden = true), 300);
+      if (location.hash === "#pitch") history.replaceState(null, "", location.pathname + location.search);
+      if (lastFocus) lastFocus.focus();
+    };
+
+    const validStep = (i) => {
+      const el = stepEls[i];
+      for (const input of el.querySelectorAll("input[required], textarea[required]")) {
+        if (input.type === "radio") {
+          if (!el.querySelector(`input[name="${input.name}"]:checked`)) return `Please pick an option for "${input.closest(".pf-field").querySelector("span").textContent.replace(" *", "")}".`;
+        } else if (input.type === "checkbox") {
+          if (!input.checked) return "Please tick the box so we can contact you.";
+        } else if (!input.value.trim()) {
+          input.focus(); return `Please fill in "${input.closest("label").querySelector("span").textContent.replace(" *", "")}".`;
+        } else if (!input.checkValidity()) {
+          input.focus(); return input.type === "email" ? "That email address doesn't look right." : input.type === "url" ? "Please paste a full link, starting with https://" : "Please check this field.";
+        }
+      }
+      if (i === 2 && !el.querySelector('input[name="language"]:checked')) return "Please pick at least one language.";
+      return "";
+    };
+
+    const values = () => {
+      const fd = new FormData(form);
+      const v = {};
+      for (const [k, val] of fd.entries()) v[k] = v[k] ? [].concat(v[k], val) : val;
+      return v;
+    };
+
+    const send = async (v) => {
+      const E = F.entries || {};
+      if (F.googleFormId && E.name) {
+        const body = new URLSearchParams();
+        Object.entries(E).forEach(([key, entry]) => {
+          if (!entry || v[key] == null) return;
+          [].concat(v[key]).forEach((val) => body.append(entry, val));
+        });
+        // Google Forms doesn't send CORS headers, so the response can't be read; a network error still throws.
+        await fetch(`https://docs.google.com/forms/d/e/${encodeURIComponent(F.googleFormId)}/formResponse`, { method: "POST", mode: "no-cors", body });
+        return;
+      }
+      const lines = [
+        ["Name", v.name], ["Email", v.email], ["Phone", v.phone], ["City", v.city], ["What I do", v.role], ["Link", v.link],
+        ["Field", v.industry], ["Episode title", v.title], ["Story", v.story], ["What people get wrong", v.myth],
+        ["Languages", [].concat(v.language || []).join(", ")], ["Recording", v.mode], ["Found you via", v.source],
+      ].filter(([, x]) => x).map(([k, x]) => `${k}: ${x}`);
+      location.href = `mailto:${S.contactEmail}?subject=${encodeURIComponent("Guest pitch: " + (v.title || v.name))}&body=${encodeURIComponent(lines.join("\n\n"))}`;
+    };
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const problem = validStep(step);
+      if (problem) { err.textContent = problem; err.hidden = false; return; }
+      if (step < stepEls.length - 1) { show(step + 1); return; }
+      next.disabled = true; next.textContent = "Sending…";
+      try {
+        const v = values();
+        await send(v);
+        stepEls.forEach((el) => (el.hidden = true));
+        $(".pf-nav", wrap).hidden = true;
+        err.hidden = true;
+        $(".pf-first", wrap).textContent = v.name ? ", " + String(v.name).trim().split(/\s+/)[0] : "";
+        $(".pf-done", wrap).hidden = false;
+        sideSteps.forEach((li) => { li.classList.remove("on"); li.classList.add("done"); });
+        bar.style.transform = "scaleX(1)";
+      } catch (_) {
+        err.textContent = `Your pitch couldn't be sent. Check your connection and try again, or email us at ${S.contactEmail}.`;
+        err.hidden = false;
+      } finally {
+        next.disabled = false; if (step === stepEls.length - 1) next.textContent = "Send my pitch →";
+      }
+    });
+    back.addEventListener("click", () => show(Math.max(0, step - 1)));
+    form.addEventListener("input", () => (err.hidden = true));
+    form.addEventListener("change", () => (err.hidden = true));
+    const story = $("#pf-story", wrap), counter = $(".pf-counter", wrap);
+    story.addEventListener("input", () => (counter.textContent = `${story.value.length} / 800`));
+
+    wrap.addEventListener("click", (e) => { if (e.target.closest("[data-close]")) close(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !wrap.hidden) close(); });
+    document.addEventListener("click", (e) => {
+      const t = e.target.closest("[data-pitch]");
+      if (t) { e.preventDefault(); open(); }
+    });
+    if (location.hash === "#pitch") open();
+  }
+
   /* ---------------- Boot ---------------- */
   renderChrome();
   setupModal();
+  setupPitch();
   const page = document.body.dataset.page;
   if (page === "home") { renderHome(); splitLetters($(".hero-title")); }
   if (page === "blog") renderBlog();
