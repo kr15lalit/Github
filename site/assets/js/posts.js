@@ -23,11 +23,11 @@ window.POSTS = [
     date: "2026-10-15",
     category: "Episode Notes",
     excerpt:
-      "Our longest conversation yet, with a former IAS officer. The big themes, the uncomfortable truths, and who should watch it.",
+      "Our longest conversation yet, with former IAS officer Aditya Nath Das. The big themes, the uncomfortable truths, and who should watch it.",
     cover: "",
     video: "dM9CqdQ6ApI",
     body: `
-Lakhs of aspirants appear for the civil services exam every year. Only a tiny fraction make it to the final list. We wanted to understand why — from someone who has seen the system from the inside.
+Lakhs of aspirants appear for the civil services exam every year. Only a tiny fraction make it to the final list. We wanted to understand why — from former IAS officer Aditya Nath Das, who has seen the system from the inside.
 
 ## The questions we asked
 
