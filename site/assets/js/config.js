@@ -59,6 +59,7 @@ window.SITE = {
     { name: "Dr. Arun Tungaria", role: "Neurosurgeon", episode: "Db8uUA9dlYA", topic: "Anxiety, depression & mobile addiction" },
     { name: "Sanddeep Bajaj", role: "Numerologist", episode: "_TPYlhVhpy4", topic: "Does your birth date decide success?" },
     { name: "Nitisha Malhotra", role: "Astrologer & Numerologist", episode: "4ojqBPlD0Jo", topic: "Can destiny really be changed?" },
+    { name: "Ravi", role: "Insurance Professional", episode: "YwBDPUkqKVk", topic: "Health and term insurance, explained without the jargon" }, // title to be confirmed
   ],
 
   // Featured episode in the hero (ID from https://www.youtube.com/watch?v=THIS_PART)

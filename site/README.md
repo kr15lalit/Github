@@ -37,6 +37,7 @@ Set `video` to a YouTube ID to embed that episode at the top of the post and use
 - [ ] **Guest pitch form:** create the Google Form using [GUEST-FORM-SETUP.md](GUEST-FORM-SETUP.md), then send the pre-filled link so it can be connected (`guestForm` in `config.js`)
 - [ ] **Contact email:** replace `hello@example.com` in `config.js` (`contactEmail`)
 - [ ] **Social links:** real Instagram / LinkedIn URLs in `config.js` (`socials`)
+- [ ] **Guests:** confirm Ravi's surname and title for his guest card
 - [ ] **Hosts:** photos of Lalit and Vandana (optional, `photo` in `config.js`), plus profile links
 - [ ] **Blog posts:** rewrite the episode posts from the transcripts (optional)
 - [ ] **Go live:** merge to `main`, enable GitHub Pages (Settings → Pages → Source: GitHub Actions), connect your domain
