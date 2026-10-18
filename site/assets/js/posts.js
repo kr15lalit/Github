@@ -41,7 +41,7 @@ A teenager who thinks her irregular periods mean something is wrong with her. A 
 
 These are not rare stories. They are what happens when half the population grows up learning about their own bodies through hesitant conversations, forwarded messages and guesswork. **Women's health is still surrounded by taboos, myths and half-knowledge.** And the cost is real: symptoms ignored, questions never asked, help sought too late.
 
-That's why this became a two-part series. We sat down with **Dr. Poonam Gupta, an obstetrician and gynaecologist**, to walk through every stage of a woman's life, from the first period to menopause, in plain language. She chose this field because she loved surgery, and because her parents dreamt of her becoming a "lady doctor". Like most gynaecologists, she can be called in at any hour of any day, and she credits her family and husband for helping her balance it all.
+That's why this became a two-part series. Host Vandana sat down with **Dr. Poonam Gupta, an obstetrician and gynaecologist**, to walk through every stage of a woman's life, from the first period to menopause, in plain language. She chose this field because she loved surgery, and because her parents dreamt of her becoming a "lady doctor". Like most gynaecologists, she can be called in at any hour of any day, and she credits her family and husband for helping her balance it all.
 
 This article brings both episodes together in one place.
 
@@ -84,7 +84,7 @@ When Dr. Poonam was a student, PCOD was a tiny column in her textbook. "Now it's
 
 **PCOD and PCOS are not two different diseases.** They are points on the same spectrum. In the ovary, many small follicles form, often in a typical "necklace" pattern, but none of them matures properly. So ovulation doesn't happen regularly, and periods become irregular. When **metabolic problems** are added, such as weight gain and insulin resistance, it is called **PCOS (polycystic ovary syndrome)**. That can bring acne, excess hair growth, abnormal cholesterol, and a higher risk of **diabetes and high blood pressure** later in life.
 
-Why is it rising so fast? Our host asked whether it was lifestyle, and Dr. Poonam agreed. Processed food full of high-glycaemic carbohydrates and fats, sedentary routines and stress (which often means stress-eating) drive weight gain and insulin resistance, which in turn disrupt ovulation. "It's a vicious circle," she said, "and we need to break it."
+Why is it rising so fast? Host Vandana asked whether it was lifestyle, and Dr. Poonam agreed. Processed food full of high-glycaemic carbohydrates and fats, sedentary routines and stress (which often means stress-eating) drive weight gain and insulin resistance, which in turn disrupt ovulation. "It's a vicious circle," she said, "and we need to break it."
 
 **How do you break it?** Medicines can regularise periods, but they don't fix the root cause. The cornerstone of treatment is lifestyle:
 
@@ -180,7 +180,7 @@ Other causes of ovulation stopping include PCOS, thyroid problems, uncontrolled 
 
 ## 6. Infertility and IVF: when to seek help, and the myths to drop
 
-Our host said what many young couples feel: very few people around her seem to be conceiving naturally. So when should you see a doctor?
+Vandana said what many young couples feel: very few people around her seem to be conceiving naturally. So when should you see a doctor?
 
 :::help When to seek medical help for conceiving
 - **Under 35:** after **12 months** of regular unprotected sex without conceiving
@@ -268,7 +268,7 @@ Anaemia is one of the biggest threats to Indian mothers. According to the Nation
 
 ## 8. Normal delivery or C-section? The honest answer
 
-Our host didn't hold back here. The WHO has long suggested that caesarean rates above about **15%** don't bring extra benefits to mothers and babies. Yet in many private hospitals in India, rates have crossed **40%**. Why?
+Vandana didn't hold back here. The WHO has long suggested that caesarean rates above about **15%** don't bring extra benefits to mothers and babies. Yet in many private hospitals in India, rates have crossed **40%**. Why?
 
 Dr. Poonam explained that there are real reasons behind part of the rise: women are becoming mothers later, and with age come more **diabetes, high blood pressure** and growth problems in the baby. Diabetes can also mean a very large baby, which makes a normal delivery riskier.
 
@@ -337,7 +337,7 @@ And fathers should absolutely join in:
 
 **Struggling with low milk supply?** The most powerful signal is the simplest: **feed the baby every one to two hours**. Every time the breast is emptied, the brain gets the message to make more milk. Fibre-rich food, whole grains, **ajwain, jeera or saunf water**, and a little ginger and garlic in the diet also help. And no, moderate exercise doesn't reduce milk supply.
 
-**Postpartum depression.** Our host raised something many families miss. A new mother feeding every two hours, barely sleeping and getting no time for herself can begin to struggle, and it shows in her behaviour. Dr. Poonam described three levels:
+**Postpartum depression.** Vandana raised something many families miss. A new mother feeding every two hours, barely sleeping and getting no time for herself can begin to struggle, and it shows in her behaviour. Dr. Poonam described three levels:
 
 1. **Baby blues**, the mildest: anxiety, frequent crying, poor sleep. With support from the husband and family, most women overcome it.
 2. **Postpartum depression**: intense anxiety and sadness, crying spells, and sometimes thoughts of harming herself or the baby. Counselling and family support are essential, and medicines may be needed.
