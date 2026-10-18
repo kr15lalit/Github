@@ -380,11 +380,11 @@ This article summarises the views our guest shared on the show. Quotes are trans
   },
   {
     slug: "health-and-term-insurance",
-    title: "One Hospital Bill Away: Health, Term and Crop Insurance Explained Without the Jargon",
+    title: "One Hospital Bill Away: Health and Term Insurance Explained Without the Jargon",
     date: "2026-10-16",
     category: "Episode Notes",
     excerpt:
-      "A single illness can wipe out years of savings, and a hidden pre-existing condition can get your claim rejected. Insurance professional Ravi on what to buy first, how much cover you need, and how farmers can protect their crops.",
+      "A single illness can wipe out years of savings, and a hidden pre-existing condition can get your claim rejected. Insurance professional Ravi on what to buy first, how much cover you need, and how to make sure your family actually gets paid.",
     cover: "",
     video: "YwBDPUkqKVk",
     body: `
@@ -397,14 +397,13 @@ During this conversation, host Lalit Sharma put it in one line that stayed with 
 > "The difference between being middle class and being poor is often health insurance."
 > — Lalit Sharma
 
-To make sense of health, term and crop insurance, without the sales pitch, Lalit spoke to **Ravi**, his batchmate from MBA days, who has spent 12 years in the insurance industry, most of it in rural and micro insurance, and now leads crop, cattle and fisheries insurance.
+To make sense of health and term insurance, without the sales pitch, Lalit spoke to **Ravi**, his batchmate from MBA days, who has spent 12 years in the insurance industry, much of it in rural and micro insurance.
 
 :::summary In this conversation
 - Why so many Indians still don't trust insurance
 - Health insurance first: what one illness can do to a family
 - How to buy health insurance without getting your claim rejected
 - Term insurance: the policy nobody wants to talk about
-- Crop insurance: protecting six months of a farmer's work
 :::
 
 [[watch]]
@@ -510,44 +509,9 @@ When a claim is paid, it's usually a **lump sum**. Ravi's advice to families: wo
 India's insurance penetration, meaning premiums as a share of GDP, is just **3.7%**, roughly half the global average of about 7%. Life insurance penetration is only **2.8%**, and even that includes many investment-style policies rather than pure protection. Ravi believes the biggest gap is understanding: insurance pays when something goes wrong, not as a return on money spent.
 :::
 
-## 5. Crop insurance: protecting six months of a farmer's work
-
-This is Ravi's own field, and he spoke about it with real feeling. For a farmer, a crop represents three to six months of work, savings and hope. One flood, drought or hailstorm before harvest can wipe it all out.
-
-The main scheme today is the **Pradhan Mantri Fasal Bima Yojana (PMFBY)**, launched in 2016 to replace earlier schemes (NAIS and MNAIS) with lower premiums and a simpler, largely digital process.
-
-**What farmers pay:**
-
-- **2%** of the sum insured for kharif crops
-- **1.5%** for rabi crops
-- **5%** for annual commercial and horticulture crops, such as pomegranate, apple, sweet lime or sugarcane
-
-The rest of the premium is shared by the central and state governments. If the actual premium for an area works out to 10%, the farmer pays 2% and the governments pay the remaining 8%.
-
-**How to enrol:**
-
-- **If you have a crop loan (KCC):** just ask your bank. It already has your documents, the premium is debited from your loan account, and you get an SMS confirmation.
-- **If you don't have a loan:** go to your bank branch, a **Common Service Centre (CSC)** in your village, an insurance agent, or apply online at **pmfby.gov.in**.
-- **Documents to carry:** land record, sowing certificate, Aadhaar, and bank passbook or a cancelled cheque.
-
-You'll get a receipt showing your share of the premium, and what the state and central governments paid on your behalf. You can track your application on the portal.
-
-**What's covered, and how claims work:**
-
-- **Yield loss (area-based):** Officials conduct crop-cutting experiments at random plots in each area. If the actual yield falls below the area's "threshold" yield (based on the previous five years), a claim is triggered for everyone insured in that area.
-- **Prevented sowing:** If drought or floods stop you from sowing at all, you get **25% of the sum insured** right away, and the policy closes.
-- **Local disasters** like hailstorms, which hit individual fields: inform the insurer **within 72 hours**, and your field is surveyed individually.
-- **After harvest:** If your cut crop is drying in the field and unseasonal rain destroys it, you're covered for **up to 14 days** after harvest. Again, report it within 72 hours.
-
-**What's not covered:** crops damaged in storage, for example by pests in a godown. Insect damage is usually picked up while the crop is still growing, through lower yields.
-
-:::context The bigger picture
-By application count, PMFBY is among the largest crop insurance schemes in the world. In 2024-25 alone, around **4.19 crore farmers** enrolled. By mid-2025, claims of about **₹1.83 lakh crore** had been paid since 2016, on more than 22 crore farmer applications.
-:::
-
 ## Protect first, invest later
 
-What we took from this conversation is a simple order of priorities. **Health insurance first**, because one illness can undo years of savings. **Term insurance next**, if anyone depends on you. And for farmers, **crop insurance**, because a whole season shouldn't be lost to one storm. Investing comes after you're protected, and it should never be bundled into an insurance policy.
+What we took from this conversation is a simple order of priorities. **Health insurance first**, because one illness can undo years of savings. **Term insurance next**, if anyone depends on you. Investing comes after you're protected, and it should never be bundled into an insurance policy.
 
 :::takeaways Key takeaways
 1. Insurance compensates you for a loss. It isn't an investment, so don't expect "returns".
@@ -556,7 +520,6 @@ What we took from this conversation is a simple order of priorities. **Health in
 4. Check room-rent caps, waiting periods, network hospitals and the insurer's claim record.
 5. Buy a pure term plan if someone depends on you, invest separately, and name your nominee correctly.
 6. Seniors 70+ can get free cover of up to ₹5 lakh through Ayushman Vay Vandana.
-7. Farmers can insure crops under PMFBY for 1.5–5% premium. Report local damage within 72 hours.
 :::
 
 :::note
