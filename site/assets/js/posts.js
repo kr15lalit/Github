@@ -25,11 +25,11 @@
 window.POSTS = [
   {
     slug: "womens-health-series",
-    title: "Women's Health, Honestly: A Gynaecologist on Periods, PCOS, Fertility, Pregnancy and Menopause",
+    title: "Women's Health, Honestly: A Gynaecologist on Periods, PCOS, Fertility and Motherhood",
     date: "2026-10-18",
     category: "Episode Notes",
     excerpt:
-      "Irregular periods, PCOS, infertility, C-sections, postpartum depression, menopause: half the population still learns about their own bodies through guesswork. Dr. Poonam Gupta's two-part masterclass, brought together in one guide.",
+      "Irregular periods, PCOS, C-sections and postpartum depression: half the population still learns about their own bodies through guesswork. Dr. Poonam Gupta's two-part conversation on women's health, brought together in one guide.",
     cover: "",
     video: "LAlagU6xhUE",
     parts: [
@@ -37,15 +37,15 @@ window.POSTS = [
       { id: "XcICUW9XrS4", label: "Part 2 · Pregnancy, postpartum and menopause", title: "Women's Health Secrets Doctors Rarely Tell You | Part 2" },
     ],
     body: `
-A teenager who thinks her irregular periods mean something is wrong with her. A couple quietly trying for a baby for two years, too embarrassed to ask anyone. A new mother who can't stop crying while everyone tells her she should be happy. A woman in her fifties who stops going out because of a problem she can't bring herself to name.
+A teenager who thinks her irregular periods mean something is wrong with her. A couple quietly trying for a baby for two years, too embarrassed to ask anyone. A new mother who can't stop crying while everyone tells her she should be happy.
 
 These stories are not rare. **Women's health is still surrounded by taboos, myths and half-knowledge**, and the cost is real: symptoms ignored, questions never asked, help sought too late.
 
-So host Vandana sat down with **Dr. Poonam Gupta, an obstetrician and gynaecologist**, for a two-part conversation covering every stage of a woman's life, from the first period to menopause. This article brings both parts together.
+So host Vandana sat down with **Dr. Poonam Gupta, an obstetrician and gynaecologist**, for a two-part conversation covering every stage of a woman's life. This article brings both parts together.
 
 :::summary In this two-part series
-- **Part 1:** periods, PCOS, planning a pregnancy, egg freezing, infertility and IVF
-- **Part 2:** pregnancy, normal delivery vs C-section, life after birth, menopause and cervical cancer
+- **Part 1:** what a normal period looks like, PCOS, and when to seek help for conceiving
+- **Part 2:** normal delivery vs C-section, and postpartum depression
 :::
 
 [[part Part 1 · Periods, PCOS, fertility and IVF]]
@@ -57,65 +57,27 @@ The most common worry is that a cycle should be exactly 28 days. It doesn't have
 > "A normal cycle varies from woman to woman, anywhere between 21 and 35 days. If it comes every 21 days regularly, that's normal for her. If it comes every 35 days, that's normal for her."
 > — Dr. Poonam Gupta
 
-What matters is a change from *your* normal, or cycles that are regularly **shorter than 21 or longer than 35 days**. In the first two or three years after a girl's first period, some irregularity is expected while her hormones settle. Later in life, the usual causes are **PCOS, thyroid problems, high prolactin, sudden weight gain or loss, and stress**, physical or emotional.
+What matters is a change from *your* normal, or cycles that are regularly **shorter than 21 or longer than 35 days**. The usual causes are **PCOS, thyroid problems, high prolactin, sudden weight gain or loss, and stress**.
 
 :::help See a doctor if your period...
 - Is so painful or heavy that it **disrupts your daily routine**
 - **Lasts more than seven days**, or needs a **pad change every one to two hours**
 - Makes you **wake at night** to change pads, or leaves you **anaemic** and tired
-- Doesn't ease with simple measures like a hot water bag, a warm bath and light exercise
 :::
-
-Ordinary cramps come from chemicals called prostaglandins and usually respond to heat, exercise and, if needed, anti-inflammatory painkillers. But pain with heavy bleeding can point to conditions like **endometriosis, fibroids or a pelvic infection**, which need proper treatment.
 
 ## 2. PCOS: from a textbook footnote to a "new-age pandemic"
 
 When Dr. Poonam was a student, PCOD was a tiny column in her textbook. "Now it's a huge topic," she said.
 
-**PCOD and PCOS are the same condition at different points on a spectrum.** Many small follicles form in the ovary, but none matures properly, so ovulation and periods become irregular. When metabolic problems such as weight gain and **insulin resistance** join in, it's called PCOS, often with acne, excess hair growth, and a higher risk of **diabetes and high blood pressure** later in life.
+**PCOD and PCOS are the same condition at different points on a spectrum.** Many small follicles form in the ovary, but none matures properly, so ovulation and periods become irregular. When weight gain and **insulin resistance** join in, it's called PCOS, with a higher risk of **diabetes and high blood pressure** later in life.
 
-The drivers are familiar: processed, high-carb food, sedentary days and stress. Medicines can regularise periods, but they don't fix the root cause. The cornerstone of treatment is lifestyle:
-
-- **Fibre-rich food** and mindful eating
-- **Moderate exercise, five days a week for 30 to 45 minutes**
-- **Yoga**, good sleep and less stress
+Medicines can regularise periods, but they don't fix the root cause. The cornerstone of treatment is lifestyle: **fibre-rich food**, **moderate exercise five days a week for 30 to 45 minutes**, yoga, good sleep and less stress.
 
 :::context The bigger picture
-The World Health Organization estimates that PCOS affects around **1 in 10 women of reproductive age** worldwide, and that **up to 70% of them are undiagnosed**. Because it raises long-term risks like diabetes, an early diagnosis is about far more than periods.
+The World Health Organization estimates that PCOS affects around **1 in 10 women of reproductive age** worldwide, and that **up to 70% of them are undiagnosed**.
 :::
 
-## 3. Planning a baby: start three months early
-
-Most women first see a gynaecologist after they're already pregnant. Dr. Poonam wishes more couples came **before**, for preconception counselling, when weight, blood sugar, anaemia, vaccinations and any family history of conditions like thalassaemia can be checked and sorted.
-
-The single most important step is **folic acid, started three months before trying**. It helps the baby's brain and spine form properly, and that process begins before most women even know they're pregnant. Health agencies estimate it can prevent **up to 70% of neural tube defects**.
-
-**Finding your fertile window.** Ovulation doesn't always happen on day 14. It usually happens **about 14 days before your next period**:
-
-- **28-day cycle:** around day 14
-- **21-day cycle:** around day 7
-- **35-day cycle:** around day 21
-
-An egg survives only **12 to 24 hours**, while sperm can survive **three to five days**, so the days just before and around ovulation give the best chance of conceiving.
-
-## 4. The biological clock and egg freezing
-
-Many women now marry later and put education and careers first. Dr. Poonam isn't asking anyone to give that up, only to plan with the facts.
-
-> "There is a biological clock in women which is ticking day by day. Of course, prioritise your career. But take this into consideration too."
-> — Dr. Poonam Gupta
-
-A baby girl is born with all the eggs she'll ever have, roughly **1 to 2 million**, falling to a few lakh by puberty. The ovaries can't make new ones. After **35**, both the number and the quality of eggs drop, so conceiving gets harder and the risk of **miscarriage and chromosomal problems** rises. Biologically, the **twenties and early thirties** are the ideal time.
-
-For women who want to wait, **egg freezing** is a growing option. "If you freeze your eggs at 25, the age of the egg will be 25, not 40, when you use it," she explained.
-
-- **Best age:** between **25 and 30**. Don't leave it until 35 or 40.
-- **Storage:** up to about **10 years** in India.
-- **Approximate cost:** **₹1.2 to 1.5 lakh per cycle**, plus **₹30,000 to ₹40,000 a year** for storage.
-
-Not sure where you stand? An **ovarian reserve test** (an AMH blood test, an FSH test and an ultrasound follicle count) estimates how many eggs you have left.
-
-## 5. Infertility and IVF: when to seek help
+## 3. Trying for a baby: when to seek help
 
 :::help When to see a doctor about conceiving
 - **Under 35:** after **12 months** of trying without success
@@ -123,43 +85,17 @@ Not sure where you stand? An **ovarian reserve test** (an AMH blood test, an FSH
 - **Straight away** if you have irregular periods, PCOS, a thyroid problem or another known issue
 :::
 
-Seeing a doctor doesn't mean jumping to IVF. The first step is **testing both partners**, including a **semen analysis**, because fertility is a couple's issue. Often the fix is simple: knowing your fertile days, losing weight, or treating a thyroid problem. Next come medicines to help ovulation, then **IUI**, and **IVF as the last step**, unless something like blocked fallopian tubes makes it necessary straight away.
-
-**Four IVF myths, busted:**
-
-- **"IVF is 100% successful."** Even in the best hands, it's around **40 to 60%** per attempt, depending on age.
-- **"If one cycle fails, the next will too."** Many couples need **two or three cycles**.
-- **"IVF always means twins."** Twins are more common, but not guaranteed.
-- **"IVF babies are abnormal."** No. The risk depends mainly on the mother's age, not on IVF.
-
-And yes, stress matters. Dr. Poonam has seen couples stop treatment for a few months, relax, and then conceive naturally.
+Seeing a doctor doesn't mean jumping to IVF. The first step is **testing both partners**, including a **semen analysis**, because fertility is a couple's issue. Often the fix is simple, and IVF is the **last step**, not the first. Even then, it isn't a guarantee: in the best hands, success is around **40 to 60%** per attempt.
 
 [[watch:LAlagU6xhUE]]
 
 [[part Part 2 · Pregnancy, delivery, postpartum and menopause]]
 
-## 6. Pregnancy: normal life, with a little extra care
-
-> "Pregnancy is a natural process. With minor lifestyle changes, you can carry on with most of your routine activities."
-> — Dr. Poonam Gupta
-
-Start folic acid at once if you haven't already, eat a balanced diet, rest well, **walk daily**, and avoid smoking and alcohol completely. **Healthy weight gain** depends on your weight before pregnancy: about **10 to 15 kg** for most women, more if you were underweight, and less, around **6 to 10 kg**, if you were overweight.
-
-The **first trimester** brings tiredness, nausea at any time of day, constipation and frequent urination. Small, frequent meals and family support help, but severe vomiting needs a doctor. The **second trimester**, which Dr. Poonam calls **"the golden period of pregnancy"**, is usually the easiest.
-
-**Key tests to know:** an early scan to confirm the heartbeat, blood tests including **thalassaemia screening**, the **NT scan and double marker** at 11 to 13 weeks, a detailed **anomaly scan** and **diabetes screening** in the second trimester, and regular haemoglobin checks throughout. A low-lying placenta on an early scan usually moves up on its own; if it's still low after eight months (**placenta previa**), a C-section is needed. And sleep on your **left side**, which improves blood flow to the baby.
-
-:::context The bigger picture
-According to the National Family Health Survey (NFHS-5), **more than half of pregnant women in India are anaemic**. That's why haemoglobin is checked again and again, and why iron and a good diet matter so much for both mother and baby.
-:::
-
-## 7. Normal delivery or C-section? The honest answer
+## 4. Normal delivery or C-section? The honest answer
 
 Vandana asked the question many families whisper: the WHO suggests caesarean rates above about **15%** bring no extra benefit, yet in many private hospitals in India they've crossed **40%**. Why?
 
-Part of the rise is real: women are becoming mothers later, with more **diabetes, high blood pressure** and growth problems in the baby. But Dr. Poonam was clear that **normal delivery is preferred in most cases**: faster recovery, fewer complications, better bonding and breastfeeding, and good bacteria that boost the baby's immunity.
-
-A C-section becomes necessary when the **baby's heartbeat drops**, labour doesn't progress, the cord slips down, the baby is **breech or sideways**, the placenta blocks the way, or the baby is too big for the mother's pelvis.
+Part of the rise is real: women are becoming mothers later, with more **diabetes, high blood pressure** and growth problems in the baby. But Dr. Poonam was clear that **normal delivery is preferred in most cases**: faster recovery, fewer complications, and better bonding and breastfeeding.
 
 On whether doctors push C-sections for profit, she answered directly:
 
@@ -169,16 +105,12 @@ On whether doctors push C-sections for profit, she answered directly:
 She also had a firm message for anyone who judges a mother for having one: the idea that she "couldn't bear the pain" is unfair and wrong.
 
 :::context The bigger picture
-According to NFHS-5, about **1 in 5 births in India** is a caesarean, but the gap is striking: around **14% in public hospitals versus about 47% in private ones**. It's worth asking your doctor early about their approach, and what would make a C-section necessary in your case.
+According to NFHS-5, about **1 in 5 births in India** is a caesarean, but the gap is striking: around **14% in public hospitals versus about 47% in private ones**.
 :::
 
-## 8. After the birth: food myths, breastfeeding and the "baby blues"
+## 5. The new mother is new too
 
-**Panjiri and laddoos?** Dr. Poonam is a fan: ghee for energy, dry fruits for protein, jaggery for iron, gond for joints, ginger for digestion. "But moderation is the key," she said. And the idea that a new mother shouldn't eat roti or rice is a myth. She needs **every food group**, not weeks of only dalia and khichdi.
-
-**Breastfeed exclusively for six months.** That means **no water, honey or ghutti**. Breast milk is a complete food, and its antibodies protect against diarrhoea and chest infections. It helps mothers too, including a lower risk of breast cancer. For low supply, the most powerful fix is **feeding every one to two hours**, since emptying the breast signals the body to make more. Fathers should join in with **skin-to-skin contact** and baby care; it builds their bond and the mother's confidence.
-
-**Postpartum depression** is real. A new mother feeding every two hours, barely sleeping, can struggle badly. It ranges from mild **baby blues** to **depression**, sometimes with thoughts of self-harm, and rarely **postpartum psychosis**, which needs urgent treatment.
+A new mother feeding every two hours, barely sleeping and getting no time for herself can struggle badly. Dr. Poonam described a range, from mild **baby blues** to **postpartum depression**, sometimes with thoughts of self-harm, and rarely **postpartum psychosis**, which needs urgent treatment.
 
 > "We need to understand that the mother is also new. She's struggling with motherhood and baby care too."
 > — Dr. Poonam Gupta
@@ -189,43 +121,24 @@ According to NFHS-5, about **1 in 5 births in India** is a caesarean, but the ga
 - In India, call the free government mental health helpline **Tele-MANAS on 14416**, any time.
 :::
 
-**And one message for every family:** it's the **father**, not the mother, who determines the baby's sex. The mother's egg always carries an X chromosome; the father's sperm carries either an X (a girl) or a Y (a boy).
+And one message for every family: it's the **father**, not the mother, who determines the baby's sex.
 
 > "The mother has just gone through labour, delivery and breastfeeding. This is the time to give her love and care, not blame."
 > — Dr. Poonam Gupta
 
-## 9. Menopause, cervical cancer and the taboos to break
-
-**Menopause** usually comes between **45 and 50**, confirmed after **12 months without a period**, often after several years of perimenopause. Hot flushes, mood swings, brain fog and dryness are common, along with higher risks to **bones and the heart**. Dr. Poonam wants to bust the myths that symptoms can't be treated, that weight gain is unavoidable, that active life ends, and that hormone therapy is always dangerous. It's a decision to make with your doctor.
-
-**Cervical cancer** is largely preventable, yet still common, because it develops out of sight and is often caught late.
-
-- **Screening:** a **Pap smear every three years from 21**, or **Pap plus HPV testing every five years after 30**, until about 65.
-- **Vaccine:** the **HPV vaccine** works best between **9 and 15**, and is now recommended for **boys as well as girls**.
-
-:::context The bigger picture
-Cervical cancer is the **second most common cancer among Indian women**, with well over a lakh new cases every year. India now has its own HPV vaccine, and the WHO says even a single dose can give strong protection to young girls.
-:::
-
-Finally, two taboos. **Periods are not shameful**, and girls should manage them with confidence, with pads and proper disposal in schools and public places. And **urinary leakage** after childbirth or menopause is common and treatable with **pelvic floor (Kegel) exercises**, less caffeine, physiotherapy and, if needed, medicines or surgery. The first step is simply talking about it.
-
-> "No one size fits all, and no one size defines women's health. A woman can be fit, confident and empowered at any age and any size."
-> — Dr. Poonam Gupta
+What does it cost to freeze your eggs, and what's the best age to do it? Dr. Poonam answers that in Part 1.
 
 :::thanks A heartfelt thank you
-Dr. Poonam Gupta gave us two long conversations and decades of experience, explaining some of the most sensitive topics in medicine with warmth and clarity. She didn't dodge the hard questions, from C-section rates to the blame mothers face for having a girl. Thank you, Doctor. This series will help many women, and many families, ask the right questions at the right time.
+Dr. Poonam Gupta gave us two long conversations and decades of experience, explaining some of the most sensitive topics in medicine with warmth and clarity. She didn't dodge the hard questions, from C-section rates to the blame mothers face for having a girl. Thank you, Doctor.
 :::
 
 :::takeaways Key takeaways
 1. A normal cycle is 21 to 35 days. See a doctor if yours falls outside that or changes suddenly.
 2. PCOS is managed mainly through diet, exercise, sleep and stress control.
-3. Start folic acid three months before trying to conceive.
-4. Under 35, seek help after a year of trying; over 35, after six months. Egg freezing works best at 25 to 30.
-5. IVF is a last step, isn't 100% successful, and doesn't make babies "abnormal".
-6. Normal delivery is preferred, but a necessary C-section is nothing to be judged for.
-7. Breastfeed exclusively for six months, and take postpartum depression seriously (Tele-MANAS: 14416).
-8. It's the father's chromosome that decides a baby's sex. Never blame the mother.
-9. Get regular cervical screening, and vaccinate children against HPV between 9 and 15.
+3. Under 35, seek help after a year of trying; over 35, after six months. Test both partners.
+4. Normal delivery is preferred, but a necessary C-section is nothing to be judged for.
+5. Postpartum depression is real and treatable (Tele-MANAS: 14416).
+6. It's the father's chromosome that decides a baby's sex. Never blame the mother.
 :::
 
 :::note
@@ -239,40 +152,35 @@ This article summarises the views our guest shared on the show and is for awaren
     date: "2026-10-18",
     category: "Episode Notes",
     excerpt:
-      "Spiritual escape or waste of time? A follower of 38 years on what satsang actually means, the three disciplines, balancing family and a demanding job, and why contentment beats the endless chase for more.",
+      "Spiritual escape or waste of time? A follower of 38 years on what satsang actually means, balancing family with spiritual life, and why contentment beats the endless chase for more.",
     cover: "",
     video: "Wlg7mH0H8mo",
     body: `
-Look around any office, metro coach or family WhatsApp group today and you'll see the same thing: people who have more information, more options and more comforts than any generation before them, and less peace. We scroll to relax and end up more restless. We earn more and still feel it isn't enough. We have hundreds of contacts and almost nobody to sit with quietly.
+Look around any office, metro coach or family WhatsApp group today and you'll see the same thing: people who have more information, more options and more comforts than any generation before them, and less peace. We earn more and still feel it isn't enough.
 
 This isn't just a feeling. In an Ipsos survey, **one in two urban Indians (53%)** said they had experienced stress severe enough to affect their daily life in the past year.
 
-So people go looking. Some try apps and retreats. Some return to the temple or the gurdwara. And many, often quietly, end up at a **satsang**. To outsiders, satsang is a bit of a mystery. Some call it a spiritual escape. Some call it a waste of time. Some assume it is only for the very religious or the very old.
+So people go looking, and many, often quietly, end up at a **satsang**. To outsiders, it's a bit of a mystery. Some call it a spiritual escape. Some call it a waste of time.
 
-To understand what actually happens there, host Lalit Sharma sat down with a guest who has been attending satsang for **38 years**, since 1986. He follows the **Radha Soami Satsang Beas** path, worked for decades in a demanding job that took him through audit postings and transfers far from home, and is now retired. He spoke with complete sincerity, and at times with so much emotion that he had to pause.
+To understand what actually happens there, host Lalit Sharma sat down with a guest who has been attending satsang for **38 years**, since 1986. He follows the **Radha Soami Satsang Beas** path, worked for decades in a demanding job, and is now retired. He spoke with complete sincerity, and at times with so much emotion that he had to pause.
 
 :::summary In this conversation
 - What "satsang" actually means
 - How he found it, and why he never walked away
-- The three disciplines, and how the practice differs from ritual
-- Balancing family, a demanding job and spiritual life
-- Stress, karma and the meaning of contentment
+- Family first, then satsang: the balance
+- Contentment, the real measure
 :::
 
 [[watch]]
 
 ## 1. What "satsang" actually means
 
-Our guest started with the word itself. **Sat** means truth, and **sang** means company. Satsang is "the company of truth".
-
-And in his understanding, only one thing is truly permanent:
+**Sat** means truth, and **sang** means company. Satsang is "the company of truth". And in our guest's understanding, only one thing is truly permanent:
 
 > "Everything you can see with these eyes will perish one day. The only truth is the Supreme. It was there before creation, it is here now, and it will be there when everything else is gone."
 > — Our guest
 
-Whatever you call it, God, Naam, Shabd or the Supreme, satsang for him means keeping company with that truth, and with people who are trying to live by it.
-
-The gathering itself is simple. A speaker reads a hymn or verse from one of the saints, explains what it means, and relates it to everyday life. People listen, often in silence. There is no performance and no spectacle.
+The gathering itself is simple. A speaker reads a hymn or verse from one of the saints, explains what it means, and relates it to everyday life. People listen, often in silence.
 
 :::context The bigger picture
 Radha Soami Satsang Beas traces its roots to 1891, when its main centre was established on the banks of the Beas river in Punjab. Today it holds meetings in more than 90 countries. It describes itself as open to people of every caste, colour and creed, and places strong emphasis on meditation and *seva*, or selfless service.
@@ -280,110 +188,58 @@ Radha Soami Satsang Beas traces its roots to 1891, when its main centre was esta
 
 ## 2. How he found satsang, and why he never left
 
-His journey began with doubt, not devotion. His elder brother, who worked at State Bank of India, had started going to satsang first. The two never discussed it, and what our guest heard second-hand put him off completely. He'd been told that satsang taught people that only the Guru mattered, and that parents, brothers and sisters meant nothing. He was firmly against that idea.
+His journey began with doubt, not devotion. His elder brother had started going first, and what our guest heard second-hand put him off completely: that satsang taught people that parents, brothers and sisters meant nothing. He was firmly against that idea.
 
-And yet, one day, he decided to go. He walked his brother to the railway station just to tell him, in a two-minute conversation on the way, "This time, I'll come to satsang too."
-
-He went, stood in line, registered for initiation (called *naam daan*), and has never looked back. In nearly four decades, he says, he never once felt like quitting.
+And yet, one day, he walked his brother to the railway station just to tell him, in a two-minute conversation on the way, "This time, I'll come to satsang too." In nearly four decades since, he says, he never once felt like quitting.
 
 > "When you get benefit from something, when you feel peace inside, your attachment to it grows on its own."
 > — Our guest
 
-His explanation was surprisingly practical. A child learns by following a teacher. A new businessman succeeds more often when he learns from someone experienced and follows the rules. Spiritual practice is the same: if you meditate for the time, in the posture and in the way you've been taught, he says, you begin to see the results you were promised.
-
-In 1995, he also began **seva**, volunteering at satsang gatherings that can draw lakhs of people. Seva means doing whatever work you are given, without choosing what you like:
+In 1995, he also began **seva**, volunteering at gatherings that can draw lakhs of people:
 
 > "No seva is small and no seva is big. The main purpose of seva is to end your own ego."
 > — Our guest
 
-:::context The bigger picture
-Modern research tends to agree with something spiritual traditions have long said about service. Studies on volunteering consistently link regularly giving your time to others with lower stress, a stronger sense of purpose and greater life satisfaction.
-:::
-
-## 3. The three disciplines, and a practice without ritual
-
-Lalit asked about the core principles. Our guest explained them with a doctor's analogy. When you're ill, the doctor gives you medicine and tells you what to avoid. Take both seriously and you recover faster. Skip either and recovery takes longer.
-
-On his path, there are three things to avoid:
-
-1. **No intoxicants** of any kind, including alcohol.
-2. **No meat or non-vegetarian food**, in any form.
-3. **An upright, moral life.**
-
-Alongside these comes the "medicine": daily meditation, done in the way it is taught at initiation.
-
-He also explained how the practice differs from what many people grow up with. On this path, he said, there is no emphasis on idol worship, pilgrimages, paid offerings or ritual bathing to "cut" bad karma. The practice is entirely inward. Money is never compulsory either:
-
-> "Any work needs money, we know that. But nobody is told you must give this much, or that you must give at all. If you give, fine. If you don't, that's fine too."
-> — Our guest
-
-Lalit was candid that on some of these comparisons, the two of them would simply see things differently, and moved on. That felt like the right spirit for the whole conversation: understanding, not converting.
-
-His one piece of caution was worth hearing for anyone who is searching. Many people in pain, he said, go wherever someone promises a quick fix in exchange for money, and too often, the problem doesn't get solved. A place that pressures you to pay is not one he would trust.
-
-## 4. Family first, then satsang: the balance
+## 3. Family first, then satsang
 
 One of the biggest misconceptions about spiritual paths is that they ask you to give up the world. Our guest was emphatic that satsang says the opposite.
 
 > "Satsang never says leave your home, stop earning, go to the jungle and become a sadhu. You can live with your family and still progress beautifully on the spiritual path."
 > — Our guest
 
-The priorities, as he lives them, are clear:
+If a family member needs a doctor at the same time as satsang, you go to the doctor. "Satsang is for your whole life. If you miss one, you miss one." And a job comes before it too: "Leaving your family hungry to go to satsang would be foolish."
 
-- **Your family comes first.** If a family member needs a doctor at the same time as satsang, you go to the doctor. "Satsang is for your whole life. If you miss one, you miss one."
-- **Your livelihood comes next.** "A job is how we put food on the table. Leaving your family hungry to go to satsang would be foolish."
-- **Honest earnings.** He was taught to earn only by honest means, and never in a way that hurts anyone else.
+His own career tested this. As a clerk, getting leave was easy. After promotion, postings in audit work and a transfer to faraway Gujarat meant he often couldn't attend. His answer was simple acceptance: apply for leave, request it, and if it isn't granted, don't go. "That is the balance."
 
-His own career tested this. As a clerk, getting leave was easy. After promotion, it got harder. Postings in audit work, with constant deadlines, and a transfer to faraway Gujarat meant he often couldn't attend. His answer was simple acceptance: apply for leave, request it, and if it isn't granted, don't go. "That is the balance."
+Today, he says, more than 70% of his relatives follow the path, and **nobody was ever pressured**.
 
-He sees the same pattern across his family. Unusually, satsang came "upwards" in his home: first his elder brother, then him, then his parents, then his younger brother. Today, he says, more than 70% of his relatives follow the path, and **nobody was ever pressured**, not his children, neighbours, friends or relatives.
+## 4. Contentment: the real measure
 
-> "The teaching is the same for everyone: father, son, grandfather, grandson. What differs is how much each person takes in."
-> — Our guest
-
-## 5. Stress, karma and the stories that moved him to tears
-
-How does satsang help people who are stressed and distracted? For our guest, the answer lies in how he understands suffering. In his view, both our joys and our difficulties are the results of our own past karma. Understanding that, he says, doesn't make the pain disappear, but it lets you go through it with acceptance, and even with a smile.
-
-He also believes deeply that people come to satsang when the time is right for them, not because someone persuaded them. Sometimes it is the people who criticised it the loudest who end up finding peace there.
-
-He shared stories that followers on his path tell, and became visibly emotional telling them. In one, a poor widow in Rajasthan wanted to travel to satsang but couldn't afford the bus fare. Her only possession worth selling was a stack of cow-dung cakes she used for fuel, and nobody would buy it, until, at the last moment, a stranger came and paid more than she asked. When she reached satsang and saw the Master, she cried out that he was the man who had bought her dung cakes.
-
-In another, a daily-wage labourer who couldn't find work joined volunteers at a satsang centre, thinking it was a paid job. For three days he worked, was fed, and was never paid, because the "Malik" (as followers call the Master) never came. On the third night he went home to find a month's rations delivered to his family by a stranger, whose photograph, the next day, his wife recognised hanging at the gate of the satsang centre.
-
-Lalit gently raised the obvious question: couldn't some of this be coincidence? Our guest didn't argue. "You can call it coincidence, or call it anything you like," he said. For him, these experiences are what assure him that his Guru is with him, and if he started listing them, he said, it would take days.
-
-:::context The bigger picture
-Whatever your view of faith, the effects of a regular, quiet inner practice are well studied. A large review in *JAMA Internal Medicine*, covering 47 trials, found moderate evidence that meditation programmes can help reduce anxiety, depression and pain. Researchers also point to community and a sense of meaning as strong protectors against stress and loneliness.
-:::
-
-## Contentment: the real measure
-
-Lalit closed by asking how our guest defines fulfilment. His answer is perhaps the most useful line of the whole conversation, whatever your beliefs:
+Lalit closed by asking how our guest defines fulfilment. His answer is useful whatever your beliefs:
 
 > "Desire is never satisfied. The man with a thousand thinks two thousand is big. The man with a lakh looks at the crorepati, and the crorepati looks at the billionaire. Fulfil one wish, and the next one starts."
 > — Our guest
 
-Psychologists have a name for this, the "hedonic treadmill": we quickly get used to every gain and start chasing the next. Our guest's answer to it is contentment. Those who follow satsang seriously, he says, feel they have received what they needed, and more.
+Psychologists call this the "hedonic treadmill". Our guest's answer to it is contentment.
 
 > "I know what my ability is, and how much I could have achieved without satsang. What I have received is far more than that."
 > — Our guest
 
+And the story of a poor widow who wanted to reach satsang but had nothing to sell except her cow-dung cakes? It's one he could barely finish without tears.
+
 :::thanks A heartfelt thank you
-It isn't easy to speak about faith on camera, especially about experiences that are deeply personal and that others may question. Our guest did so with complete honesty, without trying to convince anyone, and with emotion he didn't try to hide. At the end, he apologised for getting sentimental. There was nothing to apologise for. Thank you for sharing 38 years of your journey with us, and for reminding us that peace is something you practise, not something you buy.
+It isn't easy to speak about faith on camera. Our guest did so with complete honesty, without trying to convince anyone, and with emotion he didn't try to hide. Thank you for sharing 38 years of your journey with us, and for reminding us that peace is something you practise, not something you buy.
 :::
 
 :::takeaways Key takeaways
 1. Satsang means "the company of truth": listening, reflecting and meditating together.
-2. On the Radha Soami path, the disciplines are no intoxicants, no meat and an upright moral life, along with daily meditation.
-3. The focus is inward practice, not rituals, idol worship or paid offerings, and giving money is never compulsory.
-4. Spiritual life doesn't mean leaving the world: family comes first, honest work next.
-5. Seva, or selfless service, is meant to dissolve the ego, and no seva is big or small.
-6. Real fulfilment comes from contentment, not from the next thing on the list.
+2. Seva, or selfless service, is meant to dissolve the ego, and no seva is big or small.
+3. Spiritual life doesn't mean leaving the world: family comes first, honest work next.
+4. Real fulfilment comes from contentment, not from the next thing on the list.
 :::
 
 :::note
-This article summarises the personal beliefs and experiences our guest shared on the show. The stories in it are told as he shared them, and the article does not promote any organisation or ask anyone to change their faith. We respect every path. If you are going through a difficult time, please also reach out to people you trust or a qualified professional. Quotes are translated and lightly condensed from the original Hindi conversation.
+This article summarises the personal beliefs and experiences our guest shared on the show, and does not promote any organisation or ask anyone to change their faith. We respect every path. If you are going through a difficult time, please also reach out to people you trust or a qualified professional. Quotes are translated and lightly condensed from the original Hindi conversation.
 :::
 `,
   },
@@ -393,146 +249,86 @@ This article summarises the personal beliefs and experiences our guest shared on
     date: "2026-10-18",
     category: "Episode Notes",
     excerpt:
-      "Free children's healthcare, 4pm finishes and a system you can trust, but also 30% tax, a brutal housing market, gang worries and rules that keep tightening. Dakshesh Sharma on six years of Indian family life in Sweden.",
+      "Free children's healthcare, 4pm finishes and a system you can trust, but also 30% tax, doing everything yourself and rules that keep tightening. Dakshesh Sharma on Indian family life in Sweden.",
     cover: "",
     video: "dYmflUeeVqM",
     body: `
-Every year, lakhs of Indians make the same quiet calculation. The salary has stopped growing as fast as the rent. The commute eats three hours a day. The boss sends messages at 11pm. The children's school fees keep climbing. And somewhere in the back of the mind, a question keeps returning: **would life be better abroad?**
+Every year, lakhs of Indians make the same quiet calculation. The salary has stopped growing as fast as the rent. The commute eats three hours a day. The boss sends messages at 11pm. And somewhere in the back of the mind, a question keeps returning: **would life be better abroad?**
 
-Then comes the confusion. Instagram shows snow-covered cottages and people cycling to work at 4pm. WhatsApp forwards say Europe is falling apart. Relatives who have never left India have strong opinions either way. Almost nobody gives you a straight answer from someone who has actually done it, with a family, and lived with the consequences.
+Then comes the confusion. Instagram shows people cycling home at 4pm. WhatsApp forwards say Europe is falling apart. Almost nobody gives you a straight answer from someone who has actually done it, with a family.
 
-So we asked someone we trust completely. Host Lalit Sharma sat down with **Dakshesh Sharma**, his childhood friend, an electronics and communications engineer who spent about 12 years in telecom and IT companies in India before moving to **Sweden in 2019**. He has lived there through the pandemic, through a change of government and through some of the biggest changes in Swedish immigration rules in decades. He brought his family, built a life there, and was refreshingly honest about both sides.
+So we asked someone we trust completely. Host Lalit Sharma sat down with **Dakshesh Sharma**, his childhood friend, an electronics and communications engineer who spent about 12 years in telecom and IT companies in India before moving to **Sweden in 2019** with his family.
 
 :::summary In this conversation
-- Moving to Sweden: the paperwork, the first month and the housing struggle
-- Healthcare and what 30% tax actually buys you
+- Healthcare, and what 30% tax actually buys you
 - Work-life balance: why he chose Sweden over Canada
-- Safety, gangs and a country that is changing
 - Why some Indians are leaving, and the new rules every applicant should know
 :::
 
 [[watch]]
 
-## 1. Moving to Sweden: easier than you think, until you look for a house
+## 1. Healthcare, and what 30% tax actually buys you
 
-Dakshesh moved on an **intra-company transfer**. His employer handled the visa and work permit, which is how a large share of Indian tech professionals arrive. What surprised him was how quickly the rest fell into place.
+Indians often hear one thing about Sweden: the taxes are brutal. Dakshesh pays around **30 to 33%** of his income in tax. The question is what you get back.
 
-Within about **20 days** of landing, he was entered into the Swedish population register, which gave him his personal identity number. That single number connects everything: tax, healthcare, banking and the children's schooling. And from the moment you are registered, you are covered by the public healthcare system.
-
-> "Within twenty days everything was done: registration, tax, healthcare. From day one, you are part of the system."
-> — Dakshesh Sharma
-
-Daily life runs on two quiet pieces of infrastructure that Indians often fall in love with:
-
-- **BankID**, a digital identity on your phone, used to log into your bank, sign contracts, file taxes, book doctor appointments and even sign a rental agreement.
-- **One transit card** for buses, metro, trams and local trains. A single ticket is valid for about an hour, so you can switch between them without paying twice. It isn't cheap (a single ride costs around 40 kronor), but it works, and it runs on time.
-
-**Housing is the hard part.** Long-term rentals in cities like Stockholm are notoriously scarce. Much of the rental stock sits in long waiting queues, and many apartments are owned through housing associations (called BRFs) that limit how long an owner can sublet, often to around two years. That means many newcomers move from one short contract to the next.
-
-Buying is a different story. Dakshesh says property sells quickly and the process is clean. When he moved, mortgage rates were extraordinarily low, around **1 to 1.5%** in 2020–21. They have since risen to roughly **3.5%**, which has changed the maths for many families.
-
-:::context The bigger picture
-Stockholm's rental shortage is well documented. The city's official housing queue has hundreds of thousands of people registered, and waits for a first-hand contract in central areas can run to many years. That is why most newcomers rent second-hand at first, and why many eventually buy.
-:::
-
-## 2. Healthcare, and what 30% tax actually buys you
-
-Indians often hear one thing about Sweden: the taxes are brutal. Dakshesh pays around **30 to 33%** of his income in tax, depending on income and municipality. The question is what you get back, and his answer was the most compelling part of the conversation.
-
-**Children's healthcare is free.** When a friend's young daughter broke her arm, she was treated at Karolinska, one of Europe's best-known hospitals. Dakshesh remembers the details that stayed with the family: cartoons playing, a clown visiting the ward, an artist painting with the children. Nobody asked for a card at the counter.
+**Children's healthcare is free.** When a friend's young daughter broke her arm, she was treated at Karolinska, one of Europe's best-known hospitals, with cartoons playing, a clown visiting the ward and an artist painting with the children.
 
 > "The child was in pain, but the hospital made it feel like a playground. And the bill was zero."
 > — Dakshesh Sharma
 
-For adults, visits cost a **small fixed fee**, with tests usually included. Most care starts at your local health centre, the **vårdcentral**. And there is a safety net that Indian families can only dream of: Sweden's **high-cost protection** caps what you pay in a year. Once you hit the limit (around 1,450 kronor for visits and about 2,950 kronor for prescription medicines in 2026, though exact amounts can vary by region), the rest of the year's care within that scheme is free.
+For adults, visits cost a **small fixed fee**, and Sweden's **high-cost protection** caps what you pay in a year (around 1,450 kronor for visits and about 2,950 kronor for prescription medicines in 2026). Nobody goes bankrupt because someone fell ill.
 
-Is it perfect? No. Waits for non-urgent care can be long, which is why some people, including some companies' employees, use private insurance for faster appointments and more choice. But nobody goes bankrupt because someone fell ill.
-
-The taxes also pay for things you notice every day:
-
-- **No road tolls** on ordinary roads.
-- **Free education** from school through to a master's degree for residents, with **free school lunches**.
-- Heavily subsidised **preschool**.
-- **Unemployment support** if you lose your job.
-- And a detail Dakshesh found moving: legal residents can **vote in municipal elections** after three years, even without citizenship.
+The taxes also pay for **free education** through to a master's degree, with **free school lunches**, subsidised **preschool**, **unemployment support**, and no road tolls. And a detail Dakshesh found moving: legal residents can **vote in municipal elections** after three years, even without citizenship.
 
 > "You pay a lot, but you can see where it goes. Your child's school, your hospital, your road. That changes how you feel about tax."
 > — Dakshesh Sharma
 
-## 3. Work-life balance: why he chose Sweden over Canada
+## 2. Work-life balance: why he chose Sweden over Canada
 
-Before Sweden, Dakshesh had an offer from Canada. He chose Sweden, and the reason was simple: **time**.
+Before Sweden, Dakshesh had an offer from Canada. He chose Sweden for one reason: **time**.
 
-A typical office day runs roughly from **8am to 4pm**. Managers trust people to do their work, without constant check-ins or micromanagement. Most employees get **around 25 to 30 days** of paid leave a year, and taking a long summer break is normal, not a career risk.
+A typical office day runs roughly from **8am to 4pm**. Managers trust people to do their work, and most employees get **around 25 to 30 days** of paid leave a year.
 
 > "Nobody watches over your shoulder. You are trusted to do your work, and then you go home to your family."
 > — Dakshesh Sharma
 
-That time showed up in his health. With shorter workdays and long summer evenings, when it stays light until almost midnight, he started training regularly and went from **89 kg to 72 kg**.
+That time showed up in his health. With shorter workdays and long summer evenings, he started training regularly and went from **89 kg to 72 kg**.
 
-Culture takes adjusting to. Swedish society runs on **high trust**: people follow rules, keep promises and assume the best of each other. Dakshesh says he has personally never faced racism. But Swedes are quiet and private, and Indians, he laughs, are loud. Phone calls on the train, big family gatherings and dropping by unannounced are things you quickly learn to tone down.
+Culture takes adjusting to. Swedish society runs on **high trust**: people follow rules, keep promises and assume the best of each other. Dakshesh says he has personally never faced racism. But Swedes are quiet and private, and Indians, he laughs, are loud. Phone calls on the train and dropping by unannounced are things you quickly learn to tone down.
 
 :::context The bigger picture
 Sweden regularly ranks among the top ten countries in the World Happiness Report, and OECD data consistently shows Swedish employees working far fewer long hours than the global average. Statutory annual leave is 25 days, and many employers offer more.
 :::
 
-## 4. Safety, gangs and a country that is changing
+## 3. Why some Indians are leaving, and the new rules you must know
 
-This was the part of the conversation where Dakshesh was most careful, and most honest. Sweden is still a safe country for most people going about their daily lives. But over the past decade it has faced a serious problem with **organised gang crime**, and he didn't want to pretend otherwise.
+In 2024, headlines in India talked about an "exodus" of Indians from Sweden. According to Statistics Sweden, the number of Indians leaving rose from about **1,600 in 2022 to about 4,500 in 2024**, while new arrivals fell.
 
-His biggest worry as a parent is how criminal networks **recruit young teenagers**, sometimes as young as 12 to 14, because children that age face lighter legal consequences. Sweden's strict privacy rules also mean far less CCTV than Indians are used to. He has also noticed more organised burglaries in some areas, and a police force that, in his view, is stretched thin.
+Dakshesh sees a few reasons: **salaries in India have caught up** since around 2021; some feel a **glass ceiling** without fluent Swedish; and **you do everything yourself**, since a nanny can cost around **15,000 to 16,000 kronor a month**.
 
-:::context The bigger picture
-Swedish authorities have openly acknowledged the problem. Prosecutors reported a sharp rise in children under 15 suspected in serious violent cases, and police have described gangs recruiting minors through social media. Sweden has responded with tougher laws, more police funding, wider camera surveillance and stronger powers against gang recruitment. Reported shootings fell sharply in 2025 from their 2022 peak. For most residents, everyday life remains calm, but it is a real issue worth understanding before you move.
-:::
+The rules have tightened too:
 
-Politics has shifted too. The government elected in 2022 has taken a **much harder line on immigration**, and that has changed the mood for many foreigners, including skilled workers who arrived legally and pay full taxes. Dakshesh's view was fair-minded:
+- **Higher salary thresholds for work permits.** Since **June 2026**, new applicants generally need at least **90% of the median salary, about 33,000 kronor a month**.
+- **A longer road to citizenship.** The general residence requirement rose from **five years to eight**, with language and civics tests being phased in.
+- **Swedish is becoming a job requirement**, even in many IT job adverts.
 
-> "It's not fair to put every immigrant in the same box. People who come here, work, pay taxes and follow the rules are part of this country too."
-> — Dakshesh Sharma
-
-## 5. Why some Indians are leaving, and the new rules you must know
-
-In 2024, headlines in India talked about an "exodus" of Indians from Sweden. The numbers are real: according to Statistics Sweden, the number of Indians leaving rose from about **1,600 in 2022 to about 4,500 in 2024**, while new arrivals fell. (Some of that jump came from a clean-up of the population register, which recorded people who had already left years earlier.)
-
-Dakshesh sees several reasons behind the trend:
-
-- **Salaries back home have caught up.** Since around 2021, senior tech salaries in India have grown fast. With a lower cost of living and household help, many families are financially better off returning.
-- **A glass ceiling.** Some Indians feel they reach a point where moving into senior leadership is hard without fluent Swedish and local networks.
-- **You do everything yourself.** There are no maids, drivers or cooks on tap. A nanny can cost around **15,000 to 16,000 kronor a month**, so most families manage cooking, cleaning and childcare on their own.
-- **The pull of the US.** Some use Sweden as a stepping stone to America.
-- **Tighter rules** that make the future feel less certain.
-
-And the rules really have tightened. If you are thinking about Sweden now, these are the changes that matter most:
-
-- **Higher salary thresholds for work permits.** Dakshesh remembers when the minimum was around 13,000 kronor a month. It then rose to 80% of the national median salary, and since **June 2026 new applicants generally need at least 90% of the median, about 33,000 kronor a month**, with some exempted occupations at a lower level. Salaries must also match collective agreements, and unions play a role in checking contracts. Part of the reason, Dakshesh explained, was to close a loophole where some workers were brought in on low-paid jobs and then exploited.
-- **A longer road to citizenship.** From June 2026, the general residence requirement for citizenship rose from **five years to eight**, with new requirements on self-sufficiency, conduct, and Swedish language and civics tests being phased in.
-- **Swedish is becoming a job requirement.** Dakshesh has noticed more IT job adverts listing Swedish as required, not just "nice to have".
-
-His practical advice: **start learning Swedish early**. The free state-run **SFI (Swedish for Immigrants)** classes, many held in the evenings, are one of the best investments a newcomer can make.
-
-:::context The bigger picture
-Sweden is not alone. Several European countries, from Denmark and the Netherlands to Germany, have tightened migration and citizenship rules in recent years, while simultaneously competing for skilled tech and healthcare workers. For Indian professionals, the message is the same everywhere: skills get you in, but language and integration decide how far you go.
-:::
-
-## So, dream or reality?
-
-The honest answer from this conversation is: **both**. Sweden gives you time, trust, clean air, free schools and healthcare that won't bankrupt your family. It also asks for high taxes, long dark winters, a tough housing market, doing your own chores, and learning a new language and new rules that keep changing.
+His practical advice: **start learning Swedish early**, through the free **SFI (Swedish for Immigrants)** classes.
 
 > "It depends on what you want from life. If you want time with your family and a system you can trust, Sweden gives you that. If you want to grow fast and live comfortably with help at home, India may be the better choice today."
 > — Dakshesh Sharma
 
+And why does he call finding a home the hardest part of moving to Sweden? He explains it in the conversation.
+
 :::thanks A heartfelt thank you
-Most people who move abroad share only the good parts. Dakshesh shared everything: the paperwork and the healthcare, the taxes and the trust, but also the worries he carries as a parent and the reasons some of his friends have packed up and gone home. He did it without any agenda, simply so that Indian families making this big decision can make it with open eyes. Thank you, Dakshesh, for your honesty and for giving so freely of your time.
+Most people who move abroad share only the good parts. Dakshesh shared everything, without any agenda, simply so that Indian families making this big decision can make it with open eyes. Thank you, Dakshesh, for your honesty and for giving so freely of your time.
 :::
 
 :::takeaways Key takeaways
-1. An intra-company transfer is one of the smoothest routes into Sweden. Registration, tax and healthcare can be sorted within weeks.
-2. Housing is the hardest part. Expect short rental contracts at first, and plan your budget around it.
-3. Taxes of around 30% buy free children's healthcare, capped annual medical costs, free education and real social security.
-4. Work-life balance is the biggest draw: shorter days, little micromanagement and around five weeks of leave.
-5. Gang crime is a real issue Sweden is actively tackling. Research your neighbourhood carefully.
-6. Rules have tightened: a work permit now generally needs about 90% of the median salary, and citizenship needs eight years. Start learning Swedish early.
+1. Taxes of around 30% buy free children's healthcare, capped annual medical costs and free education.
+2. Work-life balance is the biggest draw: shorter days, little micromanagement and around five weeks of leave.
+3. Indian salaries catching up and doing everything yourself are real reasons some families return.
+4. A work permit now generally needs about 90% of the median salary, and citizenship needs eight years.
+5. Start learning Swedish early.
 :::
 
 :::note
@@ -546,57 +342,25 @@ This article summarises the personal experience and views our guest shared on th
     date: "2026-10-18",
     category: "Episode Notes",
     excerpt:
-      "Back pain at 19, sleepless scrolling, children glued to phones and worry that won't switch off. Neurosurgeon Dr. Arun Tungaria on what our screens are doing to our brains, and what actually helps.",
+      "Endless reels, worry that won't switch off and children glued to phones. Neurosurgeon Dr. Arun Tungaria on what our screens are doing to our brains, and what actually helps.",
     cover: "",
     video: "Db8uUA9dlYA",
     body: `
-You go to bed tired but lie awake, scrolling. You wake up with a stiff neck and a heavy head. Your mind keeps running through things that haven't happened yet. Your child won't eat unless a video is playing. And when someone asks how you are, you say "fine", because saying anything else feels like admitting something is wrong with you.
+You go to bed tired but lie awake, scrolling. Your mind keeps running through things that haven't happened yet. Your child won't eat unless a video is playing. And when someone asks how you are, you say "fine", because saying anything else feels like admitting something is wrong with you.
 
 If any of that sounds familiar, you're far from alone. India's National Mental Health Survey found that roughly one in ten adults lives with a mental health condition, and that for common problems like anxiety and depression, more than 80% never get any treatment.
 
 In this episode, host Lalit Sharma sat down with **Dr. Arun Tungaria**, a senior neurosurgeon with over 15 years of experience and more than 5,000 surgeries behind him. He runs Shri Krishna Neurospine Hospital in Bikaner and spends his spare time explaining brain and spine health in plain language through his channel, *Neuromate Talks*. He has seen these modern problems turn up in his own clinic, in patients who are getting younger every year.
 
 :::summary In this conversation
-- Back pain at 19 and the headache that isn't "just a headache"
 - The dopamine "bomb blast": how our phones feed anxiety
 - When worry won't switch off: the link between anxiety and depression
 - Children and screens: when does normal use become addiction?
-- Sleep: the most underrated medicine we have
 :::
 
 [[watch]]
 
-## 1. Back pain at 19, and the headache that isn't "just a headache"
-
-Fifteen or twenty years ago, Dr. Tungaria's spine patients were mostly older people whose discs and joints had worn down with age. That has changed.
-
-> "In the last few years, young patients — college-going students, young working adults — have started coming very commonly. In the last five years I've operated on five or six patients who were under 20, for back pain and disc problems."
-> — Dr. Arun Tungaria
-
-The reasons he sees are depressingly ordinary: very little physical activity, long hours sitting in front of screens, poor posture, fast food, not drinking enough water, and furniture that isn't built for the body. Neck pain from bending over phones is now the second most common complaint.
-
-**Signs your spine needs attention:**
-
-- Back or neck pain that keeps coming back
-- Pain that travels from the lower back into the buttocks, the back of the thighs or the legs
-- Tingling or numbness in the hands or feet
-
-He has also seen brain strokes and brain haemorrhages become more common.
-
-Then there's migraine. Migraine is one of the most common conditions in the world, affecting roughly one in seven people, and Lalit pointed to surveys showing it is common among teenagers and young adults in India too. Dr. Tungaria believes rising screen time is making it worse: bright screens and loud music through earphones are classic triggers.
-
-**How to tell it might be migraine:** headache comes in attacks, often with nausea, vomiting, flashing lights or visual disturbances, or numbness, and then goes away completely. It's called *aadha seesi* (half-head) in Hindi, but he stresses it can affect the whole head too.
-
-**What helps:**
-
-- Watch the **"three Cs"**: chocolate, coffee and cheese (especially cheese that isn't fresh).
-- Avoid smoking and alcohol.
-- Drink 3 to 4 litres of water a day.
-- Never stay on an empty stomach for long. Skipped meals and long fasts trigger attacks.
-
-If attacks become frequent, see a doctor. There are medicines that can control them.
-
-## 2. The dopamine "bomb blast": how our phones feed anxiety
+## 1. The dopamine "bomb blast": how our phones feed anxiety
 
 Every notification, every like and every new reel gives your brain a small hit of dopamine, the chemical behind the feeling of instant reward. Dr. Tungaria compares it with the "slow dopamine" we used to get from cleaning the house, working in the fields, reading a book or spending time in nature.
 
@@ -610,15 +374,9 @@ He's realistic: nobody can give up their phone entirely today. His practical "do
 - Delete the apps you overuse, or set timers on them.
 - Decide in advance how much time social media gets, and give the rest of your time to real work, physical activity and people.
 
-He's equally worried about what he calls **social health**. "The parks in front of our houses are beautiful, but you don't see children in them anymore. Fifteen or twenty years ago they were full; kids fought over who would play cricket where." He reminds us that the WHO defines health as physical, mental *and* social well-being.
+He's equally worried about what he calls **social health**. "The parks in front of our houses are beautiful, but you don't see children in them anymore." He reminds us that the WHO defines health as physical, mental *and* social well-being.
 
-:::context The bigger picture
-Governments are starting to act. Dr. Tungaria pointed to India's Fit India Movement, and to Australia, where a law banning social media accounts for children under 16 came into force in December 2025. Platforms there, including Instagram, TikTok, Snapchat and YouTube, now have to verify users' ages.
-
-But he puts just as much responsibility on families and schools: "In our schools, all the competition is about marks: 90%, above 90%. Physical fitness gets almost no attention. Children should learn how to strengthen their back and neck muscles from the very beginning. People are discovering the gym at 30 or 40. That should have started in childhood."
-:::
-
-## 3. When worry won't switch off: anxiety and depression
+## 2. When worry won't switch off: anxiety and depression
 
 Stress, he explains, is a broad term, and a small amount of it helps us grow. Anxiety is one part of it, and it becomes a problem when worry is constant and starts to affect your body and your daily life.
 
@@ -631,107 +389,55 @@ Stress, he explains, is a broad term, and a small amount of it helps us grow. An
 > "They say 90% of the things we worry about never actually happen. Anxiety is an exaggeration of that."
 > — Dr. Arun Tungaria
 
-Lalit raised research showing that around half of people with chronic anxiety also experience depression. Dr. Tungaria explained the vicious circle. Constant fear chips away at your self-confidence and self-esteem. You start to feel worthless, and that low feeling in turn creates more anxiety. Chronic back pain works the same way: he cited a large US study in which around 40% of people with long-term low back pain also had depression, each condition making the other worse.
+Lalit raised research showing that around half of people with chronic anxiety also experience depression. Dr. Tungaria explained the vicious circle. Constant fear chips away at your self-confidence and self-esteem. You start to feel worthless, and that low feeling in turn creates more anxiety.
 
 **Signs of depression:**
 
 - Feeling low and sad most of the time
 - Losing joy in things you used to enjoy
-- Sleeping much more than usual, or much less
-- Eating more than usual, and gaining weight
+- Sleeping or eating much more, or much less, than usual
 - In major depression, suicidal thoughts
 
 **His three tools for anxiety** (which also help with depression):
 
-1. **Journaling.** Write down exactly what you fear, and the pros and cons of each outcome. A student anxious about a result, for example, should write down every possible rank, college or branch, and what they'd do in each case, including the options if it doesn't work out.
+1. **Journaling.** Write down exactly what you fear, and the pros and cons of each outcome, including the options if it doesn't work out.
 2. **Mindfulness.** Stay in the present moment. "If I sit here worrying about tomorrow's brain tumour surgery, I'll ruin this conversation, and I won't be able to do tomorrow's work any better."
-3. **Meditation.** It helps regulate your mental and emotional health, and he believes it can dramatically improve how well your brain works.
+3. **Meditation.** It helps regulate your mental and emotional health.
 
-When symptoms are serious, doctors often prescribe a combination of anti-anxiety and antidepressant medicines, alongside these habits.
-
-**If suicidal thoughts appear:** tell someone you trust right away, whether family or a friend if family feels hard to talk to, and get professional help. "Mental health is the most neglected part of health in our society. There's so much taboo that people get labelled *paagal* (mad) far too quickly."
+**If suicidal thoughts appear:** tell someone you trust right away, whether family or a friend, and get professional help. "Mental health is the most neglected part of health in our society. There's so much taboo that people get labelled *paagal* (mad) far too quickly."
 
 :::help If you are struggling right now
 You don't have to go through it alone. Call **Tele-MANAS on 14416** (or 1-800-891-4416). It is the Government of India's free, confidential mental health helpline, open 24×7 in many Indian languages. If you or someone near you is in immediate danger, call **112**.
 :::
 
-## 4. Children and screens: when does normal use become addiction?
+## 3. Children and screens: when does normal use become addiction?
 
 Lalit described a scene many of us know: young parents playing videos on a phone just to get a toddler to sit still and eat. Dr. Tungaria didn't soften his answer.
 
-A child's brain is still building its pathways, which is called neuroplasticity. Fill those years with fast, loud, colourful short content (and sometimes vulgar content no parent can fully control), and the results show up early: **poor focus**, weak social skills and early spectacles. "Give them a storybook, and they'd rather watch the film made from it."
+A child's brain is still building its pathways, which is called neuroplasticity. Fill those years with fast, loud, colourful short content, and the results show up early: **poor focus**, weak social skills and early spectacles. "Give them a storybook, and they'd rather watch the film made from it."
 
-His own view is strict: ideally no screens before the age of 10, and after that only limited, supervised use with parental controls, restricted mode and app timers switched on.
+His own view is strict: ideally no screens before the age of 10, and after that only limited, supervised use with parental controls and app timers switched on.
 
-**Normal use vs. addiction.** He compares screens to food: a balanced amount keeps you healthy, too much shows up in your body. A little gaming can keep a child's brain active and even improve hand-eye coordination. But watch for these signs:
+**Warning signs that use is becoming addiction:**
 
 - Grades falling below the child's usual level
-- Less time with friends and outdoor play
-- Talking less with parents
+- Less time with friends and outdoor play, and less talking with parents
 - Sleep problems or late nights with the phone
-- More processed food and sugary drinks
 - Constantly demanding the phone the moment homework is done
 
-**What parents can do:**
-
-- **Be aware first.** If you're both on your phones at dinner, your child is learning from you.
-- **Be firm when needed.** Treat overuse as seriously as you would any other harmful habit.
-- **Give a basic keypad phone** for staying in touch, instead of a smartphone.
-- **Most of all, give your time.** "If we don't make ourselves available to our children, they'll seek that time and attention elsewhere, and today the easiest place is the phone."
-
-He shared a recent case. A 15- or 16-year-old came to him with frequent headaches and falling grades. Gently questioning the family revealed that the teenager was taking the phone to bed every night without the parents realising. Once they took firm steps, the headaches eased and the grades started coming back.
+**What parents can do:** notice your own habits first (if you're both on your phones at dinner, your child is learning from you), be firm when needed, consider a basic keypad phone for staying in touch, and most of all, give your time. "If we don't make ourselves available to our children, they'll seek that time and attention elsewhere, and today the easiest place is the phone."
 
 :::context The bigger picture
 Dr. Tungaria's age-10 view is stricter than the formal guidance, but the direction is the same. The Indian Academy of Pediatrics recommends no screen exposure at all for children under 2, at most one hour a day of supervised screen time between ages 2 and 5, and less than two hours a day between 5 and 10. It also says screens must never replace outdoor play, sleep, family time or study.
 :::
 
-## 5. Sleep: the most underrated medicine we have
-
-Lalit cited the National Sleep Foundation's guidance: 8 to 10 hours of sleep for teenagers and 7 to 9 for adults. Dr. Tungaria explained why that sleep is non-negotiable.
-
-Sleep repairs the body, the muscles, bones and joints you've used all day, and it's when the brain **consolidates what you learned**. That's why the all-nighter doesn't work:
-
-> "If you think you'll study 16 hours and sleep 5, you won't remember what you studied. Five hours of focused study with proper sleep will help you far more."
-> — Dr. Arun Tungaria
-
-Nature built in a simple switch. When it gets dark, the pineal gland releases melatonin, the hormone that makes us sleepy. But we've overridden it: lights stay on until 11 p.m., and when they finally go off, the phone screen lights up.
-
-> "As long as light keeps reaching the brain through our eyes, the signal that brings on sleep will not switch on."
-> — Dr. Arun Tungaria
-
-**His sleep prescription:**
-
-- Take an evening walk somewhere with dim light, so your brain registers that night has come.
-- Sleep in a completely dark room. Even a small night light can disturb sleep.
-- Avoid tea and coffee for six to seven hours before bed.
-- Don't rely on sleeping pills. "Our society has developed a knee-jerk reaction of asking for a pill for everything. There is no magic pill." Sleep medicines should be taken only on prescription and under a doctor's supervision, because the biggest risk is dependence. Lifestyle changes last.
-
-Many of his patients find that once their sleep is fixed, their concentration improves, and even long-standing body pain eases.
-
-## Put your own oxygen mask on first
-
-Lalit's last question was practical: what should someone do first if they're worried about their brain, spine or mental health?
-
-Not Google, says Dr. Tungaria, and not ChatGPT or unqualified "health influencers". He suggests going to a qualified doctor, in person or through one of the many online consultation platforms now available. "Twenty years ago we said *neem hakeem khatra-e-jaan* (a half-trained healer is a danger to life). The same applies to social media today."
-
-His final message was about priorities.
-
-:::context The bigger picture
-He pointed to Zerodha co-founder Nithin Kamath, a famously fit entrepreneur who shared in 2024 that he'd had a mild stroke. Kamath himself suggested that poor sleep, exhaustion, dehydration and overexertion may have played a part. It was a reminder that chasing short-term goals at the cost of health can stop you from reaching them at all.
-:::
-
-> "When the oxygen level drops on a plane, you put the mask on yourself first. Only then can you help others. Your parents, your spouse, your children depend on you. Be a responsible person: make your health your top priority — physical, mental, social and emotional."
-> — Dr. Arun Tungaria
-
-And don't wait until you're very ill to see a doctor. Early signs are reason enough.
+In the episode, Dr. Tungaria also explains why studying for 16 hours on five hours of sleep backfires, and the simple bedtime switch our phones have quietly broken.
 
 :::takeaways Key takeaways
-1. Back and neck pain in your teens or twenties is a warning sign, not a normal part of studying or work.
-2. Phones deliver constant "fast dopamine". Set limits, and make room for slow, real-world rewards.
-3. Anxiety and depression feed each other. Journaling, mindfulness and meditation help, and professional help is not a weakness.
+1. Phones deliver constant "fast dopamine". Set limits, and make room for slow, real-world rewards.
+2. Anxiety and depression feed each other. Watch for the early signs in yourself and others.
+3. Journaling, mindfulness and meditation help, and professional help is not a weakness.
 4. Children need your time more than they need a screen. Watch for slipping grades, sleep and friendships.
-5. Darkness, no late caffeine and a phone-free bedroom do more for sleep than any pill.
-6. Check symptoms with a qualified doctor, not with Google or influencers.
 :::
 
 :::note
@@ -759,8 +465,6 @@ Our guest was **Nitisha Malhotra**, an astrologer, numerologist, tarot reader an
 - Can destiny be changed? Her "40% destiny" answer
 - Mangal dosh, matching gunas and love marriages
 - How to spot a good astrologer, and a bad one
-- Names, spellings and the Lo Shu grid
-- Willpower, manifestation and the "sensitive" generation
 :::
 
 [[watch]]
@@ -797,9 +501,6 @@ Few things cause more fear in Indian families than *mangal dosh*. Some astrologe
 
 What keeps a marriage going, she says, is confidence, understanding and the values you stand on, not a number on a chart.
 
-:::context The bigger picture
-That's a striking admission, and a reassuring one for couples who've been told their match is "too low". Low guna scores and manglik status are still among the most common reasons families reject a proposal. Hearing an astrologer say her own 12-guna marriage is working is a reminder that a chart describes tendencies, not a final judgement on two people.
-:::
 
 ## 3. How to spot a good astrologer, and a bad one
 
@@ -822,72 +523,13 @@ She even shared a story from the Puranas: when Narad predicted Parvati's future 
 Psychologists offer one more test worth adding. In 1948, Bertram Forer gave all his students the same "personality report", and most rated it as remarkably accurate for them personally. This tendency to see ourselves in general statements is called the Barnum effect. It's a good reason to ask any reader for specific, checkable facts about your past, exactly as Nitisha suggests, rather than vague descriptions that could fit anyone.
 :::
 
-## 4. Names, spellings and the Lo Shu grid
-
-Ayushmann Khurrana's extra "n" and "r" are well known. Lalit also mentioned the numerologist Arviend Sud, who changed both his first name and surname spellings. So should you change yours?
-
-Usually not, says Nitisha. In her estimate, around **70% of people don't need a name change** at all. Only if your name number clashes with your driver and conductor numbers (the numbers from your birth date) does she recommend a change, and she warns strongly against adding letters just because it's fashionable: "The whole equation changes."
-
-She's also a firm believer in giving children names with meaning, including names of gods, because she feels the qualities behind a name like Ram (dignity, acceptance, patience) shape a child.
-
-**The Lo Shu grid.** She walked through how to build one from any date of birth. The classic 3×3 square always has the numbers in the same positions:
-
-:::loshu
-4 9 2
-3 5 7
-8 1 6
-The Lo Shu square: every row, column and diagonal adds up to 15
----
-4 - 22
-- - -
-8 - -
-Her example, 2 August 2004: 2 appears twice, 4 and 8 once; the rest are missing
-:::
-
-You write each digit of your birth date into its square, repeating a number as many times as it appears, and leave the missing ones empty. Zeros are ignored. In her system, each missing number points to something to work on, and she gave a practical, non-ritual way to "activate" many of them:
-
-- **Missing 1** (leadership, confidence): be disciplined, wake early, respect and serve your father
-- **Missing 2** (emotional balance): love your mother, help others, meditate
-- **Missing 3** (knowledge, expression): read and write something every day
-- **Missing 4** (time management): commit to doing one thing for a fixed hour, and do it
-- **Missing 5** (communication): speak up and express yourself, in a balanced way
-
-Notice how many of these are simply good habits.
-
-:::context The bigger picture
-On the question of a name for the country, Nitisha said she prefers "Bharat". It's worth knowing that India's Constitution already uses both. Article 1 begins: *"India, that is Bharat, shall be a Union of States."* Both names have been official since the Constitution was adopted.
-:::
-
-## 5. Willpower, manifestation and the "sensitive" generation
-
-The theme Nitisha returned to most was willpower, and she's worried about today's young people. In her view, Gen Z and Gen Alpha dream big but give up quickly when challenges come. Smaller families and single-child homes, she believes, have led to more pampering and more emotional sensitivity.
-
-She was also clear about what manifestation is not:
-
-> "Manifestation is not saying 'I'll become rich, I'll become rich' and expecting it to happen. It is how attentive you are, practically, to the thing you want to achieve."
-> — Nitisha Malhotra
-
-Her example was Shah Rukh Khan, who she says kept working through years of being called over-the-top or childish, and kept updating himself until his dream came true. The contrast she drew is painfully relevant: some people face a flop or a failure and turn to addiction, or even suicide. "How strong your willpower is *after* you lose is what decides everything."
-
-She spoke from experience. As a woman entering astrology, she was told it was "*₹11 wali kamai*" (a pittance), and called a *jaadugarni* (sorceress). "If we had cried that day and quit, where would we be? We cried, and then we said: let them talk. We'll do it anyway."
-
-Her everyday advice was refreshingly practical: sleep on time, wake up early, build discipline, and stop waiting for the stars to do the work.
-
-:::help If you're going through a hard time
-Nitisha spoke about people who give up after a failure. If you or someone you know is struggling, please reach out. Call **Tele-MANAS on 14416**, India's free, confidential, 24×7 mental health helpline. In an emergency, call **112**.
-:::
-
-## What we took away
-
-You may come to this episode as a believer, a skeptic, or simply curious, and you'll leave with something either way. What stood out to us wasn't a prediction. It was an astrologer telling people to stop being afraid: of mangal dosh, of low guna scores, of astrologers who demand money for fear-based remedies, and of a future that, in her own words, is only 40% written.
+In the episode, Nitisha also shows how to draw your own Lo Shu grid from your date of birth, and the simple habits she believes can "activate" each missing number.
 
 :::takeaways Key takeaways
 1. In Nitisha's view, destiny is only part of the story. Effort, willpower and choices count for more.
 2. Don't cancel a relationship over guna scores alone. Her own 12-guna marriage is working.
 3. Be wary of any astrologer who frightens you, prescribes remedies for all nine planets, or simply asks for money.
 4. Ask "Can I become this, and how?" instead of "What's my future?"
-5. Most people don't need a name change. Never change a spelling just because it's fashionable.
-6. Manifestation means practical, consistent effort, not repeating wishes.
 :::
 
 :::note
@@ -917,33 +559,14 @@ During this conversation, host Lalit Sharma put it in one line that stayed with 
 To make sense of health and term insurance, without the sales pitch, Lalit spoke to **Ravi Ashok**, his batchmate from MBA days, who has spent 12 years in the insurance industry, much of it in rural and micro insurance.
 
 :::summary In this conversation
-- Why so many Indians still don't trust insurance
 - Health insurance first: what one illness can do to a family
-- How to buy health insurance without getting your claim rejected
+- How to avoid getting your claim rejected
 - Term insurance: the policy nobody wants to talk about
 :::
 
 [[watch]]
 
-## 1. Why so many Indians still don't trust insurance
-
-Ask most people to name an insurance company and they'll say LIC. Ravi says that's part of the problem: for decades, armies of agents in every town sold insurance **as an investment**, promising returns, and so people never understood what insurance is actually for.
-
-His definition is beautifully simple. Imagine 100 houses in your neighbourhood. Every year, on average, one of them catches fire. If all 100 families contribute a small amount each year, the one family that suffers the loss can be paid in full.
-
-> "In simple words: when you suffer a loss, insurance makes it good, because you paid the premium."
-> — Ravi
-
-That's it. Insurance isn't meant to "give back" money. It's meant to stop one bad event from wrecking your finances.
-
-**The two big families of insurance:**
-
-- **Life insurance:** pays your dependants if you die.
-- **Non-life (general) insurance:** everything else, including health, motor, property, fire, marine, accident and crop insurance.
-
-**A quick word on motor insurance.** Third-party cover, for damage you cause to other people or their property, is mandatory under the Motor Vehicles Act; without it you'll be fined. Comprehensive cover, which pays for damage to your own vehicle, isn't mandatory, but Ravi strongly recommends it: even a broken bumper, windscreen or fender can take a real bite out of a middle-class budget.
-
-## 2. Health insurance first: what one illness can do to a family
+## 1. Health insurance first: what one illness can do to a family
 
 Lalit asked the practical question: if you're middle class or lower middle class, which insurance should you buy first?
 
@@ -959,7 +582,7 @@ For families who can't afford a premium at all, the government's **Ayushman Bhar
 Ravi called it one of the most important health initiatives in the country, especially because private insurers rarely sell new policies to people that age. If someone in your family is 70 or older, help them enrol. It's free, through the Ayushman app, beneficiary.nha.gov.in or a Common Service Centre.
 :::
 
-## 3. How to buy health insurance without getting your claim rejected
+## 2. How to avoid getting your claim rejected
 
 The most heartbreaking insurance stories are the ones where people *did* pay their premiums, and the claim was still rejected. Ravi's advice is aimed squarely at avoiding that.
 
@@ -971,34 +594,10 @@ The most heartbreaking insurance stories are the ones where people *did* pay the
 
 - **Room-rent caps.** A limit of ₹5,000 or ₹10,000 a day can reduce your entire claim if you take a better room.
 - **Waiting periods.** Usually 30 days for new illnesses, and longer for pre-existing ones.
-- **Riders and add-ons.** Maternity cover, for example, if you're planning a family.
 - **Network hospitals.** Check that the hospitals near you are on the list.
 - **Claim settlement track record.** Choose an insurer that actually pays.
 
-**4. Use the free-look period.** If you realise soon after buying that the policy isn't right for you, you can cancel it and get your premium back.
-
-**The smart move most salaried people miss: a top-up.** If your employer already gives you ₹3–5 lakh of cover, you don't need to buy a brand-new ₹10 lakh policy. A **top-up or super top-up** plan covers costs above a threshold you choose (the "deductible"), and because the insurer only pays above that level, the premium is far lower. Ravi estimates around ₹4,000 a year, compared with ₹20,000 or more for a full fresh policy.
-
-Here's how it works, using Lalit's example:
-
-- Your base policy covers **₹2 lakh**. You buy a top-up of **₹3 lakh** with a **₹2 lakh deductible**.
-- You're hospitalised and the bill comes to **₹5 lakh**.
-- Your base policy pays the first ₹2 lakh. The top-up pays the remaining ₹3 lakh.
-
-It works for family floater policies too. Ravi's own family has a ₹5 lakh floater plus a super top-up of ₹20 lakh with a ₹5 lakh deductible, which means ₹25 lakh of peace of mind at a fraction of the cost.
-
-:::context The bigger picture
-The rules have moved in policyholders' favour since this conversation. Under IRDAI's 2024 reforms:
-
-- The **free-look period is now 30 days** (earlier 15 days) to cancel a policy that isn't right for you.
-- The **maximum waiting period for pre-existing diseases is 3 years**, down from 4.
-- After **5 continuous years** of cover (the "moratorium"), an insurer can't reject a claim for non-disclosure unless there is proven fraud.
-- Insurers must decide on **cashless approval within an hour** of the hospital's request.
-
-Always check your own policy wording, but these changes make honest, continuous cover more valuable than ever.
-:::
-
-## 4. Term insurance: the policy nobody wants to talk about
+## 3. Term insurance: the policy nobody wants to talk about
 
 If health insurance is the first priority, Ravi says term insurance comes second, and only if someone depends on you.
 
@@ -1013,30 +612,23 @@ That question is exactly why Ravi is so firm about this:
 
 Endowment plans and ULIPs bundle insurance with investment. In his experience, endowment plans have rarely returned more than around 6% historically, and the bundling leaves you with too little cover *and* poor returns. His alternative is simple: **buy a pure term plan for protection, and invest separately**, for example through mutual funds, for growth. You get a far bigger cover for the premium, and better returns on your investments.
 
-**How much cover?** A common rule of thumb is **8 to 10 times your annual income**, but Ravi says your lifestyle and dependants matter more. If your family spends ₹1 lakh a month and you want them to keep living the same way, your cover needs to reflect that. A middle-class earner with fewer dependants will need much less.
-
 **Choosing a plan.** Look for an insurer with a long track record and a strong claim settlement ratio, and balance that against the premium. Then two things decide whether your family actually gets paid:
 
 - **Declare everything honestly**, just like with health insurance.
 - **Get the nominee right**, so the money reaches the right person quickly, without legal tangles.
 
-When a claim is paid, it's usually a **lump sum**. Ravi's advice to families: work with a qualified financial adviser to invest it, so it covers monthly expenses *and* future goals.
-
-:::context The bigger picture
-India's insurance penetration, meaning premiums as a share of GDP, is just **3.7%**, roughly half the global average of about 7%. Life insurance penetration is only **2.8%**, and even that includes many investment-style policies rather than pure protection. Ravi believes the biggest gap is understanding: insurance pays when something goes wrong, not as a return on money spent.
-:::
-
 ## Protect first, invest later
 
 What we took from this conversation is a simple order of priorities. **Health insurance first**, because one illness can undo years of savings. **Term insurance next**, if anyone depends on you. Investing comes after you're protected, and it should never be bundled into an insurance policy.
 
+In the episode, Ravi also walks through the low-cost top-up trick that can multiply a salaried family's health cover for a few thousand rupees a year.
+
 :::takeaways Key takeaways
-1. Insurance compensates you for a loss. It isn't an investment, so don't expect "returns".
-2. Buy health insurance first, with at least ₹10 lakh of cover. Use a top-up if you already have employer cover.
-3. Declare every pre-existing condition honestly. Hiding one is the fastest route to a rejected claim.
-4. Check room-rent caps, waiting periods, network hospitals and the insurer's claim record.
-5. Buy a pure term plan if someone depends on you, invest separately, and name your nominee correctly.
-6. Seniors 70+ can get free cover of up to ₹5 lakh through Ayushman Vay Vandana.
+1. Buy health insurance first, with at least ₹10 lakh of cover.
+2. Declare every pre-existing condition honestly. Hiding one is the fastest route to a rejected claim.
+3. Check room-rent caps, waiting periods, network hospitals and the insurer's claim record.
+4. Buy a pure term plan if someone depends on you, invest separately, and name your nominee correctly.
+5. Seniors 70+ can get free cover of up to ₹5 lakh through Ayushman Vay Vandana.
 :::
 
 :::note
@@ -1050,7 +642,7 @@ This article summarises the views our guest shared on the show and is for awaren
     date: "2026-10-15",
     category: "Episode Notes",
     excerpt:
-      "He failed prelims, then mains, quit a secure bank job before his last attempt, and later survived 59 rounds of gunfire as a Collector. Aditya Nath Das on what UPSC aspirants really go through, and what the job is really like.",
+      "He failed prelims, then mains, and still made it to the IAS. Former Chief Secretary Aditya Nath Das on judging yourself honestly, beating burnout, and why the exam should never be bigger than you.",
     cover: "",
     video: "dM9CqdQ6ApI",
     body: `
@@ -1064,10 +656,8 @@ So for our Independence Day special, we didn't want a topper's highlight reel. W
 
 :::summary In this conversation
 - "I didn't even clear prelims": failing twice, and learning to judge yourself honestly
-- The bank job he quit: Plan B, family pressure and knowing yourself
 - Burnout, coaching and information overload
-- 59 rounds of gunfire: the ambush that gave him a "second life"
-- Power, pressure and ethics: what the job is really like
+- Why the exam should never be bigger than you
 :::
 
 [[watch]]
@@ -1100,26 +690,7 @@ He welcomed a recent UPSC step in that direction. In June 2025 the Commission la
 > "This exam doesn't capture your whole life story. There's a lot still to come. Don't let one examination become the marker of your future."
 > — Aditya Nath Das
 
-## 2. The bank job he quit: Plan B, family pressure and knowing yourself
-
-Here's a part of his story most aspirants never hear. Before the IAS, he cleared the Probationary Officer exam for two or three banks and actually joined one.
-
-He quickly realised the work wasn't for him. So, with only his final UPSC attempt left, he resigned.
-
-> "Many people asked me, 'Have you gone mad, leaving such a good job?' I said: I don't know what will happen. But I know what I don't like, and I'm acting on what I know."
-> — Aditya Nath Das
-
-His advice to anyone without a clear roadmap is to start with yourself, not with what society calls a good job. Figure out what you enjoy, what you're good at and where you fall short, because "finally, you have to live with yourself." Get stuck in the wrong place, he warns, and it becomes very hard to get out.
-
-When our host pushed back, saying many young people take jobs they don't love to support their families, he agreed it's a real factor. But he held his ground on one thing: "If you aren't happy yourself, you can't keep anyone else happy."
-
-On Plan B, he was clear-eyed. This is a competitive exam, which means it's an elimination process: "You're not allowed to make mistakes." That's exactly why your sense of who you are can't depend on it.
-
-:::context The bigger picture
-His point about public service runs deeper than career advice. He insists that every level of public service matters: "Somebody working lower in the hierarchy is still contributing." For an aspirant who doesn't make the final list, that's a reminder that there are many ways to serve, and many respectable paths out of the preparation cycle.
-:::
-
-## 3. Burnout, coaching and information overload
+## 2. Burnout, coaching and information overload
 
 Burnout is one of the most common struggles aspirants describe, and his explanation of where it comes from was striking.
 
@@ -1134,84 +705,26 @@ His practical habits:
 - **Stop when understanding stops.** "Your eyes are still on the book, but your mind isn't working." That's the moment for a cup of tea.
 - **Don't cut off your social life.** When it gets too much, go out, meet friends, then come back and reassess. Isolation makes everything worse.
 - **Compete with yourself.** "You're not going to beat anybody. You're going to do yourself better. That's all."
-- **Choose your own path.** The most common mistake, he says, is listening to others, "even to us". Pick subjects on what you enjoy and score well in, and make mid-course corrections when needed.
 
 On coaching, he's neither for nor against. Preparing in complete isolation is hard, and being around other aspirants helps ideas flow. "The only danger is that you get stuck in a pattern. Coaching tries to fit you into a slot. Don't get slotted."
 
-The same goes for the interview. Boards can tell when answers are over-rehearsed. What they look for is sincerity, honesty and a candidate who is at ease. "Don't sit on the edge of the chair as if you're about to fall off. Don't try to bluff the board. Everyone makes mistakes. Let them see who you are."
+## 3. "Don't make the exam bigger than yourself"
 
-:::context The bigger picture
-For many aspirants, preparation means moving to a coaching hub and living in cramped rooms, often far from family. The risks of that life became painfully visible in July 2024, when three aspirants died after a coaching centre's basement library in Delhi's Old Rajinder Nagar flooded. It set off a national conversation about the conditions young people endure in pursuit of this one exam.
-
-That's why his advice about balance isn't a soft extra. A healthy routine, friends and a life outside the syllabus are part of preparing well.
-:::
-
-## 4. 59 rounds of gunfire: the ambush that gave him a "second life"
-
-Between 1999 and 2001, he served as Collector of Warangal, then a district badly affected by Naxalite violence. One evening in 2001, returning from a tribal-development council meeting deep in the forest, his car came under fire.
-
-Around 59 to 60 rounds hit the vehicle. A splinter struck him in the back. His driver was shot in the leg, and that driver saved his life. Bleeding, he pressed the accelerator down with his hand, slumped over the steering wheel, and kept the car moving until they were out of the firing zone.
-
-They later learned there had been two squads waiting, and claymore mines had been laid on the road. The person holding the trigger didn't press it, because the Collector wasn't the target. The Naxalites later sent an apology.
-
-Even in that moment, there was a decision to make. A nurse at a primary health centre gave them first aid. Back in Warangal, he sent his badly injured driver to a better-equipped hospital rather than taking him along to the same one, so the driver would get full attention. Doctors later said that decision saved the driver's leg. The driver went on to spend nearly two years in treatment and grafting.
-
-> "It is like a second life for me. It changed my perception of a lot of things. I realised how much time we waste on small things that we make into very big things."
-> — Aditya Nath Das
-
-He says the experience left him less stressed, not more, and much clearer about what's important and what isn't.
-
-## 5. Power, pressure and ethics: what the job is really like
-
-The IAS is heavily glorified in India by the media, by families and by coaching ads. So we asked directly: what are the real perks and powers?
-
-His answer is worth printing on every aspirant's wall:
-
-> "Power is like an electric bulb. You get power, and you give light. If you can't do that, you'll burst. Power is always for others. It is not for yourself."
-> — Aditya Nath Das
-
-The facilities officers get, he explains, exist only to help them do a job that runs 24×7: train accidents, floods and law-and-order emergencies at any hour. People don't resent those facilities when the work gets done. Resentment begins when they're misused.
-
-**Work-life balance.** By the time officers reach a district, many have working spouses and young children. His formula: stay physically active, meet people, clear your work every day so it doesn't pile up, and above all, decide. "Being stuck between yes and no, to be or not to be, is what increases stress. Our job is to take a call."
-
-**Political pressure.** He doesn't pretend it doesn't exist, nor does he demonise it. A bureaucracy's legitimacy comes from elected representatives, and politicians often bring accurate information from the ground. But: "Nobody holds your hand and makes you sign. Applying pressure is their dharma. Doing your work well is yours."
-
-**When you're asked to do something wrong,** his method is simple and practical:
-
-1. Say clearly that it isn't right, and explain the harm.
-2. If they insist, ask for the instruction in writing, and reply in writing with your objection.
-3. If it could cause serious, irreversible damage, be ready to walk away from that post.
-
-Often, he says, the matter is dropped long before step three. He gave his own juniors the same freedom: question any oral instruction, and ask for it in writing if they disagree. And he takes ownership at the top: "When I sign, the responsibility of everyone below me ends. If I can't defend it, why should I sign it?"
-
-The most satisfying moments of his career had nothing to do with power. In Shillong, he was sent, somewhat unwillingly, to a medical institute that simply wasn't getting off the ground; today it is a fully working institute. As Principal Secretary of Education, his goal was that no teacher should have to run around the secretariat to get a problem solved, and that teachers be allowed to teach instead of being pulled into every other government duty.
-
-:::context The bigger picture
-The conversation also turned to the economy facing today's young graduates. India produces around 1.5 million engineering graduates a year, yet many struggle to find work in their field. Mr Das points to uneven college quality, the need to stream students towards ITIs, polytechnics or degrees from Class 12, a manufacturing sector that isn't yet strong enough, and the case for giving states more economic autonomy to attract investment.
-
-And on global headwinds: around the time of recording, the US had announced a 25% tariff on Indian goods over India's purchases of Russian oil. Later in August 2025, a further 25% took the combined rate to 50%. His view: tariffs have become a tool of coercive diplomacy, India's rise is making bigger powers nervous, and the answer is an economy robust enough to withstand it, along with a bureaucracy that is decisive, fair and unbiased enough to attract investment.
-:::
-
-## "Don't make the exam bigger than yourself"
-
-We closed by asking for one piece of advice for someone just starting out. His answer covered the practical and the personal.
-
-Prepare with a calm mind. Know your capacity. Build a daily routine. Read one newspaper every day, especially the editorials, because they show how to make many points precisely and concisely. And understand an issue before you criticise it: "When we become critical first, we take a position, and our preparation becomes lopsided."
+We asked for one piece of advice for someone just starting out. Prepare with a calm mind, he said. Know your capacity. Build a daily routine. Read one newspaper every day, especially the editorials, because they show how to make many points precisely and concisely.
 
 Then came the line that, for us, defined the whole episode:
 
 > "Don't make the exam bigger than yourself. An exam is an exam. Don't let the balance sheet of your life rest on it. Nothing in life is bigger than you. Everything begins after you."
 > — Aditya Nath Das
 
-If you're in the middle of your preparation, or watching someone you love go through it, this is a conversation worth an hour of your time.
+In the episode, he also tells the story of the evening in 2001 when around 59 rounds of gunfire hit his car in Warangal, and what his injured driver did that saved both their lives.
 
 :::takeaways Key takeaways
 1. Failing prelims or mains isn't the end. Calibrate yourself honestly and fix the specific gap.
-2. Know yourself before choosing a path. He walked away from a secure bank job because it wasn't right for him.
-3. Study to understand, not to "crack the exam". It's the best defence against burnout and information overload.
-4. Don't isolate yourself, and compete only with who you were yesterday.
-5. Power is for others. In the job, decide clearly, act ethically and ask for wrong instructions in writing.
-6. Nothing in life, including this exam, is bigger than you.
+2. Study to understand, not to "crack the exam". It's the best defence against burnout and information overload.
+3. Don't isolate yourself, and compete only with who you were yesterday.
+4. Use coaching if it helps, but don't let it slot you into a pattern.
+5. Nothing in life, including this exam, is bigger than you.
 :::
 
 :::note
@@ -1225,7 +738,7 @@ This article is based on our conversation with Aditya Nath Das. His quotes are t
     date: "2026-10-12",
     category: "Episode Notes",
     excerpt:
-      "Money that never stays, a job that keeps slipping away, school fees he couldn't pay. Numerologist Sanddeep Bajaj on the years when nothing worked, and the five ideas he says turned his life around.",
+      "Money that never stays, a job that keeps slipping away, school fees he couldn't pay. Numerologist Sanddeep Bajaj on the years when nothing worked, why he says your name matters, and what the numbers missing from your birth date reveal.",
     cover: "",
     video: "_TPYlhVhpy4",
     body: `
@@ -1238,19 +751,15 @@ His father retired as an Assistant Commissioner of Income Tax. On paper, the fam
 > "I had a lot, but nothing in my hands."
 > — Sanddeep Bajaj
 
-Today, he says, he owns five flats, five cars and two shops, and he credits numerology and his teacher for the turnaround. Whatever you make of numerology, what makes this conversation worth your time is how openly it deals with things most people never admit: debt, borrowed school fees, a career that keeps slipping away.
+Whatever you make of numerology, what makes this conversation worth your time is how openly it deals with things most people never admit: debt, borrowed school fees, a career that keeps slipping away.
 
 :::context The bigger picture
-Sanddeep's story is personal, but the pressure behind it is widespread. In the ManipalCigna–YouGov *India Health Quotient 2026*, 82% of urban Indians said they experience stress, and financial well-being scored lowest of all five dimensions measured. Aditya Birla Sun Life's *A-Nishchit Index 2024* found that 59% of working professionals feel uncertain about their own and their family's well-being. And school fees, the very thing Sanddeep couldn't pay, keep climbing: in a 2025 LocalCircles survey, over 80% of private-school parents reported fee hikes above 10% in a single year.
-
-When people feel that squeeze, many go looking for answers anywhere they can. Astrology app Astrotalk's income rose about 85% in FY25 to roughly ₹1,214 crore, with most activity coming from India's biggest cities.
+Sanddeep's story is personal, but the pressure behind it is widespread. In the ManipalCigna–YouGov *India Health Quotient 2026*, 82% of urban Indians said they experience stress, and financial well-being scored lowest of all five dimensions measured. And school fees, the very thing Sanddeep couldn't pay, keep climbing: in a 2025 LocalCircles survey, over 80% of private-school parents reported fee hikes above 10% in a single year.
 :::
 
 :::summary In this conversation
 - When the future feels frightening, start with today
 - Same birthday, different lives: why he says your name matters
-- The "luck factor" that stayed at zero until 42
-- Kua numbers, angel numbers and "switch codes"
 - The missing numbers: stability, discipline and a child who speaks late
 :::
 
@@ -1267,12 +776,6 @@ Sanddeep's answer surprised us. He believes knowing the future matters far less 
 
 In his view, everyone is given four "pillars" to work with today: the spelling of their name, their signature, their bank account number and their mobile number. Until these are aligned with your date of birth, he says, it's hard to move forward. He was also refreshingly blunt about the limits: if someone has decided to gamble or bet on horses, no number on earth can save them.
 
-:::context The bigger picture
-Lalit raised a fair point: in the age of AI, when a younger generation prides itself on logic and science, interest in numerology seems to be growing, not shrinking. Surveys abroad tell a similar story. A US survey by EduBirdie, reported by Fortune, found that around 80% of Gen Z and millennials say they believe in astrology.
-
-Researchers add an important caveat: there's a difference between casual interest and deep belief. Many young people use these systems less as a rulebook and more as a way to reflect on their lives. Either way, "focus on what you can change today" is advice almost anyone can use.
-:::
-
 ## 2. Same birthday, different lives: why he says your name matters
 
 Here's a question that bothers a lot of people: thousands of babies are born on the same day, so why do their lives turn out so differently? Sanddeep's answer is that the date may be shared, but the name never is. "One became Lalit Narang, another Lalit Kumar, another Lalit Kohli."
@@ -1282,63 +785,9 @@ He ties this to the old saying *"Ram se bada Ram ka naam"*: the name of Ram is g
 > "Your date of birth can never change. The spelling of your name, you can change whenever you like."
 > — Sanddeep Bajaj
 
-He urged parents to think twice before naming a child after a favourite TV-serial character without checking the name's "vibration". And unlike Lal Kitab astrology, where he says you need a fresh reading every year, he describes numerology as a one-time process: fix your name spelling, mobile number and account number once, and you're done.
+He urged parents to think twice before naming a child after a favourite TV-serial character without checking the name's "vibration".
 
-:::context The bigger picture
-Name-spelling changes are hardly rare in India's film industry. Ayushmann Khurrana was born Nishant, and reports say his astrologer father changed both his name and its spelling for numerological reasons.
-
-But it's worth asking a harder question too. We remember the stories where a new spelling was followed by success. We rarely hear from the people who changed their names and saw nothing change. Psychologists call this survivorship bias.
-:::
-
-## 3. The "luck factor" that stayed at zero until 42
-
-Plenty of people feel they work hard and still can't catch a break. Sanddeep says he felt exactly that, and that numerology gave him an explanation.
-
-Most numerologists, he says, only talk about the **driver number** (the *mulank*), but every date of birth carries two numbers:
-
-- **Driver number (mulank):** the sum of the digits of the day you were born
-- **Conductor number (bhagyank, or destiny number):** the sum of every digit in your full date of birth
-
-"The real game starts after 40," he says, because that's when, in his view, the conductor number takes over. Using his own birthday, 17 November 1971, he explained: 1 + 7 gives a driver of 8, and the full date adds up to 28, which reduces to a conductor of 1. In numerology, 8 belongs to Saturn and 1 to the Sun: "father and son, but the biggest enemies." That clash, he believes, is why his luck stayed close to zero until he was 42.
-
-He learned the terms "driver" and "conductor" from his teacher, **Arviend Sud**, who he says has registered both terms. After a six-month weekend course that began in December 2011, his first change was to the spelling of his own name, moving its total from 37 to 41 to bring in the number 5. "Five is a number that supports everyone," he says.
-
-What stood out to us was how openly he thanks his teacher, in every interview he gives.
-
-> "People say, 'We paid for the course, why should we thank anyone?' Thanks matter because I've seen both situations, then and now."
-> — Sanddeep Bajaj
-
-:::context The bigger picture
-At a time when success stories are often told as solo journeys, publicly crediting a teacher, again and again, is unusual. It echoes the old Indian guru–shishya tradition, and it's a habit worth keeping in any field.
-
-It's also worth remembering that real turnarounds usually have many causes: experience, persistence, relationships and timing. It's easy to credit a single change for everything, and much harder to prove it.
-:::
-
-## 4. Kua numbers, angel numbers and "switch codes"
-
-For anyone running a business, the pressure is daily: rent, salaries, suppliers. Sanddeep, who runs his own business, says this is where he leans on two more tools.
-
-The first is what's known worldwide as the **Kua number**, which he treats as an "angel number". His formula:
-
-- Add up the digits of your birth year until you get a single digit (1971 → 1+9+7+1 = 18 → 9)
-- **For men:** subtract that from 11 (11 − 9 = **2**)
-- **For women:** add 4 to it (9 + 4 = 13 → **4**)
-
-He writes this number on his left hand in green ink, because "green is the one colour with no enemy". He suggests writing it on your wallet, handkerchief, car seat or pillow too.
-
-The second tool is **switch codes**, which he writes on his own hand: **897** under the thumb, which he calls an "emergency code" for large sums, and **15** for everyday cash flow. As an example, he said he is currently using them while trying to raise funds to buy a plot in Noida.
-
-:::context The bigger picture
-The Kua number comes from Chinese feng shui, where it is traditionally used to choose favourable directions in a home. "Angel numbers" like 111, 222 and 444 have become a staple of the "manifestation" trend on Instagram and TikTok.
-
-From a psychology point of view, writing a number or goal on your hand can work as a constant reminder that keeps your attention on what you're working towards. There is, however, no scientific evidence that numbers themselves attract money.
-:::
-
-:::note On money decisions
-Big decisions such as buying property, investing or taking on debt deserve a proper plan and advice from a qualified financial adviser.
-:::
-
-## 5. The missing numbers: stability, discipline and a child who speaks late
+## 3. The missing numbers: stability, discipline and a child who speaks late
 
 Some of the most relatable moments in the episode came from the Lo Shu grid, a 3×3 square filled in with the digits of your date of birth. Each number always sits in the same position, and you write in every digit of your birth date (ignoring zeros):
 
@@ -1376,33 +825,27 @@ His most talked-about claim was about the number 1. Many children born after 200
 :::context The bigger picture
 The Lo Shu grid comes from an ancient Chinese legend about a turtle that emerged from the Lo river with a 3×3 "magic square" on its shell, in which every row, column and diagonal adds up to 15. Mathematically, it really is a beautiful pattern.
 
-Personality descriptions deserve a closer look, though. In 1948, psychologist Bertram Forer gave all his students the same "personality report", and most rated it as remarkably accurate for them personally. This is now called the Barnum effect: statements like "your room is often messy" or "you crave stability" fit most people to some degree. A 2025 study in India found moderate to high susceptibility to this effect.
+Personality descriptions deserve a closer look, though. In 1948, psychologist Bertram Forer gave all his students the same "personality report", and most rated it as remarkably accurate for them personally. This is now called the Barnum effect: statements like "your room is often messy" or "you crave stability" fit most people to some degree.
 :::
 
 :::note If your child is speaking late
 Please don't put it down to numbers. Speak to a paediatrician or a speech therapist. With speech delays, getting help early makes the biggest difference.
 :::
 
-## Why conversations like this matter
+You may finish this episode a believer, a skeptic or somewhere in between. But the real point is a man talking honestly about the years when nothing worked, struggles millions of families live with and almost never talk about. And lessons like focusing on today and looking for stability work whether or not you believe in numbers.
 
-You may finish this episode a believer, a skeptic or somewhere in between. Science still has no controlled studies showing that numbers can predict the future or describe personality, and most research explains why readings *feel* accurate (the Barnum effect, and confirmation bias, our tendency to notice what fits what we already believe).
-
-But that isn't really the point of this conversation. The point is a man sitting across the table and talking honestly about the years when nothing worked: borrowed school fees, sold jewellery, jobs that kept slipping away. These are struggles millions of families live with and almost never talk about. Insightoholix exists for conversations like that.
-
-And several of the lessons here, such as focusing on today, building discipline, looking for stability and thanking the people who taught you, work whether or not you believe in numbers.
+In the episode, he also explains why he believes his own "luck factor" stayed close to zero until he turned 42.
 
 :::takeaways Key takeaways
 1. According to Sanddeep Bajaj, fixing today matters more than predicting tomorrow.
 2. In numerology, the name you write (its spelling) counts for more than the name people call you.
-3. Look beyond your driver number; he believes the conductor number shapes life after 40.
-4. He uses Kua numbers and switch codes as daily "blessings" and reminders.
-5. Whatever you believe, take health, child-development and big money decisions with expert advice.
+3. The Lo Shu grid, he says, shows which numbers are missing from your birth date, and each points to a struggle.
+4. Whatever you believe, take health, child-development and big money decisions with expert advice.
 :::
 
 :::note
 This article summarises the views our guest shared on the show. Quotes are translated from the original Hindi conversation. Insightoholix does not scientifically endorse these claims; the "bigger picture" sections are there for context.
 :::
-
 `,
   },
   {
@@ -1456,21 +899,17 @@ That is one afternoon from the story of our guest: a retired bank employee who, 
 
 His story isn't rare. It's the norm. According to SEBI's own study, **91% of individual traders in India's futures and options (F&O) market lost money in FY25**, with combined losses of about **₹1.06 lakh crore**, roughly ₹1.1 lakh per trader. Put simply, only about 9 out of every 100 make money.
 
-We asked him to tell the whole story honestly: the excitement, the panic, the mistakes he's embarrassed about, and what finally helped him stop the bleeding. He did. That's what makes this conversation worth your time.
-
 :::summary In this conversation
 - How it starts: a ₹1,500 YouTube class and an "easy" first week
-- The week it turned, and the moment he realised he knew nothing
 - The traps: revenge trading, greed and a ₹79,000 margin shock
 - The silent killer: brokerage, charges and overtrading
-- Climbing back: smaller size, fewer trades, more patience
 :::
 
 [[watch]]
 
 ## 1. How it starts: a ₹1,500 class and an "easy" first week
 
-After retiring from his bank job, he suddenly had empty days. He first tried selling life insurance, but people soon stopped picking up his calls, and even relatives began to avoid him. Trading seemed perfect: work from home, keep the mind busy, and, he told himself, never sell a stock at a loss.
+After retiring from his bank job, he suddenly had empty days. Trading seemed perfect: work from home, keep the mind busy, and, he told himself, never sell a stock at a loss.
 
 In stocks, it worked. He bought companies with steadily rising quarterly and yearly profits, and by June he was about **₹4 lakh in profit**.
 
@@ -1479,26 +918,13 @@ Then he found options. He watched a YouTube creator, paid ₹1,500 for a weekly 
 > "I thought: this needs less money, and there's profit every single day. Why not leave stocks and just do options?"
 > — Our guest
 
+In the second week, he lost **₹49,000**. For the next three months, he lost **more than ₹1 lakh every single month**.
+
 :::context The bigger picture
 That first-week high is exactly what makes options so dangerous for beginners. A small amount of money controls a large position, and quick early wins feel like skill rather than luck. SEBI's three-year study (FY22 to FY24) found that **93% of individual F&O traders lost money, an average of about ₹2 lakh each, adding up to more than ₹1.8 lakh crore**. Only 1% made a profit of more than ₹1 lakh after costs.
 :::
 
-## 2. The week it turned, and the moment he realised he knew nothing
-
-In the second week, he lost **₹49,000**.
-
-For the next three months, July, August and September, he lost **more than ₹1 lakh every single month**. By October, the ₹4 lakh he had built up in stocks was gone.
-
-Part of it was pure guesswork. If the market had risen 50 or 70 points, he'd assume it "couldn't go higher" and bet on a fall, and then watch it run another 200 points. He didn't know what support or resistance meant. Some losses came from mistakes he'd rather forget: the trading app defaulted to *buy*, and more than once he swiped to place an order and ended up buying when he meant to sell.
-
-The turning point came from another YouTube video. The trader on screen listed what every options trader must know: stop-loss, swing high, swing low and a few other terms.
-
-> "He said: 'If you don't know these, then *bhagwan maalik* (God help you). I can't even teach you.' And I realised I didn't know any of it."
-> — Our guest
-
-He admits he still doesn't always set a proper stop-loss or target. That honesty is the point: most people who lose money in options are not reckless gamblers. They are ordinary, intelligent people who entered a professional arena with a few YouTube videos.
-
-## 3. The traps: revenge trading, greed and a ₹79,000 margin shock
+## 2. The traps: revenge trading, greed and a ₹79,000 margin shock
 
 Three patterns caused most of his biggest losses. Anyone who has traded will recognise them.
 
@@ -1511,18 +937,14 @@ Three patterns caused most of his biggest losses. Anyone who has traded will rec
 > "₹5,000 profit, I'm happy. ₹10,000, very happy. ₹11,000, let it go higher. Then it dropped to ₹8,000, ₹7,000, ₹5,000. I said, I'll exit at ₹10,000. It came back to zero. Then I said, at least let the commission come out. Then it went into loss."
 > — Our guest
 
-And the mirror image, exiting too early out of fear: he'd buy at ₹110, panic at ₹103 because 1,000 quantity meant a ₹7,000 loss, cut the trade, and watch it rise to ₹120.
+And the mirror image, exiting too early out of fear:
 
 > "Of course my heart goes *dhak-dhak*. Once the loss crossed ₹2,000, it would start. Past ₹5,000, I'd cut the trade."
 > — Our guest
 
 Without a plan decided *before* entering a trade, every decision is made by fear or greed in the middle of it.
 
-:::context The bigger picture
-His instinct to keep going after big losses is common too. SEBI found that **more than 75% of loss-making traders continued trading** despite losing money year after year. And his age didn't protect him: in SEBI's FY26 data, around **81% of traders above 60 still lost money**. Older traders do better than the under-30s (about 89% of whom lose), but four out of five losing is hardly a safe bet for retirement savings.
-:::
-
-## 4. The silent killer: brokerage, charges and overtrading
+## 3. The silent killer: brokerage, charges and overtrading
 
 This might be the most eye-opening part of the conversation.
 
@@ -1536,63 +958,21 @@ He didn't even know how to check his options P&L until three days later. When he
 
 Brokerage is only one part. Exchange fees, taxes and other charges add up on every single trade, and the more often you trade, the faster they eat whatever you make.
 
-:::context The bigger picture
-SEBI's data shows exactly the same pattern at national scale. Between FY22 and FY24, individual F&O traders spent **about ₹50,000 crore on transaction costs** alone, around ₹26,000 per trader in FY24.
-
-Meanwhile, the money doesn't disappear; it moves. In FY24, proprietary trading firms and foreign portfolio investors made gross trading profits of about ₹33,000 crore and ₹28,000 crore respectively, and **over 96% of those profits came from algorithmic trading**. When a retail trader taps *buy* on a phone, the person on the other side is very often a machine.
-:::
-
-## 5. Climbing back: smaller size, fewer trades, more patience
-
-After losing ₹1 lakh in the first week of October alone, he stopped trading for three days. Then he started changing things, one at a time:
-
-- **Cut position size:** from 1,000 quantity to 500, and later to a maximum of 200 (8 lots).
-- **Capped trades:** no more than five trades a day.
-- **Kept it simple:** only Nifty, no jumping between Nifty and Bank Nifty.
-- **Stopped double-trading** on the same big candle.
-
-October still ended with a loss, but a much smaller one. In December, at the time of recording, he was **in profit** for the month.
-
-His new philosophy came from a learning video, and it's the opposite of what drew him in:
-
-> "Whether you trade three times a month, five or ten, make them quality trades. If you trade five days and sit out the other 25, that's also good for you. And that's exactly what happened with me."
-> — Our guest
-
-:::context The bigger picture
-Regulators have also stepped in. From November 2024, SEBI raised the minimum size of index derivative contracts from ₹5 lakh to ₹15 lakh, allowed each exchange only one weekly-expiry index, and required option premiums to be paid upfront. In the quarters that followed, the number of individual F&O traders fell by about 20% to 30%. Even so, losses remained huge: total individual losses still rose to ₹1.06 lakh crore in FY25.
-:::
-
-## Before you place your first options trade
-
-We asked what he would tell anyone, of any age, who is thinking of starting. His advice was simple:
+His advice to anyone, of any age, thinking of starting:
 
 > "First sit with someone for at least six months and understand it. My mistake was taking too much quantity at the start. If I'd started with one or two lots, I'd have lasted six or seven months instead of losing it all in three."
 > — Our guest
 
-Here is what his story teaches, in plain terms:
-
-1. **Learn before you earn.** Understand price action, trends, stop-loss, targets and margin before risking real money, and paper-trade first.
-2. **Decide your exit before you enter.** Know your stop-loss and target in advance, and stick to them.
-3. **Start tiny.** One or two lots. If you can't handle a small loss calmly, you can't handle a big one.
-4. **Never trade money you need.** Retirement savings, emergency funds, school fees and EMIs are off-limits.
-5. **Count every cost.** Check your real P&L, after brokerage and charges, every single day.
-6. **Fewer, better trades.** Overtrading feeds the broker, not you.
-7. **Take a break after a big loss.** Revenge trading is how small losses become big ones.
+In the episode, he also shares the three simple rules that helped him stop the bleeding and end December in profit.
 
 :::note Important
 This article shares one person's real experience and publicly available SEBI data. It is not investment advice. F&O trading carries a high risk of loss. Please speak to a SEBI-registered investment adviser before making financial decisions.
 :::
 
-## The real lesson
-
-What stayed with us after this conversation wasn't the size of the losses. It was how ordinary the path was: a retired man with free time, a ₹1,500 online course, one lucky week, and then three months of learning the hardest way possible.
-
-He's still trading, more carefully now. If you know someone who has just discovered options trading, a parent, a friend, a young colleague, this is the conversation to send them.
-
 :::thanks A heartfelt thank you
-People rarely talk about money they've lost. Losses are hidden from friends, kept from family, and almost never shared in public. Our guest did the opposite. When we asked him to tell his story, he agreed without a second thought, and then spoke openly about every painful detail: the ₹60,000 afternoon, the margin shock, the trades he wishes he'd never placed, even the mistakes he worried his family might be upset to hear about.
+People rarely talk about money they've lost. Our guest did the opposite. When we asked him to tell his story, he agreed without a second thought, and spoke openly about every painful detail: the ₹60,000 afternoon, the margin shock, the trades he wishes he'd never placed.
 
-He didn't do it for attention. He did it so that someone else might recognise the trap before falling into it. That takes real courage and real generosity. Thank you, sir, for trusting us with your story. It will save someone a lot of money and a lot of heartache.
+He did it so that someone else might recognise the trap before falling into it. That takes real courage and real generosity. Thank you, sir, for trusting us with your story. It will save someone a lot of money and a lot of heartache.
 :::
 
 :::takeaways Key takeaways
@@ -1600,7 +980,7 @@ He didn't do it for attention. He did it so that someone else might recognise th
 2. A few winning days in options mean very little. Early wins often lead to bigger bets.
 3. Doubling up to recover, selling options without understanding margin, and holding on out of greed caused his biggest losses.
 4. Brokerage and charges quietly ate most of his profits on high-trade days.
-5. Smaller size, a daily trade limit and patience helped him stop the losses.
+5. Learn first, start with one or two lots, and never trade money you need.
 :::
 `,
   },
