@@ -93,7 +93,7 @@
       }
       if ((m = line.match(/^:::(\w+)\s*(.*)$/))) { flushAll(); block = { type: m[1], title: m[2], lines: [] }; continue; }
       if (!line) { flushAll(); continue; }
-      if (line === "[[watch]]") { flushAll(); html += "<!--watch-->"; continue; }
+      if ((m = line.match(/^\[\[watch(?::([\w-]+))?\]\]$/))) { flushAll(); html += `<!--watch${m[1] ? ":" + m[1] : ""}-->`; continue; }
       if ((m = line.match(/^(#{2,3})\s+(.*)/))) {
         flushAll();
         const id = m[1].length === 2 && !nested ? ` id="section-${++h2}"` : "";
@@ -585,21 +585,27 @@
     if (desc) desc.setAttribute("content", p.excerpt);
 
     const ytWatch = (id) => `https://www.youtube.com/watch?v=${encodeURIComponent(id)}`;
-    const ep = [S.featuredVideo, ...(S.videos || [])].find((v) => v && v.id === p.video);
-    const watchCard = (variant) => p.video ? `
+    /* Multi-part posts list their episodes in p.parts: [{ id, title, label, duration }] */
+    const findEp = (id) => (p.parts || []).find((v) => v.id === id) || [S.featuredVideo, ...(S.videos || [])].find((v) => v && v.id === id);
+    const watchCard = (variant, vid = p.video) => {
+      if (!vid) return "";
+      const ep = findEp(vid);
+      const label = p.parts && ep && ep.label ? ep.label : variant === "end" ? "Now watch the full conversation" : "Hear it in their own words";
+      return `
       <aside class="watch-card ${variant}">
-        <a class="watch-thumb" href="${ytWatch(p.video)}" target="_blank" rel="noopener" aria-label="Watch the episode on YouTube">
-          ${thumbImg(p.video, p.title)}<span class="play">${ICON.play}</span>${ep && ep.duration ? `<span class="duration">${esc(ep.duration)}</span>` : ""}
+        <a class="watch-thumb" href="${ytWatch(vid)}" target="_blank" rel="noopener" aria-label="Watch the episode on YouTube">
+          ${thumbImg(vid, p.title)}<span class="play">${ICON.play}</span>${ep && ep.duration ? `<span class="duration">${esc(ep.duration)}</span>` : ""}
         </a>
         <div class="watch-body">
-          <span class="watch-label">${variant === "end" ? "Now watch the full conversation" : "Hear it in their own words"}</span>
+          <span class="watch-label">${esc(label)}</span>
           <p class="watch-title">${esc(ep ? ep.title : p.title)}</p>
           <div class="watch-actions">
-            <a class="btn btn-saffron btn-sm" href="${ytWatch(p.video)}" target="_blank" rel="noopener">${ICON.yt} Watch on YouTube</a>
+            <a class="btn btn-saffron btn-sm" href="${ytWatch(vid)}" target="_blank" rel="noopener">${ICON.yt} Watch on YouTube</a>
             <a class="btn btn-sm watch-sub" href="${esc(S.subscribeUrl)}" target="_blank" rel="noopener">Subscribe</a>
           </div>
         </div>
-      </aside>` : "";
+      </aside>`;
+    };
 
     const media = p.video
       ? `<div class="post-media"><iframe src="https://www.youtube-nocookie.com/embed/${esc(p.video)}?rel=0" title="${esc(p.title)}" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>`
@@ -626,7 +632,7 @@
       <div class="container">
         <div class="article-wrap">
           <nav class="toc" lang="${p.lang || "en"}" aria-label="${p.lang === "hi" ? "इस लेख में" : "In this article"}" hidden></nav>
-          <article class="prose" lang="${p.lang || "en"}">${markdown(p.body).replace("<!--watch-->", watchCard("mid"))}${watchCard("end")}</article>
+          <article class="prose" lang="${p.lang || "en"}">${markdown(p.body).replace(/<!--watch(?::([\w-]+))?-->/g, (_, id) => watchCard("mid", id))}${p.parts ? p.parts.map((x) => watchCard("end", x.id)).join("") : watchCard("end")}</article>
         </div>
         <div class="post-footer">
           <a class="btn btn-saffron" href="${esc(S.subscribeUrl)}" target="_blank" rel="noopener">${ICON.yt} Subscribe for new episodes</a>
