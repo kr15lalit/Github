@@ -137,7 +137,7 @@
             <div>
               <a class="brand" href="index.html"><img src="${esc(S.logo)}" alt=""><span>${esc(S.channelName)}</span></a>
               <p class="hand" style="font-size:26px;color:var(--saffron);margin:18px 0 8px">${esc(S.tagline)}</p>
-              <p>${esc(S.intro)}</p>
+              <a class="btn btn-saffron btn-sm" href="${esc(S.subscribeUrl)}" target="_blank" rel="noopener">${ICON.yt} Subscribe on YouTube</a>
             </div>
             <div>
               <h4>Explore</h4>
