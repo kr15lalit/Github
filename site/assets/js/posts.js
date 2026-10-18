@@ -11,6 +11,8 @@
      cover     optional image URL; leave "" to use the episode thumbnail
                (if `video` is set) or a designed cover
      video     optional YouTube ID to embed at the top of the post
+     [[watch]] on its own line in the body places a "Watch on YouTube" card there
+               (one is always added at the end of posts that have a video)
      coverText optional short headline for the designed cover (when no image/video)
      body      the post in simple Markdown:
                ## Heading, **bold**, *italic*, [link](url), - list, 1. list,
@@ -89,6 +91,8 @@ When people feel that squeeze, many go looking for answers anywhere they can. As
 - Kua numbers, angel numbers and "switch codes"
 - The missing numbers: stability, discipline and a child who speaks late
 :::
+
+[[watch]]
 
 ## 1. When the future feels frightening, start with today
 
@@ -223,18 +227,6 @@ And several of the lessons here, such as focusing on today, building discipline,
 This article summarises the views our guest shared on the show. Quotes are translated from the original Hindi conversation. Insightoholix does not scientifically endorse these claims; the "bigger picture" sections are there for context.
 :::
 
-## Sources
-
-- [India Health Quotient 2026: urban stress and financial well-being (HR Katha)](https://www.hrkatha.com/features/research/indias-wellness-economy-is-booming-so-is-employee-stress/)
-- [A-Nishchit Index 2024: working professionals and financial uncertainty (Outlook Money)](https://www.outlookmoney.com/retirement/news/a-nishchit-index-2024-most-indians-expect-greater-financial-uncertainty-unsure-of-future-well-being-says-survey)
-- [Rising private school fees in India, LocalCircles survey (The Daily Ittefaq)](https://en.ittefaq.com.bd/12437/rising-school-fees-push-indian-families-to-the)
-- [Astrotalk's FY25 income (Outlook Business)](https://www.outlookbusiness.com/start-up/news/astrotalk-reports-85-revenue-growth-in-fy25-as-tier-i-cities-boost-platform-activity)
-- [Gen Z, millennials and astrology survey (Fortune)](https://www.fortune.com/2024/08/22/gen-z-millenails-astrology-career-advice)
-- [Casual interest vs deep belief (Oxford Brookes University)](https://www.brookes.ac.uk/about-brookes/news/news-from-2025/05/expert-comment-why-is-gen-z-looking-to-the-stars-f)
-- [Ayushmann Khurrana's name change (Republic World)](https://www.republicworld.com/entertainment/bollywood/did-you-know-ayushmann-khurranas-astrologer-father-changed-his-name-due-to-numerology)
-- [Why horoscopes and numerology feel accurate (Business Today)](https://www.businesstoday.in/science/story/why-horoscopes-and-numerology-feel-so-accurate-the-science-of-the-thats-me-effect-549422-2026-08-16)
-- [Numerology and confirmation bias (Skeptoid)](https://skeptoid.com/episodes/626)
-- [2025 Indian study on the Barnum effect (IJIP)](https://ijip.in/wp-content/uploads/2025/09/18.01.337.20251303.pdf)
 `,
   },
   {
