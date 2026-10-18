@@ -57,16 +57,15 @@ window.SITE = {
   guests: [
     { name: "Former IAS Officer", role: "Indian Administrative Service", episode: "dM9CqdQ6ApI", topic: "Why 90% of UPSC aspirants fail" }, // add the officer's name
     { name: "Dr. Arun Tungaria", role: "Neurosurgeon", episode: "Db8uUA9dlYA", topic: "Anxiety, depression & mobile addiction" },
-    { name: "Sanddeep Bajaj & Arviend Sud", role: "Numerology decoded", episode: "_TPYlhVhpy4", topic: "Does your birth date decide success?" },
+    { name: "Sanddeep Bajaj", role: "Numerologist", episode: "_TPYlhVhpy4", topic: "Does your birth date decide success?" },
     { name: "Nitisha Malhotra", role: "Astrologer", episode: "4ojqBPlD0Jo", topic: "Can destiny really be changed?" }, // name taken from the YouTube handle; please confirm
-    { name: "Sumith", role: "ISB alum · AI & LLMs", episode: "Cy5MKpEZcs0", topic: "What's next for large language models" },
   ],
 
   // Featured episode in the hero (ID from https://www.youtube.com/watch?v=THIS_PART)
   featuredVideo: {
     id: "_TPYlhVhpy4",
     title: "Your Birth Date Is Deciding Success? Ignorance Could Affect Your Life",
-    guest: "Ft. Sanddeep Bajaj & Arviend Sud",
+    guest: "Ft. Sanddeep Bajaj, numerologist",
     duration: "54:12",
   },
 

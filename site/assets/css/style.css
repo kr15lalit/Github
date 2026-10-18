@@ -289,7 +289,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .guest-card.invite h3 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: clamp(52px, 5vw, 72px); line-height: .9; }
 .guest-card.invite p { margin: 0; color: var(--ink-2); }
 .guest-card.invite .btn { align-self: flex-start; }
-@media (max-width: 980px) { .guest-grid { grid-template-columns: repeat(2, 1fr); } }
+.guest-grid[data-rem3="2"] .guest-card.invite { grid-column: span 2; }
+@media (max-width: 980px) {
+  .guest-grid { grid-template-columns: repeat(2, 1fr); }
+  .guest-grid[data-rem3="2"] .guest-card.invite { grid-column: auto; }
+  .guest-grid[data-rem2="1"] .guest-card.invite { grid-column: 1 / -1; }
+}
 @media (max-width: 620px) {
   /* swipeable row on phones instead of a long stack */
   .guest-grid {

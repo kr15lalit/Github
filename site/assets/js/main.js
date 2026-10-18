@@ -442,7 +442,11 @@
         </div>
       </article>`).join("");
 
-    $("#guest-grid").innerHTML = (S.guests || []).map((g, i) => `
+    const gGrid = $("#guest-grid");
+    // lets the invite card stretch to fill an otherwise half-empty last row
+    gGrid.dataset.rem3 = ((S.guests || []).length + 1) % 3;
+    gGrid.dataset.rem2 = ((S.guests || []).length + 1) % 2;
+    gGrid.innerHTML = (S.guests || []).map((g, i) => `
       <article class="guest-card reveal" data-delay="${i % 3}">
         <div class="guest-photo">${g.photo ? `<img src="${esc(g.photo)}" alt="${esc(g.name)}" loading="lazy">` : thumbImg(g.episode, g.name)}</div>
         <div class="guest-body">
