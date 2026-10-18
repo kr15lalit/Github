@@ -24,6 +24,160 @@
 
 window.POSTS = [
   {
+    slug: "what-is-satsang",
+    title: "What Is Satsang, Really? 38 Years on the Radha Soami Path",
+    date: "2026-10-18",
+    category: "Episode Notes",
+    excerpt:
+      "Spiritual escape or waste of time? A follower of 38 years on what satsang actually means, the three disciplines, balancing family and a demanding job, and why contentment beats the endless chase for more.",
+    cover: "",
+    video: "Wlg7mH0H8mo",
+    body: `
+Look around any office, metro coach or family WhatsApp group today and you'll see the same thing: people who have more information, more options and more comforts than any generation before them, and less peace. We scroll to relax and end up more restless. We earn more and still feel it isn't enough. We have hundreds of contacts and almost nobody to sit with quietly.
+
+This isn't just a feeling. In an Ipsos survey, **one in two urban Indians (53%)** said they had experienced stress severe enough to affect their daily life in the past year.
+
+So people go looking. Some try apps and retreats. Some return to the temple or the gurdwara. And many, often quietly, end up at a **satsang**. To outsiders, satsang is a bit of a mystery. Some call it a spiritual escape. Some call it a waste of time. Some assume it is only for the very religious or the very old.
+
+To understand what actually happens there, host Lalit Sharma sat down with a guest who has been attending satsang for **38 years**, since 1986. He follows the **Radha Soami Satsang Beas** path, worked for decades in a demanding job that took him through audit postings and transfers far from home, and is now retired. He spoke with complete sincerity, and at times with so much emotion that he had to pause.
+
+:::summary In this conversation
+- What "satsang" actually means
+- How he found it, and why he never walked away
+- The three disciplines, and how the practice differs from ritual
+- Balancing family, a demanding job and spiritual life
+- Stress, karma and the meaning of contentment
+:::
+
+[[watch]]
+
+## 1. What "satsang" actually means
+
+Our guest started with the word itself. **Sat** means truth, and **sang** means company. Satsang is "the company of truth".
+
+And in his understanding, only one thing is truly permanent:
+
+> "Everything you can see with these eyes will perish one day. The only truth is the Supreme. It was there before creation, it is here now, and it will be there when everything else is gone."
+> — Our guest
+
+Whatever you call it, God, Naam, Shabd or the Supreme, satsang for him means keeping company with that truth, and with people who are trying to live by it.
+
+The gathering itself is simple. A speaker reads a hymn or verse from one of the saints, explains what it means, and relates it to everyday life. People listen, often in silence. There is no performance and no spectacle.
+
+:::context The bigger picture
+Radha Soami Satsang Beas traces its roots to 1891, when its main centre was established on the banks of the Beas river in Punjab. Today it holds meetings in more than 90 countries. It describes itself as open to people of every caste, colour and creed, and places strong emphasis on meditation and *seva*, or selfless service.
+:::
+
+## 2. How he found satsang, and why he never left
+
+His journey began with doubt, not devotion. His elder brother, who worked at State Bank of India, had started going to satsang first. The two never discussed it, and what our guest heard second-hand put him off completely. He'd been told that satsang taught people that only the Guru mattered, and that parents, brothers and sisters meant nothing. He was firmly against that idea.
+
+And yet, one day, he decided to go. He walked his brother to the railway station just to tell him, in a two-minute conversation on the way, "This time, I'll come to satsang too."
+
+He went, stood in line, registered for initiation (called *naam daan*), and has never looked back. In nearly four decades, he says, he never once felt like quitting.
+
+> "When you get benefit from something, when you feel peace inside, your attachment to it grows on its own."
+> — Our guest
+
+His explanation was surprisingly practical. A child learns by following a teacher. A new businessman succeeds more often when he learns from someone experienced and follows the rules. Spiritual practice is the same: if you meditate for the time, in the posture and in the way you've been taught, he says, you begin to see the results you were promised.
+
+In 1995, he also began **seva**, volunteering at satsang gatherings that can draw lakhs of people. Seva means doing whatever work you are given, without choosing what you like:
+
+> "No seva is small and no seva is big. The main purpose of seva is to end your own ego."
+> — Our guest
+
+:::context The bigger picture
+Modern research tends to agree with something spiritual traditions have long said about service. Studies on volunteering consistently link regularly giving your time to others with lower stress, a stronger sense of purpose and greater life satisfaction.
+:::
+
+## 3. The three disciplines, and a practice without ritual
+
+Lalit asked about the core principles. Our guest explained them with a doctor's analogy. When you're ill, the doctor gives you medicine and tells you what to avoid. Take both seriously and you recover faster. Skip either and recovery takes longer.
+
+On his path, there are three things to avoid:
+
+1. **No intoxicants** of any kind, including alcohol.
+2. **No meat or non-vegetarian food**, in any form.
+3. **An upright, moral life.**
+
+Alongside these comes the "medicine": daily meditation, done in the way it is taught at initiation.
+
+He also explained how the practice differs from what many people grow up with. On this path, he said, there is no emphasis on idol worship, pilgrimages, paid offerings or ritual bathing to "cut" bad karma. The practice is entirely inward. Money is never compulsory either:
+
+> "Any work needs money, we know that. But nobody is told you must give this much, or that you must give at all. If you give, fine. If you don't, that's fine too."
+> — Our guest
+
+Lalit was candid that on some of these comparisons, the two of them would simply see things differently, and moved on. That felt like the right spirit for the whole conversation: understanding, not converting.
+
+His one piece of caution was worth hearing for anyone who is searching. Many people in pain, he said, go wherever someone promises a quick fix in exchange for money, and too often, the problem doesn't get solved. A place that pressures you to pay is not one he would trust.
+
+## 4. Family first, then satsang: the balance
+
+One of the biggest misconceptions about spiritual paths is that they ask you to give up the world. Our guest was emphatic that satsang says the opposite.
+
+> "Satsang never says leave your home, stop earning, go to the jungle and become a sadhu. You can live with your family and still progress beautifully on the spiritual path."
+> — Our guest
+
+The priorities, as he lives them, are clear:
+
+- **Your family comes first.** If a family member needs a doctor at the same time as satsang, you go to the doctor. "Satsang is for your whole life. If you miss one, you miss one."
+- **Your livelihood comes next.** "A job is how we put food on the table. Leaving your family hungry to go to satsang would be foolish."
+- **Honest earnings.** He was taught to earn only by honest means, and never in a way that hurts anyone else.
+
+His own career tested this. As a clerk, getting leave was easy. After promotion, it got harder. Postings in audit work, with constant deadlines, and a transfer to faraway Gujarat meant he often couldn't attend. His answer was simple acceptance: apply for leave, request it, and if it isn't granted, don't go. "That is the balance."
+
+He sees the same pattern across his family. Unusually, satsang came "upwards" in his home: first his elder brother, then him, then his parents, then his younger brother. Today, he says, more than 70% of his relatives follow the path, and **nobody was ever pressured**, not his children, neighbours, friends or relatives.
+
+> "The teaching is the same for everyone: father, son, grandfather, grandson. What differs is how much each person takes in."
+> — Our guest
+
+## 5. Stress, karma and the stories that moved him to tears
+
+How does satsang help people who are stressed and distracted? For our guest, the answer lies in how he understands suffering. In his view, both our joys and our difficulties are the results of our own past karma. Understanding that, he says, doesn't make the pain disappear, but it lets you go through it with acceptance, and even with a smile.
+
+He also believes deeply that people come to satsang when the time is right for them, not because someone persuaded them. Sometimes it is the people who criticised it the loudest who end up finding peace there.
+
+He shared stories that followers on his path tell, and became visibly emotional telling them. In one, a poor widow in Rajasthan wanted to travel to satsang but couldn't afford the bus fare. Her only possession worth selling was a stack of cow-dung cakes she used for fuel, and nobody would buy it, until, at the last moment, a stranger came and paid more than she asked. When she reached satsang and saw the Master, she cried out that he was the man who had bought her dung cakes.
+
+In another, a daily-wage labourer who couldn't find work joined volunteers at a satsang centre, thinking it was a paid job. For three days he worked, was fed, and was never paid, because the "Malik" (as followers call the Master) never came. On the third night he went home to find a month's rations delivered to his family by a stranger, whose photograph, the next day, his wife recognised hanging at the gate of the satsang centre.
+
+Lalit gently raised the obvious question: couldn't some of this be coincidence? Our guest didn't argue. "You can call it coincidence, or call it anything you like," he said. For him, these experiences are what assure him that his Guru is with him, and if he started listing them, he said, it would take days.
+
+:::context The bigger picture
+Whatever your view of faith, the effects of a regular, quiet inner practice are well studied. A large review in *JAMA Internal Medicine*, covering 47 trials, found moderate evidence that meditation programmes can help reduce anxiety, depression and pain. Researchers also point to community and a sense of meaning as strong protectors against stress and loneliness.
+:::
+
+## Contentment: the real measure
+
+Lalit closed by asking how our guest defines fulfilment. His answer is perhaps the most useful line of the whole conversation, whatever your beliefs:
+
+> "Desire is never satisfied. The man with a thousand thinks two thousand is big. The man with a lakh looks at the crorepati, and the crorepati looks at the billionaire. Fulfil one wish, and the next one starts."
+> — Our guest
+
+Psychologists have a name for this, the "hedonic treadmill": we quickly get used to every gain and start chasing the next. Our guest's answer to it is contentment. Those who follow satsang seriously, he says, feel they have received what they needed, and more.
+
+> "I know what my ability is, and how much I could have achieved without satsang. What I have received is far more than that."
+> — Our guest
+
+:::thanks A heartfelt thank you
+It isn't easy to speak about faith on camera, especially about experiences that are deeply personal and that others may question. Our guest did so with complete honesty, without trying to convince anyone, and with emotion he didn't try to hide. At the end, he apologised for getting sentimental. There was nothing to apologise for. Thank you for sharing 38 years of your journey with us, and for reminding us that peace is something you practise, not something you buy.
+:::
+
+:::takeaways Key takeaways
+1. Satsang means "the company of truth": listening, reflecting and meditating together.
+2. On the Radha Soami path, the disciplines are no intoxicants, no meat and an upright moral life, along with daily meditation.
+3. The focus is inward practice, not rituals, idol worship or paid offerings, and giving money is never compulsory.
+4. Spiritual life doesn't mean leaving the world: family comes first, honest work next.
+5. Seva, or selfless service, is meant to dissolve the ego, and no seva is big or small.
+6. Real fulfilment comes from contentment, not from the next thing on the list.
+:::
+
+:::note
+This article summarises the personal beliefs and experiences our guest shared on the show. The stories in it are told as he shared them, and the article does not promote any organisation or ask anyone to change their faith. We respect every path. If you are going through a difficult time, please also reach out to people you trust or a qualified professional. Quotes are translated and lightly condensed from the original Hindi conversation.
+:::
+`,
+  },
+  {
     slug: "sweden-dream-vs-reality",
     title: "Sweden: Dream Destination or Harsh Reality? An Indian Family's Honest Account",
     date: "2026-10-18",
