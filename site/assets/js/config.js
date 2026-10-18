@@ -20,14 +20,47 @@ window.SITE = {
     { value: "∞", label: "Curiosity" },
   ],
 
-  // Topics strip + topics section
+  // Topics: shown in the scrolling strip and as clickable pills.
+  // `query` is what each pill searches for on the YouTube channel.
   topics: [
-    { name: "Health & Wellbeing", note: "Women's health, mental health, and the habits that shape both." },
-    { name: "Money & Markets", note: "Trading, investing, insurance and the emotions behind every rupee." },
-    { name: "Careers & Ambition", note: "UPSC, entrepreneurship and what it really takes to succeed." },
-    { name: "Life Abroad", note: "Sweden, migration and the reality behind the dream destination." },
-    { name: "Tech & AI", note: "LLMs, generative AI and building it responsibly." },
-    { name: "Mind & Meaning", note: "Spirituality, astrology, numerology and the big questions." },
+    { name: "Health & Wellbeing", query: "health", note: "Women's health, mental health and the habits that shape both" },
+    { name: "Money & Markets", query: "trading investing insurance", note: "Trading, investing, insurance and the emotions behind every rupee" },
+    { name: "Careers & Ambition", query: "UPSC career", note: "UPSC, entrepreneurship and what it takes to succeed" },
+    { name: "Life Abroad", query: "Sweden", note: "Sweden, migration and the reality behind the dream destination" },
+    { name: "Tech & AI", query: "AI LLM", note: "LLMs, generative AI and building it responsibly" },
+    { name: "Mind & Meaning", query: "astrology spirituality", note: "Spirituality, astrology, numerology and the big questions" },
+  ],
+
+  // Hosts. Add a `photo` path (e.g. "assets/img/lalit.jpg") to replace the initials,
+  // and LinkedIn/Instagram URLs to show profile links.
+  hosts: [
+    {
+      name: "Lalit Sharma",
+      role: "Co-host",
+      work: "Program Manager · Adobe Firefly FDE team",
+      bio: "Lalit works on Adobe Firefly, Adobe's family of generative AI models, as part of the Forward Deployed Engineering team. On the show, Lalit brings a builder's curiosity: how things really work, and what people learn on the way to getting there.",
+      photo: "",
+      links: [],
+    },
+    {
+      name: "Vandana",
+      role: "Co-host",
+      work: "Manager · EY, DPIIT team",
+      bio: "Vandana is a Manager with EY's team at DPIIT, the Government of India's Department for Promotion of Industry and Internal Trade. That view of policy, startups and public systems shapes the questions Vandana brings to every conversation.",
+      photo: "",
+      links: [],
+    },
+  ],
+
+  // Guests. `episode` is the YouTube ID of their episode. Its thumbnail is the card image
+  // unless you add `photo: "assets/img/guest-name.jpg"`.
+  // Please double-check names and titles before going live.
+  guests: [
+    { name: "Former IAS Officer", role: "Indian Administrative Service", episode: "dM9CqdQ6ApI", topic: "Why 90% of UPSC aspirants fail" }, // add the officer's name
+    { name: "Dr. Arun Tungaria", role: "Neurosurgeon", episode: "Db8uUA9dlYA", topic: "Anxiety, depression & mobile addiction" },
+    { name: "Sanddeep Bajaj & Arviend Sud", role: "Numerology decoded", episode: "_TPYlhVhpy4", topic: "Does your birth date decide success?" },
+    { name: "Nitisha Malhotra", role: "Astrologer", episode: "4ojqBPlD0Jo", topic: "Can destiny really be changed?" }, // name taken from the YouTube handle; please confirm
+    { name: "Sumith", role: "ISB alum · AI & LLMs", episode: "Cy5MKpEZcs0", topic: "What's next for large language models" },
   ],
 
   // Featured episode in the hero (ID from https://www.youtube.com/watch?v=THIS_PART)

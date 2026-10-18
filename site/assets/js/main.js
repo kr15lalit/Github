@@ -98,9 +98,9 @@
     if (nav) {
       const links = [
         ["index.html#episodes", "Episodes", "episodes"],
-        ["index.html#topics", "Topics", "topics"],
+        ["index.html#guests", "Guests", "guests"],
         ["blog.html", "Journal", "blog"],
-        ["index.html#about", "About", "about"],
+        ["index.html#about", "Hosts", "about"],
       ];
       nav.innerHTML = `
         <div class="container nav-inner">
@@ -144,8 +144,9 @@
               <ul>
                 <li><a href="index.html#episodes">Episodes</a></li>
                 <li><a href="index.html#topics">Topics</a></li>
+                <li><a href="index.html#guests">Guests</a></li>
                 <li><a href="blog.html">Journal</a></li>
-                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#about">Hosts</a></li>
               </ul>
             </div>
             <div>
@@ -442,12 +443,41 @@
         </div>
       </article>`).join("");
 
-    $("#topics-grid").innerHTML = S.topics.map((t, i) => `
-      <div class="topic reveal" data-delay="${i % 3}">
-        <span class="num">0${i + 1}.</span>
-        <h3>${esc(t.name)}</h3>
-        <p>${esc(t.note)}</p>
-      </div>`).join("");
+    const channelSearch = (q) => `${S.youtubeUrl.replace(/\/$/, "")}/search?query=${encodeURIComponent(q)}`;
+    $("#topic-pills").innerHTML = S.topics.map((t, i) => `
+      <a class="topic-pill reveal" data-delay="${i % 3}" href="${channelSearch(t.query || t.name)}" target="_blank" rel="noopener" title="${esc(t.note || "")}">
+        ${esc(t.name)}<span class="arr" aria-hidden="true">↗</span>
+      </a>`).join("");
+
+    $("#guest-grid").innerHTML = (S.guests || []).map((g, i) => `
+      <article class="guest-card reveal" data-delay="${i % 3}">
+        <div class="guest-photo">${g.photo ? `<img src="${esc(g.photo)}" alt="${esc(g.name)}" loading="lazy">` : thumbImg(g.episode, g.name)}</div>
+        <div class="guest-body">
+          <span class="guest-role">${esc(g.role)}</span>
+          <h3>${esc(g.name)}</h3>
+          <p class="guest-topic">“${esc(g.topic)}”</p>
+          <button class="guest-watch" type="button" data-video="${esc(g.episode)}">${ICON.play} Watch the episode</button>
+        </div>
+      </article>`).join("") + `
+      <article class="guest-card invite reveal" data-delay="${(S.guests || []).length % 3}">
+        <span class="hand">Your story here?</span>
+        <h3>Be our next guest</h3>
+        <p>Built something, survived something or know something the rest of us should hear? We'd love to talk.</p>
+        <a class="btn btn-primary" href="mailto:${esc(S.contactEmail)}?subject=${encodeURIComponent("Guest on Insightoholix")}">Pitch your story →</a>
+      </article>`;
+
+    const initials = (name) => name.split(/\s+/).map((w) => w[0]).join("").slice(0, 2).toUpperCase();
+    $("#host-list").innerHTML = (S.hosts || []).map((h, i) => `
+      <article class="host reveal" data-delay="${i + 1}">
+        <div class="host-avatar">${h.photo ? `<img src="${esc(h.photo)}" alt="${esc(h.name)}">` : `<span aria-hidden="true">${esc(initials(h.name))}</span>`}</div>
+        <div class="host-text">
+          <span class="host-role">${esc(h.role)}</span>
+          <h3>${esc(h.name)}</h3>
+          <span class="host-work">${esc(h.work)}</span>
+          <p>${esc(h.bio)}</p>
+          ${(h.links || []).filter((l) => l.url).length ? `<div class="host-links">${h.links.filter((l) => l.url).map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.name)} ↗</a>`).join("")}</div>` : ""}
+        </div>
+      </article>`).join("");
 
     renderCarousels($("#journal-carousels"));
 

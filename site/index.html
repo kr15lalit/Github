@@ -85,16 +85,28 @@
     </section>
 
     <!-- TOPICS -->
-    <section class="section topics" id="topics">
+    <section class="topics-band" id="topics">
+      <div class="container">
+        <div class="topics-head">
+          <span class="eyebrow reveal">What we talk about</span>
+          <h2 class="display reveal" data-delay="1">Pick a topic.</h2>
+          <p class="hand reveal" data-delay="2">Tap one and start watching on YouTube.</p>
+        </div>
+        <div class="topic-pills" id="topic-pills"></div>
+      </div>
+    </section>
+
+    <!-- GUESTS -->
+    <section class="section" id="guests">
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow reveal">What we talk about</span>
-            <h2 class="display section-title reveal" data-delay="1">Six rooms,<br>one table</h2>
+            <span class="eyebrow reveal">On the show</span>
+            <h2 class="display section-title reveal" data-delay="1">Guests in <span class="mark">the chair</span></h2>
           </div>
-          <p class="reveal" data-delay="2">Every episode lands somewhere in these six worlds. The common thread: real people, honest stories and lessons you can use.</p>
+          <p class="reveal" data-delay="2">Officers, doctors, investors, believers and skeptics. People who have lived what they talk about.</p>
         </div>
-        <div class="topic-grid" id="topics-grid"></div>
+        <div class="guest-grid" id="guest-grid"></div>
       </div>
     </section>
 
@@ -112,18 +124,18 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT + HOSTS -->
     <section class="section-tight" id="about">
       <div class="container about-grid">
-        <div class="about-visual reveal">
-          <div class="logo-disc"><img src="assets/img/logo.jpg" alt="Insightoholix logo — a smiling character wearing headphones behind a microphone"></div>
-          <div class="note">fueled by<br>curiosity ☕</div>
-        </div>
         <div class="about-copy">
           <span class="eyebrow reveal">About the podcast</span>
           <h2 class="reveal" data-delay="1" id="about-heading"></h2>
           <div class="reveal" data-delay="2" id="about-body"></div>
           <a class="btn btn-primary reveal" data-delay="3" data-subscribe target="_blank" rel="noopener">Join the conversation →</a>
+        </div>
+        <div class="hosts" id="hosts">
+          <span class="eyebrow reveal">Meet your hosts</span>
+          <div class="host-list" id="host-list"></div>
         </div>
       </div>
     </section>
