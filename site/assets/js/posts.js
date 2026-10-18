@@ -379,6 +379,192 @@ This article summarises the views our guest shared on the show. Quotes are trans
 `,
   },
   {
+    slug: "health-and-term-insurance",
+    title: "One Hospital Bill Away: Health, Term and Crop Insurance Explained Without the Jargon",
+    date: "2026-10-16",
+    category: "Episode Notes",
+    excerpt:
+      "A single illness can wipe out years of savings, and a hidden pre-existing condition can get your claim rejected. Insurance professional Ravi on what to buy first, how much cover you need, and how farmers can protect their crops.",
+    cover: "",
+    video: "YwBDPUkqKVk",
+    body: `
+It usually starts with a phone call. A parent has collapsed, or there's been an accident. Within days, the hospital bill crosses ₹3 or ₹4 lakh, and a family that has spent years saving carefully watches it disappear. Some sell jewellery. Some borrow from relatives. Some choose a cheaper hospital, or delay treatment, because there is simply no other option.
+
+This isn't rare. Even today, around **39% of all health spending in India comes directly out of people's own pockets**, and one widely cited study estimated that medical costs pushed **55 million Indians into poverty in a single year**. Meanwhile, medical costs in India have been rising by around **13% a year**, roughly twice as fast as general inflation.
+
+During this conversation, host Lalit Sharma put it in one line that stayed with us:
+
+> "The difference between being middle class and being poor is often health insurance."
+> — Lalit Sharma
+
+To make sense of health, term and crop insurance, without the sales pitch, Lalit spoke to **Ravi**, his batchmate from MBA days, who has spent 12 years in the insurance industry, most of it in rural and micro insurance, and now leads crop, cattle and fisheries insurance.
+
+:::summary In this conversation
+- Why so many Indians still don't trust insurance
+- Health insurance first: what one illness can do to a family
+- How to buy health insurance without getting your claim rejected
+- Term insurance: the policy nobody wants to talk about
+- Crop insurance: protecting six months of a farmer's work
+:::
+
+[[watch]]
+
+## 1. Why so many Indians still don't trust insurance
+
+Ask most people to name an insurance company and they'll say LIC. Ravi says that's part of the problem: for decades, armies of agents in every town sold insurance **as an investment**, promising returns, and so people never understood what insurance is actually for.
+
+His definition is beautifully simple. Imagine 100 houses in your neighbourhood. Every year, on average, one of them catches fire. If all 100 families contribute a small amount each year, the one family that suffers the loss can be paid in full.
+
+> "In simple words: when you suffer a loss, insurance makes it good, because you paid the premium."
+> — Ravi
+
+That's it. Insurance isn't meant to "give back" money. It's meant to stop one bad event from wrecking your finances.
+
+**The two big families of insurance:**
+
+- **Life insurance:** pays your dependants if you die.
+- **Non-life (general) insurance:** everything else, including health, motor, property, fire, marine, accident and crop insurance.
+
+**A quick word on motor insurance.** Third-party cover, for damage you cause to other people or their property, is mandatory under the Motor Vehicles Act; without it you'll be fined. Comprehensive cover, which pays for damage to your own vehicle, isn't mandatory, but Ravi strongly recommends it: even a broken bumper, windscreen or fender can take a real bite out of a middle-class budget.
+
+## 2. Health insurance first: what one illness can do to a family
+
+Lalit asked the practical question: if you're middle class or lower middle class, which insurance should you buy first?
+
+Ravi's answer was clear: **health insurance, before anything else.** Picture a family earning ₹40,000–50,000 a month. A parent or grandparent falls ill, and a "small" treatment costs ₹3–4 lakh. That hits hard. The same family paying ₹10,000–15,000 a year in premium would barely feel it.
+
+He also pointed to a cost that's easy to miss: without insurance, people **compromise**. They pick a cheaper hospital or delay treatment. With insurance, he says, you can choose the best care available.
+
+For people who run their own business, he's even firmer. Salaried employees usually get some group cover from their employer. Business owners and small traders get nothing unless they buy it, so for them health insurance should be the very first financial goal.
+
+:::context The bigger picture
+For families who can't afford a premium at all, the government's **Ayushman Bharat PM-JAY** scheme offers free hospital cover of up to ₹5 lakh a year to eligible economically weaker families. Since October 2024, it has also covered **every Indian aged 70 and above**, regardless of income, through the **Ayushman Vay Vandana** card.
+
+Ravi called it one of the most important health initiatives in the country, especially because private insurers rarely sell new policies to people that age. If someone in your family is 70 or older, help them enrol. It's free, through the Ayushman app, beneficiary.nha.gov.in or a Common Service Centre.
+:::
+
+## 3. How to buy health insurance without getting your claim rejected
+
+The most heartbreaking insurance stories are the ones where people *did* pay their premiums, and the claim was still rejected. Ravi's advice is aimed squarely at avoiding that.
+
+**1. Tell the whole truth.** Many people hide an existing illness or their real weight to reduce the premium, sometimes on an agent's advice. Then, during a hospital stay, the doctor writes that you've been on blood pressure medicine for four years. The insurer sees you didn't declare it, and the claim is rejected. Declare every pre-existing condition, and let the premium be what it should be.
+
+**2. Don't under-insure.** "₹3 lakh feels like a lot, until a single day in a private hospital ICU costs ₹1 lakh." For cancer treatment, chemotherapy and repeated tests, costs climb fast. His rule of thumb: **at least ₹10 lakh of health cover today.**
+
+**3. Read the fine print.** Look for:
+
+- **Room-rent caps.** A limit of ₹5,000 or ₹10,000 a day can reduce your entire claim if you take a better room.
+- **Waiting periods.** Usually 30 days for new illnesses, and longer for pre-existing ones.
+- **Riders and add-ons.** Maternity cover, for example, if you're planning a family.
+- **Network hospitals.** Check that the hospitals near you are on the list.
+- **Claim settlement track record.** Choose an insurer that actually pays.
+
+**4. Use the free-look period.** If you realise soon after buying that the policy isn't right for you, you can cancel it and get your premium back.
+
+**The smart move most salaried people miss: a top-up.** If your employer already gives you ₹3–5 lakh of cover, you don't need to buy a brand-new ₹10 lakh policy. A **top-up or super top-up** plan covers costs above a threshold you choose (the "deductible"), and because the insurer only pays above that level, the premium is far lower. Ravi estimates around ₹4,000 a year, compared with ₹20,000 or more for a full fresh policy.
+
+Here's how it works, using Lalit's example:
+
+- Your base policy covers **₹2 lakh**. You buy a top-up of **₹3 lakh** with a **₹2 lakh deductible**.
+- You're hospitalised and the bill comes to **₹5 lakh**.
+- Your base policy pays the first ₹2 lakh. The top-up pays the remaining ₹3 lakh.
+
+It works for family floater policies too. Ravi's own family has a ₹5 lakh floater plus a super top-up of ₹20 lakh with a ₹5 lakh deductible, which means ₹25 lakh of peace of mind at a fraction of the cost.
+
+:::context The bigger picture
+The rules have moved in policyholders' favour since this conversation. Under IRDAI's 2024 reforms:
+
+- The **free-look period is now 30 days** (earlier 15 days) to cancel a policy that isn't right for you.
+- The **maximum waiting period for pre-existing diseases is 3 years**, down from 4.
+- After **5 continuous years** of cover (the "moratorium"), an insurer can't reject a claim for non-disclosure unless there is proven fraud.
+- Insurers must decide on **cashless approval within an hour** of the hospital's request.
+
+Always check your own policy wording, but these changes make honest, continuous cover more valuable than ever.
+:::
+
+## 4. Term insurance: the policy nobody wants to talk about
+
+If health insurance is the first priority, Ravi says term insurance comes second, and only if someone depends on you.
+
+**Who needs it?** If you're young, single, and your parents are financially secure (say, with government pensions), you may not need term cover yet. But once you have a spouse who isn't earning, children, or parents who rely on your income, it becomes essential. If something happens to you, a ₹50 lakh, ₹1 crore or ₹2 crore payout can keep your family afloat.
+
+**Why do so few people buy it?** Partly because nobody likes a salesperson saying "If you die tomorrow…". And partly because people ask, "If nothing happens, what do I get back?"
+
+That question is exactly why Ravi is so firm about this:
+
+> "Insurance and investment should never be mixed. The people selling them mixed together are doing something very wrong."
+> — Ravi
+
+Endowment plans and ULIPs bundle insurance with investment. In his experience, endowment plans have rarely returned more than around 6% historically, and the bundling leaves you with too little cover *and* poor returns. His alternative is simple: **buy a pure term plan for protection, and invest separately**, for example through mutual funds, for growth. You get a far bigger cover for the premium, and better returns on your investments.
+
+**How much cover?** A common rule of thumb is **8 to 10 times your annual income**, but Ravi says your lifestyle and dependants matter more. If your family spends ₹1 lakh a month and you want them to keep living the same way, your cover needs to reflect that. A middle-class earner with fewer dependants will need much less.
+
+**Choosing a plan.** Look for an insurer with a long track record and a strong claim settlement ratio, and balance that against the premium. Then two things decide whether your family actually gets paid:
+
+- **Declare everything honestly**, just like with health insurance.
+- **Get the nominee right**, so the money reaches the right person quickly, without legal tangles.
+
+When a claim is paid, it's usually a **lump sum**. Ravi's advice to families: work with a qualified financial adviser to invest it, so it covers monthly expenses *and* future goals.
+
+:::context The bigger picture
+India's insurance penetration, meaning premiums as a share of GDP, is just **3.7%**, roughly half the global average of about 7%. Life insurance penetration is only **2.8%**, and even that includes many investment-style policies rather than pure protection. Ravi believes the biggest gap is understanding: insurance pays when something goes wrong, not as a return on money spent.
+:::
+
+## 5. Crop insurance: protecting six months of a farmer's work
+
+This is Ravi's own field, and he spoke about it with real feeling. For a farmer, a crop represents three to six months of work, savings and hope. One flood, drought or hailstorm before harvest can wipe it all out.
+
+The main scheme today is the **Pradhan Mantri Fasal Bima Yojana (PMFBY)**, launched in 2016 to replace earlier schemes (NAIS and MNAIS) with lower premiums and a simpler, largely digital process.
+
+**What farmers pay:**
+
+- **2%** of the sum insured for kharif crops
+- **1.5%** for rabi crops
+- **5%** for annual commercial and horticulture crops, such as pomegranate, apple, sweet lime or sugarcane
+
+The rest of the premium is shared by the central and state governments. If the actual premium for an area works out to 10%, the farmer pays 2% and the governments pay the remaining 8%.
+
+**How to enrol:**
+
+- **If you have a crop loan (KCC):** just ask your bank. It already has your documents, the premium is debited from your loan account, and you get an SMS confirmation.
+- **If you don't have a loan:** go to your bank branch, a **Common Service Centre (CSC)** in your village, an insurance agent, or apply online at **pmfby.gov.in**.
+- **Documents to carry:** land record, sowing certificate, Aadhaar, and bank passbook or a cancelled cheque.
+
+You'll get a receipt showing your share of the premium, and what the state and central governments paid on your behalf. You can track your application on the portal.
+
+**What's covered, and how claims work:**
+
+- **Yield loss (area-based):** Officials conduct crop-cutting experiments at random plots in each area. If the actual yield falls below the area's "threshold" yield (based on the previous five years), a claim is triggered for everyone insured in that area.
+- **Prevented sowing:** If drought or floods stop you from sowing at all, you get **25% of the sum insured** right away, and the policy closes.
+- **Local disasters** like hailstorms, which hit individual fields: inform the insurer **within 72 hours**, and your field is surveyed individually.
+- **After harvest:** If your cut crop is drying in the field and unseasonal rain destroys it, you're covered for **up to 14 days** after harvest. Again, report it within 72 hours.
+
+**What's not covered:** crops damaged in storage, for example by pests in a godown. Insect damage is usually picked up while the crop is still growing, through lower yields.
+
+:::context The bigger picture
+By application count, PMFBY is among the largest crop insurance schemes in the world. In 2024-25 alone, around **4.19 crore farmers** enrolled. By mid-2025, claims of about **₹1.83 lakh crore** had been paid since 2016, on more than 22 crore farmer applications.
+:::
+
+## Protect first, invest later
+
+What we took from this conversation is a simple order of priorities. **Health insurance first**, because one illness can undo years of savings. **Term insurance next**, if anyone depends on you. And for farmers, **crop insurance**, because a whole season shouldn't be lost to one storm. Investing comes after you're protected, and it should never be bundled into an insurance policy.
+
+:::takeaways Key takeaways
+1. Insurance compensates you for a loss. It isn't an investment, so don't expect "returns".
+2. Buy health insurance first, with at least ₹10 lakh of cover. Use a top-up if you already have employer cover.
+3. Declare every pre-existing condition honestly. Hiding one is the fastest route to a rejected claim.
+4. Check room-rent caps, waiting periods, network hospitals and the insurer's claim record.
+5. Buy a pure term plan if someone depends on you, invest separately, and name your nominee correctly.
+6. Seniors 70+ can get free cover of up to ₹5 lakh through Ayushman Vay Vandana.
+7. Farmers can insure crops under PMFBY for 1.5–5% premium. Report local damage within 72 hours.
+:::
+
+:::note
+This article summarises the views our guest shared on the show and is for awareness only. It is not financial or insurance advice. Insurance rules and products change, so always read your policy wording, check IRDAI's guidelines, and speak to a licensed adviser before buying. Quotes are translated and lightly condensed from the original Hindi conversation.
+:::
+`,
+  },
+  {
     slug: "why-upsc-aspirants-fail",
     title: "Don't Make the Exam Bigger Than You: Aditya Nath Das on Failing UPSC, Burnout and the Real IAS",
     date: "2026-10-15",
