@@ -384,7 +384,7 @@ This article summarises the views our guest shared on the show. Quotes are trans
     date: "2026-10-16",
     category: "Episode Notes",
     excerpt:
-      "A single illness can wipe out years of savings, and a hidden pre-existing condition can get your claim rejected. Insurance professional Ravi on what to buy first, how much cover you need, and how to make sure your family actually gets paid.",
+      "A single illness can wipe out years of savings, and a hidden pre-existing condition can get your claim rejected. Insurance professional Ravi Ashok on what to buy first, how much cover you need, and how to make sure your family actually gets paid.",
     cover: "",
     video: "YwBDPUkqKVk",
     body: `
@@ -397,7 +397,7 @@ During this conversation, host Lalit Sharma put it in one line that stayed with 
 > "The difference between being middle class and being poor is often health insurance."
 > — Lalit Sharma
 
-To make sense of health and term insurance, without the sales pitch, Lalit spoke to **Ravi**, his batchmate from MBA days, who has spent 12 years in the insurance industry, much of it in rural and micro insurance.
+To make sense of health and term insurance, without the sales pitch, Lalit spoke to **Ravi Ashok**, his batchmate from MBA days, who has spent 12 years in the insurance industry, much of it in rural and micro insurance.
 
 :::summary In this conversation
 - Why so many Indians still don't trust insurance
