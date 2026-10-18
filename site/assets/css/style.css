@@ -685,6 +685,9 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .callout-help .callout-label { color: var(--ink); }
 .callout-help .callout-label::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: #2f9e44; box-shadow: 0 0 0 4px rgba(47,158,68,.2); }
 .callout-help strong { font-size: 1.08em; }
+.callout-thanks { background: var(--cream-2); text-align: center; padding: 34px 36px; }
+.callout-thanks .callout-label { justify-content: center; color: var(--saffron-deep); font-family: var(--font-hand); font-size: 28px; font-weight: 600; letter-spacing: 0; text-transform: none; }
+.callout-thanks p:last-child { font-family: var(--font-serif); font-style: italic; font-size: 1.08em; color: var(--ink); }
 .callout-note { padding: 18px 22px; background: transparent; box-shadow: inset 0 0 0 1.5px var(--line); color: var(--muted); font-size: .82em; }
 .callout-note .callout-label { color: var(--ink-2); margin-bottom: 8px; }
 

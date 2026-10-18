@@ -751,7 +751,13 @@ This article shares one person's real experience and publicly available SEBI dat
 
 What stayed with us after this conversation wasn't the size of the losses. It was how ordinary the path was: a retired man with free time, a ₹1,500 online course, one lucky week, and then three months of learning the hardest way possible.
 
-He's still trading, more carefully now. He chose to share the embarrassing parts so that someone else might skip them. If you know someone who has just discovered options trading, a parent, a friend, a young colleague, this is the conversation to send them.
+He's still trading, more carefully now. If you know someone who has just discovered options trading, a parent, a friend, a young colleague, this is the conversation to send them.
+
+:::thanks A heartfelt thank you
+People rarely talk about money they've lost. Losses are hidden from friends, kept from family, and almost never shared in public. Our guest did the opposite. When we asked him to tell his story, he agreed without a second thought, and then spoke openly about every painful detail: the ₹60,000 afternoon, the margin shock, the trades he wishes he'd never placed, even the mistakes he worried his family might be upset to hear about.
+
+He didn't do it for attention. He did it so that someone else might recognise the trap before falling into it. That takes real courage and real generosity. Thank you, sir, for trusting us with your story. It will save someone a lot of money and a lot of heartache.
+:::
 
 :::takeaways Key takeaways
 1. About 9 in 10 individual F&O traders in India lose money. Assume you will be one of them until you've proven otherwise.
