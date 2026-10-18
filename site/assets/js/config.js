@@ -41,14 +41,9 @@ window.SITE = {
   // Episodes grid
   videos: [
     { id: "4ojqBPlD0Jo", title: "Kya Kismat Badli Ja Sakti Hai? Astrology & Numerology Explained", duration: "1:04:08", tag: "Mind & Meaning" },
-    { id: "ahI9osLXDBY", title: "Children's Day Special — Gen Alpha vs 90s Kids: Who's Smarter?", duration: "48:20", tag: "Life" },
-    { id: "XcICUW9XrS4", title: "Women's Health Secrets Doctors Rarely Tell You — Part 2", duration: "42:35", tag: "Health" },
-    { id: "sDGD1Q-FGDk", title: "I Lost ₹3 Lakhs in 3 Months Trading — Here's What No One Tells You", duration: "19:59", tag: "Money" },
     { id: "Db8uUA9dlYA", title: "Anxiety, Depression & Mobile Addiction: The Hidden Effects on the Brain", duration: "1:10:33", tag: "Mental Health" },
     { id: "dM9CqdQ6ApI", title: "Why 90% of UPSC Aspirants Fail — Former IAS Officer Explains", duration: "1:16:57", tag: "Careers" },
-    { id: "dYmflUeeVqM", title: "Is Sweden Still a Dream Destination? The Harsh Reality", duration: "46:00", tag: "Life Abroad" },
     { id: "Wlg7mH0H8mo", title: "Do You Really Need a Guru? An Eye-Opening Truth About Spirituality", duration: "58:56", tag: "Spirituality" },
-    { id: "Cy5MKpEZcs0", title: "What's Next for Large Language Models? Responsible AI", duration: "45:56", tag: "Tech & AI" },
   ],
 
   about: {
