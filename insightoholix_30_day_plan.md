@@ -82,7 +82,7 @@ I've assumed **about 5 hours a week** and that you edit yourself. Tell me if tha
 | **Sun** | — | **Highlight video** (3–6 min, horizontal) | 11:00 am |
 | **Mon** | Story: poll or question | Community post | 8:00 pm |
 | **Tue** | **Reel** | Same clip as a **Short** | 7:30 pm |
-| **Wed** | Story: quiz or slider | — | 8:00 pm |
+| **Wed** | **Static post** (quote card) + Story: quiz or slider | Same card as a Community image post | 8:00 pm |
 | **Thu** | **Reel** | Same clip as a **Short** | 7:30 pm |
 | **Fri** | **Carousel** + Story | — | 7:30 pm |
 | **Sat** | **Reel** | Same clip as a **Short** | 12:30 pm |
@@ -172,7 +172,37 @@ Timestamps are approximate (±30 s). Start each cut 3 seconds early.
 | Sun 22 Nov | YT | **Highlight video** | **"What Your Missing Birth-Date Numbers Say About You (Lo Shu Grid)"** (18:00–23:01) | #1 Numerology | Description + full-episode link | #A | Watch the full episode | ⬜ |
 | Mon 23 – Tue 25 Nov | — | **Review** | Send me your numbers (section 9). I'll rebuild month 2 around the top 3 clips. | — | — | — | — | ⬜ |
 
-**Totals:** 12 Reels/Shorts · 4 carousels · 4 YouTube highlight videos · 4 Community posts · about 13 Stories.
+**Totals:** 12 Reels/Shorts · 4 carousels · 6 static posts (section 6b) · 4 YouTube highlight videos · 4 Community polls + 6 Community image posts · about 13 Stories.
+
+---
+
+## 6b. Static posts calendar
+
+**Role:** shares to Stories and WhatsApp, grid look, announcements. Not reach.
+**Effort:** about 15 minutes each with one fixed Canva template. Add them to your Saturday batch.
+
+**Rules that make static posts work**
+- **One template, always.** Same layout, fonts and colours, so people recognise you mid-scroll.
+- **15 words max** on the card. If it needs more, it's a carousel.
+- **Put the guest's face on the card** (a cut-out from the episode frame). Faces beat text-only cards.
+- **Post it as a 2-slide carousel:** slide 1 is the quote, slide 2 is "Who said it + watch on YouTube." Instagram re-shows slide 2 to people who scrolled past slide 1, which gives a free second chance at reach.
+- **Mirror every card** as a YouTube Community image post on the same day.
+
+**Pushback:** don't do daily quote cards. Every podcast page does them, and most get ignored. One strong line a week, from a moment people already reacted to, is enough. The same goes for festival greetings: a generic "Happy Diwali" graphic gets almost nothing, so the Diwali post below ties to an episode.
+
+| Date | Platform | Format | Card text (slide 1) | Source episode | Caption | Hashtags | CTA | Status |
+|---|---|---|---|---|---|---|---|---|
+| Wed 28 Oct | IG + YT Community | Static (2-slide) | **"Don't make the exam bigger than yourself."** – Aditya Nath Das, former IAS | #8 UPSC (1:15:00) | "He failed prelims, then mains, then became Chief Secretary. Every aspirant needs this line. 🎯" | #C | Send this to an aspirant | ⬜ |
+| Wed 4 Nov | IG + YT Community | Static (2-slide) | **"90% of the things we worry about never actually happen."** – Dr. Arun Tungaria, neurosurgeon | #7 Mental Health (17:32) | "Read it twice. Then breathe. 🧠" | #B | Share to your Story | ⬜ |
+| Sun 8 Nov 🪔 | IG + YT Community | Static (2-slide) | **"You don't have to leave home to find peace. You can find it within your family."** | #9 Satsang (30:30) | "Happy Diwali from Insightoholix. 🪔 May this festival bring you contentment, not just more." | #A | Wish your family 💛 | ⬜ |
+| Wed 11 Nov | IG + YT Community | Static (2-slide) | **"Women can be fit, confident and empowered at any age and any size."** – Dr. Poonam Gupta | #4 Women's Health P2 (38:03) | "No one size fits all, and no one size defines women's health. 💛" | #B | Tag a woman who needs this | ⬜ |
+| Wed 18 Nov | IG + YT Community | Static (2-slide) | **"When I imagine the 80s and 90s, I can only picture them in black and white."** – an 8-year-old Gen Alpha guest | #3 Gen Alpha (36:32) | "90s kids, are we really that old? 😅📼" | #D | Comment your birth year | ⬜ |
+| Mon 23 Nov | IG + YT Community | Static (single) | **"Got a story the world should hear? Be our next guest. 🎙️"** | — (guest pitch) | "Doctors, founders, believers, sceptics, people who've lived something real. DM us 'GUEST' and tell us your story in 3 lines." | #insightoholix #hindipodcast #podcastguest #indianpodcast #storytelling | DM "GUEST" | ⬜ |
+
+Quotes are translated from Hindi and condensed; the meaning is the speaker's own. The Diwali line paraphrases the guest's point that satsang doesn't ask you to leave home.
+
+**PROMPT FOR CHATGPT (image generator): reusable quote-card template**
+> Design a reusable Instagram quote card, 1080×1350 (4:5), for a premium Indian podcast brand called "Insightoholix". Background warm cream #F8EADF. Top-left: a large saffron (#F5B104) opening quotation mark. Centre-left: the quote in a bold elegant serif, deep ink #141210, max 4 lines, generous line spacing: "Don't make the exam bigger than yourself." Below it, in small caps sans-serif: "— ADITYA NATH DAS, FORMER IAS OFFICER". Right side, bottom: an empty circular frame (500 px, saffron outline) where I will place a cut-out photo of the guest. Bottom-left: a small microphone icon and the text "INSIGHTOHOLIX PODCAST". Clean, editorial, lots of white space, no gradients, no stock imagery. Keep text areas clearly separated so I can reuse the layout for other quotes.
 
 ---
 
