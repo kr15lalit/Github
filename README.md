@@ -1,5 +1,7 @@
 # FreshCart — WordPress + WooCommerce grocery theme
 
+> **Developers working on the Verda website: start with [DEVELOPER-HANDOFF.md](DEVELOPER-HANDOFF.md).**
+
 FreshCart is a WordPress theme for an online grocery and organic food store. It is original code, laid out like the Zilly "Home 06" demo: hero banners, popular categories, discount and trending product carousels, a deal of the week with a countdown, promo banners, a blog section and a features bar.
 
 The theme code is in the [`freshcart/`](freshcart) folder.
