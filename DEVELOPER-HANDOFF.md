@@ -97,3 +97,7 @@ For bigger changes, use a child theme so theme updates don't overwrite them.
 ## Still to come from the business
 
 Real product list + photos (template provided), GSTIN, GST rate & HSN per category (from their CA), FSSAI licence number, social media links, WhatsApp number, final banners, payment gateway choice, domain and hosting.
+
+
+## Shop filters (to set up on the live site)
+The preview's Shop page has filters for Category, Product, Pack size, Flavour and Price, where each filter's choices update from the others. On the live site use WooCommerce's built-in **Product Filters** blocks in the Shop sidebar. Pack size and Flavour must be global product attributes (Products → Attributes) for those filters to work.

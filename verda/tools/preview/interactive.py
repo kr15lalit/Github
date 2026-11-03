@@ -29,7 +29,7 @@ for p in data["products"]:
         img = UP + v["image"]
         if not os.path.exists(os.path.join(OUT, img)):
             missing.append(img)
-        vs.append({"label": v["label"], "sku": v["sku"], "mrp": v["mrp"], "price": v["price"], "image": img})
+        vs.append({"label": v["label"], "size": v.get("size") or v["label"], "sku": v["sku"], "mrp": v["mrp"], "price": v["price"], "image": img})
     products.append({"slug": p["slug"], "name": p["name"], "cat": p["cat"], "attr": p.get("attr") or "Size", "url": page, "variants": vs})
 cat = {"products": products, "freeFrom": 1599, "shipping": 49}
 with open(os.path.join(OUT, "verda-catalog.js"), "w", encoding="utf-8") as fh:
