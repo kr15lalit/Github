@@ -391,7 +391,7 @@ $mods = array(
 	'feat4_text'         => 'Festive offers every week',
 	'feat5_text'         => 'Call +91-9266604099',
 
-	'footer_about'       => 'Verda brings you pure, natural and healthy foods — from wholesome staples to millet puffs, makhana, dry fruits and festive gift hampers.',
+	'footer_about'       => 'Verda brings you pure, natural kitchen staples — wood-pressed and cold-pressed oils, bilona desi cow ghee, stone-cleaned dals, atta and roasted millet snacks.',
 	'footer_address'     => $address,
 	'footer_phone'       => $phones,
 	'footer_email'       => $email,
