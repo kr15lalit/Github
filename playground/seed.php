@@ -90,9 +90,16 @@ $catalogue      = json_decode( file_get_contents( VERDA_DATA . 'real-products.js
 $category_names = $catalogue['categories'];
 $ids            = array();
 foreach ( $category_names as $order => $name ) {
-	$term          = wp_insert_term( $name, 'product_cat' );
-	$ids[ $name ] = $term['term_id'];
-	update_term_meta( $term['term_id'], 'order', $order );
+	$term = term_exists( $name, 'product_cat' );
+	if ( ! $term ) {
+		$term = wp_insert_term( $name, 'product_cat' );
+	}
+	if ( is_wp_error( $term ) ) {
+		fwrite( STDERR, 'Category ' . $name . ': ' . $term->get_error_message() . "\n" );
+		continue;
+	}
+	$ids[ $name ] = (int) $term['term_id'];
+	update_term_meta( $ids[ $name ], 'order', $order );
 }
 
 $image_by_file = array();

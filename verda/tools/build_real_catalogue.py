@@ -211,11 +211,13 @@ def build(photos):
             size_txt = "%s %s" % (qty, unit) if p.get("flavours") else label
             entry["variants"].append({
                 "label": label, "size": size_txt, "qty": qty, "unit": unit, "mrp": mrp, "price": price,
-                "sku": "VR-" + "".join(w[0] for w in base.split("-") if w)[:5].upper() + "-" + slug(label).upper().replace("-", "")[:6],
+                "sku": "VR-" + "".join(w[:3] for w in base.split("-") if w).upper()[:12] + "-" + slug(label).upper().replace("-", "")[:8],
                 "image": img, "back": back_img, "photo": (front or "").split("@")[0], "back_photo": back or "",
             })
         entry["gallery"] = [save(trim_square(load(photos, g)), base + "-group-%d.jpg" % i) for i, g in enumerate(p["gallery"], 1)]
         catalogue.append(entry)
+    skus = [v["sku"] for c in catalogue for v in c["variants"]]
+    assert len(skus) == len(set(skus)), "duplicate SKUs: %s" % sorted(x for x in skus if skus.count(x) > 1)
     json.dump({"categories": CATEGORIES, "products": catalogue}, open(os.path.join(ROOT, "real-products.json"), "w"), indent=1, ensure_ascii=False)
     write_csv(catalogue)
     write_excel(catalogue)
