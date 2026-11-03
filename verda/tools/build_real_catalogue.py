@@ -236,7 +236,11 @@ def build(photos):
         for label, qty, unit, mrp, price, front, back in p["sizes"]:
             vslug = base + "-" + slug(label)
             if front:
-                img = save(trim_square(load(photos, front)), vslug + ".jpg")
+                im = load(photos, front)
+                if p["cat"] == "Atta, Rice & Dals" and im.width > im.height:
+                    # Pulse packs are shot lying sideways: show them standing upright.
+                    im = im.rotate(-90, expand=True)
+                img = save(trim_square(im), vslug + ".jpg")
             else:
                 img = vslug + ".jpg"
                 coming_soon(p["name"].split(" (")[0], label, os.path.join(OUT_IMG, img))
