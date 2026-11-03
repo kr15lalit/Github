@@ -72,7 +72,7 @@ update_option(
 	)
 );
 
-// Shipping: ₹49 flat rate, free above ₹499 (sample rules).
+// Shipping: ₹49 flat rate, free above ₹1,599 (sample rules).
 $zone = new WC_Shipping_Zone();
 $zone->set_zone_name( 'India' );
 $zone->add_location( 'IN', 'country' );
@@ -80,7 +80,7 @@ $zone->save();
 $flat = $zone->add_shipping_method( 'flat_rate' );
 update_option( 'woocommerce_flat_rate_' . $flat . '_settings', array( 'title' => 'Standard Delivery', 'tax_status' => 'none', 'cost' => '49' ) );
 $free = $zone->add_shipping_method( 'free_shipping' );
-update_option( 'woocommerce_free_shipping_' . $free . '_settings', array( 'title' => 'Free Delivery', 'requires' => 'min_amount', 'min_amount' => '499' ) );
+update_option( 'woocommerce_free_shipping_' . $free . '_settings', array( 'title' => 'Free Delivery', 'requires' => 'min_amount', 'min_amount' => '1599' ) );
 
 // ---------------------------------------------------------------------------
 // Real Verda catalogue (verda/real-products.json, built from the product photos).
@@ -228,7 +228,7 @@ $pages = array(
 	'About Us'             => "<h2>Nature. Purity. Life.</h2><p>Verda is a brand of {$company}, built on a simple belief: everyday food should be pure, natural and good for you.</p><p>We bring you wood-pressed and cold-pressed oils, bilona desi cow ghee, stone-cleaned pulses, millet atta and roasted millet snacks — sourced with care and packed hygienically.</p><h3>What we stand for</h3><ul><li><strong>Purity</strong> — oils lab tested at an NABL-certified lab, with no added oils or preservatives.</li><li><strong>Nature</strong> — traditional grains and time-tested methods like cold pressing and bilona churning.</li><li><strong>Life</strong> — food that fuels healthy families and supports Indian farmers.</li></ul><p>We deliver all over India.</p>",
 	'Contact Us'           => "<p>We'd love to hear from you — for orders, bulk and corporate gifting, or partnerships.</p><p><strong>{$company}</strong><br>{$address}</p><p><strong>Phone:</strong> {$phones}<br><strong>Email:</strong> <a href=\"mailto:{$email}\">{$email}</a></p><p><strong>Hours:</strong> Monday to Saturday, 10:00 am – 7:00 pm</p><!-- wp:html --><iframe title=\"Verda on the map\" src=\"https://www.google.com/maps?q=Niti+Khand+1+Indirapuram+Ghaziabad&output=embed\" width=\"100%\" height=\"360\" style=\"border:0;border-radius:12px\" loading=\"lazy\"></iframe><!-- /wp:html -->",
 	'FAQ'                  => '<h3>Where do you deliver?</h3><p>We deliver across India.</p><h3>How long does delivery take?</h3><p>Orders are dispatched within 1–2 working days. Delivery usually takes 3–7 working days depending on your location.</p><h3>What payment methods do you accept?</h3><p>UPI, credit and debit cards, net banking and Cash on Delivery (on eligible pincodes).</p><h3>What is the difference between wood-pressed and cold-pressed oil?</h3><p>Both are pressed without high heat or chemical refining, so the oil keeps its natural aroma and nutrients. Our coconut, groundnut and sesame oils are wood pressed; our mustard oils are cold pressed.</p><h3>Do you supply in bulk?</h3><p>Yes. Email ' . $email . ' with the products and quantities you need.</p><h3>Are your oils lab tested?</h3><p>Yes — at an NABL-certified lab. They contain no added edible oils and no preservatives.</p>',
-	'Shipping Policy'      => "<p>{$company} ships to all serviceable pincodes in India.</p><ul><li>Orders are dispatched within 1–2 working days.</li><li>Typical delivery time is 3–7 working days.</li><li>Free shipping on orders above ₹499; a flat fee applies below that.</li><li>You will receive a tracking link by SMS/email once your order ships.</li></ul><p><em>Draft — please review the delivery charges and timelines.</em></p>",
+	'Shipping Policy'      => "<p>{$company} ships to all serviceable pincodes in India.</p><ul><li>Orders are dispatched within 1–2 working days.</li><li>Typical delivery time is 3–7 working days.</li><li>Free shipping on orders above ₹1,599; a flat fee applies below that.</li><li>You will receive a tracking link by SMS/email once your order ships.</li></ul><p><em>Draft — please review the delivery charges and timelines.</em></p>",
 	'Return & Refund Policy' => "<p>Because our products are food items, we cannot accept returns of opened packs. If your order arrives damaged, defective or incorrect, contact us within 48 hours of delivery at {$email} with photos, and we will send a replacement or a full refund.</p><p>Refunds are processed to the original payment method within 5–7 working days of approval.</p><p><em>Draft — please review.</em></p>",
 	'Privacy Policy'       => "<p>{$company} respects your privacy. We collect only the information needed to process your orders and improve our service — such as your name, address, phone number and email. We never sell your personal data.</p><p>Payments are processed by secure third-party payment gateways; we do not store card details.</p><p>For any privacy questions, write to {$email}.</p><p><em>Draft — have this reviewed by your legal adviser.</em></p>",
 	'Terms & Conditions'   => "<p>This website is operated by {$company}, {$address}. By placing an order you agree to these terms.</p><ul><li>Prices are in Indian Rupees and include applicable taxes unless stated otherwise.</li><li>We may cancel orders in case of pricing errors or stock unavailability, with a full refund.</li><li>Product images are for illustration; actual packaging may vary.</li><li>All disputes are subject to the jurisdiction of courts in Ghaziabad, Uttar Pradesh.</li></ul><p><em>Draft — have this reviewed by your legal adviser.</em></p>",
@@ -276,7 +276,6 @@ $shop_item = wp_update_nav_menu_item( $main, 0, verda_page_item( wc_get_page_id(
 foreach ( $category_names as $name ) {
 	wp_update_nav_menu_item( $main, 0, verda_cat_item( $ids[ $name ] ) + array( 'menu-item-parent-id' => $shop_item, 'menu-item-status' => 'publish' ) );
 }
-wp_update_nav_menu_item( $main, 0, verda_cat_item( $ids['Oils & Ghee'] ) + array( 'menu-item-title' => 'Oils & Ghee', 'menu-item-status' => 'publish' ) );
 foreach ( array( 'About Us', 'Contact Us' ) as $title ) {
 	wp_update_nav_menu_item( $main, 0, verda_page_item( $page_ids[ $title ] ) + array( 'menu-item-status' => 'publish' ) );
 }
@@ -335,7 +334,7 @@ $mods = array(
 
 	'topbar_address'     => '561, Niti Khand-1, Indirapuram, Ghaziabad – 201014',
 	'topbar_email'       => $email,
-	'topbar_text'        => 'Free delivery on orders above ₹499 · Delivering all over India',
+	'topbar_text'        => 'Free delivery on orders above ₹1,599 · Delivering all over India',
 	'header_phone_label' => 'Call Us',
 	'header_phone'       => '+91-9266604099',
 
@@ -385,7 +384,7 @@ $mods = array(
 	'dual2_url'          => get_term_link( $ids['Atta, Rice & Dals'] ),
 
 	'blog_title'         => 'Healthy Living Blog',
-	'feat1_text'         => 'On orders above ₹499',
+	'feat1_text'         => 'On orders above ₹1,599',
 	'feat2_text'         => 'Best prices, direct from us',
 	'feat3_text'         => 'Easy replacement on damaged items',
 	'feat4_text'         => 'Festive offers every week',
@@ -396,6 +395,8 @@ $mods = array(
 	'footer_phone'       => $phones,
 	'footer_email'       => $email,
 	'news_text'          => 'Get offers, new launches and healthy recipes in your inbox.',
+	'whatsapp_number'    => '+91 92666 04099',
+	'whatsapp_message'   => 'Hello Verda! I have a question about your products.',
 	'social_facebook'    => 'https://www.facebook.com/',
 	'social_instagram'   => 'https://www.instagram.com/',
 	'social_youtube'     => 'https://www.youtube.com/',

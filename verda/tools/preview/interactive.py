@@ -31,7 +31,7 @@ for p in data["products"]:
             missing.append(img)
         vs.append({"label": v["label"], "sku": v["sku"], "mrp": v["mrp"], "price": v["price"], "image": img})
     products.append({"slug": p["slug"], "name": p["name"], "cat": p["cat"], "attr": p.get("attr") or "Size", "url": page, "variants": vs})
-cat = {"products": products, "freeFrom": 499, "shipping": 49}
+cat = {"products": products, "freeFrom": 1599, "shipping": 49}
 with open(os.path.join(OUT, "verda-catalog.js"), "w", encoding="utf-8") as fh:
     fh.write("window.VERDA_CATALOG = " + json.dumps(cat, ensure_ascii=True, separators=(",", ":")) + ";\n")
 shutil.copy(os.path.join(HERE, "verda-preview.js"), os.path.join(OUT, "verda-preview.js"))

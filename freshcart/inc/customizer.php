@@ -131,6 +131,8 @@ function freshcart_defaults() {
 		'social_instagram'     => '',
 		'social_x'             => '',
 		'social_youtube'       => '',
+		'whatsapp_number'      => '',
+		'whatsapp_message'     => 'Hello! I have a question about your products.',
 		'copyright'            => '© {year} {site}. All Rights Reserved.',
 	);
 }
@@ -362,6 +364,8 @@ function freshcart_customize_register( $wp_customize ) {
 				'social_instagram' => array( 'url', __( 'Instagram URL', 'freshcart' ) ),
 				'social_x'         => array( 'url', __( 'X / Twitter URL', 'freshcart' ) ),
 				'social_youtube'   => array( 'url', __( 'YouTube URL', 'freshcart' ) ),
+				'whatsapp_number'  => array( 'text', __( 'WhatsApp number for the chat button (with country code, e.g. +91 98765 43210). Leave empty to hide the button.', 'freshcart' ) ),
+				'whatsapp_message' => array( 'text', __( 'WhatsApp pre-filled message', 'freshcart' ) ),
 				'copyright'        => array( 'text', __( 'Copyright ({year} and {site} are replaced)', 'freshcart' ) ),
 			),
 		),

@@ -804,3 +804,8 @@ span.onsale {
 	.fc-footer-bottom-inner { flex-direction: column; justify-content: center; padding: 18px 16px; text-align: center; }
 	.fc-post-grid, .has-sidebar .fc-post-grid { grid-template-columns: 1fr; }
 }
+
+/* WhatsApp chat button */
+.fc-whatsapp{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:9990;display:inline-flex;align-items:center;gap:8px;height:56px;padding:0 18px 0 13px;border-radius:999px;background:#25d366;color:#fff;font-weight:600;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.2);transition:transform .2s}
+.fc-whatsapp:hover,.fc-whatsapp:focus-visible{color:#fff;transform:translateY(-2px)}
+@media (max-width:600px){.fc-whatsapp{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));width:56px;padding:0;justify-content:center}.fc-whatsapp-label{display:none}}

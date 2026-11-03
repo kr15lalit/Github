@@ -106,6 +106,16 @@ $freshcart_locations = get_nav_menu_locations();
 	</div>
 </footer>
 
+<?php
+$freshcart_wa = preg_replace( '/\D+/', '', (string) freshcart_mod( 'whatsapp_number' ) );
+if ( $freshcart_wa ) :
+	$freshcart_wa_url = 'https://wa.me/' . $freshcart_wa . ( freshcart_mod( 'whatsapp_message' ) ? '?text=' . rawurlencode( freshcart_mod( 'whatsapp_message' ) ) : '' );
+	?>
+	<a class="fc-whatsapp" href="<?php echo esc_url( $freshcart_wa_url ); ?>" target="_blank" rel="noopener" aria-label="<?php esc_attr_e( 'Chat with us on WhatsApp', 'freshcart' ); ?>">
+		<svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.2 10 10 5.3 16 5.3S26.8 10 26.8 15.8 22 26.4 16 26.4zm5.9-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.8.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3c.2.2 2.3 3.6 5.7 5 2.1.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5s.3-1.3.2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg>
+		<span class="fc-whatsapp-label"><?php esc_html_e( 'Chat with us', 'freshcart' ); ?></span>
+	</a>
+<?php endif; ?>
 <?php wp_footer(); ?>
 </body>
 </html>

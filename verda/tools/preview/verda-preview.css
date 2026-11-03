@@ -87,3 +87,9 @@ body{padding-bottom:44px}
   .vp-meta li{border-right:0;border-bottom:1px dashed var(--fc-border,#e8e9eb)}
   .vp-bar{font-size:12px}
 }
+
+/* WhatsApp chat button (same as the theme), lifted above the preview bar */
+.fc-whatsapp{position:fixed;right:20px;bottom:calc(64px + env(safe-area-inset-bottom,0px));z-index:9990;display:inline-flex;align-items:center;gap:8px;height:56px;padding:0 18px 0 13px;border-radius:999px;background:#25d366;color:#fff;font-weight:600;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.2);transition:transform .2s}
+.fc-whatsapp:hover,.fc-whatsapp:focus-visible{color:#fff;transform:translateY(-2px)}
+@media (max-width:600px){.fc-whatsapp{right:14px;bottom:calc(60px + env(safe-area-inset-bottom,0px));width:56px;padding:0;justify-content:center}.fc-whatsapp-label{display:none}}
+.vp-toast{bottom:calc(132px + env(safe-area-inset-bottom,0px))}

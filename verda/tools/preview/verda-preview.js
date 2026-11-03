@@ -7,7 +7,7 @@
 (function () {
 	'use strict';
 
-	var CAT = window.VERDA_CATALOG || { products: [], freeFrom: 499, shipping: 49 };
+	var CAT = window.VERDA_CATALOG || { products: [], freeFrom: 1599, shipping: 49 };
 	var KEY = 'verda-preview-cart';
 	var memory = [];
 
