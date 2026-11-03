@@ -338,9 +338,9 @@ $mods = array(
 	'header_phone_label' => 'Call Us',
 	'header_phone'       => '+91-9266604099',
 
-	'hero_banner'        => $banner( 'hero-diwali.jpg' ),
+	'hero_banner'        => $banner( 'hero-main.jpg' ),
 	'hero_banner_url'    => wc_get_page_permalink( 'shop' ),
-	'hero_banner_alt'    => 'Verda – pure oils, ghee, pulses and millet snacks',
+	'hero_banner_alt'    => 'Verda – wood-pressed oils, bilona ghee, stone-cleaned dals and millet snacks',
 	'hero_tagline'       => '100% Natural',
 	'hero_title'         => "Pure & Natural\nGoodness",
 	'hero_text'          => 'Millet puffs, makhana, dry fruits and everyday staples — delivered all over India.',

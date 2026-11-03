@@ -809,3 +809,8 @@ span.onsale {
 .fc-whatsapp{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:9990;display:inline-flex;align-items:center;gap:8px;height:56px;padding:0 18px 0 13px;border-radius:999px;background:#25d366;color:#fff;font-weight:600;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.2);transition:transform .2s}
 .fc-whatsapp:hover,.fc-whatsapp:focus-visible{color:#fff;transform:translateY(-2px)}
 @media (max-width:600px){.fc-whatsapp{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));width:56px;padding:0;justify-content:center}.fc-whatsapp-label{display:none}}
+
+/* Ready-made hero banner: always shown whole at 3:2 (recommended upload 1536 x 1024),
+   and the side banners share its height. */
+.fc-hero-main.fc-hero-main--image img { height: auto; min-height: 0; aspect-ratio: 3 / 2; object-position: center; }
+.fc-hero-grid:has(.fc-hero-main--image) .fc-banner.fc-banner--image { min-height: 0; }
