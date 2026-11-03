@@ -191,8 +191,8 @@ def real_banner(photos, specs, bg, path, size=(900, 450), area=(0.46, 0.99), sca
 def build(photos):
     os.makedirs(OUT_IMG, exist_ok=True)
     banners = os.path.join(ROOT, "images", "banners")
-    real_banner(photos, ["DSC05965@jar:4", "DSC05965@jar:1"], (255, 243, 214), os.path.join(banners, "banner-real-puffs.jpg"), scale=1.4, middle=True)
-    real_banner(photos, ["DSC05933-Edit-Edit", "DSC05951-Edit"], (229, 240, 251), os.path.join(banners, "banner-real-dals.jpg"), area=(0.44, 0.99), middle=True)
+    real_banner(photos, ["DSC05965@jar:4", "DSC05965@jar:1"], (255, 243, 214), os.path.join(banners, "banner-real-puffs.jpg"), area=(0.56, 0.99), scale=1.45, middle=True)
+    real_banner(photos, ["DSC05933-Edit-Edit", "DSC05951-Edit"], (229, 240, 251), os.path.join(banners, "banner-real-dals.jpg"), area=(0.58, 0.99), scale=1.3, middle=True)
     catalogue = []
     for p in PRODUCTS:
         base = slug(p["name"])
