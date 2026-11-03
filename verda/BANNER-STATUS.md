@@ -9,6 +9,7 @@ All four approved by the owner. Not yet on the preview site (to be published tog
 | Small, bottom right 1 | `images/banners/hero-dals.jpg` | 1448 × 1086 |
 | Small, bottom right 2 | `images/banners/hero-ghee.jpg` | 1448 × 1086 |
 | Healthy Snacks (dual banner 1) | `images/banners/healthy-snacks.jpg` | 1536 × 1024 (approved, not yet on the preview) |
+| Kitchen Staples (dual banner 2) | `images/banners/kitchen-staples.jpg` | 1536 × 1024 (text + scene only, temporary; to be replaced with a real photo of the pulses) |
 | Full-width oils banner (mid page) | `images/banners/promo-oils-pure.jpg` | 2000 × 667 (approved, not yet on the preview) |
 
 Hand edits on the main banner (re-apply if it is ever regenerated): official logo on the left; dal heap above the
