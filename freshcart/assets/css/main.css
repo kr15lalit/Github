@@ -820,3 +820,9 @@ span.onsale {
 .fc-dual .fc-banner--image img { position: static; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
 /* Full-width promo banner: keep the logo and headline (left) in view. */
 .fc-promo-banner-img { aspect-ratio: 3 / 1; }
+
+/* Popular Categories with fewer than 8 cards: cards share the full row (no empty space). */
+.fc-cat-list--fill { --fc-cols: var(--fc-n); }
+@media (max-width: 1200px) { .fc-cat-list--fill { --fc-cols: min(var(--fc-n), 6); } }
+@media (max-width: 991px) { .fc-cat-list--fill { --fc-cols: min(var(--fc-n), 4); } }
+@media (max-width: 600px) { .fc-cat-list--fill { --fc-cols: min(var(--fc-n), 3); } }

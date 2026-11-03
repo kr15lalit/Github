@@ -29,9 +29,14 @@ if ( ! $freshcart_terms || is_wp_error( $freshcart_terms ) ) {
 ?>
 <section class="fc-section fc-categories">
 	<div class="fc-container">
-		<?php freshcart_section_head( freshcart_mod( 'cats_title' ), array( 'arrows' => true ) ); ?>
+		<?php
+		// Fewer than 8 categories: the cards share the full row. 8 or more: a carousel with arrows.
+		$freshcart_count = count( $freshcart_terms );
+		$freshcart_fill  = $freshcart_count < 8;
+		freshcart_section_head( freshcart_mod( 'cats_title' ), array( 'arrows' => ! $freshcart_fill ) );
+		?>
 		<div class="fc-carousel">
-			<ul class="fc-carousel-track fc-cat-list">
+			<ul class="fc-carousel-track fc-cat-list<?php echo $freshcart_fill ? ' fc-cat-list--fill' : ''; ?>"<?php echo $freshcart_fill ? ' style="--fc-n:' . absint( $freshcart_count ) . '"' : ''; ?>>
 				<?php foreach ( $freshcart_terms as $freshcart_term ) : ?>
 					<?php $freshcart_thumb = get_term_meta( $freshcart_term->term_id, 'thumbnail_id', true ); ?>
 					<li class="fc-cat">

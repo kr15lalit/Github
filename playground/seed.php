@@ -278,9 +278,7 @@ function verda_cat_item( $id ) {
 $main = wp_create_nav_menu( 'Main Menu' );
 wp_update_nav_menu_item( $main, 0, array( 'menu-item-title' => 'Home', 'menu-item-url' => home_url( '/' ), 'menu-item-status' => 'publish' ) );
 $shop_item = wp_update_nav_menu_item( $main, 0, verda_page_item( wc_get_page_id( 'shop' ) ) + array( 'menu-item-status' => 'publish' ) );
-foreach ( $category_names as $name ) {
-	wp_update_nav_menu_item( $main, 0, verda_cat_item( $ids[ $name ] ) + array( 'menu-item-parent-id' => $shop_item, 'menu-item-status' => 'publish' ) );
-}
+// Shop is a plain link to all products; categories are under "Browse Categories".
 foreach ( array( 'About Us', 'Contact Us' ) as $title ) {
 	wp_update_nav_menu_item( $main, 0, verda_page_item( $page_ids[ $title ] ) + array( 'menu-item-status' => 'publish' ) );
 }
