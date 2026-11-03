@@ -169,8 +169,8 @@ foreach ( $catalogue['products'] as $i => $c ) {
 }
 
 $category_thumb = array(
-	'Oils & Ghee'       => 'wood-pressed-coconut-oil-group-1.jpg',
-	'Atta, Rice & Dals' => 'chana-dal-1-kg.jpg',
+	'Oils & Ghee'       => 'cat-oils-ghee.jpg',
+	'Atta, Rice & Dals' => 'cat-dals.jpg',
 	'Healthy Snacks'    => 'jowar-puffs-group-1.jpg',
 	'Makhana'           => 'roasted-makhana-cream-onion.jpg',
 	'Millets'           => 'raagi-atta-1-kg.jpg',
@@ -185,23 +185,28 @@ foreach ( $category_thumb as $name => $file ) {
 $posts = array(
 	array(
 		'Wood-Pressed Oil: What Makes It Different?',
-		'wood-pressed-coconut-oil-group-1.jpg',
+		'blog-wood-pressed.jpg',
 		'<p>Wood pressing (the traditional <em>kolhu</em> or <em>ghani</em>) crushes seeds slowly at low temperature. Because the oil is not heated or chemically refined, it keeps its natural aroma, colour and taste.</p><p>Verda coconut, groundnut and sesame oils are wood pressed, lab tested at an NABL-certified lab and contain no added edible oils or preservatives.</p>',
 	),
 	array(
 		'Yellow or Black Mustard Oil — Which Should You Use?',
-		'cold-pressed-black-mustard-oil-group-1.jpg',
+		'blog-mustard.jpg',
 		'<p>Both are cold pressed from mustard seeds. <strong>Black mustard oil</strong> has the strong, pungent kachi ghani flavour loved in North Indian and Bengali cooking — perfect for pickles, sarson ka saag and fish. <strong>Yellow mustard oil</strong> is milder and works well for everyday cooking.</p><p>Verda mustard oils come in 1 L, 2 L and 5 L packs.</p>',
 	),
 	array(
 		'Why Stone-Cleaned Pulses Matter',
-		'chana-dal-1-kg.jpg',
+		'blog-dals.jpg',
 		'<p>Stone cleaning removes grit, husk and small stones that ordinary sorting can miss — so your dal is cleaner before it ever reaches your kitchen.</p><p>Verda dals, rajma and chana are stone cleaned and freshly packed in 1 kg packs. Store them in a cool, dry place and always use a dry spoon.</p>',
 	),
 	array(
 		'Millet Puffs: A Smarter Tea-Time Snack',
-		'jowar-puffs-group-1.jpg',
+		'blog-millet-puffs.jpg',
 		'<p>Jowar and bajra are traditional Indian millets, naturally rich in fibre. Verda Jowar Puffs and Bajra Puffs are roasted snacks that come in four flavours: Cream Onion, Peri Peri, Tandoori and Magic Masala.</p>',
+	),
+	array(
+		'Bilona Ghee: Why the Traditional Way Matters',
+		'blog-ghee.jpg',
+		'<p>Bilona is the traditional way of making desi ghee. Milk is first set into curd, and the curd is churned slowly with a wooden churner &mdash; the <em>bilona</em> &mdash; to separate the butter. The butter is then gently heated until it turns into golden, grainy (<em>danedar</em>) ghee.</p><p>Because it is made from curd and churned slowly, bilona ghee keeps the rich aroma and taste that many of us remember from ghee made at home.</p><p>Verda Desi Cow Ghee is made by the bilona technique and comes in 500 ml and 1 L jars.</p>',
 	),
 );
 foreach ( $posts as $p ) {
