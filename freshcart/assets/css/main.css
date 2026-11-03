@@ -814,3 +814,9 @@ span.onsale {
    and the side banners share its height. */
 .fc-hero-main.fc-hero-main--image img { height: auto; min-height: 0; aspect-ratio: 3 / 2; object-position: center; }
 .fc-hero-grid:has(.fc-hero-main--image) .fc-banner.fc-banner--image { min-height: 0; }
+
+/* Ready-made side-by-side banners: shown whole at 3:2 (recommended upload 1536 x 1024). */
+.fc-dual .fc-banner.fc-banner--image { min-height: 0; padding: 0; }
+.fc-dual .fc-banner--image img { position: static; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+/* Full-width promo banner: keep the logo and headline (left) in view. */
+.fc-promo-banner-img { aspect-ratio: 3 / 1; }
