@@ -28,7 +28,18 @@ FONT = "/usr/share/fonts/opentype/inter/Inter-%s.otf"
 
 OIL_NOTE = "Lab tested at an NABL-certified lab. No added edible oils, free from argemone oil, no preservatives. Best before 12 months from manufacture; store in a dry place away from heat and light."
 DAL_NOTE = "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon."
-SNACK_NOTE = "Roasted, not fried. High in fibre and gluten free."
+SNACK_NOTE = "Roasted snack. High in fibre and gluten free."
+ATTA_NOTE = "Freshly milled and packed. Store in a cool, dry and hygienic place, away from direct sunlight."
+# The business stocks 7 types of atta in 5 kg and 10 kg packs; names below are placeholders until confirmed.
+ATTA_TYPES = [
+    ("Chakki Fresh Whole Wheat Atta", "Stone-ground whole wheat atta for soft, everyday rotis.", 1),
+    ("Sharbati Wheat Atta", "Atta from premium sharbati wheat for soft, slightly sweet rotis.", 0),
+    ("Multigrain Atta", "A wholesome blend of wheat and grains for fibre-rich rotis.", 1),
+    ("Jowar Atta", "Gluten-free jowar (sorghum) atta for bhakri and rotis.", 0),
+    ("Bajra Atta", "Bajra (pearl millet) atta — a winter favourite for rotis and khichdi.", 0),
+    ("Makka Atta", "Makka (maize) atta for makki di roti.", 0),
+    ("Chana Atta (Missi)", "Chana and wheat atta for protein-rich missi roti.", 0),
+]
 
 # One entry per product (group). Each size: (label, net qty, unit, mrp, price, front photo, back photo).
 # Photo spec: "FILE" or "FILE@crop" where crop = "jar:N" (N-th jar in a group shot) or "right" (right bottle).
@@ -68,7 +79,8 @@ PRODUCTS = [
     {"name": "Desi Cow Ghee (Bilona, Danedar)", "cat": "Oils & Ghee", "featured": 1,
      "short": "Pure, danedar desi cow ghee made by the traditional bilona technique.",
      "note": "Ingredient: cow milk fat. Store in a cool and dry place, away from direct sunlight.",
-     "sizes": [("1 L (909 g)", 1, "L", 1899, 1699, None, None)],
+     "sizes": [("500 ml", 500, "ml", 999, 899, None, None),
+               ("1 L (909 g)", 1, "L", 1899, 1699, None, None)],
      "gallery": []},
     {"name": "Chana Dal", "cat": "Atta, Rice & Dals", "featured": 1, "short": "Stone-cleaned, freshly packed chana dal.", "note": DAL_NOTE,
      "sizes": [("1 kg", 1, "kg", 149, 135, "DSC05933-Edit-Edit", None)], "gallery": []},
@@ -93,12 +105,12 @@ PRODUCTS = [
     {"name": "Raagi Atta", "cat": "Millets", "featured": 1, "short": "Raagi (finger millet) atta, freshly packed — naturally rich in protein and fibre.", "note": DAL_NOTE,
      "sizes": [("1 kg", 1, "kg", 129, 115, None, None)], "gallery": []},
     {"name": "Jowar Puffs", "cat": "Healthy Snacks", "featured": 1,
-     "short": "Crunchy jowar (sorghum) puffs — roasted, not fried.", "note": SNACK_NOTE, "flavours": True,
+     "short": "Crunchy jowar (sorghum) puffs — a roasted snack, high in fibre.", "note": SNACK_NOTE, "flavours": True,
      "sizes": [("Cream Onion", 120, "g", 149, 129, "DSC05965@jar:3", None),
                ("Peri Peri", 120, "g", 149, 129, "DSC05965@jar:4", None)],
      "gallery": ["DSC05965"]},
     {"name": "Bajra Puffs", "cat": "Healthy Snacks", "featured": 1,
-     "short": "Crunchy bajra (pearl millet) puffs — roasted, not fried.", "note": SNACK_NOTE, "flavours": True,
+     "short": "Crunchy bajra (pearl millet) puffs — a roasted snack, high in fibre.", "note": SNACK_NOTE, "flavours": True,
      "sizes": [("Tandoori", 120, "g", 149, 129, "DSC05965@jar:1", None),
                ("Magic Masala", 120, "g", 149, 129, "DSC05965@jar:2", None)],
      "gallery": ["DSC05964"]},
@@ -108,6 +120,26 @@ PRODUCTS = [
                ("Tangy Tomato", 70, "g", 199, 179, None, None)],
      "gallery": []},
 ]
+PRODUCTS += [
+    {"name": name, "cat": "Atta, Rice & Dals", "featured": featured, "short": short, "note": ATTA_NOTE, "placeholder_name": True,
+     "sizes": [("5 kg", 5, "kg", None, None, None, None), ("10 kg", 10, "kg", None, None, None, None)], "gallery": []}
+    for name, short, featured in ATTA_TYPES
+]
+# Estimated prices per atta type (₹ MRP / selling) for 5 kg and 10 kg — to be replaced.
+ATTA_PRICES = {
+    "Chakki Fresh Whole Wheat Atta": ((299, 269), (579, 519)),
+    "Sharbati Wheat Atta": ((349, 315), (679, 609)),
+    "Multigrain Atta": ((399, 359), (779, 699)),
+    "Jowar Atta": ((449, 405), (879, 789)),
+    "Bajra Atta": ((399, 359), (779, 699)),
+    "Makka Atta": ((349, 315), (679, 609)),
+    "Chana Atta (Missi)": ((449, 405), (879, 789)),
+}
+for _p in PRODUCTS:
+    if _p["name"] in ATTA_PRICES:
+        (m5, s5), (m10, s10) = ATTA_PRICES[_p["name"]]
+        _p["sizes"] = [("5 kg", 5, "kg", m5, s5, None, None), ("10 kg", 10, "kg", m10, s10, None, None)]
+
 CATEGORIES = ["Oils & Ghee", "Atta, Rice & Dals", "Healthy Snacks", "Makhana", "Millets"]
 
 
@@ -197,6 +229,7 @@ def build(photos):
     for p in PRODUCTS:
         base = slug(p["name"])
         entry = {k: p[k] for k in ("name", "cat", "featured", "short", "note")}
+        entry["placeholder_name"] = p.get("placeholder_name", False)
         entry["slug"] = base
         entry["attr"] = "Flavour" if p.get("flavours") else "Size"
         entry["variants"] = []
@@ -267,8 +300,10 @@ def write_excel(catalogue):
             back = (v["back_photo"] + ".jpg") if v["back_photo"] else ""
             front = (v["photo"] + ".jpg") if v["photo"] else "PHOTO NEEDED"
             note = "Prices are estimates — please replace with your MRP and selling price."
-            if not v["photo"]:
-                note += " Photo file is over 6 MB in Drive; please share a smaller copy."
+            if c.get("placeholder_name"):
+                note += " Atta type name is a placeholder — please confirm the 7 types; photo needed."
+            elif not v["photo"]:
+                note += " Photo file is over 6 MB in Drive (or not shot yet); please share a smaller copy."
             samples.append((c["name"], c["cat"], flavour, size, v["mrp"], v["price"], None, c["short"], front, back, note))
     t.SAMPLES = samples
     t.CATEGORIES = CATEGORIES + ["Dry Fruits & Nuts", "Diwali Gift Hampers"]

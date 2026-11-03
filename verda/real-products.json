@@ -13,6 +13,7 @@
    "featured": 1,
    "short": "Pure coconut oil, wood pressed from premium coconuts to keep its natural goodness, aroma and nutrients.",
    "note": "Lab tested at an NABL-certified lab. No added edible oils, free from argemone oil, no preservatives. Best before 12 months from manufacture; store in a dry place away from heat and light.",
+   "placeholder_name": false,
    "slug": "wood-pressed-coconut-oil",
    "attr": "Size",
    "variants": [
@@ -53,6 +54,7 @@
    "featured": 1,
    "short": "Pure groundnut oil, wood pressed from premium groundnuts for authentic taste and aroma.",
    "note": "Lab tested at an NABL-certified lab. No added edible oils, free from argemone oil, no preservatives. Best before 12 months from manufacture; store in a dry place away from heat and light.",
+   "placeholder_name": false,
    "slug": "wood-pressed-groundnut-oil",
    "attr": "Size",
    "variants": [
@@ -93,6 +95,7 @@
    "featured": 0,
    "short": "Pure sesame (til) oil, wood pressed from premium sesame seeds to retain natural goodness.",
    "note": "Lab tested at an NABL-certified lab. No added edible oils, free from argemone oil, no preservatives. Best before 12 months from manufacture; store in a dry place away from heat and light.",
+   "placeholder_name": false,
    "slug": "wood-pressed-sesame-oil",
    "attr": "Size",
    "variants": [
@@ -133,6 +136,7 @@
    "featured": 1,
    "short": "Cold pressed from premium yellow mustard seeds — mild, aromatic and full of natural goodness.",
    "note": "Lab tested at an NABL-certified lab. No added edible oils, free from argemone oil, no preservatives. Best before 12 months from manufacture; store in a dry place away from heat and light.",
+   "placeholder_name": false,
    "slug": "cold-pressed-yellow-mustard-oil",
    "attr": "Size",
    "variants": [
@@ -186,6 +190,7 @@
    "featured": 1,
    "short": "Cold pressed from premium black mustard seeds — the classic pungent kachi ghani flavour.",
    "note": "Lab tested at an NABL-certified lab. No added edible oils, free from argemone oil, no preservatives. Best before 12 months from manufacture; store in a dry place away from heat and light.",
+   "placeholder_name": false,
    "slug": "cold-pressed-black-mustard-oil",
    "attr": "Size",
    "variants": [
@@ -239,9 +244,23 @@
    "featured": 1,
    "short": "Pure, danedar desi cow ghee made by the traditional bilona technique.",
    "note": "Ingredient: cow milk fat. Store in a cool and dry place, away from direct sunlight.",
+   "placeholder_name": false,
    "slug": "desi-cow-ghee-bilona-danedar",
    "attr": "Size",
    "variants": [
+    {
+     "label": "500 ml",
+     "size": "500 ml",
+     "qty": 500,
+     "unit": "ml",
+     "mrp": 999,
+     "price": 899,
+     "sku": "VR-DESCOWGHEBIL-500ML",
+     "image": "desi-cow-ghee-bilona-danedar-500-ml.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    },
     {
      "label": "1 L (909 g)",
      "size": "1 L (909 g)",
@@ -264,6 +283,7 @@
    "featured": 1,
    "short": "Stone-cleaned, freshly packed chana dal.",
    "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "placeholder_name": false,
    "slug": "chana-dal",
    "attr": "Size",
    "variants": [
@@ -289,6 +309,7 @@
    "featured": 0,
    "short": "Stone-cleaned, freshly packed masoor dal.",
    "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "placeholder_name": false,
    "slug": "masoor-dal",
    "attr": "Size",
    "variants": [
@@ -314,6 +335,7 @@
    "featured": 0,
    "short": "Whole masoor, stone-cleaned and freshly packed.",
    "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "placeholder_name": false,
    "slug": "sabut-masoor",
    "attr": "Size",
    "variants": [
@@ -339,6 +361,7 @@
    "featured": 0,
    "short": "Washed split urad dal, stone-cleaned and freshly packed.",
    "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "placeholder_name": false,
    "slug": "urad-dhuli",
    "attr": "Size",
    "variants": [
@@ -364,6 +387,7 @@
    "featured": 0,
    "short": "Whole black urad, stone-cleaned and freshly packed.",
    "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "placeholder_name": false,
    "slug": "urad-sabut",
    "attr": "Size",
    "variants": [
@@ -389,6 +413,7 @@
    "featured": 0,
    "short": "Kabuli chana (white chickpeas), stone-cleaned and freshly packed.",
    "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "placeholder_name": false,
    "slug": "kabuli-chana",
    "attr": "Size",
    "variants": [
@@ -414,6 +439,7 @@
    "featured": 0,
    "short": "Kala chana (black chickpeas), stone-cleaned and freshly packed.",
    "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "placeholder_name": false,
    "slug": "kala-chana",
    "attr": "Size",
    "variants": [
@@ -439,6 +465,7 @@
    "featured": 0,
    "short": "Red rajma (kidney beans), stone-cleaned and freshly packed.",
    "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "placeholder_name": false,
    "slug": "red-rajma",
    "attr": "Size",
    "variants": [
@@ -464,6 +491,7 @@
    "featured": 0,
    "short": "Chitra rajma, stone-cleaned and freshly packed.",
    "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "placeholder_name": false,
    "slug": "rajma-chitra",
    "attr": "Size",
    "variants": [
@@ -489,6 +517,7 @@
    "featured": 0,
    "short": "Gram flour (besan), freshly packed.",
    "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "placeholder_name": false,
    "slug": "besan",
    "attr": "Size",
    "variants": [
@@ -514,6 +543,7 @@
    "featured": 1,
    "short": "Raagi (finger millet) atta, freshly packed — naturally rich in protein and fibre.",
    "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "placeholder_name": false,
    "slug": "raagi-atta",
    "attr": "Size",
    "variants": [
@@ -537,8 +567,9 @@
    "name": "Jowar Puffs",
    "cat": "Healthy Snacks",
    "featured": 1,
-   "short": "Crunchy jowar (sorghum) puffs — roasted, not fried.",
-   "note": "Roasted, not fried. High in fibre and gluten free.",
+   "short": "Crunchy jowar (sorghum) puffs — a roasted snack, high in fibre.",
+   "note": "Roasted snack. High in fibre and gluten free.",
+   "placeholder_name": false,
    "slug": "jowar-puffs",
    "attr": "Flavour",
    "variants": [
@@ -577,8 +608,9 @@
    "name": "Bajra Puffs",
    "cat": "Healthy Snacks",
    "featured": 1,
-   "short": "Crunchy bajra (pearl millet) puffs — roasted, not fried.",
-   "note": "Roasted, not fried. High in fibre and gluten free.",
+   "short": "Crunchy bajra (pearl millet) puffs — a roasted snack, high in fibre.",
+   "note": "Roasted snack. High in fibre and gluten free.",
+   "placeholder_name": false,
    "slug": "bajra-puffs",
    "attr": "Flavour",
    "variants": [
@@ -618,7 +650,8 @@
    "cat": "Makhana",
    "featured": 1,
    "short": "Light, crunchy roasted makhana (fox nuts) — high in fibre, gluten free.",
-   "note": "Roasted, not fried. High in fibre and gluten free.",
+   "note": "Roasted snack. High in fibre and gluten free.",
+   "placeholder_name": false,
    "slug": "roasted-makhana",
    "attr": "Flavour",
    "variants": [
@@ -644,6 +677,279 @@
      "price": 179,
      "sku": "VR-ROAMAK-TANGYTOM",
      "image": "roasted-makhana-tangy-tomato.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Chakki Fresh Whole Wheat Atta",
+   "cat": "Atta, Rice & Dals",
+   "featured": 1,
+   "short": "Stone-ground whole wheat atta for soft, everyday rotis.",
+   "note": "Freshly milled and packed. Store in a cool, dry and hygienic place, away from direct sunlight.",
+   "placeholder_name": true,
+   "slug": "chakki-fresh-whole-wheat-atta",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "5 kg",
+     "size": "5 kg",
+     "qty": 5,
+     "unit": "kg",
+     "mrp": 299,
+     "price": 269,
+     "sku": "VR-CHAFREWHOWHE-5KG",
+     "image": "chakki-fresh-whole-wheat-atta-5-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    },
+    {
+     "label": "10 kg",
+     "size": "10 kg",
+     "qty": 10,
+     "unit": "kg",
+     "mrp": 579,
+     "price": 519,
+     "sku": "VR-CHAFREWHOWHE-10KG",
+     "image": "chakki-fresh-whole-wheat-atta-10-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Sharbati Wheat Atta",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Atta from premium sharbati wheat for soft, slightly sweet rotis.",
+   "note": "Freshly milled and packed. Store in a cool, dry and hygienic place, away from direct sunlight.",
+   "placeholder_name": true,
+   "slug": "sharbati-wheat-atta",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "5 kg",
+     "size": "5 kg",
+     "qty": 5,
+     "unit": "kg",
+     "mrp": 349,
+     "price": 315,
+     "sku": "VR-SHAWHEATT-5KG",
+     "image": "sharbati-wheat-atta-5-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    },
+    {
+     "label": "10 kg",
+     "size": "10 kg",
+     "qty": 10,
+     "unit": "kg",
+     "mrp": 679,
+     "price": 609,
+     "sku": "VR-SHAWHEATT-10KG",
+     "image": "sharbati-wheat-atta-10-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Multigrain Atta",
+   "cat": "Atta, Rice & Dals",
+   "featured": 1,
+   "short": "A wholesome blend of wheat and grains for fibre-rich rotis.",
+   "note": "Freshly milled and packed. Store in a cool, dry and hygienic place, away from direct sunlight.",
+   "placeholder_name": true,
+   "slug": "multigrain-atta",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "5 kg",
+     "size": "5 kg",
+     "qty": 5,
+     "unit": "kg",
+     "mrp": 399,
+     "price": 359,
+     "sku": "VR-MULATT-5KG",
+     "image": "multigrain-atta-5-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    },
+    {
+     "label": "10 kg",
+     "size": "10 kg",
+     "qty": 10,
+     "unit": "kg",
+     "mrp": 779,
+     "price": 699,
+     "sku": "VR-MULATT-10KG",
+     "image": "multigrain-atta-10-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Jowar Atta",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Gluten-free jowar (sorghum) atta for bhakri and rotis.",
+   "note": "Freshly milled and packed. Store in a cool, dry and hygienic place, away from direct sunlight.",
+   "placeholder_name": true,
+   "slug": "jowar-atta",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "5 kg",
+     "size": "5 kg",
+     "qty": 5,
+     "unit": "kg",
+     "mrp": 449,
+     "price": 405,
+     "sku": "VR-JOWATT-5KG",
+     "image": "jowar-atta-5-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    },
+    {
+     "label": "10 kg",
+     "size": "10 kg",
+     "qty": 10,
+     "unit": "kg",
+     "mrp": 879,
+     "price": 789,
+     "sku": "VR-JOWATT-10KG",
+     "image": "jowar-atta-10-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Bajra Atta",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Bajra (pearl millet) atta — a winter favourite for rotis and khichdi.",
+   "note": "Freshly milled and packed. Store in a cool, dry and hygienic place, away from direct sunlight.",
+   "placeholder_name": true,
+   "slug": "bajra-atta",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "5 kg",
+     "size": "5 kg",
+     "qty": 5,
+     "unit": "kg",
+     "mrp": 399,
+     "price": 359,
+     "sku": "VR-BAJATT-5KG",
+     "image": "bajra-atta-5-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    },
+    {
+     "label": "10 kg",
+     "size": "10 kg",
+     "qty": 10,
+     "unit": "kg",
+     "mrp": 779,
+     "price": 699,
+     "sku": "VR-BAJATT-10KG",
+     "image": "bajra-atta-10-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Makka Atta",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Makka (maize) atta for makki di roti.",
+   "note": "Freshly milled and packed. Store in a cool, dry and hygienic place, away from direct sunlight.",
+   "placeholder_name": true,
+   "slug": "makka-atta",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "5 kg",
+     "size": "5 kg",
+     "qty": 5,
+     "unit": "kg",
+     "mrp": 349,
+     "price": 315,
+     "sku": "VR-MAKATT-5KG",
+     "image": "makka-atta-5-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    },
+    {
+     "label": "10 kg",
+     "size": "10 kg",
+     "qty": 10,
+     "unit": "kg",
+     "mrp": 679,
+     "price": 609,
+     "sku": "VR-MAKATT-10KG",
+     "image": "makka-atta-10-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Chana Atta (Missi)",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Chana and wheat atta for protein-rich missi roti.",
+   "note": "Freshly milled and packed. Store in a cool, dry and hygienic place, away from direct sunlight.",
+   "placeholder_name": true,
+   "slug": "chana-atta-missi",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "5 kg",
+     "size": "5 kg",
+     "qty": 5,
+     "unit": "kg",
+     "mrp": 449,
+     "price": 405,
+     "sku": "VR-CHAATTMIS-5KG",
+     "image": "chana-atta-missi-5-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    },
+    {
+     "label": "10 kg",
+     "size": "10 kg",
+     "qty": 10,
+     "unit": "kg",
+     "mrp": 879,
+     "price": 789,
+     "sku": "VR-CHAATTMIS-10KG",
+     "image": "chana-atta-missi-10-kg.jpg",
      "back": null,
      "photo": "",
      "back_photo": ""

@@ -201,7 +201,7 @@ $posts = array(
 	array(
 		'Millet Puffs: A Smarter Tea-Time Snack',
 		'jowar-puffs-group-1.jpg',
-		'<p>Jowar and bajra are traditional Indian millets, naturally rich in fibre. Verda Jowar Puffs and Bajra Puffs are roasted, not fried, and come in four flavours: Cream Onion, Peri Peri, Tandoori and Magic Masala.</p>',
+		'<p>Jowar and bajra are traditional Indian millets, naturally rich in fibre. Verda Jowar Puffs and Bajra Puffs are roasted snacks that come in four flavours: Cream Onion, Peri Peri, Tandoori and Magic Masala.</p>',
 	),
 );
 foreach ( $posts as $p ) {
@@ -375,7 +375,7 @@ $mods = array(
 
 	'dual1_tagline'      => 'Healthy Snacks',
 	'dual1_title'        => 'Jowar & Bajra Puffs',
-	'dual1_text'         => 'Roasted, not fried · 4 flavours',
+	'dual1_text'         => 'Roasted millet snacks · 4 flavours',
 	'dual1_image'        => $banner( 'banner-real-puffs.jpg' ),
 	'dual1_url'          => get_term_link( $ids['Healthy Snacks'] ),
 	'dual2_tagline'      => 'Kitchen Staples',
