@@ -181,7 +181,7 @@ def load(photos, spec):
 def coming_soon(title, sub, path):
     """Placeholder for products whose photo is not available yet."""
     W = 1000
-    im = Image.new("RGB", (W, W), (247, 246, 240))
+    im = Image.new("RGB", (W, W), (255, 255, 255))  # white, so it blends like the product photos
     d = ImageDraw.Draw(im)
     logo = Image.open(LOGO).convert("RGBA")
     logo = logo.resize((420, int(420 * logo.height / logo.width)), Image.LANCZOS)
