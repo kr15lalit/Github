@@ -731,6 +731,11 @@ span.onsale {
 	background: var(--fc-primary); color: #fff;
 }
 .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover { background: var(--fc-secondary); }
+/* Block-based cart and checkout buttons (Proceed to checkout, Place order). */
+.wc-block-components-button:not(.is-link):not(.wc-block-components-button--text) {
+	border-radius: 50px; background: var(--fc-primary); color: #fff; font-weight: 600;
+}
+.wc-block-components-button:not(.is-link):not(.wc-block-components-button--text):hover { background: var(--fc-secondary); color: #fff; }
 .woocommerce .widget_price_filter .ui-slider .ui-slider-range,
 .woocommerce .widget_price_filter .ui-slider .ui-slider-handle { background: var(--fc-primary); }
 

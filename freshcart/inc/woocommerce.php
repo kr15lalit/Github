@@ -137,3 +137,21 @@ function freshcart_sale_ids() {
 	$ids = array_map( 'absint', wc_get_product_ids_on_sale() );
 	return $ids ? $ids : array( 0 );
 }
+
+/**
+ * When an order qualifies for free shipping, offer only the free option(s),
+ * so customers are never charged for delivery they should get free.
+ *
+ * @param array $rates Shipping rates.
+ * @return array
+ */
+function freshcart_free_shipping_only( $rates ) {
+	$free = array();
+	foreach ( $rates as $id => $rate ) {
+		if ( 'free_shipping' === $rate->get_method_id() ) {
+			$free[ $id ] = $rate;
+		}
+	}
+	return $free ? $free : $rates;
+}
+add_filter( 'woocommerce_package_rates', 'freshcart_free_shipping_only', 100 );

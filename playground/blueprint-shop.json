@@ -1,0 +1,74 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/",
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": true
+  },
+  "login": false,
+  "steps": [
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Verda",
+        "permalink_structure": "/%postname%/",
+        "woocommerce_onboarding_profile": {
+          "skipped": true
+        },
+        "woocommerce_coming_soon": "no"
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "woocommerce"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "git:directory",
+        "url": "https://github.com/kr15lalit/Github",
+        "ref": "claude/funny-euler-c0bsfh",
+        "refType": "branch",
+        "path": "freshcart"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "writeFiles",
+      "writeToPath": "/wordpress/verda-data",
+      "filesTree": {
+        "resource": "git:directory",
+        "url": "https://github.com/kr15lalit/Github",
+        "ref": "claude/funny-euler-c0bsfh",
+        "refType": "branch",
+        "path": "verda"
+      }
+    },
+    {
+      "step": "writeFiles",
+      "writeToPath": "/wordpress/verda-setup",
+      "filesTree": {
+        "resource": "git:directory",
+        "url": "https://github.com/kr15lalit/Github",
+        "ref": "claude/funny-euler-c0bsfh",
+        "refType": "branch",
+        "path": "playground"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/verda-setup/seed.php'; foreach (array('/wordpress/verda-data', '/wordpress/verda-setup') as $dir) { $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS), RecursiveIteratorIterator::CHILD_FIRST); foreach ($it as $f) { $f->isDir() ? rmdir($f) : unlink($f); } rmdir($dir); }"
+    }
+  ]
+}
