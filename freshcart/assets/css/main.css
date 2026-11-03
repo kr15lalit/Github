@@ -417,7 +417,8 @@ body.fc-nav-open::after {
 .fc-cat-img {
 	display: grid; place-items: center;
 	width: 96px; height: 96px; margin-bottom: 14px;
-	border-radius: 50%; background: var(--fc-light); color: var(--fc-primary);
+	/* White circle so product photos (shot on white) show no square edge on any browser. */
+	border-radius: 50%; background: #fff; border: 1px solid var(--fc-border); color: var(--fc-primary);
 	overflow: hidden;
 }
 .fc-cat-img img {
