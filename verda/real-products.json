@@ -1,0 +1,655 @@
+{
+ "categories": [
+  "Oils & Ghee",
+  "Atta, Rice & Dals",
+  "Healthy Snacks",
+  "Makhana",
+  "Millets"
+ ],
+ "products": [
+  {
+   "name": "Wood Pressed Coconut Oil",
+   "cat": "Oils & Ghee",
+   "featured": 1,
+   "short": "Pure coconut oil, wood pressed from premium coconuts to keep its natural goodness, aroma and nutrients.",
+   "note": "Lab tested at an NABL-certified lab. No added edible oils, free from argemone oil, no preservatives. Best before 12 months from manufacture; store in a dry place away from heat and light.",
+   "slug": "wood-pressed-coconut-oil",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "500 ml",
+     "size": "500 ml",
+     "qty": 500,
+     "unit": "ml",
+     "mrp": 349,
+     "price": 299,
+     "sku": "VR-WPCO-500ML",
+     "image": "wood-pressed-coconut-oil-500-ml.jpg",
+     "back": "wood-pressed-coconut-oil-500-ml-back.jpg",
+     "photo": "DSC05845-Edit",
+     "back_photo": "DSC05920-Edit-Edit"
+    },
+    {
+     "label": "1 L",
+     "size": "1 L",
+     "qty": 1,
+     "unit": "L",
+     "mrp": 649,
+     "price": 579,
+     "sku": "VR-WPCO-1L",
+     "image": "wood-pressed-coconut-oil-1-l.jpg",
+     "back": "wood-pressed-coconut-oil-1-l-back.jpg",
+     "photo": "DSC05848-Edit",
+     "back_photo": "DSC05915-Edit"
+    }
+   ],
+   "gallery": [
+    "wood-pressed-coconut-oil-group-1.jpg"
+   ]
+  },
+  {
+   "name": "Wood Pressed Groundnut Oil",
+   "cat": "Oils & Ghee",
+   "featured": 1,
+   "short": "Pure groundnut oil, wood pressed from premium groundnuts for authentic taste and aroma.",
+   "note": "Lab tested at an NABL-certified lab. No added edible oils, free from argemone oil, no preservatives. Best before 12 months from manufacture; store in a dry place away from heat and light.",
+   "slug": "wood-pressed-groundnut-oil",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "500 ml",
+     "size": "500 ml",
+     "qty": 500,
+     "unit": "ml",
+     "mrp": 299,
+     "price": 259,
+     "sku": "VR-WPGO-500ML",
+     "image": "wood-pressed-groundnut-oil-500-ml.jpg",
+     "back": "wood-pressed-groundnut-oil-500-ml-back.jpg",
+     "photo": "DSC05846-Edit",
+     "back_photo": "DSC05912-Edit"
+    },
+    {
+     "label": "1 L",
+     "size": "1 L",
+     "qty": 1,
+     "unit": "L",
+     "mrp": 549,
+     "price": 489,
+     "sku": "VR-WPGO-1L",
+     "image": "wood-pressed-groundnut-oil-1-l.jpg",
+     "back": "wood-pressed-groundnut-oil-1-l-back.jpg",
+     "photo": "DSC05849",
+     "back_photo": "DSC05913-Edit"
+    }
+   ],
+   "gallery": [
+    "wood-pressed-groundnut-oil-group-1.jpg"
+   ]
+  },
+  {
+   "name": "Wood Pressed Sesame Oil",
+   "cat": "Oils & Ghee",
+   "featured": 0,
+   "short": "Pure sesame (til) oil, wood pressed from premium sesame seeds to retain natural goodness.",
+   "note": "Lab tested at an NABL-certified lab. No added edible oils, free from argemone oil, no preservatives. Best before 12 months from manufacture; store in a dry place away from heat and light.",
+   "slug": "wood-pressed-sesame-oil",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "500 ml",
+     "size": "500 ml",
+     "qty": 500,
+     "unit": "ml",
+     "mrp": 349,
+     "price": 299,
+     "sku": "VR-WPSO-500ML",
+     "image": "wood-pressed-sesame-oil-500-ml.jpg",
+     "back": "wood-pressed-sesame-oil-500-ml-back.jpg",
+     "photo": "DSC05851-Edit",
+     "back_photo": "DSC05916-Edit"
+    },
+    {
+     "label": "1 L",
+     "size": "1 L",
+     "qty": 1,
+     "unit": "L",
+     "mrp": 649,
+     "price": 579,
+     "sku": "VR-WPSO-1L",
+     "image": "wood-pressed-sesame-oil-1-l.jpg",
+     "back": "wood-pressed-sesame-oil-1-l-back.jpg",
+     "photo": "DSC05847",
+     "back_photo": "DSC05917-Edit"
+    }
+   ],
+   "gallery": [
+    "wood-pressed-sesame-oil-group-1.jpg"
+   ]
+  },
+  {
+   "name": "Cold Pressed Yellow Mustard Oil",
+   "cat": "Oils & Ghee",
+   "featured": 1,
+   "short": "Cold pressed from premium yellow mustard seeds — mild, aromatic and full of natural goodness.",
+   "note": "Lab tested at an NABL-certified lab. No added edible oils, free from argemone oil, no preservatives. Best before 12 months from manufacture; store in a dry place away from heat and light.",
+   "slug": "cold-pressed-yellow-mustard-oil",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 L",
+     "size": "1 L",
+     "qty": 1,
+     "unit": "L",
+     "mrp": 299,
+     "price": 269,
+     "sku": "VR-CPYMO-1L",
+     "image": "cold-pressed-yellow-mustard-oil-1-l.jpg",
+     "back": "cold-pressed-yellow-mustard-oil-1-l-back.jpg",
+     "photo": "DSC05874-Edit",
+     "back_photo": "DSC05910-Edit"
+    },
+    {
+     "label": "2 L",
+     "size": "2 L",
+     "qty": 2,
+     "unit": "L",
+     "mrp": 579,
+     "price": 519,
+     "sku": "VR-CPYMO-2L",
+     "image": "cold-pressed-yellow-mustard-oil-2-l.jpg",
+     "back": null,
+     "photo": "DSC05877-Edit",
+     "back_photo": ""
+    },
+    {
+     "label": "5 L",
+     "size": "5 L",
+     "qty": 5,
+     "unit": "L",
+     "mrp": 1399,
+     "price": 1249,
+     "sku": "VR-CPYMO-5L",
+     "image": "cold-pressed-yellow-mustard-oil-5-l.jpg",
+     "back": "cold-pressed-yellow-mustard-oil-5-l-back.jpg",
+     "photo": "DSC05886-Edit",
+     "back_photo": "DSC05911-Edit"
+    }
+   ],
+   "gallery": [
+    "cold-pressed-yellow-mustard-oil-group-1.jpg"
+   ]
+  },
+  {
+   "name": "Cold Pressed Black Mustard Oil",
+   "cat": "Oils & Ghee",
+   "featured": 1,
+   "short": "Cold pressed from premium black mustard seeds — the classic pungent kachi ghani flavour.",
+   "note": "Lab tested at an NABL-certified lab. No added edible oils, free from argemone oil, no preservatives. Best before 12 months from manufacture; store in a dry place away from heat and light.",
+   "slug": "cold-pressed-black-mustard-oil",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 L",
+     "size": "1 L",
+     "qty": 1,
+     "unit": "L",
+     "mrp": 319,
+     "price": 289,
+     "sku": "VR-CPBMO-1L",
+     "image": "cold-pressed-black-mustard-oil-1-l.jpg",
+     "back": "cold-pressed-black-mustard-oil-1-l-back.jpg",
+     "photo": "DSC05890-Edit",
+     "back_photo": "DSC05906-Edit"
+    },
+    {
+     "label": "2 L",
+     "size": "2 L",
+     "qty": 2,
+     "unit": "L",
+     "mrp": 619,
+     "price": 559,
+     "sku": "VR-CPBMO-2L",
+     "image": "cold-pressed-black-mustard-oil-2-l.jpg",
+     "back": "cold-pressed-black-mustard-oil-2-l-back.jpg",
+     "photo": "DSC05887-Edit",
+     "back_photo": "DSC05908-Edit"
+    },
+    {
+     "label": "5 L",
+     "size": "5 L",
+     "qty": 5,
+     "unit": "L",
+     "mrp": 1499,
+     "price": 1349,
+     "sku": "VR-CPBMO-5L",
+     "image": "cold-pressed-black-mustard-oil-5-l.jpg",
+     "back": "cold-pressed-black-mustard-oil-5-l-back.jpg",
+     "photo": "DSC05885-Edit",
+     "back_photo": "DSC05909-Edit"
+    }
+   ],
+   "gallery": [
+    "cold-pressed-black-mustard-oil-group-1.jpg"
+   ]
+  },
+  {
+   "name": "Desi Cow Ghee (Bilona, Danedar)",
+   "cat": "Oils & Ghee",
+   "featured": 1,
+   "short": "Pure, danedar desi cow ghee made by the traditional bilona technique.",
+   "note": "Ingredient: cow milk fat. Store in a cool and dry place, away from direct sunlight.",
+   "slug": "desi-cow-ghee-bilona-danedar",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 L (909 g)",
+     "size": "1 L (909 g)",
+     "qty": 1,
+     "unit": "L",
+     "mrp": 1899,
+     "price": 1699,
+     "sku": "VR-DCGBD-1L909G",
+     "image": "desi-cow-ghee-bilona-danedar-1-l-909-g.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Chana Dal",
+   "cat": "Atta, Rice & Dals",
+   "featured": 1,
+   "short": "Stone-cleaned, freshly packed chana dal.",
+   "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "slug": "chana-dal",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 kg",
+     "size": "1 kg",
+     "qty": 1,
+     "unit": "kg",
+     "mrp": 149,
+     "price": 135,
+     "sku": "VR-CD-1KG",
+     "image": "chana-dal-1-kg.jpg",
+     "back": null,
+     "photo": "DSC05933-Edit-Edit",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Masoor Dal",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Stone-cleaned, freshly packed masoor dal.",
+   "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "slug": "masoor-dal",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 kg",
+     "size": "1 kg",
+     "qty": 1,
+     "unit": "kg",
+     "mrp": 149,
+     "price": 135,
+     "sku": "VR-MD-1KG",
+     "image": "masoor-dal-1-kg.jpg",
+     "back": null,
+     "photo": "DSC05940-Edit",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Sabut Masoor",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Whole masoor, stone-cleaned and freshly packed.",
+   "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "slug": "sabut-masoor",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 kg",
+     "size": "1 kg",
+     "qty": 1,
+     "unit": "kg",
+     "mrp": 159,
+     "price": 145,
+     "sku": "VR-SM-1KG",
+     "image": "sabut-masoor-1-kg.jpg",
+     "back": null,
+     "photo": "DSC05938-Edit",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Urad Dhuli",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Washed split urad dal, stone-cleaned and freshly packed.",
+   "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "slug": "urad-dhuli",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 kg",
+     "size": "1 kg",
+     "qty": 1,
+     "unit": "kg",
+     "mrp": 199,
+     "price": 179,
+     "sku": "VR-UD-1KG",
+     "image": "urad-dhuli-1-kg.jpg",
+     "back": null,
+     "photo": "DSC05941-Edit",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Urad Sabut",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Whole black urad, stone-cleaned and freshly packed.",
+   "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "slug": "urad-sabut",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 kg",
+     "size": "1 kg",
+     "qty": 1,
+     "unit": "kg",
+     "mrp": 189,
+     "price": 169,
+     "sku": "VR-US-1KG",
+     "image": "urad-sabut-1-kg.jpg",
+     "back": null,
+     "photo": "DSC05939-Edit",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Kabuli Chana",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Kabuli chana (white chickpeas), stone-cleaned and freshly packed.",
+   "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "slug": "kabuli-chana",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 kg",
+     "size": "1 kg",
+     "qty": 1,
+     "unit": "kg",
+     "mrp": 179,
+     "price": 159,
+     "sku": "VR-KC-1KG",
+     "image": "kabuli-chana-1-kg.jpg",
+     "back": null,
+     "photo": "DSC05937-Edit-Edit",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Kala Chana",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Kala chana (black chickpeas), stone-cleaned and freshly packed.",
+   "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "slug": "kala-chana",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 kg",
+     "size": "1 kg",
+     "qty": 1,
+     "unit": "kg",
+     "mrp": 129,
+     "price": 115,
+     "sku": "VR-KC-1KG",
+     "image": "kala-chana-1-kg.jpg",
+     "back": null,
+     "photo": "DSC05944-Edit",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Red Rajma",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Red rajma (kidney beans), stone-cleaned and freshly packed.",
+   "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "slug": "red-rajma",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 kg",
+     "size": "1 kg",
+     "qty": 1,
+     "unit": "kg",
+     "mrp": 199,
+     "price": 179,
+     "sku": "VR-RR-1KG",
+     "image": "red-rajma-1-kg.jpg",
+     "back": null,
+     "photo": "DSC05951-Edit",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Rajma Chitra",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Chitra rajma, stone-cleaned and freshly packed.",
+   "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "slug": "rajma-chitra",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 kg",
+     "size": "1 kg",
+     "qty": 1,
+     "unit": "kg",
+     "mrp": 219,
+     "price": 199,
+     "sku": "VR-RC-1KG",
+     "image": "rajma-chitra-1-kg.jpg",
+     "back": null,
+     "photo": "DSC05953-Edit",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Besan",
+   "cat": "Atta, Rice & Dals",
+   "featured": 0,
+   "short": "Gram flour (besan), freshly packed.",
+   "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "slug": "besan",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 kg",
+     "size": "1 kg",
+     "qty": 1,
+     "unit": "kg",
+     "mrp": 139,
+     "price": 125,
+     "sku": "VR-B-1KG",
+     "image": "besan-1-kg.jpg",
+     "back": null,
+     "photo": "DSC05948-Edit",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Raagi Atta",
+   "cat": "Millets",
+   "featured": 1,
+   "short": "Raagi (finger millet) atta, freshly packed — naturally rich in protein and fibre.",
+   "note": "Stone cleaned and freshly packed. Naturally rich in protein and fibre. Store in a cool, dry and hygienic place, away from direct sunlight; always use a dry spoon.",
+   "slug": "raagi-atta",
+   "attr": "Size",
+   "variants": [
+    {
+     "label": "1 kg",
+     "size": "1 kg",
+     "qty": 1,
+     "unit": "kg",
+     "mrp": 129,
+     "price": 115,
+     "sku": "VR-RA-1KG",
+     "image": "raagi-atta-1-kg.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  },
+  {
+   "name": "Jowar Puffs",
+   "cat": "Healthy Snacks",
+   "featured": 1,
+   "short": "Crunchy jowar (sorghum) puffs — roasted, not fried.",
+   "note": "Roasted, not fried. High in fibre and gluten free.",
+   "slug": "jowar-puffs",
+   "attr": "Flavour",
+   "variants": [
+    {
+     "label": "Cream Onion",
+     "size": "120 g",
+     "qty": 120,
+     "unit": "g",
+     "mrp": 149,
+     "price": 129,
+     "sku": "VR-JP-CREAMO",
+     "image": "jowar-puffs-cream-onion.jpg",
+     "back": null,
+     "photo": "DSC05965",
+     "back_photo": ""
+    },
+    {
+     "label": "Peri Peri",
+     "size": "120 g",
+     "qty": 120,
+     "unit": "g",
+     "mrp": 149,
+     "price": 129,
+     "sku": "VR-JP-PERIPE",
+     "image": "jowar-puffs-peri-peri.jpg",
+     "back": null,
+     "photo": "DSC05965",
+     "back_photo": ""
+    }
+   ],
+   "gallery": [
+    "jowar-puffs-group-1.jpg"
+   ]
+  },
+  {
+   "name": "Bajra Puffs",
+   "cat": "Healthy Snacks",
+   "featured": 1,
+   "short": "Crunchy bajra (pearl millet) puffs — roasted, not fried.",
+   "note": "Roasted, not fried. High in fibre and gluten free.",
+   "slug": "bajra-puffs",
+   "attr": "Flavour",
+   "variants": [
+    {
+     "label": "Tandoori",
+     "size": "120 g",
+     "qty": 120,
+     "unit": "g",
+     "mrp": 149,
+     "price": 129,
+     "sku": "VR-BP-TANDOO",
+     "image": "bajra-puffs-tandoori.jpg",
+     "back": null,
+     "photo": "DSC05965",
+     "back_photo": ""
+    },
+    {
+     "label": "Magic Masala",
+     "size": "120 g",
+     "qty": 120,
+     "unit": "g",
+     "mrp": 149,
+     "price": 129,
+     "sku": "VR-BP-MAGICM",
+     "image": "bajra-puffs-magic-masala.jpg",
+     "back": null,
+     "photo": "DSC05965",
+     "back_photo": ""
+    }
+   ],
+   "gallery": [
+    "bajra-puffs-group-1.jpg"
+   ]
+  },
+  {
+   "name": "Roasted Makhana",
+   "cat": "Makhana",
+   "featured": 1,
+   "short": "Light, crunchy roasted makhana (fox nuts) — high in fibre, gluten free.",
+   "note": "Roasted, not fried. High in fibre and gluten free.",
+   "slug": "roasted-makhana",
+   "attr": "Flavour",
+   "variants": [
+    {
+     "label": "Cream Onion",
+     "size": "70 g",
+     "qty": 70,
+     "unit": "g",
+     "mrp": 199,
+     "price": 179,
+     "sku": "VR-RM-CREAMO",
+     "image": "roasted-makhana-cream-onion.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    },
+    {
+     "label": "Tangy Tomato",
+     "size": "70 g",
+     "qty": 70,
+     "unit": "g",
+     "mrp": 199,
+     "price": 179,
+     "sku": "VR-RM-TANGYT",
+     "image": "roasted-makhana-tangy-tomato.jpg",
+     "back": null,
+     "photo": "",
+     "back_photo": ""
+    }
+   ],
+   "gallery": []
+  }
+ ]
+}

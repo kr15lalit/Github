@@ -41,6 +41,12 @@ COLUMNS = [
     ("notes", "Notes\n(optional)", 26, "Anything else, e.g. hamper contents."),
 ]
 
+NOTES = [
+    "• One row per pack size or flavour. Rows with the same Product Name become one product with options.",
+    "• Fill the yellow cells. Rows 7–13 are examples — type over them or delete them.",
+    "• Send the filled sheet back with all photos (front + back of pack) in one folder or zip.",
+]
+
 SAMPLES = [
     ("Jowar Puffs", "Healthy Snacks", "Classic Salted", "100 g", 99, 89, 120, "Light, crunchy jowar puffs with a pinch of salt. Roasted, never fried.", "jowar-classic-100g.jpg", "jowar-classic-100g-back.jpg", ""),
     ("Jowar Puffs", "Healthy Snacks", "Classic Salted", "200 g", 179, 159, 80, "Family pack of our classic salted jowar puffs.", "jowar-classic-200g.jpg", "jowar-classic-200g-back.jpg", "Same name = shown as a size option"),
@@ -61,11 +67,7 @@ def build():
     # Short instructions on the same sheet.
     ws["A1"] = "Verda — Product List"
     ws["A1"].font = Font(name=F, bold=True, size=16, color=GREEN)
-    notes = [
-        "• One row per pack size or flavour. Rows with the same Product Name become one product with options.",
-        "• Fill the yellow cells. Rows 7–13 are examples — type over them or delete them.",
-        "• Send the filled sheet back with all photos (front + back of pack) in one folder or zip.",
-    ]
+    notes = NOTES
     for i, t in enumerate(notes, start=2):
         ws.cell(i, 1, t).font = Font(name=F, size=10, color="444444")
         ws.merge_cells(start_row=i, start_column=1, end_row=i, end_column=len(COLUMNS))

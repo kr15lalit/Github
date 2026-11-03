@@ -83,72 +83,93 @@ $free = $zone->add_shipping_method( 'free_shipping' );
 update_option( 'woocommerce_free_shipping_' . $free . '_settings', array( 'title' => 'Free Delivery', 'requires' => 'min_amount', 'min_amount' => '499' ) );
 
 // ---------------------------------------------------------------------------
-// Categories, in display order.
+// Real Verda catalogue (verda/real-products.json, built from the product photos).
+// Prices in that file are ESTIMATES until the business confirms its MRPs.
 // ---------------------------------------------------------------------------
-$category_names = array( 'Healthy Snacks', 'Makhana', 'Dry Fruits & Nuts', 'Diwali Gift Hampers', 'Atta, Rice & Dals', 'Oils & Ghee', 'Millets' );
-$category_thumb = array(
-	'Healthy Snacks'      => 'vs-jp-cs',
-	'Makhana'             => 'vs-mk-ps',
-	'Dry Fruits & Nuts'   => 'vs-df-al500',
-	'Diwali Gift Hampers' => 'vs-gh-dd',
-	'Atta, Rice & Dals'   => 'vs-ar-wa5',
-	'Oils & Ghee'         => 'vs-og-ag500',
-	'Millets'             => 'vs-ml-rf1',
-);
-$ids = array();
+$catalogue      = json_decode( file_get_contents( VERDA_DATA . 'real-products.json' ), true );
+$category_names = $catalogue['categories'];
+$ids            = array();
 foreach ( $category_names as $order => $name ) {
 	$term          = wp_insert_term( $name, 'product_cat' );
 	$ids[ $name ] = $term['term_id'];
 	update_term_meta( $term['term_id'], 'order', $order );
 }
 
-// ---------------------------------------------------------------------------
-// Products from products.csv.
-// ---------------------------------------------------------------------------
-$csv = fopen( VERDA_DATA . 'products.csv', 'r' );
-$head = fgetcsv( $csv, 0, ',', '"', '' );
-$image_by_sku = array();
-$i = 0;
-while ( ( $row = fgetcsv( $csv, 0, ',', '"', '' ) ) !== false ) {
-	$r       = array_combine( $head, $row );
-	$product = new WC_Product_Simple();
-	$product->set_name( $r['Name'] );
-	$product->set_sku( $r['SKU'] );
-	$product->set_short_description( $r['Short description'] );
-	$product->set_description( $r['Description'] );
-	$product->set_regular_price( $r['Regular price'] );
-	if ( '' !== $r['Sale price'] ) {
-		$product->set_sale_price( $r['Sale price'] );
+$image_by_file = array();
+$real_image    = function ( $file, $title ) use ( &$image_by_file ) {
+	if ( ! $file ) {
+		return 0;
 	}
-	$product->set_manage_stock( true );
-	$product->set_stock_quantity( (int) $r['Stock'] );
-	$product->set_featured( '1' === $r['Is featured?'] );
-	$product->set_category_ids( array( $ids[ str_replace( '\\,', ',', $r['Categories'] ) ] ) );
+	if ( ! isset( $image_by_file[ $file ] ) ) {
+		$image_by_file[ $file ] = verda_image( 'real/' . $file, $title );
+	}
+	return $image_by_file[ $file ];
+};
+
+$product_ids = array();
+foreach ( $catalogue['products'] as $i => $c ) {
+	$variants = $c['variants'];
+	$gallery  = array();
+	foreach ( $variants as $v ) {
+		if ( $v['back'] ) {
+			$gallery[] = $real_image( $v['back'], $c['name'] . ' – back of pack' );
+		}
+	}
+	foreach ( $c['gallery'] as $g ) {
+		$gallery[] = $real_image( $g, $c['name'] );
+	}
 
 	$attribute = new WC_Product_Attribute();
-	$attribute->set_name( 'Pack size' );
-	$attribute->set_options( array( $r['Attribute 1 value(s)'] ) );
+	$attribute->set_name( $c['attr'] );
+	$attribute->set_options( wp_list_pluck( $variants, 'label' ) );
 	$attribute->set_visible( true );
+	$attribute->set_variation( count( $variants ) > 1 );
+
+	$product = count( $variants ) > 1 ? new WC_Product_Variable() : new WC_Product_Simple();
+	$product->set_name( $c['name'] );
+	$product->set_short_description( $c['short'] );
+	$product->set_description( '<p>' . $c['short'] . '</p><p>' . $c['note'] . '</p>' );
+	$product->set_featured( (bool) $c['featured'] );
+	$product->set_category_ids( array( $ids[ $c['cat'] ] ) );
 	$product->set_attributes( array( $attribute ) );
-
-	$image = verda_image( 'products/' . basename( $r['Images'] ), $r['Name'] );
-	if ( $image ) {
-		$product->set_image_id( $image );
-		$image_by_sku[ strtolower( $r['SKU'] ) ] = $image;
-	}
-	// Sample sales numbers so "Trending Products" has an order; featured items sell most.
-	$product->set_total_sales( ( '1' === $r['Is featured?'] ? 200 : 60 ) - $i );
-	// Newest first follows the CSV order, so "Products With Discounts" starts with snacks.
+	$product->set_image_id( $real_image( $variants[0]['image'], $c['name'] ) );
+	$product->set_gallery_image_ids( array_values( array_filter( $gallery ) ) );
+	// Sample sales numbers so "Trending Products" has an order; featured items first.
+	$product->set_total_sales( ( $c['featured'] ? 200 : 60 ) - $i );
 	$product->set_date_created( time() - $i * HOUR_IN_SECONDS );
-	$product->save();
-	$i++;
-}
-fclose( $csv );
-
-foreach ( $category_thumb as $name => $sku ) {
-	if ( isset( $image_by_sku[ $sku ] ) ) {
-		update_term_meta( $ids[ $name ], 'thumbnail_id', $image_by_sku[ $sku ] );
+	if ( 1 === count( $variants ) ) {
+		$product->set_sku( $variants[0]['sku'] );
+		$product->set_regular_price( $variants[0]['mrp'] );
+		$product->set_sale_price( $variants[0]['price'] );
 	}
+	$product_id = $product->save();
+	$product_ids[ $c['slug'] ] = $product_id;
+
+	if ( count( $variants ) > 1 ) {
+		foreach ( $variants as $v ) {
+			$variation = new WC_Product_Variation();
+			$variation->set_parent_id( $product_id );
+			$variation->set_attributes( array( sanitize_title( $c['attr'] ) => $v['label'] ) );
+			$variation->set_sku( $v['sku'] );
+			$variation->set_regular_price( $v['mrp'] );
+			$variation->set_sale_price( $v['price'] );
+			$variation->set_image_id( $real_image( $v['image'], $c['name'] . ' ' . $v['label'] ) );
+			$variation->set_stock_status( 'instock' );
+			$variation->save();
+		}
+		WC_Product_Variable::sync( $product_id );
+	}
+}
+
+$category_thumb = array(
+	'Oils & Ghee'       => 'wood-pressed-coconut-oil-group-1.jpg',
+	'Atta, Rice & Dals' => 'chana-dal-1-kg.jpg',
+	'Healthy Snacks'    => 'jowar-puffs-group-1.jpg',
+	'Makhana'           => 'roasted-makhana-cream-onion.jpg',
+	'Millets'           => 'raagi-atta-1-kg.jpg',
+);
+foreach ( $category_thumb as $name => $file ) {
+	update_term_meta( $ids[ $name ], 'thumbnail_id', $real_image( $file, $name ) );
 }
 
 // ---------------------------------------------------------------------------
@@ -156,24 +177,24 @@ foreach ( $category_thumb as $name => $sku ) {
 // ---------------------------------------------------------------------------
 $posts = array(
 	array(
-		'5 Reasons to Add Millets to Your Daily Diet',
-		'vs-ml-ma1',
-		'<p>Millets like jowar, bajra and ragi were staples in Indian kitchens for centuries. Here is why they deserve a place on your plate again:</p><ol><li><strong>Naturally gluten-free</strong> — gentle on digestion.</li><li><strong>High in fibre</strong> — keeps you full for longer.</li><li><strong>Rich in minerals</strong> — ragi is one of the best plant sources of calcium.</li><li><strong>Low glycaemic index</strong> — helps manage blood sugar.</li><li><strong>Good for the planet</strong> — millets need far less water than rice or wheat.</li></ol><p>Start simple: swap half your wheat atta for Verda Multi-Millet Atta.</p>',
+		'Wood-Pressed Oil: What Makes It Different?',
+		'wood-pressed-coconut-oil-group-1.jpg',
+		'<p>Wood pressing (the traditional <em>kolhu</em> or <em>ghani</em>) crushes seeds slowly at low temperature. Because the oil is not heated or chemically refined, it keeps its natural aroma, colour and taste.</p><p>Verda coconut, groundnut and sesame oils are wood pressed, lab tested at an NABL-certified lab and contain no added edible oils or preservatives.</p>',
 	),
 	array(
-		'Makhana: The Superfood Snack From Bihar',
-		'vs-mk-pl250',
-		'<p>Makhana (fox nuts) are the seeds of the lotus plant, harvested by hand from the ponds of Mithila. Light, crunchy and naturally low in calories, they are high in protein and magnesium.</p><p>Roast them in a little ghee with salt and pepper, or try our ready-to-eat Roasted Makhana in four flavours.</p>',
+		'Yellow or Black Mustard Oil — Which Should You Use?',
+		'cold-pressed-black-mustard-oil-group-1.jpg',
+		'<p>Both are cold pressed from mustard seeds. <strong>Black mustard oil</strong> has the strong, pungent kachi ghani flavour loved in North Indian and Bengali cooking — perfect for pickles, sarson ka saag and fish. <strong>Yellow mustard oil</strong> is milder and works well for everyday cooking.</p><p>Verda mustard oils come in 1 L, 2 L and 5 L packs.</p>',
 	),
 	array(
-		'Healthy Diwali Gifting Ideas for 2026',
-		'vs-gh-rd',
-		'<p>This Diwali, gift health instead of sugar. Dry fruit boxes, millet snack hampers and roasted makhana make thoughtful gifts for family, friends and colleagues.</p><p>Ordering for your team? Our corporate hampers can be customised with your company branding — write to office@verdaessentials.com.</p>',
+		'Why Stone-Cleaned Pulses Matter',
+		'chana-dal-1-kg.jpg',
+		'<p>Stone cleaning removes grit, husk and small stones that ordinary sorting can miss — so your dal is cleaner before it ever reaches your kitchen.</p><p>Verda dals, rajma and chana are stone cleaned and freshly packed in 1 kg packs. Store them in a cool, dry place and always use a dry spoon.</p>',
 	),
 	array(
-		'How to Store Dry Fruits and Keep Them Fresh',
-		'vs-df-cw500',
-		'<p>Dry fruits stay fresh for months when stored right. Keep them in airtight glass jars, away from heat and sunlight. In summer, refrigerate walnuts and pistachios to stop their natural oils turning rancid.</p><p>Every Verda dry fruit pack is nitrogen-flushed to lock in freshness until you open it.</p>',
+		'Millet Puffs: A Smarter Tea-Time Snack',
+		'jowar-puffs-group-1.jpg',
+		'<p>Jowar and bajra are traditional Indian millets, naturally rich in fibre. Verda Jowar Puffs and Bajra Puffs are roasted, not fried, and come in four flavours: Cream Onion, Peri Peri, Tandoori and Magic Masala.</p>',
 	),
 );
 foreach ( $posts as $p ) {
@@ -184,9 +205,7 @@ foreach ( $posts as $p ) {
 			'post_status'  => 'publish',
 		)
 	);
-	if ( isset( $image_by_sku[ $p[1] ] ) ) {
-		set_post_thumbnail( $post_id, $image_by_sku[ $p[1] ] );
-	}
+	set_post_thumbnail( $post_id, $real_image( $p[1], $p[0] ) );
 }
 wp_delete_post( 1, true ); // "Hello world!"
 
@@ -199,9 +218,9 @@ $email   = 'office@verdaessentials.com';
 $phones  = '+91-9266604099 | +91-7701830278';
 
 $pages = array(
-	'About Us'             => "<h2>Nature. Purity. Life.</h2><p>Verda is a brand of {$company}, built on a simple belief: everyday food should be pure, natural and good for you.</p><p>We bring you wholesome millet snacks, premium makhana, hand-picked dry fruits and honest kitchen staples — sourced from trusted Indian farms and packed with care in hygienic conditions.</p><h3>What we stand for</h3><ul><li><strong>Purity</strong> — no artificial colours, no palm oil, nothing you can't pronounce.</li><li><strong>Nature</strong> — traditional grains and time-tested methods like cold pressing and bilona churning.</li><li><strong>Life</strong> — food that fuels healthy families and supports Indian farmers.</li></ul><p>We deliver all over India.</p>",
+	'About Us'             => "<h2>Nature. Purity. Life.</h2><p>Verda is a brand of {$company}, built on a simple belief: everyday food should be pure, natural and good for you.</p><p>We bring you wood-pressed and cold-pressed oils, bilona desi cow ghee, stone-cleaned pulses, millet atta and roasted millet snacks — sourced with care and packed hygienically.</p><h3>What we stand for</h3><ul><li><strong>Purity</strong> — oils lab tested at an NABL-certified lab, with no added oils or preservatives.</li><li><strong>Nature</strong> — traditional grains and time-tested methods like cold pressing and bilona churning.</li><li><strong>Life</strong> — food that fuels healthy families and supports Indian farmers.</li></ul><p>We deliver all over India.</p>",
 	'Contact Us'           => "<p>We'd love to hear from you — for orders, bulk and corporate gifting, or partnerships.</p><p><strong>{$company}</strong><br>{$address}</p><p><strong>Phone:</strong> {$phones}<br><strong>Email:</strong> <a href=\"mailto:{$email}\">{$email}</a></p><p><strong>Hours:</strong> Monday to Saturday, 10:00 am – 7:00 pm</p><!-- wp:html --><iframe title=\"Verda on the map\" src=\"https://www.google.com/maps?q=Niti+Khand+1+Indirapuram+Ghaziabad&output=embed\" width=\"100%\" height=\"360\" style=\"border:0;border-radius:12px\" loading=\"lazy\"></iframe><!-- /wp:html -->",
-	'FAQ'                  => '<h3>Where do you deliver?</h3><p>We deliver across India.</p><h3>How long does delivery take?</h3><p>Orders are dispatched within 1–2 working days. Delivery usually takes 3–7 working days depending on your location.</p><h3>What payment methods do you accept?</h3><p>UPI, credit and debit cards, net banking and Cash on Delivery (on eligible pincodes).</p><h3>Do you offer corporate or bulk Diwali hampers?</h3><p>Yes. We customise hampers with your branding. Email ' . $email . ' with your quantity and budget.</p><h3>Are your products preservative-free?</h3><p>Our snacks are roasted, not fried, and contain no artificial colours or palm oil. See each product page for full details.</p>',
+	'FAQ'                  => '<h3>Where do you deliver?</h3><p>We deliver across India.</p><h3>How long does delivery take?</h3><p>Orders are dispatched within 1–2 working days. Delivery usually takes 3–7 working days depending on your location.</p><h3>What payment methods do you accept?</h3><p>UPI, credit and debit cards, net banking and Cash on Delivery (on eligible pincodes).</p><h3>What is the difference between wood-pressed and cold-pressed oil?</h3><p>Both are pressed without high heat or chemical refining, so the oil keeps its natural aroma and nutrients. Our coconut, groundnut and sesame oils are wood pressed; our mustard oils are cold pressed.</p><h3>Do you supply in bulk?</h3><p>Yes. Email ' . $email . ' with the products and quantities you need.</p><h3>Are your oils lab tested?</h3><p>Yes — at an NABL-certified lab. They contain no added edible oils and no preservatives.</p>',
 	'Shipping Policy'      => "<p>{$company} ships to all serviceable pincodes in India.</p><ul><li>Orders are dispatched within 1–2 working days.</li><li>Typical delivery time is 3–7 working days.</li><li>Free shipping on orders above ₹499; a flat fee applies below that.</li><li>You will receive a tracking link by SMS/email once your order ships.</li></ul><p><em>Draft — please review the delivery charges and timelines.</em></p>",
 	'Return & Refund Policy' => "<p>Because our products are food items, we cannot accept returns of opened packs. If your order arrives damaged, defective or incorrect, contact us within 48 hours of delivery at {$email} with photos, and we will send a replacement or a full refund.</p><p>Refunds are processed to the original payment method within 5–7 working days of approval.</p><p><em>Draft — please review.</em></p>",
 	'Privacy Policy'       => "<p>{$company} respects your privacy. We collect only the information needed to process your orders and improve our service — such as your name, address, phone number and email. We never sell your personal data.</p><p>Payments are processed by secure third-party payment gateways; we do not store card details.</p><p>For any privacy questions, write to {$email}.</p><p><em>Draft — have this reviewed by your legal adviser.</em></p>",
@@ -250,13 +269,13 @@ $shop_item = wp_update_nav_menu_item( $main, 0, verda_page_item( wc_get_page_id(
 foreach ( $category_names as $name ) {
 	wp_update_nav_menu_item( $main, 0, verda_cat_item( $ids[ $name ] ) + array( 'menu-item-parent-id' => $shop_item, 'menu-item-status' => 'publish' ) );
 }
-wp_update_nav_menu_item( $main, 0, verda_cat_item( $ids['Diwali Gift Hampers'] ) + array( 'menu-item-title' => 'Diwali Gifting', 'menu-item-status' => 'publish' ) );
+wp_update_nav_menu_item( $main, 0, verda_cat_item( $ids['Oils & Ghee'] ) + array( 'menu-item-title' => 'Oils & Ghee', 'menu-item-status' => 'publish' ) );
 foreach ( array( 'About Us', 'Contact Us' ) as $title ) {
 	wp_update_nav_menu_item( $main, 0, verda_page_item( $page_ids[ $title ] ) + array( 'menu-item-status' => 'publish' ) );
 }
 wp_update_nav_menu_item( $main, 0, verda_page_item( $blog ) + array( 'menu-item-status' => 'publish' ) );
 
-$quick = verda_menu( 'Shop', array_map( function ( $n ) use ( $ids ) { return verda_cat_item( $ids[ $n ] ); }, array( 'Healthy Snacks', 'Makhana', 'Dry Fruits & Nuts', 'Diwali Gift Hampers', 'Millets' ) ) );
+$quick = verda_menu( 'Shop', array_map( function ( $n ) use ( $ids ) { return verda_cat_item( $ids[ $n ] ); }, $category_names ) );
 $help  = verda_menu(
 	'Help',
 	array(
@@ -314,8 +333,8 @@ $mods = array(
 	'header_phone'       => '+91-9266604099',
 
 	'hero_banner'        => $banner( 'hero-diwali.jpg' ),
-	'hero_banner_url'    => get_term_link( $ids['Diwali Gift Hampers'] ),
-	'hero_banner_alt'    => 'Verda Premium Diwali Gifting – thoughtfully curated dry fruit gift boxes',
+	'hero_banner_url'    => wc_get_page_permalink( 'shop' ),
+	'hero_banner_alt'    => 'Verda – pure oils, ghee, pulses and millet snacks',
 	'hero_tagline'       => '100% Natural',
 	'hero_title'         => "Pure & Natural\nGoodness",
 	'hero_text'          => 'Millet puffs, makhana, dry fruits and everyday staples — delivered all over India.',
@@ -335,9 +354,9 @@ $mods = array(
 	'hero_b3_title'      => '',
 	'hero_b3_text'       => 'Verda Pure Desi Ghee – traditional bilona process',
 	'hero_b3_image'      => $banner( 'banner-ghee.jpg' ),
-	'hero_b3_url'        => get_permalink( wc_get_product_id_by_sku( 'VS-OG-AG500' ) ),
+	'hero_b3_url'        => get_permalink( $product_ids['desi-cow-ghee-bilona-danedar'] ),
 
-	'cats_include'       => 'healthy-snacks,makhana,dry-fruits-nuts,diwali-gift-hampers,atta-rice-dals,oils-ghee,millets',
+	'cats_include'       => 'oils-ghee,atta-rice-dals,healthy-snacks,makhana,millets',
 
 	'promo_tagline'      => 'Millet Power',
 	'promo_title'        => "Wholesome Millets\nFor Your Family",
@@ -349,14 +368,14 @@ $mods = array(
 
 	'dual1_tagline'      => 'Healthy Snacks',
 	'dual1_title'        => 'Jowar & Bajra Puffs',
-	'dual1_text'         => 'Roasted, never fried',
-	'dual1_image'        => $banner( 'banner-puffs.jpg' ),
+	'dual1_text'         => 'Roasted, not fried · 4 flavours',
+	'dual1_image'        => $banner( 'banner-real-puffs.jpg' ),
 	'dual1_url'          => get_term_link( $ids['Healthy Snacks'] ),
-	'dual2_tagline'      => 'Festive Gifting',
-	'dual2_title'        => 'Corporate Hampers',
-	'dual2_text'         => 'Custom-branded gift boxes for Diwali',
-	'dual2_image'        => $banner( 'banner-corporate.jpg' ),
-	'dual2_url'          => get_term_link( $ids['Diwali Gift Hampers'] ),
+	'dual2_tagline'      => 'Kitchen Staples',
+	'dual2_title'        => 'Stone-Cleaned Pulses',
+	'dual2_text'         => 'Dals, rajma, chana & besan',
+	'dual2_image'        => $banner( 'banner-real-dals.jpg' ),
+	'dual2_url'          => get_term_link( $ids['Atta, Rice & Dals'] ),
 
 	'blog_title'         => 'Healthy Living Blog',
 	'feat1_text'         => 'On orders above ₹499',
