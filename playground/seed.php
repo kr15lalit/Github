@@ -50,6 +50,14 @@ update_option( 'blogname', 'Verda' );
 update_option( 'blogdescription', 'Nature. Purity. Life' );
 update_option( 'woocommerce_currency', 'INR' );
 update_option( 'woocommerce_currency_pos', 'left' );
+
+// Accounts: guests can buy; customers can also sign up on My Account or with one tick at checkout.
+update_option( 'woocommerce_enable_guest_checkout', 'yes' );
+update_option( 'woocommerce_enable_checkout_login_reminder', 'yes' );
+update_option( 'woocommerce_enable_signup_and_login_from_checkout', 'yes' );
+update_option( 'woocommerce_enable_myaccount_registration', 'yes' );
+update_option( 'woocommerce_registration_generate_username', 'yes' );
+update_option( 'woocommerce_registration_generate_password', 'no' ); // customers choose their own password
 update_option( 'woocommerce_price_num_decimals', 0 );
 update_option( 'woocommerce_default_country', 'IN:UP' );
 update_option( 'woocommerce_store_address', '561, Niti Khand-1, Indirapuram' );

@@ -12,7 +12,7 @@
 	var panel = document.getElementById('vp-filters');
 	if (!CAT || !list || !panel) { return; }
 
-	function rupees(n) { return '₹' + Number(n).toLocaleString('en-IN'); }
+	function rupees(n) { return '\u20b9' + Number(n).toLocaleString('en-IN'); }
 	function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
 	/* ---------- product data ---------- */
@@ -37,10 +37,10 @@
 		return (u === 'g' || u === 'kg' ? 1e7 : 0) + (u === 'kg' || u === 'l' ? n * 1000 : n);
 	}
 	var PRICES = [
-		{ id: 'u200', label: 'Under ₹200', test: function (x) { return x < 200; } },
-		{ id: '200-499', label: '₹200 – ₹499', test: function (x) { return x >= 200 && x < 500; } },
-		{ id: '500-999', label: '₹500 – ₹999', test: function (x) { return x >= 500 && x < 1000; } },
-		{ id: '1000', label: '₹1,000 & above', test: function (x) { return x >= 1000; } }
+		{ id: 'u200', label: 'Under \u20b9200', test: function (x) { return x < 200; } },
+		{ id: '200-499', label: '\u20b9200 \u2013 \u20b9499', test: function (x) { return x >= 200 && x < 500; } },
+		{ id: '500-999', label: '\u20b9500 \u2013 \u20b9999', test: function (x) { return x >= 500 && x < 1000; } },
+		{ id: '1000', label: '\u20b91,000 & above', test: function (x) { return x >= 1000; } }
 	];
 	var items = CAT.products.map(function (p) {
 		var li = list.querySelector('li[data-slug="' + p.slug + '"]');
@@ -162,7 +162,7 @@
 		var box = document.getElementById('vp-f-chips'), html = '';
 		FACETS.forEach(function (f) {
 			(state[f.key] || []).forEach(function (v) {
-				html += '<button type="button" class="vp-chip" data-k="' + f.key + '" data-v="' + esc(v) + '">' + esc(label(f, v)) + ' <span aria-hidden="true">×</span><span class="screen-reader-text">Remove filter</span></button>';
+				html += '<button type="button" class="vp-chip" data-k="' + f.key + '" data-v="' + esc(v) + '">' + esc(label(f, v)) + ' <span aria-hidden="true">\u00d7</span><span class="screen-reader-text">Remove filter</span></button>';
 			});
 		});
 		box.innerHTML = html; box.hidden = !html;

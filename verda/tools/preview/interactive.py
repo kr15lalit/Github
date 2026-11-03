@@ -68,7 +68,7 @@ def inject(h):
 
 # ---------- cart and checkout pages from the About page ----------
 tpl = open(os.path.join(OUT, "about-us.html"), encoding="utf-8").read()
-for name, title, view in (("cart.html", "Cart", "cart"), ("checkout.html", "Checkout", "checkout")):
+for name, title, view in (("cart.html", "Cart", "cart"), ("checkout.html", "Checkout", "checkout"), ("account.html", "My account", "account")):
     main = (
         '<main id="primary" class="fc-main">\n<div class="fc-page-header">\n\t<div class="fc-container">\n'
         '\t\t<h1 class="fc-page-title">%s</h1>\n\t\t<nav class="fc-breadcrumb" aria-label="Breadcrumb">\n'
@@ -78,6 +78,8 @@ for name, title, view in (("cart.html", "Cart", "cart"), ("checkout.html", "Chec
     h = re.sub(r'<main id="primary" class="fc-main">.*?</main>', lambda m: main, tpl, count=1, flags=re.S)
     h = re.sub(r"<title>.*?</title>", "<title>%s – Verda</title>" % title, h, count=1, flags=re.S)
     h = re.sub(r"page-id-\d+", "woocommerce-%s" % view, h)
+    # These pages are copies of About Us: un-highlight it in the menu.
+    h = re.sub(r"\s(current-menu-item|current_page_item|current_page_parent)\b", "", h).replace(' aria-current="page">About Us<', ">About Us<")
     open(os.path.join(OUT, name), "w", encoding="utf-8").write(h)
 
 n = 0
