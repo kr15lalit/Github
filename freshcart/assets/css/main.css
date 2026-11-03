@@ -166,7 +166,7 @@ input[type="submit"]:hover,
 }
 
 .fc-logo img { max-height: 64px; width: auto; }
-.fc-footer .fc-logo img { max-height: 80px; }
+.fc-footer .fc-logo img { max-height: 80px; padding: 10px 14px; border-radius: 10px; background: #fff; } /* dark-green logo needs a light badge on the dark footer */
 .fc-site-title { font-size: 28px; font-weight: 800; color: var(--fc-primary); letter-spacing: -.02em; }
 
 .fc-header-search {
