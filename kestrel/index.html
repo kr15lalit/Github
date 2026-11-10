@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d0d0f" />
+  <title>Kestrel · Stock screener for Indian & US equities</title>
+  <meta name="description" content="Kestrel is a technical stock screener: market breadth, trend and momentum scans, breakouts, Stage 2 scoring, sector rotation and relative-strength ranking in one workspace." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kestrel" />
+  <meta property="og:title" content="Kestrel · Spot strength before the crowd" />
+  <meta property="og:description" content="Breadth, breakouts, sector rotation and relative strength for Indian and US equities." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <script>
+    try { document.documentElement.dataset.theme = localStorage.getItem("kestrel-theme") || "light"; } catch (e) {}
+    // Returning visitors who chose "skip intro" go straight to the app.
+    try { if (localStorage.getItem("kestrel-skip-intro") === "1" && !/[?&]stay=1/.test(location.search)) location.replace("screener.html"); } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-nav">
+    <a class="brand" href="index.html?stay=1"><img src="assets/logo.svg" alt="" /><span>Kes<b>trel</b></span></a>
+    <nav aria-label="Primary">
+      <a class="on" href="index.html?stay=1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg>Overview</a>
+      <a href="screener.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>Screener</a>
+      <a href="screener.html?view=sectors"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v9l7 4"/><circle cx="12" cy="12" r="9"/></svg>Sector rotation</a>
+      <a href="screener.html?open=health"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Market health</a>
+      <a href="screener.html?open=eye"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>Kestrel Eye</a>
+      <a href="screener.html?open=lists"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>Watchlists</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="lp-hero">
+      <div class="inner">
+        <div class="kicker">Indian &amp; US equities · Technical screener · <span id="sessionLbl">End of day</span></div>
+        <h1>Spot strength <span class="grad-text">before the crowd.</span></h1>
+        <p class="lead">Market breadth, trend and momentum scans, base breakouts, Stage 2 scoring, sector rotation and relative-strength ranks — computed every evening, in one fast workspace.</p>
+        <div class="cta">
+          <a class="btn pill-light" href="screener.html">Open the screener →</a>
+          <a class="btn pill-outline" href="#features">See what it does</a>
+        </div>
+        <div class="lp-stats" aria-live="polite">
+          <div><b id="stStocks">—</b><span>Stocks scanned</span></div>
+          <div><b id="stCols">28</b><span>Data points per stock</span></div>
+          <div><b id="stScans">10</b><span>One-click scans</span></div>
+          <div><b id="stBo">—</b><span>Breakouts (20 bars)</span></div>
+        </div>
+      </div>
+    </section>
+    <div class="lp-slant" aria-hidden="true"></div>
+
+    <div class="lp-body">
+      <section class="lp-meters" aria-label="Market breadth today">
+        <div class="meter"><div class="kicker">Participation · 20 EMA</div><b id="m1">—</b><div class="bar"><i id="m1b" style="width:0"></i></div><small>Share of stocks above their 20-day EMA</small></div>
+        <div class="meter"><div class="kicker">Trend · 200 EMA</div><b id="m2">—</b><div class="bar"><i id="m2b" style="width:0"></i></div><small>Share of stocks in a long-term uptrend</small></div>
+        <div class="meter"><div class="kicker">Momentum · RSI &gt; 60</div><b id="m3">—</b><div class="bar"><i id="m3b" style="width:0"></i></div><small>Share of stocks with strong momentum</small></div>
+      </section>
+
+      <section class="lp-section" id="features">
+        <div class="kicker">The approach · Kestrel</div>
+        <h2>From noisy charts <span class="grad-text">to a ranked shortlist.</span></h2>
+        <p class="sub">Most traders flip through hundreds of charts every night. Kestrel does the measuring for you — trend, momentum, structure and relative strength — so you only look at what qualifies.</p>
+
+        <div class="lp-cards">
+          <article class="ncard c1">
+            <header><span class="no">01</span><div><div class="kicker">The problem</div><h3>Why screening is slow</h3></div></header>
+            <ul>
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span><div><b>Hundreds of charts</b><span>Checking setups one ticker at a time eats the evening.</span></div></li>
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 2 21h20z"/><path d="M12 10v4M12 18h.01"/></svg></span><div><b>No market context</b><span>Great setups fail when breadth is weak — and it's rarely checked.</span></div></li>
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Rotation spotted late</b><span>By the time a sector is obvious, the move is half done.</span></div></li>
+            </ul>
+          </article>
+          <article class="ncard c2">
+            <header><span class="no">02</span><div><div class="kicker">What Kestrel delivers</div><h3>Live today</h3></div><span class="badge live">Live</span></header>
+            <ul>
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></span><div><b>Market health</b><span>Seven breadth gauges with history drill-downs.</span></div></li>
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 17 6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><div><b>Trend, breakout &amp; Stage 2 scans</b><span>EMA alignment, pivots, Darvas boxes, fractals, 7-point Stage 2.</span></div></li>
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><div><b>RS ranks &amp; sector rotation</b><span>Percentile RS with history, plus sector leaders and money flow.</span></div></li>
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span><div><b>Watchlists, notes &amp; templates</b><span>Three watchlists, per-stock notes, saved screens, shareable links.</span></div></li>
+            </ul>
+          </article>
+          <article class="ncard c3">
+            <header><span class="no">03</span><div><div class="kicker">What's next</div><h3>On the roadmap</h3></div><span class="badge plan">Planned</span></header>
+            <ul>
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21h4"/></svg></span><div><b>Scan alerts</b><span>Email or Telegram when a watchlist stock qualifies.</span></div></li>
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><div><b>Accounts &amp; sync</b><span>Sign in to sync watchlists and notes across devices.</span></div></li>
+              <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-5"/></svg></span><div><b>Scan back-testing</b><span>See how each scan's picks performed over past months.</span></div></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="lp-section">
+        <div class="kicker">Latest session · <span id="sessionLbl2">—</span></div>
+        <h2>Today's <span class="grad-text">strongest movers.</span></h2>
+        <p class="sub">A live excerpt of the results table — the full screener shows 28 data points per stock across every name in the universe.</p>
+        <div class="lp-movers"><table class="grid" id="movers"></table></div>
+      </section>
+
+      <section class="lp-final">
+        <div class="kicker" style="color:#9a9aa8">Free · No sign-up · Works on mobile</div>
+        <h2>Your next watchlist is <span class="grad-text">one click away.</span></h2>
+        <div class="cta" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+          <a class="btn pill-light" href="screener.html">Open the screener →</a>
+          <label style="display:flex;gap:8px;align-items:center;color:#cfcfda;font-size:15px"><input type="checkbox" id="skipIntro" /> Skip this page next time</label>
+        </div>
+      </section>
+
+      <footer class="site-foot">
+        <span>© <span id="yr"></span> Kestrel. Market data is delayed end-of-day and for informational purposes only — not investment advice.</span>
+        <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+      </footer>
+    </div>
+  </main>
+
+  <button class="to-top" id="toTop" hidden aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+  <script src="assets/data.js"></script>
+  <script>
+  (async function () {
+    const D = Kestrel.data, $ = (s) => document.querySelector(s);
+    $("#yr").textContent = new Date().getFullYear();
+    try { $("#skipIntro").checked = localStorage.getItem("kestrel-skip-intro") === "1"; } catch (e) {}
+    $("#skipIntro").addEventListener("change", (e) => { try { localStorage.setItem("kestrel-skip-intro", e.target.checked ? "1" : "0"); } catch (er) {} });
+    const top = $("#toTop");
+    addEventListener("scroll", () => { top.hidden = scrollY < 600; }, { passive: true });
+    top.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
+
+    const d = await D.load("IN", "daily");
+    const b = Object.fromEntries(d.breadth.map((x) => [x.key, x]));
+    const sess = d.session.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" });
+    $("#sessionLbl").textContent = (d.source === "demo" ? "Demo data · " : "Data as of ") + sess;
+    $("#sessionLbl2").textContent = sess;
+    $("#stStocks").textContent = d.rows.length;
+    $("#stBo").textContent = d.rows.filter((r) => r.bo).length;
+    [["m1", "e20"], ["m2", "e200"], ["m3", "rsi60"]].forEach(([id, k]) => {
+      if (!b[k]) return;
+      $("#" + id).textContent = Math.round(b[k].value) + "%";
+      requestAnimationFrame(() => setTimeout(() => { $("#" + id + "b").style.cssText = "width:" + b[k].value + "%;transition:width 1s ease"; }, 100));
+    });
+    const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const sg = (n) => (n > 0 ? "+" : "") + n.toFixed(1) + "%";
+    const rk = (v) => v == null ? "" : v >= 70 ? "r-hi" : v >= 40 ? "r-mid" : "r-lo";
+    const rows = [...d.rows].sort((a, b) => b.chg - a.chg).slice(0, 6);
+    $("#movers").innerHTML = `<thead><tr class="groups"><th colspan="8">TOP GAINERS · NSE</th></tr><tr class="cols"><th class="c" style="top:28px">Cap</th><th class="l" style="top:28px">Ticker</th><th class="l" style="top:28px">Sector</th><th style="top:28px">Price (₹)</th><th style="top:28px">1D%</th><th style="top:28px">RSI</th><th class="c" style="top:28px">EMAs</th><th class="c" style="top:28px">RS rank<span class="sub">T-30 → T0</span></th></tr></thead><tbody>` +
+      rows.map((r) => `<tr><td class="c"><span class="cap ${r.cap}">${r.cap === "MI" ? "Mic" : r.cap}</span></td><td class="l"><a class="tk" href="screener.html?stock=${encodeURIComponent(r.ticker)}">${esc(r.ticker)}</a></td><td class="l"><div class="sector-cell">${esc(r.sector)}</div></td><td>${r.price.toLocaleString("en-IN")}</td><td><span class="pill ${r.chg >= 0 ? "pos" : "neg"}">${sg(r.chg)}</span></td><td>${r.rsi}<span class="dot ${r.rsiAboveMA ? "up" : "dn"}"></span></td><td class="c"><span class="emas">${[10, 20, 50, 200].map((p) => `<span class="${r.emas[p] ? "up" : "dn"}">${p}</span>`).join("")}</span></td><td class="c"><span class="rsh">${r.rsHist.map((v, i) => `${i ? "<em>→</em>" : ""}<span class="${rk(v)}">${v ?? "--"}</span>`).join("")}</span></td></tr>`).join("") + "</tbody>";
+  })();
+  </script>
+</body>
+</html>

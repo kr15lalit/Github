@@ -1,0 +1,261 @@
+ticker,name,sector,cap
+RELIANCE,"Reliance Industries",Oil & Gas,LC
+TCS,"Tata Consultancy Services",IT Services,LC
+HDFCBANK,"HDFC Bank",Private Banks,LC
+ICICIBANK,"ICICI Bank",Private Banks,LC
+INFY,"Infosys",IT Services,LC
+BHARTIARTL,"Bharti Airtel",Telecom,LC
+SBIN,"State Bank of India",PSU Banks,LC
+ITC,"ITC",FMCG,LC
+LT,"Larsen & Toubro",Construction & Engineering,LC
+HINDUNILVR,"Hindustan Unilever",FMCG,LC
+KOTAKBANK,"Kotak Mahindra Bank",Private Banks,LC
+AXISBANK,"Axis Bank",Private Banks,LC
+BAJFINANCE,"Bajaj Finance",NBFC,LC
+BAJAJFINSV,"Bajaj Finserv",NBFC,LC
+MARUTI,"Maruti Suzuki",Automobiles,LC
+M&M,"Mahindra & Mahindra",Automobiles,LC
+SUNPHARMA,"Sun Pharmaceutical",Pharmaceuticals,LC
+HCLTECH,"HCL Technologies",IT Services,LC
+TITAN,"Titan Company",Consumer Durables,LC
+ULTRACEMCO,"UltraTech Cement",Cement,LC
+NTPC,"NTPC",Power,LC
+POWERGRID,"Power Grid Corp",Power,LC
+ONGC,"Oil & Natural Gas Corp",Oil & Gas,LC
+TATASTEEL,"Tata Steel",Metals & Mining,LC
+JSWSTEEL,"JSW Steel",Metals & Mining,LC
+ASIANPAINT,"Asian Paints",Chemicals,LC
+WIPRO,"Wipro",IT Services,LC
+NESTLEIND,"Nestle India",FMCG,LC
+GRASIM,"Grasim Industries",Cement,LC
+ADANIPORTS,"Adani Ports & SEZ",Logistics,LC
+COALINDIA,"Coal India",Metals & Mining,LC
+HINDALCO,"Hindalco Industries",Metals & Mining,LC
+DRREDDY,"Dr. Reddy's Laboratories",Pharmaceuticals,LC
+CIPLA,"Cipla",Pharmaceuticals,LC
+TECHM,"Tech Mahindra",IT Services,LC
+EICHERMOT,"Eicher Motors",Automobiles,LC
+HEROMOTOCO,"Hero MotoCorp",Automobiles,LC
+BRITANNIA,"Britannia Industries",FMCG,LC
+APOLLOHOSP,"Apollo Hospitals",Healthcare Services,LC
+TRENT,"Trent",Retail,LC
+BEL,"Bharat Electronics",Aerospace & Defense,LC
+HAL,"Hindustan Aeronautics",Aerospace & Defense,LC
+DLF,"DLF",Realty,LC
+SIEMENS,"Siemens India",Electrical Equipment,LC
+PIDILITIND,"Pidilite Industries",Chemicals,LC
+DMART,"Avenue Supermarts",Retail,LC
+VEDL,"Vedanta",Metals & Mining,LC
+PFC,"Power Finance Corp",NBFC,LC
+RECLTD,"REC",NBFC,LC
+BANKBARODA,"Bank of Baroda",PSU Banks,LC
+PNB,"Punjab National Bank",PSU Banks,LC
+TVSMOTOR,"TVS Motor",Automobiles,LC
+ZYDUSLIFE,"Zydus Lifesciences",Pharmaceuticals,LC
+GODREJCP,"Godrej Consumer",FMCG,LC
+TATAPOWER,"Tata Power",Power,LC
+PERSISTENT,"Persistent Systems",IT Services,MC
+COFORGE,"Coforge",IT Services,MC
+MPHASIS,"Mphasis",IT Services,MC
+LTM,"LTIMindtree",IT Services,LC
+POLYCAB,"Polycab India",Electrical Equipment,MC
+CUMMINSIND,"Cummins India",Industrial Machinery,MC
+VOLTAS,"Voltas",Consumer Durables,MC
+DIXON,"Dixon Technologies",Consumer Durables,MC
+LUPIN,"Lupin",Pharmaceuticals,MC
+AUROPHARMA,"Aurobindo Pharma",Pharmaceuticals,MC
+ALKEM,"Alkem Laboratories",Pharmaceuticals,MC
+MAXHEALTH,"Max Healthcare",Healthcare Services,MC
+FORTIS,"Fortis Healthcare",Healthcare Services,MC
+INDHOTEL,"Indian Hotels",Hotels & Leisure,MC
+FEDERALBNK,"Federal Bank",Private Banks,MC
+IDFCFIRSTB,"IDFC First Bank",Private Banks,MC
+AUBANK,"AU Small Finance Bank",Private Banks,MC
+INDUSTOWER,"Indus Towers",Telecom,MC
+ASHOKLEY,"Ashok Leyland",Automobiles,MC
+BHARATFORG,"Bharat Forge",Auto Components,MC
+MRF,"MRF",Auto Components,MC
+APOLLOTYRE,"Apollo Tyres",Auto Components,MC
+SUPREMEIND,"Supreme Industries",Chemicals,MC
+SRF,"SRF",Chemicals,MC
+DEEPAKNTR,"Deepak Nitrite",Chemicals,MC
+PIIND,"PI Industries",Agrochemicals,MC
+UPL,"UPL",Agrochemicals,MC
+COROMANDEL,"Coromandel International",Agrochemicals,MC
+GODREJPROP,"Godrej Properties",Realty,MC
+OBEROIRLTY,"Oberoi Realty",Realty,MC
+PRESTIGE,"Prestige Estates",Realty,MC
+PHOENIXLTD,"Phoenix Mills",Realty,MC
+JUBLFOOD,"Jubilant FoodWorks",Hotels & Leisure,MC
+TATACOMM,"Tata Communications",Telecom,MC
+CONCOR,"Container Corp",Logistics,MC
+ABB,"ABB India",Electrical Equipment,MC
+BHEL,"Bharat Heavy Electricals",Electrical Equipment,MC
+SAIL,"Steel Authority of India",Metals & Mining,MC
+NMDC,"NMDC",Metals & Mining,MC
+LICHSGFIN,"LIC Housing Finance",NBFC,MC
+MUTHOOTFIN,"Muthoot Finance",NBFC,MC
+CHOLAFIN,"Cholamandalam Finance",NBFC,MC
+IREDA,"Indian Renewable Energy Dev.",NBFC,MC
+SUZLON,"Suzlon Energy",Renewable Energy,MC
+INOXWIND,"Inox Wind",Renewable Energy,SC
+KPIGREEN,"KPI Green Energy",Renewable Energy,SC
+WAAREEENER,"Waaree Energies",Renewable Energy,MC
+PREMIERENE,"Premier Energies",Renewable Energy,MC
+BDL,"Bharat Dynamics",Aerospace & Defense,MC
+MAZDOCK,"Mazagon Dock",Aerospace & Defense,MC
+COCHINSHIP,"Cochin Shipyard",Aerospace & Defense,SC
+DATAPATTNS,"Data Patterns",Aerospace & Defense,SC
+ASTRAMICRO,"Astra Microwave",Aerospace & Defense,SC
+KAYNES,"Kaynes Technology",Electrical Equipment,SC
+AMBER,"Amber Enterprises",Consumer Durables,SC
+BLUESTARCO,"Blue Star",Consumer Durables,SC
+CROMPTON,"Crompton Greaves Consumer",Consumer Durables,SC
+KEI,"KEI Industries",Electrical Equipment,MC
+CGPOWER,"CG Power",Electrical Equipment,MC
+SALZERELEC,"Salzer Electronics",Electrical Equipment,MI
+ELECON,"Elecon Engineering",Industrial Machinery,SC
+TIMKEN,"Timken India",Industrial Machinery,SC
+GRINDWELL,"Grindwell Norton",Industrial Machinery,SC
+KPITTECH,"KPIT Technologies",IT Services,MC
+TATAELXSI,"Tata Elxsi",IT Services,SC
+CYIENT,"Cyient",IT Services,SC
+SONATSOFTW,"Sonata Software",IT Services,SC
+NEWGEN,"Newgen Software",IT Services,SC
+ZENSARTECH,"Zensar Technologies",IT Services,SC
+GLENMARK,"Glenmark Pharma",Pharmaceuticals,SC
+IPCALAB,"IPCA Laboratories",Pharmaceuticals,SC
+GRANULES,"Granules India",Pharmaceuticals,SC
+AARTIDRUGS,"Aarti Drugs",Pharmaceuticals,MI
+IOLCP,"IOL Chemicals & Pharma",Pharmaceuticals,SC
+GUFICBIO,"Gufic Biosciences",Pharmaceuticals,MI
+NATCOPHARM,"Natco Pharma",Pharmaceuticals,SC
+LAURUSLABS,"Laurus Labs",Pharmaceuticals,SC
+METROPOLIS,"Metropolis Healthcare",Healthcare Services,SC
+RAINBOW,"Rainbow Children's Medicare",Healthcare Services,SC
+REPCOHOME,"Repco Home Finance",NBFC,MI
+CREDITACC,"CreditAccess Grameen",NBFC,SC
+MANAPPURAM,"Manappuram Finance",NBFC,SC
+ANGELONE,"Angel One",Capital Markets,SC
+CDSL,"CDSL",Capital Markets,SC
+BSE,"BSE",Capital Markets,MC
+MCX,"Multi Commodity Exchange",Capital Markets,SC
+CAMS,"Computer Age Mgmt Services",Capital Markets,SC
+KARURVYSYA,"Karur Vysya Bank",Private Banks,SC
+CUB,"City Union Bank",Private Banks,SC
+RBLBANK,"RBL Bank",Private Banks,SC
+UCOBANK,"UCO Bank",PSU Banks,SC
+CENTRALBK,"Central Bank of India",PSU Banks,SC
+CHEMPLASTS,"Chemplast Sanmar",Commodity Chemicals,MI
+AARTIIND,"Aarti Industries",Commodity Chemicals,SC
+TATACHEM,"Tata Chemicals",Commodity Chemicals,SC
+GNFC,"Gujarat Narmada Valley Fert.",Commodity Chemicals,SC
+NAVINFLUOR,"Navin Fluorine",Chemicals,SC
+CLEAN,"Clean Science & Tech",Chemicals,SC
+SPMLINFRA,"SPML Infra",Construction & Engineering,MI
+NCC,"NCC",Construction & Engineering,SC
+KEC,"KEC International",Construction & Engineering,SC
+KPIL,"Kalpataru Projects",Construction & Engineering,SC
+IRCON,"IRCON International",Construction & Engineering,SC
+RVNL,"Rail Vikas Nigam",Construction & Engineering,MC
+IRFC,"Indian Railway Finance",NBFC,LC
+TITAGARH,"Titagarh Rail Systems",Industrial Machinery,SC
+JWL,"Jupiter Wagons",Industrial Machinery,SC
+IRMENERGY,"IRM Energy",Gas Distribution,MI
+IGL,"Indraprastha Gas",Gas Distribution,MC
+MGL,"Mahanagar Gas",Gas Distribution,SC
+GAIL,"GAIL India",Gas Distribution,LC
+PETRONET,"Petronet LNG",Gas Distribution,MC
+BPCL,"Bharat Petroleum",Oil & Gas,LC
+IOC,"Indian Oil Corp",Oil & Gas,LC
+HINDPETRO,"Hindustan Petroleum",Oil & Gas,MC
+SUNTV,"Sun TV Network",Media & Entertainment,SC
+PVRINOX,"PVR INOX",Media & Entertainment,SC
+SAREGAMA,"Saregama India",Media & Entertainment,SC
+SUNSHINE,"Sunshine Pictures",Media & Entertainment,MI
+NAZARA,"Nazara Technologies",Media & Entertainment,SC
+ZEEL,"Zee Entertainment",Media & Entertainment,SC
+ALEMBICLTD,"Alembic",Realty,MI
+SOBHA,"Sobha",Realty,SC
+BRIGADE,"Brigade Enterprises",Realty,SC
+SIGNATURE,"Signatureglobal",Realty,SC
+QUESS,"Quess Corp",Business Services,SC
+TEAMLEASE,"TeamLease Services",Business Services,SC
+FSL,"Firstsource Solutions",Business Services,SC
+ECLERX,"eClerx Services",Business Services,SC
+KPEL,"K.P. Energy",Renewable Energy,MI
+SWSOLAR,"Sterling & Wilson RE",Renewable Energy,SC
+BORORENEW,"Borosil Renewables",Renewable Energy,SC
+VBL,"Varun Beverages",FMCG,LC
+DABUR,"Dabur India",FMCG,MC
+MARICO,"Marico",FMCG,MC
+COLPAL,"Colgate-Palmolive India",FMCG,MC
+TATACONSUM,"Tata Consumer Products",FMCG,LC
+EMAMILTD,"Emami",FMCG,SC
+BIKAJI,"Bikaji Foods",FMCG,SC
+VMART,"V-Mart Retail",Retail,SC
+NYKAA,"FSN E-Commerce (Nykaa)",Retail,MC
+ETERNAL,"Eternal",Internet,LC
+PAYTM,"One 97 Communications",Internet,MC
+POLICYBZR,"PB Fintech",Internet,MC
+NAUKRI,"Info Edge",Internet,MC
+INDIGO,"InterGlobe Aviation",Airlines,LC
+SHREECEM,"Shree Cement",Cement,MC
+AMBUJACEM,"Ambuja Cements",Cement,LC
+DALBHARAT,"Dalmia Bharat",Cement,MC
+JKCEMENT,"JK Cement",Cement,SC
+RAMCOCEM,"Ramco Cements",Cement,SC
+SONACOMS,"Sona BLW Precision",Auto Components,MC
+UNOMINDA,"Uno Minda",Auto Components,MC
+ENDURANCE,"Endurance Technologies",Auto Components,SC
+CRAFTSMAN,"Craftsman Automation",Auto Components,SC
+BAJAJ-AUTO,"Bajaj Auto",Automobiles,LC
+ESCORTS,"Escorts Kubota",Automobiles,MC
+OLAELEC,"Ola Electric",Automobiles,MC
+HYUNDAI,"Hyundai Motor India",Automobiles,LC
+SWIGGY,"Swiggy",Internet,MC
+JSWENERGY,"JSW Energy",Power,MC
+NHPC,"NHPC",Power,MC
+SJVN,"SJVN",Power,SC
+TORNTPOWER,"Torrent Power",Power,MC
+ADANIGREEN,"Adani Green Energy",Renewable Energy,LC
+HINDZINC,"Hindustan Zinc",Metals & Mining,LC
+NATIONALUM,"National Aluminium",Metals & Mining,MC
+JINDALSTEL,"Jindal Steel & Power",Metals & Mining,MC
+APLAPOLLO,"APL Apollo Tubes",Metals & Mining,MC
+RATNAMANI,"Ratnamani Metals",Metals & Mining,SC
+GMDCLTD,"Gujarat Mineral Dev.",Metals & Mining,SC
+DELHIVERY,"Delhivery",Logistics,MC
+BLUEDART,"Blue Dart Express",Logistics,SC
+ALLCARGO,"Allcargo Logistics",Logistics,MI
+TBOTEK,"TBO Tek",Hotels & Leisure,SC
+LEMONTREE,"Lemon Tree Hotels",Hotels & Leisure,SC
+EIHOTEL,"EIH",Hotels & Leisure,SC
+DEVYANI,"Devyani International",Hotels & Leisure,SC
+HFCL,"HFCL",Telecom,SC
+TEJASNET,"Tejas Networks",Telecom,SC
+ROUTE,"Route Mobile",Telecom,MI
+HBLENGINE,"HBL Engineering",Electrical Equipment,SC
+APARINDS,"Apar Industries",Electrical Equipment,SC
+TARIL,"Transformers & Rectifiers",Electrical Equipment,MI
+GENUSPOWER,"Genus Power Infra",Electrical Equipment,MI
+PGEL,"PG Electroplast",Consumer Durables,SC
+SYRMA,"Syrma SGS Technology",Electrical Equipment,SC
+SANSERA,"Sansera Engineering",Auto Components,MI
+JYOTICNC,"Jyoti CNC Automation",Industrial Machinery,SC
+PRAJIND,"Praj Industries",Industrial Machinery,SC
+THERMAX,"Thermax",Industrial Machinery,MC
+HONAUT,"Honeywell Automation",Industrial Machinery,MC
+SHAKTIPUMP,"Shakti Pumps",Industrial Machinery,MI
+RRKABEL,"RR Kabel",Electrical Equipment,SC
+FINCABLES,"Finolex Cables",Electrical Equipment,SC
+CERA,"Cera Sanitaryware",Consumer Durables,MI
+KAJARIACER,"Kajaria Ceramics",Consumer Durables,SC
+RELAXO,"Relaxo Footwears",Consumer Durables,MI
+BATAINDIA,"Bata India",Consumer Durables,SC
+PAGEIND,"Page Industries",Textiles & Apparel,MC
+KPRMILL,"KPR Mill",Textiles & Apparel,SC
+TRIDENT,"Trident",Textiles & Apparel,MI
+WELSPUNLIV,"Welspun Living",Textiles & Apparel,SC
+RAYMOND,"Raymond",Textiles & Apparel,SC
+ARVIND,"Arvind",Textiles & Apparel,MI
