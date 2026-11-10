@@ -1,0 +1,81 @@
+ticker,name,sector,cap
+AAPL,"Apple",Technology Hardware,LC
+MSFT,"Microsoft",Software,LC
+NVDA,"NVIDIA",Semiconductors,LC
+AMZN,"Amazon.com",Internet Retail,LC
+GOOGL,"Alphabet",Interactive Media,LC
+META,"Meta Platforms",Interactive Media,LC
+TSLA,"Tesla",Automobiles,LC
+AVGO,"Broadcom",Semiconductors,LC
+JPM,"JPMorgan Chase",Banks,LC
+LLY,"Eli Lilly",Pharmaceuticals,LC
+V,"Visa",Payments,LC
+MA,"Mastercard",Payments,LC
+UNH,"UnitedHealth",Health Care Services,LC
+XOM,"Exxon Mobil",Energy,LC
+COST,"Costco",Retail,LC
+WMT,"Walmart",Retail,LC
+HD,"Home Depot",Retail,LC
+PG,"Procter & Gamble",Consumer Staples,LC
+NFLX,"Netflix",Media,LC
+AMD,"Advanced Micro Devices",Semiconductors,LC
+CRM,"Salesforce",Software,LC
+ORCL,"Oracle",Software,LC
+ADBE,"Adobe",Software,LC
+BAC,"Bank of America",Banks,LC
+KO,"Coca-Cola",Consumer Staples,LC
+PEP,"PepsiCo",Consumer Staples,LC
+MRK,"Merck",Pharmaceuticals,LC
+ABBV,"AbbVie",Pharmaceuticals,LC
+CVX,"Chevron",Energy,LC
+CAT,"Caterpillar",Industrials,LC
+GE,"GE Aerospace",Aerospace & Defense,LC
+RTX,"RTX",Aerospace & Defense,LC
+LMT,"Lockheed Martin",Aerospace & Defense,LC
+UBER,"Uber",Internet,LC
+PLTR,"Palantir",Software,LC
+NOW,"ServiceNow",Software,LC
+INTU,"Intuit",Software,LC
+QCOM,"Qualcomm",Semiconductors,LC
+MU,"Micron",Semiconductors,LC
+ANET,"Arista Networks",Technology Hardware,LC
+PANW,"Palo Alto Networks",Software,LC
+CRWD,"CrowdStrike",Software,LC
+SHOP,"Shopify",Software,LC
+GS,"Goldman Sachs",Capital Markets,LC
+MS,"Morgan Stanley",Capital Markets,LC
+SCHW,"Charles Schwab",Capital Markets,LC
+DE,"Deere",Industrials,LC
+HON,"Honeywell",Industrials,LC
+NEE,"NextEra Energy",Utilities,LC
+DUK,"Duke Energy",Utilities,LC
+DECK,"Deckers Outdoor",Consumer Discretionary,MC
+ELF,"e.l.f. Beauty",Consumer Staples,MC
+CELH,"Celsius Holdings",Consumer Staples,MC
+DKNG,"DraftKings",Consumer Discretionary,MC
+AFRM,"Affirm",Payments,MC
+HOOD,"Robinhood",Capital Markets,MC
+SOFI,"SoFi Technologies",Banks,MC
+RKLB,"Rocket Lab",Aerospace & Defense,MC
+AXON,"Axon Enterprise",Aerospace & Defense,MC
+VRT,"Vertiv",Industrials,MC
+SMCI,"Super Micro Computer",Technology Hardware,MC
+ENPH,"Enphase Energy",Utilities,MC
+FSLR,"First Solar",Utilities,MC
+ONON,"On Holding",Consumer Discretionary,MC
+CAVA,"CAVA Group",Restaurants,MC
+WING,"Wingstop",Restaurants,MC
+CMG,"Chipotle",Restaurants,LC
+DUOL,"Duolingo",Software,MC
+NET,"Cloudflare",Software,MC
+DDOG,"Datadog",Software,MC
+SNOW,"Snowflake",Software,MC
+MDB,"MongoDB",Software,MC
+APP,"AppLovin",Software,LC
+IONQ,"IonQ",Technology Hardware,SC
+SOUN,"SoundHound AI",Software,SC
+ACHR,"Archer Aviation",Aerospace & Defense,SC
+JOBY,"Joby Aviation",Aerospace & Defense,SC
+OKLO,"Oklo",Utilities,SC
+CRDO,"Credo Technology",Semiconductors,SC
+ALAB,"Astera Labs",Semiconductors,SC
