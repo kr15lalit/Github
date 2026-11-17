@@ -40,6 +40,7 @@ kestrel/
 | **Kestrel Eye** | RS rank vs. RS change map (leading / weakening / lagging / improving) of your current screen |
 | **Interactive chart** | Click any ticker: candlesticks or line, daily/weekly, 3M–All ranges, EMA 20/50/200, volume, RSI pane, 52W-high line, breakout and earnings markers, zoom/pan, ← → to flip through your results. Built with TradingView's open-source Lightweight Charts |
 | **Your data** | 3 named watchlists, per-stock notes and saved filter templates, kept in browser storage, with backup/restore to a JSON file |
+| **AI analysis** | "✨ AI analysis" button in every stock popup. Shows a Gemini-written chart read (trend, setup, volume/momentum, key levels, risks, what to watch) when available, otherwise Kestrel's rule-based read. Pre-generated nightly, so it's instant and costs nothing per click |
 | **Sharing** | "Share active filters" copies a link that reproduces the exact screen. "Copy tickers" exports in TradingView format |
 | **Also** | Daily/weekly timeframes, IN/US markets, dark mode, `/` to search, guided tour, mobile layout |
 
@@ -54,12 +55,28 @@ kestrel/
 - **Earnings reaction**: % move the day before, the day of and the day after the last results date.
 - A bar from today is dropped until that market has closed, so a mid-session run never sees a half-finished day.
 
+## AI analysis (free)
+
+`pipeline/analysis.py` runs after `build_data.py` and writes `data/analysis/<MARKET>/<TICKER>.json` for every stock:
+
+- **Rule-based read**: always on, no key needed. Plain-English notes built directly from the indicators, so it can't make up numbers.
+- **AI read**: uses Google's **Gemini API free tier** (a "flash-lite" model, roughly 500 requests a day, enough for every stock once a night).
+  1. Get a free key at https://aistudio.google.com ("Get API key"; no card needed).
+  2. In GitHub, go to **Settings → Secrets and variables → Actions → New repository secret**, name it `GEMINI_API_KEY`, and paste the key.
+  3. The next nightly run (or **Actions → Run workflow**) generates AI reads. Stocks that pass the most scans go first.
+
+The key only lives in GitHub Actions and never reaches the website. Price levels the AI mentions are checked against the data,
+and any it invents are dropped. If the free quota runs out, the remaining stocks show the rule-based read.
+The AI is instructed to describe the chart only, with no buy/sell calls or price targets.
+Optional settings (as Actions variables or env): `GEMINI_MODEL`, `AI_MAX_STOCKS`, `AI_DELAY`, `AI_MARKETS`.
+
 ## Run it locally
 
 ```bash
 cd kestrel
 pip install -r pipeline/requirements.txt
 python pipeline/build_data.py          # ~3–5 min; add --no-earnings for ~1 min
+python pipeline/analysis.py            # stock analyses (set GEMINI_API_KEY for AI)
 python -m http.server 8000             # then open http://localhost:8000
 ```
 

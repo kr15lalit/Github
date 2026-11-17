@@ -388,6 +388,8 @@
         ${chartToolbar()}
         <div class="chart-legend" id="chartLegend"></div>
         <div class="stock-chart" id="stockChart"></div>
+        <div class="ai-bar"><button class="btn ai-btn" data-ai="${esc(r.ticker)}" aria-expanded="false" aria-controls="aiPanel"><span aria-hidden="true">✨</span> AI analysis</button><span class="caption">An educational read of this chart — not investment advice</span></div>
+        <section class="ai-panel" id="aiPanel" hidden aria-live="polite"></section>
         <div class="stats">
           <div><span>RSI (14)</span><b>${r.rsi}</b></div><div><span>RS rank</span><b>${r.rs ?? "--"}</b></div><div><span>Stage 2</span><b>${r.stage2}/7</b></div><div><span>From 52W high</span><b>${sgn(r.from52)}</b></div>
           <div><span>Vol spike</span><b>${nf(r.volSpike)}x</b></div><div><span>Daily pivot</span><b>${r.dPivot}</b></div><div><span>Breakout</span><b>${r.bo ? sgn(r.bo.gain) + " since" : "None"}</b></div><div><span>Next earnings</span><b>${fmtDate(r.nextEarn)}</b></div>
@@ -425,6 +427,63 @@
     </svg>`;
     openModal(modalHead("Kestrel Eye", `Relative-strength map of the ${pts.length} stocks in your current screen. Top-right = strong and getting stronger. Click a bubble to open it.`) + `<div class="modal-body eye">${svg}</div>`);
   }
+  // ---------- AI analysis (pre-generated nightly by pipeline/analysis.py) ----------
+  const analysisCache = {};
+  const fileName = (t) => t.replace(/[^A-Za-z0-9-]/g, "_") + ".json";
+  async function loadAnalysis(t) {
+    const k = state.market + ":" + t;
+    if (!analysisCache[k]) {
+      analysisCache[k] = fetch(`data/analysis/${state.market}/${fileName(t)}`, { cache: "no-cache" })
+        .then((r) => { if (!r.ok) throw new Error("missing"); return r.json(); })
+        .catch((e) => { delete analysisCache[k]; throw e; });
+    }
+    return analysisCache[k];
+  }
+  const levelChips = (lv) => lv.map((l) => `<span class="lvl ${l.role === "resistance" ? "res" : "sup"}" title="${esc(l.why || l.label || "")}"><b>${cur()}${nf(l.price, 2)}</b> ${esc(l.why || l.label || l.role)}</span>`).join("");
+  const list = (items) => items && items.length ? `<ul>${items.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : "";
+  function ruleHtml(rule) {
+    const lv = [...(rule.supports || []).map((x) => ({ ...x, role: "support" })), ...(rule.resistances || []).map((x) => ({ ...x, role: "resistance" }))];
+    return `<h4>${esc(rule.headline)}</h4>${list(rule.points)}
+      ${lv.length ? `<div class="ai-sub">Key levels</div><div class="lvls">${levelChips(lv.map((l) => ({ ...l, why: `${l.role === "support" ? "Support" : "Resistance"}: ${l.label}` })))}</div>` : ""}
+      ${rule.risks && rule.risks.length ? `<div class="ai-sub">Risks</div>${list(rule.risks)}` : ""}`;
+  }
+  async function showAnalysis(t, btn) {
+    const panel = $("#aiPanel"); if (!panel) return;
+    const open = panel.hidden;
+    panel.hidden = !open; btn.setAttribute("aria-expanded", open);
+    if (!open) return;
+    panel.innerHTML = `<div class="ai-loading"><span class="ai-spin"></span> Reading the chart…</div>`;
+    let a;
+    try { a = await loadAnalysis(t); }
+    catch (e) {
+      panel.innerHTML = `<p class="caption">No analysis has been generated for ${esc(t)} yet. It's created each evening by the data pipeline (<code>pipeline/analysis.py</code>).</p>`;
+      return;
+    }
+    if ($("#modalBox").dataset.ticker !== t) return; // user moved to another stock meanwhile
+    const ai = a.ai, rule = a.rule;
+    const when = D.fmtShort(new Date(a.session + "T00:00:00"));
+    if (ai) {
+      panel.innerHTML = `<div class="ai-head"><span class="ai-badge">✨ AI analysis</span><span class="caption">Based on data to ${when} · ${esc(ai.model || "AI")}</span></div>
+        <p class="ai-summary">${esc(ai.summary)}</p>
+        <div class="ai-grid">
+          <div><div class="ai-sub">Trend</div><p>${esc(ai.trend)}</p></div>
+          <div><div class="ai-sub">Setup</div><p>${esc(ai.setup)}</p></div>
+          <div><div class="ai-sub">Volume &amp; momentum</div><p>${esc(ai.volume_momentum)}</p></div>
+        </div>
+        ${ai.key_levels && ai.key_levels.length ? `<div class="ai-sub">Key levels</div><div class="lvls">${levelChips(ai.key_levels)}</div>` : ""}
+        <div class="ai-grid two">
+          ${ai.risks && ai.risks.length ? `<div><div class="ai-sub">Risks</div>${list(ai.risks)}</div>` : ""}
+          ${ai.watch_for && ai.watch_for.length ? `<div><div class="ai-sub">What to watch</div>${list(ai.watch_for)}</div>` : ""}
+        </div>
+        <details class="ai-rule"><summary>Kestrel's rule-based read</summary>${ruleHtml(rule)}</details>
+        <p class="ai-disclaimer">AI-generated from Kestrel's indicators for education only. It can be wrong. Not a recommendation to buy or sell; do your own research.</p>`;
+    } else {
+      panel.innerHTML = `<div class="ai-head"><span class="ai-badge rule">Kestrel read</span><span class="caption">Based on data to ${when} · rule-based</span></div>
+        ${ruleHtml(rule)}
+        <p class="ai-disclaimer">The AI write-up isn't available for this stock today, so this is Kestrel's rule-based read, built directly from the indicators. Educational only, not investment advice.</p>`;
+    }
+  }
+
   function openNote(t) {
     openModal(modalHead("Note · " + esc(t)) + `<div class="modal-body"><textarea class="note" id="noteText" autofocus placeholder="Your thesis, levels to watch, reasons to exit…">${esc(notes[t] || "")}</textarea></div><div class="modal-foot"><button class="btn" data-close>Cancel</button><button class="btn primary" data-save-note="${esc(t)}">Save note</button></div>`, true);
   }
@@ -490,6 +549,7 @@
       if (d.open) { if ($("#modal").hidden === false && !t.closest(".eye")) closeModal(); $("#suggest").hidden = true; return openStock(d.open); }
       if (d.wl != null) { const L = lists[+d.wl].items, i = L.indexOf(d.t); i >= 0 ? L.splice(i, 1) : L.push(d.t); store.set("lists", lists); t.setAttribute("aria-pressed", i < 0); if (state.list >= 0) render(); return; }
       if (d.nav) return openStock(d.nav);
+      if (d.ai) return showAnalysis(d.ai, t);
       if (d.cset) { if (d.cset === "tf") chartTf = d.cval; else { chartSettings[d.cset] = d.cval; store.set("chart", chartSettings); } $$(`[data-cset="${d.cset}"]`).forEach((b) => b.setAttribute("aria-pressed", b.dataset.cval === d.cval)); const r = data.rows.find((x) => x.ticker === $("#modalBox").dataset.ticker); return r && drawChart(r); }
       if (d.ctog) { chartSettings[d.ctog] = !chartSettings[d.ctog]; store.set("chart", chartSettings); t.setAttribute("aria-pressed", chartSettings[d.ctog]); const r = data.rows.find((x) => x.ticker === $("#modalBox").dataset.ticker); return r && drawChart(r); }
       if (d.note) return openNote(d.note);
