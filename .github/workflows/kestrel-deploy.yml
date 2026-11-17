@@ -36,6 +36,8 @@ jobs:
           cache-dependency-path: kestrel/pipeline/requirements.txt
       - name: Install pipeline dependencies
         run: pip install -r kestrel/pipeline/requirements.txt
+      - name: Refresh NSE stock list (new listings; keeps the committed list if NSE can't be reached)
+        run: python kestrel/pipeline/update_universe.py || echo "::warning::Universe refresh failed; using committed list"
       - name: Build market data
         # If Yahoo is down the committed data/*.json stays in place and the site still deploys.
         run: python kestrel/pipeline/build_data.py || echo "::warning::Data refresh failed; deploying previous data"

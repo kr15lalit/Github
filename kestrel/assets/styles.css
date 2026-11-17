@@ -468,3 +468,4 @@ textarea.note { width: 100%; min-height: 140px; border: 1px solid var(--border-s
 @keyframes ai-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .ai-spin { animation: none; } }
 @media (max-width: 760px) { .ai-grid, .ai-grid.two { grid-template-columns: 1fr; } }
+.suggest-empty { padding: 12px 14px; color: var(--muted); font-size: 13px; }

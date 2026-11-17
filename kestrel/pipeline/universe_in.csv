@@ -1,261 +1,2600 @@
-ticker,name,sector,cap
-RELIANCE,"Reliance Industries",Oil & Gas,LC
-TCS,"Tata Consultancy Services",IT Services,LC
-HDFCBANK,"HDFC Bank",Private Banks,LC
-ICICIBANK,"ICICI Bank",Private Banks,LC
-INFY,"Infosys",IT Services,LC
-BHARTIARTL,"Bharti Airtel",Telecom,LC
-SBIN,"State Bank of India",PSU Banks,LC
-ITC,"ITC",FMCG,LC
-LT,"Larsen & Toubro",Construction & Engineering,LC
-HINDUNILVR,"Hindustan Unilever",FMCG,LC
-KOTAKBANK,"Kotak Mahindra Bank",Private Banks,LC
-AXISBANK,"Axis Bank",Private Banks,LC
-BAJFINANCE,"Bajaj Finance",NBFC,LC
-BAJAJFINSV,"Bajaj Finserv",NBFC,LC
-MARUTI,"Maruti Suzuki",Automobiles,LC
-M&M,"Mahindra & Mahindra",Automobiles,LC
-SUNPHARMA,"Sun Pharmaceutical",Pharmaceuticals,LC
-HCLTECH,"HCL Technologies",IT Services,LC
-TITAN,"Titan Company",Consumer Durables,LC
-ULTRACEMCO,"UltraTech Cement",Cement,LC
-NTPC,"NTPC",Power,LC
-POWERGRID,"Power Grid Corp",Power,LC
-ONGC,"Oil & Natural Gas Corp",Oil & Gas,LC
-TATASTEEL,"Tata Steel",Metals & Mining,LC
-JSWSTEEL,"JSW Steel",Metals & Mining,LC
-ASIANPAINT,"Asian Paints",Chemicals,LC
-WIPRO,"Wipro",IT Services,LC
-NESTLEIND,"Nestle India",FMCG,LC
-GRASIM,"Grasim Industries",Cement,LC
-ADANIPORTS,"Adani Ports & SEZ",Logistics,LC
-COALINDIA,"Coal India",Metals & Mining,LC
-HINDALCO,"Hindalco Industries",Metals & Mining,LC
-DRREDDY,"Dr. Reddy's Laboratories",Pharmaceuticals,LC
-CIPLA,"Cipla",Pharmaceuticals,LC
-TECHM,"Tech Mahindra",IT Services,LC
-EICHERMOT,"Eicher Motors",Automobiles,LC
-HEROMOTOCO,"Hero MotoCorp",Automobiles,LC
-BRITANNIA,"Britannia Industries",FMCG,LC
-APOLLOHOSP,"Apollo Hospitals",Healthcare Services,LC
-TRENT,"Trent",Retail,LC
-BEL,"Bharat Electronics",Aerospace & Defense,LC
-HAL,"Hindustan Aeronautics",Aerospace & Defense,LC
-DLF,"DLF",Realty,LC
-SIEMENS,"Siemens India",Electrical Equipment,LC
-PIDILITIND,"Pidilite Industries",Chemicals,LC
-DMART,"Avenue Supermarts",Retail,LC
-VEDL,"Vedanta",Metals & Mining,LC
-PFC,"Power Finance Corp",NBFC,LC
-RECLTD,"REC",NBFC,LC
-BANKBARODA,"Bank of Baroda",PSU Banks,LC
-PNB,"Punjab National Bank",PSU Banks,LC
-TVSMOTOR,"TVS Motor",Automobiles,LC
-ZYDUSLIFE,"Zydus Lifesciences",Pharmaceuticals,LC
-GODREJCP,"Godrej Consumer",FMCG,LC
-TATAPOWER,"Tata Power",Power,LC
-PERSISTENT,"Persistent Systems",IT Services,MC
-COFORGE,"Coforge",IT Services,MC
-MPHASIS,"Mphasis",IT Services,MC
-LTM,"LTIMindtree",IT Services,LC
-POLYCAB,"Polycab India",Electrical Equipment,MC
-CUMMINSIND,"Cummins India",Industrial Machinery,MC
-VOLTAS,"Voltas",Consumer Durables,MC
-DIXON,"Dixon Technologies",Consumer Durables,MC
-LUPIN,"Lupin",Pharmaceuticals,MC
-AUROPHARMA,"Aurobindo Pharma",Pharmaceuticals,MC
-ALKEM,"Alkem Laboratories",Pharmaceuticals,MC
-MAXHEALTH,"Max Healthcare",Healthcare Services,MC
-FORTIS,"Fortis Healthcare",Healthcare Services,MC
-INDHOTEL,"Indian Hotels",Hotels & Leisure,MC
-FEDERALBNK,"Federal Bank",Private Banks,MC
-IDFCFIRSTB,"IDFC First Bank",Private Banks,MC
-AUBANK,"AU Small Finance Bank",Private Banks,MC
-INDUSTOWER,"Indus Towers",Telecom,MC
-ASHOKLEY,"Ashok Leyland",Automobiles,MC
-BHARATFORG,"Bharat Forge",Auto Components,MC
-MRF,"MRF",Auto Components,MC
-APOLLOTYRE,"Apollo Tyres",Auto Components,MC
-SUPREMEIND,"Supreme Industries",Chemicals,MC
-SRF,"SRF",Chemicals,MC
-DEEPAKNTR,"Deepak Nitrite",Chemicals,MC
-PIIND,"PI Industries",Agrochemicals,MC
-UPL,"UPL",Agrochemicals,MC
-COROMANDEL,"Coromandel International",Agrochemicals,MC
-GODREJPROP,"Godrej Properties",Realty,MC
-OBEROIRLTY,"Oberoi Realty",Realty,MC
-PRESTIGE,"Prestige Estates",Realty,MC
-PHOENIXLTD,"Phoenix Mills",Realty,MC
-JUBLFOOD,"Jubilant FoodWorks",Hotels & Leisure,MC
-TATACOMM,"Tata Communications",Telecom,MC
-CONCOR,"Container Corp",Logistics,MC
-ABB,"ABB India",Electrical Equipment,MC
-BHEL,"Bharat Heavy Electricals",Electrical Equipment,MC
-SAIL,"Steel Authority of India",Metals & Mining,MC
-NMDC,"NMDC",Metals & Mining,MC
-LICHSGFIN,"LIC Housing Finance",NBFC,MC
-MUTHOOTFIN,"Muthoot Finance",NBFC,MC
-CHOLAFIN,"Cholamandalam Finance",NBFC,MC
-IREDA,"Indian Renewable Energy Dev.",NBFC,MC
-SUZLON,"Suzlon Energy",Renewable Energy,MC
-INOXWIND,"Inox Wind",Renewable Energy,SC
-KPIGREEN,"KPI Green Energy",Renewable Energy,SC
-WAAREEENER,"Waaree Energies",Renewable Energy,MC
-PREMIERENE,"Premier Energies",Renewable Energy,MC
-BDL,"Bharat Dynamics",Aerospace & Defense,MC
-MAZDOCK,"Mazagon Dock",Aerospace & Defense,MC
-COCHINSHIP,"Cochin Shipyard",Aerospace & Defense,SC
-DATAPATTNS,"Data Patterns",Aerospace & Defense,SC
-ASTRAMICRO,"Astra Microwave",Aerospace & Defense,SC
-KAYNES,"Kaynes Technology",Electrical Equipment,SC
-AMBER,"Amber Enterprises",Consumer Durables,SC
-BLUESTARCO,"Blue Star",Consumer Durables,SC
-CROMPTON,"Crompton Greaves Consumer",Consumer Durables,SC
-KEI,"KEI Industries",Electrical Equipment,MC
-CGPOWER,"CG Power",Electrical Equipment,MC
-SALZERELEC,"Salzer Electronics",Electrical Equipment,MI
-ELECON,"Elecon Engineering",Industrial Machinery,SC
-TIMKEN,"Timken India",Industrial Machinery,SC
-GRINDWELL,"Grindwell Norton",Industrial Machinery,SC
-KPITTECH,"KPIT Technologies",IT Services,MC
-TATAELXSI,"Tata Elxsi",IT Services,SC
-CYIENT,"Cyient",IT Services,SC
-SONATSOFTW,"Sonata Software",IT Services,SC
-NEWGEN,"Newgen Software",IT Services,SC
-ZENSARTECH,"Zensar Technologies",IT Services,SC
-GLENMARK,"Glenmark Pharma",Pharmaceuticals,SC
-IPCALAB,"IPCA Laboratories",Pharmaceuticals,SC
-GRANULES,"Granules India",Pharmaceuticals,SC
-AARTIDRUGS,"Aarti Drugs",Pharmaceuticals,MI
-IOLCP,"IOL Chemicals & Pharma",Pharmaceuticals,SC
-GUFICBIO,"Gufic Biosciences",Pharmaceuticals,MI
-NATCOPHARM,"Natco Pharma",Pharmaceuticals,SC
-LAURUSLABS,"Laurus Labs",Pharmaceuticals,SC
-METROPOLIS,"Metropolis Healthcare",Healthcare Services,SC
-RAINBOW,"Rainbow Children's Medicare",Healthcare Services,SC
-REPCOHOME,"Repco Home Finance",NBFC,MI
-CREDITACC,"CreditAccess Grameen",NBFC,SC
-MANAPPURAM,"Manappuram Finance",NBFC,SC
-ANGELONE,"Angel One",Capital Markets,SC
-CDSL,"CDSL",Capital Markets,SC
-BSE,"BSE",Capital Markets,MC
-MCX,"Multi Commodity Exchange",Capital Markets,SC
-CAMS,"Computer Age Mgmt Services",Capital Markets,SC
-KARURVYSYA,"Karur Vysya Bank",Private Banks,SC
-CUB,"City Union Bank",Private Banks,SC
-RBLBANK,"RBL Bank",Private Banks,SC
-UCOBANK,"UCO Bank",PSU Banks,SC
-CENTRALBK,"Central Bank of India",PSU Banks,SC
-CHEMPLASTS,"Chemplast Sanmar",Commodity Chemicals,MI
-AARTIIND,"Aarti Industries",Commodity Chemicals,SC
-TATACHEM,"Tata Chemicals",Commodity Chemicals,SC
-GNFC,"Gujarat Narmada Valley Fert.",Commodity Chemicals,SC
-NAVINFLUOR,"Navin Fluorine",Chemicals,SC
-CLEAN,"Clean Science & Tech",Chemicals,SC
-SPMLINFRA,"SPML Infra",Construction & Engineering,MI
-NCC,"NCC",Construction & Engineering,SC
-KEC,"KEC International",Construction & Engineering,SC
-KPIL,"Kalpataru Projects",Construction & Engineering,SC
-IRCON,"IRCON International",Construction & Engineering,SC
-RVNL,"Rail Vikas Nigam",Construction & Engineering,MC
-IRFC,"Indian Railway Finance",NBFC,LC
-TITAGARH,"Titagarh Rail Systems",Industrial Machinery,SC
-JWL,"Jupiter Wagons",Industrial Machinery,SC
-IRMENERGY,"IRM Energy",Gas Distribution,MI
-IGL,"Indraprastha Gas",Gas Distribution,MC
-MGL,"Mahanagar Gas",Gas Distribution,SC
-GAIL,"GAIL India",Gas Distribution,LC
-PETRONET,"Petronet LNG",Gas Distribution,MC
-BPCL,"Bharat Petroleum",Oil & Gas,LC
-IOC,"Indian Oil Corp",Oil & Gas,LC
-HINDPETRO,"Hindustan Petroleum",Oil & Gas,MC
-SUNTV,"Sun TV Network",Media & Entertainment,SC
-PVRINOX,"PVR INOX",Media & Entertainment,SC
-SAREGAMA,"Saregama India",Media & Entertainment,SC
-SUNSHINE,"Sunshine Pictures",Media & Entertainment,MI
-NAZARA,"Nazara Technologies",Media & Entertainment,SC
-ZEEL,"Zee Entertainment",Media & Entertainment,SC
-ALEMBICLTD,"Alembic",Realty,MI
-SOBHA,"Sobha",Realty,SC
-BRIGADE,"Brigade Enterprises",Realty,SC
-SIGNATURE,"Signatureglobal",Realty,SC
-QUESS,"Quess Corp",Business Services,SC
-TEAMLEASE,"TeamLease Services",Business Services,SC
-FSL,"Firstsource Solutions",Business Services,SC
-ECLERX,"eClerx Services",Business Services,SC
-KPEL,"K.P. Energy",Renewable Energy,MI
-SWSOLAR,"Sterling & Wilson RE",Renewable Energy,SC
-BORORENEW,"Borosil Renewables",Renewable Energy,SC
-VBL,"Varun Beverages",FMCG,LC
-DABUR,"Dabur India",FMCG,MC
-MARICO,"Marico",FMCG,MC
-COLPAL,"Colgate-Palmolive India",FMCG,MC
-TATACONSUM,"Tata Consumer Products",FMCG,LC
-EMAMILTD,"Emami",FMCG,SC
-BIKAJI,"Bikaji Foods",FMCG,SC
-VMART,"V-Mart Retail",Retail,SC
-NYKAA,"FSN E-Commerce (Nykaa)",Retail,MC
-ETERNAL,"Eternal",Internet,LC
-PAYTM,"One 97 Communications",Internet,MC
-POLICYBZR,"PB Fintech",Internet,MC
-NAUKRI,"Info Edge",Internet,MC
-INDIGO,"InterGlobe Aviation",Airlines,LC
-SHREECEM,"Shree Cement",Cement,MC
-AMBUJACEM,"Ambuja Cements",Cement,LC
-DALBHARAT,"Dalmia Bharat",Cement,MC
-JKCEMENT,"JK Cement",Cement,SC
-RAMCOCEM,"Ramco Cements",Cement,SC
-SONACOMS,"Sona BLW Precision",Auto Components,MC
-UNOMINDA,"Uno Minda",Auto Components,MC
-ENDURANCE,"Endurance Technologies",Auto Components,SC
-CRAFTSMAN,"Craftsman Automation",Auto Components,SC
-BAJAJ-AUTO,"Bajaj Auto",Automobiles,LC
-ESCORTS,"Escorts Kubota",Automobiles,MC
-OLAELEC,"Ola Electric",Automobiles,MC
-HYUNDAI,"Hyundai Motor India",Automobiles,LC
-SWIGGY,"Swiggy",Internet,MC
-JSWENERGY,"JSW Energy",Power,MC
-NHPC,"NHPC",Power,MC
-SJVN,"SJVN",Power,SC
-TORNTPOWER,"Torrent Power",Power,MC
-ADANIGREEN,"Adani Green Energy",Renewable Energy,LC
-HINDZINC,"Hindustan Zinc",Metals & Mining,LC
-NATIONALUM,"National Aluminium",Metals & Mining,MC
-JINDALSTEL,"Jindal Steel & Power",Metals & Mining,MC
-APLAPOLLO,"APL Apollo Tubes",Metals & Mining,MC
-RATNAMANI,"Ratnamani Metals",Metals & Mining,SC
-GMDCLTD,"Gujarat Mineral Dev.",Metals & Mining,SC
-DELHIVERY,"Delhivery",Logistics,MC
-BLUEDART,"Blue Dart Express",Logistics,SC
-ALLCARGO,"Allcargo Logistics",Logistics,MI
-TBOTEK,"TBO Tek",Hotels & Leisure,SC
-LEMONTREE,"Lemon Tree Hotels",Hotels & Leisure,SC
-EIHOTEL,"EIH",Hotels & Leisure,SC
-DEVYANI,"Devyani International",Hotels & Leisure,SC
-HFCL,"HFCL",Telecom,SC
-TEJASNET,"Tejas Networks",Telecom,SC
-ROUTE,"Route Mobile",Telecom,MI
-HBLENGINE,"HBL Engineering",Electrical Equipment,SC
-APARINDS,"Apar Industries",Electrical Equipment,SC
-TARIL,"Transformers & Rectifiers",Electrical Equipment,MI
-GENUSPOWER,"Genus Power Infra",Electrical Equipment,MI
-PGEL,"PG Electroplast",Consumer Durables,SC
-SYRMA,"Syrma SGS Technology",Electrical Equipment,SC
-SANSERA,"Sansera Engineering",Auto Components,MI
-JYOTICNC,"Jyoti CNC Automation",Industrial Machinery,SC
-PRAJIND,"Praj Industries",Industrial Machinery,SC
-THERMAX,"Thermax",Industrial Machinery,MC
-HONAUT,"Honeywell Automation",Industrial Machinery,MC
-SHAKTIPUMP,"Shakti Pumps",Industrial Machinery,MI
-RRKABEL,"RR Kabel",Electrical Equipment,SC
-FINCABLES,"Finolex Cables",Electrical Equipment,SC
-CERA,"Cera Sanitaryware",Consumer Durables,MI
-KAJARIACER,"Kajaria Ceramics",Consumer Durables,SC
-RELAXO,"Relaxo Footwears",Consumer Durables,MI
-BATAINDIA,"Bata India",Consumer Durables,SC
-PAGEIND,"Page Industries",Textiles & Apparel,MC
-KPRMILL,"KPR Mill",Textiles & Apparel,SC
-TRIDENT,"Trident",Textiles & Apparel,MI
-WELSPUNLIV,"Welspun Living",Textiles & Apparel,SC
-RAYMOND,"Raymond",Textiles & Apparel,SC
-ARVIND,"Arvind",Textiles & Apparel,MI
+ticker,name,sector,cap,yahoo,sector_source
+20MICRONS,20 Microns,Other Industrial Metals & Mining,MI,,yahoo
+21STCENMGM,21st Century Management Services,Capital Markets,MI,,yahoo
+360ONE,360 ONE WAM LIMITED,Asset Management,MC,,yahoo
+3BBLACKBIO,3B Blackbio Dx,Biotechnology,MI,,yahoo
+3IINFOLTD,3i Infotech,Information Technology Services,MI,,yahoo
+3MINDIA,3M India,Conglomerates,MI,,yahoo
+3PLAND,3P Land Holdings,Real Estate Services,MI,,yahoo
+5PAISA,5Paisa Capital,Capital Markets,MI,,yahoo
+63MOONS,63 moons technologies limited,Software - Application,MI,,yahoo
+A2ZINFRA,A2Z Infra Engineering,Engineering & Construction,MI,,yahoo
+AAATECH,AAA Technologies,Information Technology Services,MI,,yahoo
+AADHARHFC,Aadhar Housing Finance,Mortgage Finance,SC,,yahoo
+AAKASH,Aakash Exploration Services,Oil & Gas Equipment & Services,MI,,yahoo
+AAREYDRUGS,Aarey Drugs & Pharmaceuticals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+AARNAV,Aarnav Fashions,Unclassified,MI,,nse
+AARON,Aaron Industries,Specialty Industrial Machinery,MI,,yahoo
+AARTECH,Aartech Solonics,Electrical Equipment & Parts,MI,,yahoo
+AARTIDRUGS,Aarti Drugs,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+AARTIIND,Aarti Industries,Specialty Chemicals,SC,,yahoo
+AARTIPHARM,Aarti Pharmalabs,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+AARTISURF,Aarti Surfactants,Specialty Chemicals,MI,,yahoo
+AARVI,Aarvi Encon,Staffing & Employment Services,MI,,yahoo
+AASTHA,Aastha Spintex,Textile Manufacturing,MI,,yahoo
+AAVAS,Aavas Financiers,Mortgage Finance,SC,,yahoo
+ABAN,Aban Offshore,Oil & Gas Drilling,MI,,yahoo
+ABANSENT,Abans Enterprises,Capital Markets,MI,,yahoo
+ABB,ABB India,Specialty Industrial Machinery,LC,,yahoo
+ABBOTINDIA,Abbott India,Drug Manufacturers - Specialty & Generic,MC,,yahoo
+ABCAPITAL,Aditya Birla Capital,Financial Conglomerates,MC,,yahoo
+ABCIND,ABC Industries India,Textile Manufacturing,MI,,yahoo
+ABDL,Allied Blenders and Distillers,Beverages - Wineries & Distilleries,SC,,yahoo
+ABFRL,Aditya Birla Fashion and Retail,Apparel Manufacturing,MI,,yahoo
+ABINFRA,A B Infrabuild,Engineering & Construction,MI,,yahoo
+ABLBL,Aditya Birla Lifestyle Brands,Apparel Retail,MI,,yahoo
+ABMINTLLTD,ABM International,Specialty Chemicals,MI,,yahoo
+ABMKNO,ABM Knowledgeware,Software - Application,MI,,yahoo
+ABREL,Aditya Birla Real Estate,Real Estate Services,SC,,yahoo
+ABSLAMC,Aditya Birla Sun Life AMC,Asset Management,SC,,yahoo
+ACC,ACC,Building Materials,SC,,yahoo
+ACCELYA,Accelya Solutions India,Information Technology Services,MI,,yahoo
+ACCURACY,Accuracy Shipping,Integrated Freight & Logistics,MI,,yahoo
+ACE,Action Construction Equipment,Farm & Heavy Construction Machinery,SC,,yahoo
+ACEINTEG,Ace Integrated Solutions,Staffing & Employment Services,MI,,yahoo
+ACEVECTOR,AceVector,Internet Retail,MI,,yahoo
+ACGL,Automobile Corporation of Goa,Auto Parts,MI,,yahoo
+ACI,Archean Chemical Industries,Chemicals,MI,,yahoo
+ACL,Andhra Cements,Building Materials,MI,,yahoo
+ACMESOLAR,Acme Solar Holdings,Utilities - Renewable,SC,,yahoo
+ACSTECH,ACS Technologies,Information Technology Services,MI,,yahoo
+ACUTAAS,Acutaas Chemicals,Specialty Chemicals,SC,,yahoo
+ADANIENSOL,Adani Energy Solutions,Utilities - Independent Power Producers,LC,,yahoo
+ADANIENT,Adani Enterprises,Thermal Coal,LC,,yahoo
+ADANIGREEN,Adani Green Energy,Utilities - Renewable,LC,,yahoo
+ADANIPORTS,Adani Ports and Special Economic Zone,Marine Shipping,LC,,yahoo
+ADANIPOWER,Adani Power,Utilities - Independent Power Producers,LC,,yahoo
+ADDIND,Addi Industries,Textile Manufacturing,MI,,yahoo
+ADFFOODS,ADF Foods,Packaged Foods,MI,,yahoo
+ADL,Archidply Decor,"Furnishings, Fixtures & Appliances",MI,,yahoo
+ADOR,Ador Welding,Specialty Industrial Machinery,MI,,yahoo
+ADROITIND,Adroit Industries (India),Auto Parts,MI,,yahoo
+ADROITINFO,Adroit Infotech,Information Technology Services,MI,,yahoo
+ADSL,Allied Digital Services,Information Technology Services,MI,,yahoo
+ADVAIT,Advait Energy Transitions,Specialty Industrial Machinery,MI,,yahoo
+ADVANCE,Advance Agrolife,Agricultural Inputs,MI,,yahoo
+ADVANIHOTR,Advani Hotels & Resorts (India),Lodging,MI,,yahoo
+ADVENTHTL,Advent Hotels International,Lodging,MI,,yahoo
+ADVENZYMES,Advanced Enzyme Technologies,Specialty Chemicals,MI,,yahoo
+ADVIKCA,Advik Capital,Credit Services,MI,,yahoo
+AEGISLOG,Aegis Logistics,Oil & Gas Refining & Marketing,SC,,yahoo
+AEGISVOPAK,Aegis Vopak Terminals,Oil & Gas Equipment & Services,SC,,yahoo
+AEPL,Artemis Electricals and Projects,Electrical Equipment & Parts,MI,,yahoo
+AEQUS,Aequs,Aerospace & Defense,MI,,yahoo
+AEROENTER,Aeroflex Enterprises,Specialty Industrial Machinery,MI,,yahoo
+AEROFLEX,Aeroflex Industries,Metal Fabrication,MI,,yahoo
+AERONEU,Aeroflex Neu,Packaging & Containers,MI,,yahoo
+AEROPLANE,Amir Chand Jagdish Kumar (Exports),Farm Products,MI,,yahoo
+AETHER,Aether Industries,Specialty Chemicals,SC,,yahoo
+AFCONS,Afcons Infrastructure,Engineering & Construction,SC,,yahoo
+AFFLE,Affle 3i,Advertising Agencies,SC,,yahoo
+AFFORDABLE,Affordable Robotic & Automation,Specialty Industrial Machinery,MI,,yahoo
+AFIL,Akme Fintrade (India),Credit Services,MI,,yahoo
+AFSL,Abans Financial Services,Capital Markets,MI,,yahoo
+AGARIND,Agarwal Industrial Corporation,Specialty Chemicals,MI,,yahoo
+AGARWALEYE,Dr. Agarwal's Health Care,Medical Instruments & Supplies,MI,,yahoo
+AGASTYAEN,Agastya Energy and Infrastructure,Chemicals,MI,,yahoo
+AGI,AGI Greenpac,Packaging & Containers,MI,,yahoo
+AGIIL,Agi Infra,Real Estate - Development,MI,,yahoo
+AGL,Allcargo Global,Integrated Freight & Logistics,MI,,yahoo
+AGOL,Ashapuri Gold Ornament,Luxury Goods,MI,,yahoo
+AGRITECH,Agri-Tech (India),Farm Products,MI,,yahoo
+AGROPHOS,Agro Phos India,Agricultural Inputs,MI,,yahoo
+AHCL,Anlon Healthcare,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+AHLADA,Ahlada Engineers,Building Products & Equipment,MI,,yahoo
+AHLEAST,Asian Hotels (East),Lodging,MI,,yahoo
+AHLUCONT,Ahluwalia Contracts (India),Engineering & Construction,MI,,yahoo
+AHLWEST,Asian Hotels (West),Lodging,MI,,yahoo
+AIAENG,AIA Engineering,Specialty Industrial Machinery,MC,,yahoo
+AIIL,Authum Investment & Infrastructure,Capital Markets,MC,,yahoo
+AIRAN,Airan,Information Technology Services,MI,,yahoo
+AIROLAM,Airo Lam limited,"Furnishings, Fixtures & Appliances",MI,,yahoo
+AJANTPHARM,Ajanta Pharma,Drug Manufacturers - Specialty & Generic,MC,,yahoo
+AJAXENGG,Ajax Engineering,Farm & Heavy Construction Machinery,MI,,yahoo
+AJMERA,Ajmera Realty & Infra India,Real Estate - Development,MI,,yahoo
+AJOONI,Ajooni Biotech,Packaged Foods,MI,,yahoo
+AKASH,Akash Infra-Projects,Engineering & Construction,MI,,yahoo
+AKCAPIT,AK Capital Services,Capital Markets,MI,,yahoo
+AKG,Akg Exim,Industrial Distribution,MI,,yahoo
+AKI,AKI India,Footwear & Accessories,MI,,yahoo
+AKSHAR,Akshar Spintex,Textile Manufacturing,MI,,yahoo
+AKSHARCHEM,AksharChem India,Specialty Chemicals,MI,,yahoo
+AKSHOPTFBR,Aksh Optifibre,Communication Equipment,MI,,yahoo
+AKUMS,Akums Drugs and Pharmaceuticals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+ALANKIT,Alankit,Information Technology Services,MI,,yahoo
+ALBERTDAVD,Albert David,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+ALEMBICLTD,Alembic,Real Estate - Development,MI,,yahoo
+ALFREDHE,Alfred Herbert India,Specialty Industrial Machinery,MI,,yahoo
+ALGOQUANT,Algoquant Fintech,Capital Markets,MI,,yahoo
+ALICON,Alicon Castalloy,Metal Fabrication,MI,,yahoo
+ALIVUS,Alivus Life Sciences,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+ALKALI,Alkali Metals,Specialty Chemicals,MI,,yahoo
+ALKEM,Alkem Laboratories,Drug Manufacturers - Specialty & Generic,MC,,yahoo
+ALKYLAMINE,Alkyl Amines Chemicals,Specialty Chemicals,MI,,yahoo
+ALLCARGO,Allcargo Logistics,Integrated Freight & Logistics,MI,,yahoo
+ALLDIGI,Alldigi Tech,Specialty Business Services,MI,,yahoo
+ALLTIME,All Time Plastics,Household & Personal Products,MI,,yahoo
+ALMONDZ,Almondz Global Securities,Capital Markets,MI,,yahoo
+ALOKINDS,Alok Industries,Textile Manufacturing,MI,,yahoo
+ALPA,Alpa Laboratories,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+ALPHAGEO,Alphageo (India),Oil & Gas Equipment & Services,MI,,yahoo
+ALPINETEX,Alpine Texworld,Textile Manufacturing,MI,,yahoo
+ALUFLUOR,Alufluoride,Chemicals,MI,,yahoo
+AMAGI,Amagi Media Labs,Software - Application,MI,,yahoo
+AMAL,Amal,Chemicals,MI,,yahoo
+AMANTA,Amanta Healthcare,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+AMARJOTHI,Amarjothi Spinning Mills,Textile Manufacturing,MI,,yahoo
+AMBALALSA,Ambalal Sarabhai Enterprises,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+AMBER,Amber Enterprises India,"Furnishings, Fixtures & Appliances",SC,,yahoo
+AMBICAAGAR,Ambica Agarbathies & Aroma industries,Household & Personal Products,MI,,yahoo
+AMBIKCO,Ambika Cotton Mills,Textile Manufacturing,MI,,yahoo
+AMBUJACEM,Ambuja Cements,Building Materials,LC,,yahoo
+AMDIND,AMD Industries,Packaging & Containers,MI,,yahoo
+AMJLAND,Amj Land Holdings,Real Estate - Development,MI,,yahoo
+AMNPLST,Amines & Plasticizers,Chemicals,MI,,yahoo
+AMRUTANJAN,Amrutanjan Health Care,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+ANANDRATHI,Anand Rathi Wealth,Asset Management,SC,,yahoo
+ANANTRAJ,Anant Raj,Real Estate - Development,SC,,yahoo
+ANDHRAPAP,ANDHRA PAPER LIMITED,Paper & Paper Products,MI,,yahoo
+ANDHRSUGAR,The Andhra Sugars,Chemicals,MI,,yahoo
+ANDREWYU,Andrew Yule & Company,Farm Products,MI,,yahoo
+ANGELONE,Angel One,Capital Markets,SC,,yahoo
+ANIKINDS,Anik Industries,Food Distribution,MI,,yahoo
+ANMOL,Anmol India,Thermal Coal,MI,,yahoo
+ANNAPURNA,Annapurna Swadisht,Packaged Foods,MI,,yahoo
+ANNU,Annu Projects,Infrastructure Operations,MI,,yahoo
+ANSALBU,Ansal Buildwell,Real Estate - Development,MI,,yahoo
+ANTELOPUS,Antelopus Selan Energy,Oil & Gas E&P,MI,,yahoo
+ANTGRAPHIC,Antarctica,Packaging & Containers,MI,,yahoo
+ANTHEM,Anthem Biosciences,Biotechnology,MC,,yahoo
+ANUHPHR,Anuh Pharma,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+ANUP,The Anup Engineering,Specialty Industrial Machinery,MI,,yahoo
+ANURAS,Anupam Rasayan India,Specialty Chemicals,SC,,yahoo
+AONESTEELS,A-One Steels India,Steel,MI,,yahoo
+APARINDS,Apar Industries,Electrical Equipment & Parts,MC,,yahoo
+APCL,Anjani Portland Cement,Building Materials,MI,,yahoo
+APCOTEXIND,Apcotex Industries,Specialty Chemicals,MI,,yahoo
+APEX,Apex Frozen Foods,Farm Products,MI,,yahoo
+APLAPOLLO,APL Apollo Tubes,Steel,MC,,yahoo
+APLLTD,Alembic Pharmaceuticals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+APOLLO,Apollo Micro Systems,Aerospace & Defense,MI,,yahoo
+APOLLOHOSP,Apollo Hospitals Enterprise,Medical Care Facilities,LC,,yahoo
+APOLLOPIPE,Apollo Pipes,Building Products & Equipment,MI,,yahoo
+APOLLOTYRE,Apollo Tyres,Auto Parts,SC,,yahoo
+APOLSINHOT,Apollo Sindoori Hotels,Specialty Business Services,MI,,yahoo
+APOORVA,Apoorva Leasing Finance and Investment Company,Capital Markets,MI,,yahoo
+APTECHT,Aptech,Education & Training Services,MI,,yahoo
+APTUS,Aptus Value Housing Finance India,Mortgage Finance,SC,,yahoo
+AQYLON,Aqylon Nexus,Broadcasting,MI,,yahoo
+ARCHIDPLY,Archidply Industries,Lumber & Wood Production,MI,,yahoo
+ARCHIES,Archies,Specialty Retail,MI,,yahoo
+ARCIL,Asset Reconstruction Company (India),Asset Management,MI,,yahoo
+ARCL,ARCL Organics,Specialty Chemicals,MI,,yahoo
+ARDEE,Ardee Industries,Metal Fabrication,MI,,yahoo
+ARE&M,Amara Raja Energy & Mobility,Electrical Equipment & Parts,SC,,yahoo
+ARENTERP,Rajdarshan Industries,Other Industrial Metals & Mining,MI,,yahoo
+ARFIN,Arfin India,Aluminum,MI,,yahoo
+ARHAM,Arham Technologies,Consumer Electronics,MI,,yahoo
+ARIES,Aries Agro,Agricultural Inputs,MI,,yahoo
+ARIHANT,Arihant Foundations & Housing,Real Estate - Development,MI,,yahoo
+ARIHANTCAP,Arihant Capital Markets,Capital Markets,MI,,yahoo
+ARIHANTSUP,Arihant Superstructures,Real Estate - Development,MI,,yahoo
+ARIS,Arisinfra Solutions,Engineering & Construction,MI,,yahoo
+ARKADE,Arkade Developers,Real Estate - Development,MI,,yahoo
+ARMANFIN,Arman Financial Services,Credit Services,MI,,yahoo
+ARMEE,ArMee Infotech,Information Technology Services,MI,,yahoo
+AROGRANITE,Aro Granite Industries,Building Products & Equipment,MI,,yahoo
+ARROWGREEN,Arrow Greentech,Packaging & Containers,MI,,yahoo
+ARSSBL,Anand Rathi Share and Stock Brokers,Financial Conglomerates,MI,,yahoo
+ARTEMISMED,Artemis Medicare Services,Unclassified,MI,,nse
+ARTNIRMAN,Art Nirman,Real Estate - Development,MI,,yahoo
+ARVEE,Arvee Laboratories (India),Specialty Chemicals,MI,,yahoo
+ARVIND,Arvind,Textile Manufacturing,MI,,yahoo
+ARVINDFASN,Arvind Fashions,Apparel Retail,MI,,yahoo
+ARVSMART,Arvind SmartSpaces,Real Estate - Development,MI,,yahoo
+ARYAMAN,Aryaman Financial Services,Capital Markets,MI,,yahoo
+ASAHIINDIA,Asahi India Glass,Auto Parts,SC,,yahoo
+ASAHISONG,Asahi Songwon Colors,Specialty Chemicals,MI,,yahoo
+ASAL,Automotive Stampings and Assemblies,Auto Parts,MI,,yahoo
+ASALCBR,Associated Alcohols & Breweries,Beverages - Wineries & Distilleries,MI,,yahoo
+ASHAPURMIN,Ashapura Minechem,Other Industrial Metals & Mining,MI,,yahoo
+ASHIANA,Ashiana Housing,Real Estate - Development,MI,,yahoo
+ASHIKAG,Ashika Global Securities,Credit Services,MI,,yahoo
+ASHIMASYN,Ashima,Real Estate - Development,MI,,yahoo
+ASHOKA,Ashoka Buildcon,Engineering & Construction,MI,,yahoo
+ASHOKAMET,Ashoka Metcast,Steel,MI,,yahoo
+ASHOKLEY,Ashok Leyland,Farm & Heavy Construction Machinery,MC,,yahoo
+ASIANENE,Asian Energy Services,Oil & Gas Equipment & Services,MI,,yahoo
+ASIANHOTNR,Asian Hotels (North),Lodging,MI,,yahoo
+ASIANPAINT,Asian Paints,Specialty Chemicals,LC,,yahoo
+ASIANTILES,Asian Granito India,Building Products & Equipment,MI,,yahoo
+ASIANTNE,Asian Tea & Exports,Food Distribution,MI,,yahoo
+ASKAUTOLTD,ASK Automotive,Auto Parts,MI,,yahoo
+ASMS,Avio Smart Market Stack,Information Technology Services,MI,,yahoo
+ASPINWALL,Aspinwall and Company,Farm Products,MI,,yahoo
+ASSAMENT,Assam Entrade,Capital Markets,MI,,yahoo
+ASTAR,Asian Star Company,Luxury Goods,MI,,yahoo
+ASTEC,Astec LifeSciences,Agricultural Inputs,MI,,yahoo
+ASTERDM,Aster DM Quality Care,Medical Care Facilities,MC,,yahoo
+ASTRAL,Astral,Building Products & Equipment,MC,,yahoo
+ASTRAMICRO,Astra Microwave Products,Communication Equipment,MI,,yahoo
+ASTRAZEN,AstraZeneca Pharma India,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+ATALREAL,Atal Realtech,Engineering & Construction,MI,,yahoo
+ATAM,Atam Valves,Specialty Industrial Machinery,MI,,yahoo
+ATGL,Adani Total Gas,Utilities - Regulated Gas,MC,,yahoo
+ATHERENERG,Ather Energy,Auto Manufacturers,SC,,yahoo
+ATL,Allcargo Terminals,Integrated Freight & Logistics,MI,,yahoo
+ATLANTAA,ATLANTAA LIMITED,Infrastructure Operations,MI,,yahoo
+ATLANTAELE,Atlanta Electricals,Electrical Equipment & Parts,MI,,yahoo
+ATLASCYCLE,Atlas Cycles (Haryana),Leisure,MI,,yahoo
+ATUL,Atul,Specialty Chemicals,SC,,yahoo
+ATULAUTO,Atul Auto,Auto Manufacturers,MI,,yahoo
+AUBANK,AU Small Finance Bank,Banks - Regional,MC,,yahoo
+AUGMONT,Augmont Enterprises,Luxury Goods,MI,,yahoo
+AURIONPRO,Aurionpro Solutions,Software - Application,MI,,yahoo
+AUROPHARMA,Aurobindo Pharma,Drug Manufacturers - Specialty & Generic,MC,,yahoo
+AURUM,Aurum PropTech,Real Estate Services,MI,,yahoo
+AURUS,AURUS GEM CORPORATION LIMITED,Luxury Goods,MI,,yahoo
+AUSOMENT,Ausom Enterprise,Capital Markets,MI,,yahoo
+AUSTENG,Austin Engineering Company,Tools & Accessories,MI,,yahoo
+AUTOAXLES,Automotive Axles,Auto Parts,MI,,yahoo
+AUTOIND,Autoline Industries,Auto Parts,MI,,yahoo
+AVADHSUGAR,Avadh Sugar & Energy,Confectioners,MI,,yahoo
+AVALON,Avalon Technologies,Electronic Components,MI,,yahoo
+AVANCE,Avance Technologies,Information Technology Services,MI,,yahoo
+AVANTEL,Avantel,Communication Equipment,MI,,yahoo
+AVANTIFEED,Avanti Feeds,Packaged Foods,SC,,yahoo
+AVG,AVG Logistics,Integrated Freight & Logistics,MI,,yahoo
+AVL,Aditya Vision,Specialty Retail,MI,,yahoo
+AVONMORE,Avonmore Capital & Management Services,Capital Markets,MI,,yahoo
+AVROIND,AVRO INDIA LIMITED,"Furnishings, Fixtures & Appliances",MI,,yahoo
+AVTNPL,AVT Natural Products,Specialty Chemicals,MI,,yahoo
+AWFIS,Awfis Space Solutions,Rental & Leasing Services,MI,,yahoo
+AWHCL,Antony Waste Handling Cell,Waste Management,MI,,yahoo
+AWL,AWL Agri Business,Packaged Foods,SC,,yahoo
+AXISBANK,Axis Bank,Banks - Regional,LC,,yahoo
+AXISCADES,AXISCADES Technologies,Engineering & Construction,MI,,yahoo
+AXITA,Axita Cotton,Textile Manufacturing,MI,,yahoo
+AXTEL,Axtel Industries,Specialty Industrial Machinery,MI,,yahoo
+AYE,Aye Finance,Credit Services,MI,,yahoo
+AYMSYNTEX,AYM Syntex,Textile Manufacturing,MI,,yahoo
+AZAD,Azad Engineering,Specialty Industrial Machinery,SC,,yahoo
+AZADIND,Azad India Mobility,Steel,MI,,yahoo
+BAFNAPH,Bafna Pharmaceuticals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+BAGFILMS,B.A.G Films and Media,Broadcasting,MI,,yahoo
+BAHETI,Baheti Recycling Industries,Aluminum,MI,,yahoo
+BAIDFIN,Baid Finserv,Credit Services,MI,,yahoo
+BAJAJ-AUTO,Bajaj Auto,Auto Manufacturers,LC,,yahoo
+BAJAJCON,Bajaj Consumer Care,Household & Personal Products,MI,,yahoo
+BAJAJELEC,Bajaj Electricals,"Furnishings, Fixtures & Appliances",MI,,yahoo
+BAJAJFINSV,Bajaj Finserv,Financial Conglomerates,LC,,yahoo
+BAJAJHCARE,Bajaj Healthcare,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+BAJAJHFL,Bajaj Housing Finance,Mortgage Finance,MC,,yahoo
+BAJAJHIND,Bajaj Hindusthan Sugar,Confectioners,MI,,yahoo
+BAJAJHLDNG,Bajaj Holdings & Investment,Asset Management,LC,,yahoo
+BAJAJINDEF,Indef Manufacturing,Farm & Heavy Construction Machinery,MI,,yahoo
+BAJAJST,Bajaj Steel Industries,Specialty Industrial Machinery,MI,,yahoo
+BAJEL,Bajel Projects,Utilities - Regulated Electric,MI,,yahoo
+BAJFINANCE,Bajaj Finance,Credit Services,LC,,yahoo
+BALAJEE,Shree Tirupati Balajee Agro Trading Company,Packaging & Containers,MI,,yahoo
+BALAJITELE,Balaji Telefilms,Entertainment,MI,,yahoo
+BALAMINES,Balaji Amines,Specialty Chemicals,MI,,yahoo
+BALAXI,BALAXI PHARMACEUTICALS LIMITED,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+BALKRISHNA,Balkrishna Paper Mills,Packaging & Containers,MI,,yahoo
+BALKRISIND,Balkrishna Industries,Auto Parts,MC,,yahoo
+BALMLAWRIE,Balmer Lawrie & Company,Conglomerates,MI,,yahoo
+BALPHARMA,Bal Pharma,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+BALRAMCHIN,Balrampur Chini Mills,Confectioners,SC,,yahoo
+BALUFORGE,Balu Forge Industries,Metal Fabrication,MI,,yahoo
+BANARBEADS,Banaras Beads,Footwear & Accessories,MI,,yahoo
+BANARISUG,Bannari Amman Sugars,Confectioners,MI,,yahoo
+BANCOINDIA,Banco Products (I),Auto Parts,MI,,yahoo
+BANDHANBNK,Bandhan Bank,Banks - Regional,SC,,yahoo
+BANG,Bang Overseas,Apparel Manufacturing,MI,,yahoo
+BANKA,Banka BioLoo,Pollution & Treatment Controls,MI,,yahoo
+BANKBARODA,Bank of Baroda,Banks - Regional,LC,,yahoo
+BANKINDIA,Bank of India,Banks - Regional,MC,,yahoo
+BANSALWIRE,Bansal Wire Industries,Steel,MI,,yahoo
+BANSWRAS,Banswara Syntex,Textile Manufacturing,MI,,yahoo
+BASF,BASF India,Specialty Chemicals,MI,,yahoo
+BASML,Bannari Amman Spinning Mills,Textile Manufacturing,MI,,yahoo
+BATAINDIA,Bata India,Footwear & Accessories,SC,,yahoo
+BATLIBOI,Batliboi,Specialty Industrial Machinery,MI,,yahoo
+BAYERCROP,Bayer Cropscience,Agricultural Inputs,MI,,yahoo
+BBL,Bharat Bijlee,Electrical Equipment & Parts,MI,,yahoo
+BBOX,Black Box,Software - Application,SC,,yahoo
+BBTC,The Bombay Burmah Trading Corporation,Packaged Foods,MI,,yahoo
+BBTCL,B&B Triplewall Containers,Packaging & Containers,MI,,yahoo
+BCG,Brightcom Group,Advertising Agencies,MI,,yahoo
+BCLIND,Bcl Industries,Beverages - Wineries & Distilleries,MI,,yahoo
+BCONCEPTS,Brand Concepts,Footwear & Accessories,MI,,yahoo
+BCPL,BCPL Railway Infrastructure,Infrastructure Operations,MI,,yahoo
+BCSSL,Bombay Coated and Special Steels,Metal Fabrication,MI,,yahoo
+BDL,Bharat Dynamics,Aerospace & Defense,MC,,yahoo
+BEARDSELL,Beardsell,Building Products & Equipment,MI,,yahoo
+BECTORFOOD,Mrs. Bectors Food Specialities,Packaged Foods,MI,,yahoo
+BEDMUTHA,Bedmutha Industries,Steel,MI,,yahoo
+BEEKAY,Beekay Steel Industries,Steel,MI,,yahoo
+BEL,Bharat Electronics,Aerospace & Defense,LC,,yahoo
+BELDING,Belding India,Aluminum,MI,,yahoo
+BELLACASA,Bella Casa Fashion & Retail,Textile Manufacturing,MI,,yahoo
+BELRISE,Belrise Industries,Auto Parts,SC,,yahoo
+BEML,BEML,Conglomerates,SC,,yahoo
+BENARAS,Benares Hotels,Lodging,MI,,yahoo
+BENGALASM,Bengal & Assam Company,Auto Parts,MI,,yahoo
+BEPL,Bhansali Engineering Polymers,Chemicals,MI,,yahoo
+BERGEPAINT,Berger Paints (I),Specialty Chemicals,MC,,yahoo
+BESTAGRO,Best Agrolife,Agricultural Inputs,MI,,yahoo
+BETA,Beta Drugs,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+BFINVEST,BF Investment,Asset Management,MI,,yahoo
+BFUTILITIE,BF Utilities,Infrastructure Operations,MI,,yahoo
+BGRENERGY,BGR Energy Systems,Engineering & Construction,MI,,yahoo
+BHAGCHEM,Bhagiradha Chemicals & Industries,Agricultural Inputs,MI,,yahoo
+BHAGERIA,Bhageria Industries,Specialty Chemicals,MI,,yahoo
+BHAGYANGR,Bhagyanagar India,Copper,MI,,yahoo
+BHANDARI,Bhandari Hosiery Exports,Apparel Manufacturing,MI,,yahoo
+BHARATCOAL,Bharat Coking Coal,Coking Coal,SC,,yahoo
+BHARATFORG,Bharat Forge,Metal Fabrication,MC,,yahoo
+BHARATGEAR,Bharat Gears,Auto Parts,MI,,yahoo
+BHARATRAS,Bharat Rasayan,Agricultural Inputs,MI,,yahoo
+BHARATSE,Bharat Seats,Auto Parts,MI,,yahoo
+BHARATWIRE,Bharat Wire Ropes,Steel,MI,,yahoo
+BHARTIARTL,Bharti Airtel,Telecom Services,LC,,yahoo
+BHARTIHEXA,Bharti Hexacom,Telecom Services,MC,,yahoo
+BHEL,Bharat Heavy Electricals,Specialty Industrial Machinery,MC,,yahoo
+BI,Bilcare,Packaging & Containers,MI,,yahoo
+BIGBLOC,Bigbloc Construction,Building Products & Equipment,MI,,yahoo
+BIKAJI,Bikaji Foods International,Packaged Foods,MI,,yahoo
+BIL,Bhartiya International,Footwear & Accessories,MI,,yahoo
+BILVYAPAR,BIL VYAPAR LIMITED,Specialty Chemicals,MI,,yahoo
+BIMETAL,Bimetal Bearings,Auto Parts,MI,,yahoo
+BIOCON,Biocon,Biotechnology,MC,,yahoo
+BIOFILCHEM,Biofil Chemicals & Pharmaceuticals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+BIRLACABLE,Birla Cable,Communication Equipment,MI,,yahoo
+BIRLACORPN,Birla Corporation,Building Materials,MI,,yahoo
+BIRLAMONEY,Aditya Birla Money,Capital Markets,MI,,yahoo
+BIRLANU,BirlaNu,Building Products & Equipment,MI,,yahoo
+BIRLAPREC,Birla Precision Technologies,Tools & Accessories,MI,,yahoo
+BLACKBUCK,BLACKBUCK LIMITED,Software - Application,MI,,yahoo
+BLACKROSE,Black Rose Inds.,Specialty Chemicals,MI,,yahoo
+BLAL,BEML Land Assets,Shell Companies,MI,,yahoo
+BLBLIMITED,BLB,Capital Markets,MI,,yahoo
+BLEL,Behari Lal Engineering,Steel,MI,,yahoo
+BLIL,Balmer Lawrie Investments,Conglomerates,MI,,yahoo
+BLISSGVS,Bliss GVS Pharma,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+BLKASHYAP,B. L. Kashyap and Sons,Engineering & Construction,MI,,yahoo
+BLS,BLS International Services,Specialty Business Services,SC,,yahoo
+BLSE,BLS E-Services,Specialty Business Services,MI,,yahoo
+BLSPOLY,BLS Polymers,Electrical Equipment & Parts,MI,,yahoo
+BLUECHIP,Blue Chip India,Capital Markets,MI,,yahoo
+BLUECLOUDS,Blue Cloud Softech Solutions,Information Technology Services,MI,,yahoo
+BLUECOAST,Blue Coast Hotels,Lodging,MI,,yahoo
+BLUEDART,Blue Dart Express,Integrated Freight & Logistics,MI,,yahoo
+BLUEJET,Blue Jet Healthcare,Biotechnology,MI,,yahoo
+BLUESTARCO,Blue Star,Building Products & Equipment,MC,,yahoo
+BLUESTONE,BlueStone Jewellery and Lifestyle,Luxury Goods,MI,,yahoo
+BLUSPRING,Bluspring Enterprises,Specialty Business Services,MI,,yahoo
+BMWVENTLTD,BMW Ventures,Steel,MI,,yahoo
+BNAGROCHEM,BN Agrochem,Packaged Foods,MI,,yahoo
+BNALTD,B & A,Packaged Foods,MI,,yahoo
+BODALCHEM,Bodal Chemicals,Specialty Chemicals,MI,,yahoo
+BOHRAIND,Bohra Industries,Agricultural Inputs,MI,,yahoo
+BOMDYEING,Bombay Dyeing & Mfg Company,Textile Manufacturing,MI,,yahoo
+BONDADA,Bondada Engineering,Engineering & Construction,MI,,yahoo
+BONFIG,Bonfiglioli Transmissions,Specialty Industrial Machinery,MI,,yahoo
+BONLON,Bonlon Industries,Other Industrial Metals & Mining,MI,,yahoo
+BORANA,Borana Weaves,Textile Manufacturing,MI,,yahoo
+BOROLTD,Borosil,"Furnishings, Fixtures & Appliances",MI,,yahoo
+BORORENEW,BOROSIL RENEWABLES LIMITED,Solar,MI,,yahoo
+BOROSCI,Borosil Scientific,Packaging & Containers,MI,,yahoo
+BOSCH-HCIL,BOSCH HOME COMFORT INDIA LIMITED,"Furnishings, Fixtures & Appliances",MI,,yahoo
+BOSCHLTD,Bosch,Auto Parts,LC,,yahoo
+BPCL,Bharat Petroleum Corporation,Oil & Gas Refining & Marketing,LC,,yahoo
+BPL,BPL,Consumer Electronics,MI,,yahoo
+BPLPHARMA,Bharat Parenterals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+BRAHMINFRA,Brahmaputra Infrastructure,Engineering & Construction,MI,,yahoo
+BRIGADE,Brigade Enterprises,Real Estate - Development,SC,,yahoo
+BRIGHOTEL,Brigade Hotel Ventures,Lodging,MI,,yahoo
+BRIGHTBR,Bright Brothers,Specialty Chemicals,MI,,yahoo
+BRIGHTOUTD,Bright Outdoor Media,Unclassified,MI,,nse
+BRITANNIA,Britannia Industries,Packaged Foods,LC,,yahoo
+BRNL,Bharat Road Network,Infrastructure Operations,MI,,yahoo
+BROOKS,Brooks Laboratories,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+BSE,BSE,Financial Data & Stock Exchanges,LC,,yahoo
+BSHSL,Bombay Super Hybrid Seeds,Agricultural Inputs,MI,,yahoo
+BSL,BSL,Textile Manufacturing,MI,,yahoo
+BSOFT,BIRLASOFT LIMITED,Information Technology Services,SC,,yahoo
+BTML,Bodhi Tree Multimedia,Entertainment,MI,,yahoo
+BTTL,Bhilwara Technical Textiles,Textile Manufacturing,MI,,yahoo
+BUILDPRO,Shankara Buildpro,Home Improvement Retail,MI,,yahoo
+BURNPUR,Burnpur Cement,Building Materials,MI,,yahoo
+BUTTERFLY,Butterfly Gandhimathi Appliances,"Furnishings, Fixtures & Appliances",MI,,yahoo
+BVCL,Barak Valley Cements,Building Materials,MI,,yahoo
+BYKE,The Byke Hospitality,Lodging,MI,,yahoo
+CALSOFT,California Software Company,Software - Application,MI,,yahoo
+CAMLINFINE,Camlin Fine Sciences,Specialty Chemicals,MI,,yahoo
+CAMPUS,Campus Activewear,Footwear & Accessories,MI,,yahoo
+CAMS,Computer Age Management Services,Information Technology Services,SC,,yahoo
+CANBK,Canara Bank,Banks - Regional,LC,,yahoo
+CANFINHOME,Can Fin Homes,Mortgage Finance,SC,,yahoo
+CANHLIFE,Canara HSBC Life Insurance Company,Insurance - Life,SC,,yahoo
+CANTABIL,Cantabil Retail India,Apparel Manufacturing,MI,,yahoo
+CAPACITE,Capacit'e Infraprojects,Engineering & Construction,MI,,yahoo
+CAPILLARY,Capillary Technologies India,Software - Application,MI,,yahoo
+CAPITALSFB,Capital Small Finance Bank,Banks - Regional,MI,,yahoo
+CAPLIPOINT,Caplin Point Laboratories,Drug Manufacturers - Specialty & Generic,SC,,yahoo
+CAPTRUST,Capital Trust,Credit Services,MI,,yahoo
+CARBORUNIV,Carborundum Universal,Tools & Accessories,SC,,yahoo
+CARERATING,CARE Ratings,Financial Data & Stock Exchanges,MI,,yahoo
+CARRARO,Carraro India,Auto Parts,MI,,yahoo
+CARTRADE,Cartrade Tech,Auto & Truck Dealerships,SC,,yahoo
+CARYSIL,CARYSIL LIMITED,"Furnishings, Fixtures & Appliances",MI,,yahoo
+CASTROLIND,Castrol India,Oil & Gas Refining & Marketing,SC,,yahoo
+CCAVENUE,AvenuesAI,Software - Infrastructure,MI,,yahoo
+CCCL,Consolidated Construction Consortium,Engineering & Construction,MI,,yahoo
+CCHHL,Country Club Hospitality & Holidays,Lodging,MI,,yahoo
+CCL,CCL Products (India),Packaged Foods,SC,,yahoo
+CDSL,Central Depository Services (India),Capital Markets,SC,,yahoo
+CEATLTD,CEAT,Auto Parts,SC,,yahoo
+CEIGALL,Ceigall India,Engineering & Construction,MI,,yahoo
+CEINSYS,Ceinsys Tech,Engineering & Construction,MI,,yahoo
+CELEBRITY,Celebrity Fashions,Apparel Manufacturing,MI,,yahoo
+CELLO,Cello World,"Furnishings, Fixtures & Appliances",MI,,yahoo
+CEMPRO,Cemindia Projects,Engineering & Construction,SC,,yahoo
+CENTENKA,Century Enka,Textile Manufacturing,MI,,yahoo
+CENTEXT,Century Extrusions,Aluminum,MI,,yahoo
+CENTRALBK,Central Bank of India,Banks - Regional,SC,,yahoo
+CENTRUM,Centrum Capital,Financial Conglomerates,MI,,yahoo
+CENTUM,Centum Electronics,Electronic Components,MI,,yahoo
+CENTURYPLY,Century Plyboards (India),Lumber & Wood Production,MI,,yahoo
+CERA,Cera Sanitaryware,Building Products & Equipment,MI,,yahoo
+CESC,CESC,Utilities - Regulated Electric,SC,,yahoo
+CEWATER,Concord Enviro Systems,Utilities - Regulated Water,MI,,yahoo
+CFEL,Confidence Futuristic Energetech,Utilities - Regulated Gas,MI,,yahoo
+CGCL,Capri Global Capital,Credit Services,SC,,yahoo
+CGPOWER,CG Power and Industrial Solutions,Electrical Equipment & Parts,LC,,yahoo
+CGVAK,CG Vak Software & Exports,Information Technology Services,MI,,yahoo
+CHALET,Chalet Hotels,Lodging,MI,,yahoo
+CHAMBLFERT,Chambal Fertilizers & Chemicals,Agricultural Inputs,SC,,yahoo
+CHEMBOND,Chembond Material Technologies,Specialty Chemicals,MI,,yahoo
+CHEMBONDCH,Chembond Chemicals,Specialty Chemicals,MI,,yahoo
+CHEMCON,Chemcon Speciality Chemicals,Specialty Chemicals,MI,,yahoo
+CHEMCRUX,Chemcrux Enterprises,Specialty Chemicals,MI,,yahoo
+CHEMFAB,Chemfab Alkalis,Specialty Chemicals,MI,,yahoo
+CHEMPLASTS,Chemplast Sanmar,Chemicals,MI,,yahoo
+CHENNPETRO,Chennai Petroleum Corporation,Oil & Gas Refining & Marketing,SC,,yahoo
+CHEVIOT,Cheviot Company,Textile Manufacturing,MI,,yahoo
+CHOICEIN,Choice International,Capital Markets,SC,,yahoo
+CHOLAFIN,Cholamandalam Investment and Finance Company,Credit Services,LC,,yahoo
+CHOLAHLDNG,Cholamandalam Financial Holdings,Credit Services,SC,,yahoo
+CIEINDIA,CIE Automotive India,Auto Parts,SC,,yahoo
+CIFL,Capital India Finance,Credit Services,MI,,yahoo
+CINELINE,Cineline India,Entertainment,MI,,yahoo
+CINEVISTA,Cinevista,Entertainment,MI,,yahoo
+CIPLA,Cipla,Drug Manufacturers - Specialty & Generic,LC,,yahoo
+CLEAN,Clean Science and Technology,Specialty Chemicals,SC,,yahoo
+CLEANMAX,Clean Max Enviro Energy Solutions,Utilities - Renewable,SC,,yahoo
+CLEDUCATE,CL Educate,Education & Training Services,MI,,yahoo
+CLSEL,Chaman Lal Setia Exports,Packaged Foods,MI,,yahoo
+CMLL,Caliber Mining and Logistics,Thermal Coal,MI,,yahoo
+CMPDI,Central Mine Planning & Design Institute,Other Industrial Metals & Mining,SC,,yahoo
+CMRGREEN,CMR Green Technologies,Aluminum,MI,,yahoo
+CMSINFO,CMS Info Systems,Specialty Business Services,MI,,yahoo
+CNL,Creative Newtech,Electronics & Computer Distribution,MI,,yahoo
+COALINDIA,Coal India,Thermal Coal,LC,,yahoo
+COASTCORP,Coastal Corporation,Packaged Foods,MI,,yahoo
+COCHINSHIP,Cochin Shipyard,Aerospace & Defense,MC,,yahoo
+COCKERILL,John Cockerill India,Metal Fabrication,MI,,yahoo
+COFFEEDAY,Coffee Day Enterprises,Restaurants,MI,,yahoo
+COFORGE,Coforge,Information Technology Services,MC,,yahoo
+COHANCE,Cohance Lifesciences,Drug Manufacturers - Specialty & Generic,SC,,yahoo
+COLPAL,Colgate Palmolive (India),Household & Personal Products,MC,,yahoo
+COMFINTE,Comfort Intech,Conglomerates,MI,,yahoo
+COMPEAU,Competent Automobiles Company,Auto & Truck Dealerships,MI,,yahoo
+COMPUSOFT,Compucom Software,Education & Training Services,MI,,yahoo
+COMSYN,Commercial Syn Bags,Packaging & Containers,MI,,yahoo
+CONCOR,Container Corporation of India,Railroads,MC,,yahoo
+CONCORDBIO,Concord Biotech,Biotechnology,SC,,yahoo
+CONFIPET,Confidence Petroleum India,Oil & Gas Refining & Marketing,MI,,yahoo
+CONSOFINVT,Consolidated Finvest & Holdings,Capital Markets,MI,,yahoo
+CONTROLPR,Control Print,Business Equipment & Supplies,MI,,yahoo
+CORALFINAC,Coral India Finance & Housing,Real Estate Services,MI,,yahoo
+CORDELIA,Waterways Leisure Tourism,Marine Shipping,MI,,yahoo
+CORDSCABLE,Cords Cable Industries,Electrical Equipment & Parts,MI,,yahoo
+COROMANDEL,Coromandel International,Agricultural Inputs,MC,,yahoo
+CORONA,CORONA Remedies,Drug Manufacturers - General,MI,,yahoo
+COSMOFIRST,COSMO FIRST LIMITED,Packaging & Containers,MI,,yahoo
+COUNCODOS,Country Condo's,Real Estate - Development,MI,,yahoo
+CPCAP,CP Capital,Credit Services,MI,,yahoo
+CPEDU,Career Point Edutech,Education & Training Services,MI,,yahoo
+CPL,Captain Polyplast,Farm & Heavy Construction Machinery,MI,,yahoo
+CPPLUS,Aditya Infotech,Building Products & Equipment,SC,,yahoo
+CRAFTSMAN,Craftsman Automation,Auto Parts,SC,,yahoo
+CRAMC,Canara Robeco Asset Management Company,Asset Management,MI,,yahoo
+CRAVATEX,Cravatex,Leisure,MI,,yahoo
+CREATIVEYE,Creative Eye,Entertainment,MI,,yahoo
+CREDITACC,CREDITACCESS GRAMEEN LIMITED,Credit Services,SC,,yahoo
+CREST,Crest Ventures,Financial Conglomerates,MI,,yahoo
+CRESTO,CRESTO TECHNO LIMITED,Entertainment,MI,,yahoo
+CRISIL,Crisil,Financial Data & Stock Exchanges,MC,,yahoo
+CRIZAC,Crizac,Education & Training Services,MI,,yahoo
+CROMPTON,Crompton Greaves Consumer Electricals,"Furnishings, Fixtures & Appliances",SC,,yahoo
+CROWN,Crown Lifters,Rental & Leasing Services,MI,,yahoo
+CSBBANK,CSB Bank,Banks - Regional,MI,,yahoo
+CSLFINANCE,CSL Finance,Credit Services,MI,,yahoo
+CSM,CSM Technologies,Information Technology Services,MI,,yahoo
+CTE,Cambridge Technology Enterprises,Information Technology Services,MI,,yahoo
+CUB,City Union Bank,Banks - Regional,SC,,yahoo
+CUBEXTUB,Cubex Tubings,Copper,MI,,yahoo
+CUMMINSIND,Cummins India,Specialty Industrial Machinery,LC,,yahoo
+CUPID,Cupid,Household & Personal Products,SC,,yahoo
+CURAA,Cura Technologies,Software - Application,MI,,yahoo
+CYBERMEDIA,Cyber Media (India),Publishing,MI,,yahoo
+CYBERTECH,Cybertech Systems And Software,Information Technology Services,MI,,yahoo
+CYIENT,Cyient,Conglomerates,SC,,yahoo
+CYIENTDLM,Cyient DLM,Aerospace & Defense,MI,,yahoo
+DABUR,Dabur India,Household & Personal Products,MC,,yahoo
+DAICHI,Dai-Ichi Karkaria,Specialty Chemicals,MI,,yahoo
+DALBHARAT,Dalmia Bharat,Building Materials,MC,,yahoo
+DALMIASUG,Dalmia Bharat Sugar and Industries,Confectioners,MI,,yahoo
+DAMCAPITAL,Dam Capital Advisors,Capital Markets,MI,,yahoo
+DAMODARIND,Damodar Industries,Textile Manufacturing,MI,,yahoo
+DANGEE,Dangee Dums,Restaurants,MI,,yahoo
+DATAMATICS,Datamatics Global Services,Information Technology Services,MI,,yahoo
+DATAPATTNS,Data Patterns (India),Aerospace & Defense,SC,,yahoo
+DAVANGERE,Davangere Sugar Company,Confectioners,MI,,yahoo
+DBCORP,D.B.Corp,Publishing,MI,,yahoo
+DBEIL,Deepak Builders & Engineers India,Engineering & Construction,MI,,yahoo
+DBL,Dilip Buildcon,Engineering & Construction,MI,,yahoo
+DBOL,Dhampur Bio Organics,Farm Products,MI,,yahoo
+DBREALTY,Valor Estate,Real Estate - Development,MI,,yahoo
+DBSTOCKBRO,DB (International) Stock Brokers,Capital Markets,MI,,yahoo
+DCAL,Dishman Carbogen Amcis,Biotechnology,MI,,yahoo
+DCBBANK,DCB Bank,Banks - Regional,MI,,yahoo
+DCI,Dc Infotech And Communication,Electronics & Computer Distribution,MI,,yahoo
+DCM,DCM,Metal Fabrication,MI,,yahoo
+DCMFINSERV,DCM Financial Services,Credit Services,MI,,yahoo
+DCMNVL,DCM Nouvelle,Textile Manufacturing,MI,,yahoo
+DCMSHRIRAM,DCM Shriram,Conglomerates,MI,,yahoo
+DCMSIL,DCM Shriram International,Industrial Distribution,MI,,yahoo
+DCMSRIND,DCM Shriram Industries,Confectioners,MI,,yahoo
+DCW,DCW,Chemicals,MI,,yahoo
+DCXINDIA,DCX Systems,Aerospace & Defense,MI,,yahoo
+DDEVPLSTIK,Ddev Plastiks Industries,Specialty Chemicals,MI,,yahoo
+DECCANCE,Deccan Cements,Building Materials,MI,,yahoo
+DECNGOLD,Deccan Gold Mines,Gold,MI,,yahoo
+DEEDEV,DEE Development Engineers,Metal Fabrication,MI,,yahoo
+DEEP,Deep Polymers,Specialty Chemicals,MI,,yahoo
+DEEPA,Deepa Jewellers,Luxury Goods,MI,,yahoo
+DEEPAKFERT,Deepak Fertilizers and Petrochemicals Corporation,Chemicals,SC,,yahoo
+DEEPAKNTR,Deepak Nitrite,Chemicals,SC,,yahoo
+DEEPINDS,Deep Industries,Oil & Gas E&P,MI,,yahoo
+DELHIVERY,Delhivery,Integrated Freight & Logistics,SC,,yahoo
+DELPHIFX,DELPHI WORLD MONEY LIMITED,Capital Markets,MI,,yahoo
+DELTACORP,Delta Corp,Resorts & Casinos,MI,,yahoo
+DELTAMAGNT,Delta Manufacturing,Textile Manufacturing,MI,,yahoo
+DEN,Den Networks,Entertainment,MI,,yahoo
+DENORA,De Nora India,Electrical Equipment & Parts,MI,,yahoo
+DENTA,Denta Water and Infra Solutions,Engineering & Construction,MI,,yahoo
+DEVIT,Dev Information Technology,Information Technology Services,MI,,yahoo
+DEVX,Dev Accelerator,Real Estate Services,MI,,yahoo
+DEVYANI,Devyani International,Restaurants,SC,,yahoo
+DGCONTENT,Digicontent,Internet Content & Information,MI,,yahoo
+DHABRIYA,Dhabriya Polywood,Building Products & Equipment,MI,,yahoo
+DHAMPURSUG,Dhampur Sugar Mills,Confectioners,MI,,yahoo
+DHANBANK,Dhanlaxmi Bank,Banks - Regional,MI,,yahoo
+DHANUKA,Dhanuka Agritech,Agricultural Inputs,MI,,yahoo
+DHARMAJ,Dharmaj Crop Guard,Agricultural Inputs,MI,,yahoo
+DHATRE,Dhatre Udyog,Steel,MI,,yahoo
+DHOOTTRANS,Dhoot Transmission,Auto Parts,MI,,yahoo
+DHRUV,Dhruv Consultancy Services,Engineering & Construction,MI,,yahoo
+DHUNINV,Dhunseri Investments,Capital Markets,MI,,yahoo
+DIACABS,Diamond Power Infrastructure,Specialty Industrial Machinery,MI,,yahoo
+DIAMINESQ,Diamines & Chemicals,Chemicals,MI,,yahoo
+DIAMONDYD,Prataap Snacks,Packaged Foods,MI,,yahoo
+DICIND,DIC India,Specialty Chemicals,MI,,yahoo
+DIFFNKG,Diffusion Engineers,Specialty Industrial Machinery,MI,,yahoo
+DIGIDRIVE,Digidrive Distributors,Internet Retail,MI,,yahoo
+DIGISPICE,DiGiSPICE Technologies,Financial Conglomerates,MI,,yahoo
+DIGITIDE,Digitide Solutions,Specialty Business Services,MI,,yahoo
+DIGJAMLMTD,Digjam,Textile Manufacturing,MI,,yahoo
+DISAQ,Disa India,Unclassified,MI,,nse
+DISHTV,Dish TV India,Entertainment,MI,,yahoo
+DIVGIITTS,Divgi Torqtransfer Systems,Auto Parts,MI,,yahoo
+DIVISLAB,Divi's Laboratories,Drug Manufacturers - Specialty & Generic,LC,,yahoo
+DIXON,Dixon Technologies (India),Consumer Electronics,MC,,yahoo
+DJML,DJ Mediaprint & Logistics,Specialty Business Services,MI,,yahoo
+DLF,DLF,Real Estate - Development,LC,,yahoo
+DLINKINDIA,D-Link (India),Communication Equipment,MI,,yahoo
+DMART,Avenue Supermarts,Discount Stores,LC,,yahoo
+DMCC,DMCC SPECIALITY CHEMICALS LIMITED,Chemicals,MI,,yahoo
+DNAMEDIA,Diligent Media Corporation,Publishing,MI,,yahoo
+DODLA,Dodla Dairy,Food Distribution,MI,,yahoo
+DOLATALGO,Dolat Algotech,Capital Markets,MI,,yahoo
+DOLLAR,Dollar Industries,Apparel Manufacturing,MI,,yahoo
+DOLLEX,Dollex Agrotech,Confectioners,MI,,yahoo
+DOLPHIN,Dolphin Offshore Enterprises (India),Oil & Gas Equipment & Services,MI,,yahoo
+DOMS,DOMS Industries,Business Equipment & Supplies,SC,,yahoo
+DONEAR,Donear Industries,Textile Manufacturing,MI,,yahoo
+DPABHUSHAN,D. P. Abhushan,Luxury Goods,MI,,yahoo
+DPSCLTD,DPSC,Utilities - Regulated Electric,MI,,yahoo
+DPWIRES,D P Wires,Metal Fabrication,MI,,yahoo
+DRAGARWQ,Dr Agarwals Eye Hospital,Medical Care Facilities,MI,,yahoo
+DRCSYSTEMS,DRC Systems India,Information Technology Services,MI,,yahoo
+DREAMFOLKS,Dreamfolks Services,Airports & Air Services,MI,,yahoo
+DREDGECORP,Dredging Corporation of India,Engineering & Construction,MI,,yahoo
+DRREDDY,Dr. Reddy's Laboratories,Drug Manufacturers - Specialty & Generic,LC,,yahoo
+DSFCL,DCM Shriram Fine Chemicals,Specialty Chemicals,MI,,yahoo
+DSKULKARNI,DS Kulkarni Developers,Real Estate - Development,MI,,yahoo
+DSSL,Dynacons Systems & Solutions,Information Technology Services,MI,,yahoo
+DTIL,Dhunseri Tea & Industries,Packaged Foods,MI,,yahoo
+DUCON,Ducon Infratechnologies,Specialty Industrial Machinery,MI,,yahoo
+DVL,Dhunseri Ventures,Packaging & Containers,MI,,yahoo
+DWARKESH,Dwarikesh Sugar Industries,Confectioners,MI,,yahoo
+DYCL,Dynamic Cables,Electrical Equipment & Parts,MI,,yahoo
+DYNAMATECH,Dynamatic Technologies,Auto Parts,MI,,yahoo
+DYNPRO,Dynemic Products,Specialty Chemicals,MI,,yahoo
+E2E,E2E Networks,Software - Infrastructure,MI,,yahoo
+EASEMYTRIP,Easy Trip Planners,Travel Services,MI,,yahoo
+EASTSILK,Eastern Silk Industries,Textile Manufacturing,MI,,yahoo
+EASTWEST,East West Freight Carriers,Integrated Freight & Logistics,MI,,yahoo
+EBGNG,GNG Electronics,Computer Hardware,MI,,yahoo
+EBIX,EBIX,Software - Application,MI,,yahoo
+ECLERX,eClerx Services,Information Technology Services,SC,,yahoo
+ECORECO,Eco Recycling,Waste Management,MI,,yahoo
+ECOSMOBLTY,Ecos (India) Mobility & Hospitality,Rental & Leasing Services,MI,,yahoo
+EDELALTS,EAAA India Alternatives,Asset Management,MI,,yahoo
+EDELWEISS,Edelweiss Financial Services,Financial Conglomerates,MI,,yahoo
+EFCIL,EFC (I),Real Estate Services,MI,,yahoo
+EICHERMOT,Eicher Motors,Auto Manufacturers,LC,,yahoo
+EIDPARRY,EID Parry India,Agricultural Inputs,SC,,yahoo
+EIEL,Enviro Infra Engineers,Engineering & Construction,MI,,yahoo
+EIFFL,Euro India Fresh Foods,Packaged Foods,MI,,yahoo
+EIHAHOTELS,EIH Associated Hotels,Lodging,MI,,yahoo
+EIHOTEL,EIH,Lodging,SC,,yahoo
+EIMCOELECO,Eimco Elecon (India),Farm & Heavy Construction Machinery,MI,,yahoo
+EKC,Everest Kanto Cylinder,Specialty Industrial Machinery,MI,,yahoo
+EKI,EKI Energy Services,Consulting Services,MI,,yahoo
+ELANTAS,Elantas Beck India,Specialty Chemicals,MI,,yahoo
+ELCIDIN,EL CID Investments,Unclassified,MI,,nse
+ELDEHSG,Eldeco Housing And Industries,Real Estate Services,MI,,yahoo
+ELECON,Elecon Engineering Company,Specialty Industrial Machinery,SC,,yahoo
+ELECTCAST,Electrosteel Castings,Building Products & Equipment,MI,,yahoo
+ELECTHERM,Electrotherm (India),Steel,MI,,yahoo
+ELEVATE,Elevate Campuses,Lodging,MI,,yahoo
+ELGIEQUIP,Elgi Equipments,Specialty Industrial Machinery,SC,,yahoo
+ELGIRUBCO,Elgi Rubber Company,Auto Parts,MI,,yahoo
+ELIN,Elin Electronics,Electrical Equipment & Parts,MI,,yahoo
+ELITECON,Elitecon International,Tobacco,MI,,yahoo
+ELLEN,Ellenbarrie Industrial Gases,Chemicals,MI,,yahoo
+ELPROINTL,Elpro International,Real Estate Services,MI,,yahoo
+EMAMILTD,Emami,Household & Personal Products,SC,,yahoo
+EMAMIPAP,Emami Paper Mills,Paper & Paper Products,MI,,yahoo
+EMAMIREAL,Emami Realty,Real Estate - Development,MI,,yahoo
+EMBDL,Embassy Developments,Real Estate - Diversified,MI,,yahoo
+EMCURE,Emcure Pharmaceuticals,Drug Manufacturers - Specialty & Generic,SC,,yahoo
+EMIL,Electronics Mart India,Specialty Retail,MI,,yahoo
+EMKAY,Emkay Global Financial Services,Capital Markets,MI,,yahoo
+EMMBI,Emmbi Industries,Packaging & Containers,MI,,yahoo
+EMMVEE,Emmvee Photovoltaic Power,Solar,SC,,yahoo
+EMPIND,Empire Industries,Conglomerates,MI,,yahoo
+EMPOWER,Empower India,Electronics & Computer Distribution,MI,,yahoo
+EMSLIMITED,EMS,Engineering & Construction,MI,,yahoo
+EMUDHRA,eMudhra,Software - Application,MI,,yahoo
+ENDURANCE,Endurance Technologies,Auto Parts,MC,,yahoo
+ENERGYDEV,Energy Development Company,Utilities - Regulated Electric,MI,,yahoo
+ENGINERSIN,Engineers India,Engineering & Construction,SC,,yahoo
+ENIL,Entertainment Network (India),Broadcasting,MI,,yahoo
+ENKEIWHEL,Enkei Wheels (India),Auto Parts,MI,,yahoo
+ENNATURE,Ennature Bio Pharma,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+ENRIN,Siemens Energy India,Utilities - Renewable,LC,,yahoo
+ENTERO,Entero Healthcare Solutions,Medical Distribution,MI,,yahoo
+EPACK,EPACK Durable,"Furnishings, Fixtures & Appliances",MI,,yahoo
+EPACKPEB,EPack Prefab Technologies,Engineering & Construction,MI,,yahoo
+EPIGRAL,Epigral,Chemicals,MI,,yahoo
+EPL,EPL,Packaging & Containers,MI,,yahoo
+EQUIPPP,Equippp Social Impact Technologies,Information Technology Services,MI,,yahoo
+EQUITASBNK,Equitas Small Finance Bank,Banks - Regional,MI,,yahoo
+ERIS,Eris Lifesciences,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+ESABINDIA,Esab India,Tools & Accessories,MI,,yahoo
+ESAFSFB,ESAF Small Finance Bank,Banks - Regional,MI,,yahoo
+ESCORTS,Escorts Kubota,Farm & Heavy Construction Machinery,MC,,yahoo
+ESDS,ESDS Software Solution,Information Technology Services,MI,,yahoo
+ESFL,Essen Speciality Films,"Furnishings, Fixtures & Appliances",MI,,yahoo
+ESSARSHPNG,Essar Shipping,Marine Shipping,MI,,yahoo
+ESSENTIA,Integra Essentia,Food Distribution,MI,,yahoo
+ESTER,Ester Industries,Specialty Chemicals,MI,,yahoo
+ETERNAL,ETERNAL LIMITED,Internet Retail,LC,,yahoo
+ETHOSLTD,Ethos,Luxury Goods,MI,,yahoo
+EUREKAFORB,Eureka Forbes,"Furnishings, Fixtures & Appliances",MI,,yahoo
+EUROBOND,Euro Panel Products,Building Products & Equipment,MI,,yahoo
+EUROPRATIK,Euro Pratik Sales,Building Materials,MI,,yahoo
+EUROTEXIND,Eurotex Industries and Exports,Real Estate - Development,MI,,yahoo
+EVEREADY,Eveready Industries India,Electrical Equipment & Parts,MI,,yahoo
+EVERESTIND,Everest Industries,Building Products & Equipment,MI,,yahoo
+EVONILE,Evonile Pharma,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+EXCELINDUS,Excel Industries,Specialty Chemicals,MI,,yahoo
+EXCELSOFT,Excelsoft Technologies,Software - Application,MI,,yahoo
+EXICOM,Exicom Tele-Systems,Electrical Equipment & Parts,MI,,yahoo
+EXIDEIND,Exide Industries,Auto Parts,MC,,yahoo
+EXPLEOSOL,Expleo Solutions,Information Technology Services,MI,,yahoo
+EXXARO,Exxaro Tiles,Building Products & Equipment,MI,,yahoo
+FABTECH,Fabtech Technologies,Health Information Services,MI,,yahoo
+FACT,Fertilizers and Chemicals Travancore,Agricultural Inputs,MC,,yahoo
+FAIRCHEMOR,Fairchem Organics,Specialty Chemicals,MI,,yahoo
+FAZE3Q,Faze Three,Textile Manufacturing,MI,,yahoo
+FCL,Fineotex Chemical,Specialty Chemicals,MI,,yahoo
+FCSSOFT,FCS Software Solutions,Information Technology Services,MI,,yahoo
+FDC,FDC,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+FEDDERSHOL,Fedders Holding,Credit Services,MI,,yahoo
+FEDERALBNK,The Federal Bank,Banks - Regional,MC,,yahoo
+FEDFINA,Fedbank Financial Services,Credit Services,MI,,yahoo
+FERMENTA,Fermenta Biotech,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+FIBERWEB,Fiberweb (India),Textile Manufacturing,MI,,yahoo
+FIEMIND,Fiem Industries,Auto Parts,MI,,yahoo
+FILATEX,Filatex India,Textile Manufacturing,MI,,yahoo
+FILATFASH,Filatex Fashions,Apparel Manufacturing,MI,,yahoo
+FINCABLES,Finolex Cables,Electrical Equipment & Parts,SC,,yahoo
+FINEORG,Fine Organic Industries,Specialty Chemicals,MI,,yahoo
+FINKURVE,Finkurve Financial Services,Credit Services,MI,,yahoo
+FINOPB,Fino Payments Bank,Banks - Regional,MI,,yahoo
+FINPIPE,Finolex Industries,Building Products & Equipment,MI,,yahoo
+FIRSTCRY,Brainbees Solutions,Internet Retail,SC,,yahoo
+FISCHER,Fischer Medical Ventures,Medical Devices,MI,,yahoo
+FIVESTAR,Five-Star Business Finance,Credit Services,SC,,yahoo
+FLAIR,Flair Writing Industries,Business Equipment & Supplies,MI,,yahoo
+FLEXITUFF,Flexituff Ventures International,Textile Manufacturing,MI,,yahoo
+FLUOROCHEM,Gujarat Fluorochemicals,Specialty Chemicals,MC,,yahoo
+FMGOETZE,Federal-Mogul Goetze (India) Limited.,Auto Parts,MI,,yahoo
+FMNL,Future Market Networks,Real Estate Services,MI,,yahoo
+FOCUS,Focus Lighting and Fixtures,"Furnishings, Fixtures & Appliances",MI,,yahoo
+FOODSIN,Foods & Inns,Packaged Foods,MI,,yahoo
+FORCEMOT,FORCE MOTORS LTD,Auto Manufacturers,SC,,yahoo
+FORTIS,Fortis Healthcare,Medical Care Facilities,MC,,yahoo
+FOSECOIND,Foseco India,Chemicals,MI,,yahoo
+FRACTAL,Fractal Analytics,Software - Infrastructure,SC,,yahoo
+FREDUN,Fredun Pharmaceuticals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+FRONTSP,Frontier Springs,Metal Fabrication,MI,,yahoo
+FSL,Firstsource Solutions,Information Technology Services,SC,,yahoo
+FUSION,Fusion Finance,Credit Services,MI,,yahoo
+FUSIONCX,Fusion CX,Specialty Business Services,MI,,yahoo
+GABRIEL,Gabriel India,Auto Parts,SC,,yahoo
+GAEL,Gujarat Ambuja Exports,Packaged Foods,MI,,yahoo
+GAIL,GAIL (India),Utilities - Regulated Gas,LC,,yahoo
+GAJA,Gaja Alternative Asset Management,Asset Management,MI,,yahoo
+GALAPREC,Gala Precision Engineering,Specialty Industrial Machinery,MI,,yahoo
+GALAXYSURF,Galaxy Surfactants,Specialty Chemicals,MI,,yahoo
+GALLANTT,Gallantt Ispat,Steel,SC,,yahoo
+GANDHAR,Gandhar Oil Refinery (India),Oil & Gas Refining & Marketing,MI,,yahoo
+GANDHITUBE,Gandhi Special Tubes,Metal Fabrication,MI,,yahoo
+GANECOS,Ganesha Ecosphere,Textile Manufacturing,MI,,yahoo
+GANESHBE,Ganesh Benzoplast,Specialty Chemicals,MI,,yahoo
+GANESHCP,Ganesh Consumer Products,Packaged Foods,MI,,yahoo
+GANESHHOU,GANESH HOUSING LIMITED,Real Estate - Development,MI,,yahoo
+GANGAFORGE,Ganga Forging,Metal Fabrication,MI,,yahoo
+GANGESSECU,Ganges Securities,Packaged Foods,MI,,yahoo
+GARFIBRES,Garware Technical Fibres,Textile Manufacturing,MI,,yahoo
+GARUDA,Garuda Construction and Engineering,Engineering & Construction,MI,,yahoo
+GATECH,GACM Technologies,Asset Management,MI,,yahoo
+GATECHDVR,GACM Technologies,Asset Management,MI,,yahoo
+GATEWAY,Gateway Distriparks,Integrated Freight & Logistics,MI,,yahoo
+GAUDIUMIVF,Gaudium IVF and Women Health,Medical Care Facilities,MI,,yahoo
+GAYAHWS,Gayatri Highways,Infrastructure Operations,MI,,yahoo
+GAYAPROJ,Gayatri Projects,Engineering & Construction,MI,,yahoo
+GCSL,Gretex Corporate Services,Capital Markets,MI,,yahoo
+GEECEE,GeeCee Ventures,Real Estate - Development,MI,,yahoo
+GEEKAYWIRE,Geekay Wires,Electrical Equipment & Parts,MI,,yahoo
+GEMAROMA,Gem Aromatics,Chemicals,MI,,yahoo
+GENCON,Generic Engineering Construction and Projects,Engineering & Construction,MI,,yahoo
+GENESYS,Genesys International Corporation,Software - Application,MI,,yahoo
+GENUSPAPER,Genus Paper & Boards,Paper & Paper Products,MI,,yahoo
+GENUSPOWER,Genus Power Infrastructures,Electrical Equipment & Parts,MI,,yahoo
+GEOJITFSL,Geojit Financial Services,Capital Markets,MI,,yahoo
+GERMAN,German Green Steel and Power,Steel,MI,,yahoo
+GESHIP,The Great Eastern Shipping Company,Marine Shipping,SC,,yahoo
+GFLLIMITED,GFL,Asset Management,MI,,yahoo
+GHCL,GHCL,Chemicals,MI,,yahoo
+GHCLTEXTIL,GHCL Textiles,Textile Manufacturing,MI,,yahoo
+GICHSGFIN,GIC Housing Finance,Mortgage Finance,MI,,yahoo
+GICL,Globe International Carriers,Integrated Freight & Logistics,MI,,yahoo
+GICRE,General Insurance Corporation of India,Insurance - Reinsurance,MC,,yahoo
+GILLANDERS,Gillanders Arbuthnot & Company,Farm Products,MI,,yahoo
+GILLETTE,Gillette India,Household & Personal Products,SC,,yahoo
+GINNIFILA,Ginni Filaments,Textile Manufacturing,MI,,yahoo
+GIPCL,Gujarat Industries Power Company,Utilities - Regulated Electric,MI,,yahoo
+GKB,GKB Ophthalmics,Medical Instruments & Supplies,MI,,yahoo
+GKENERGY,GK Energy,Utilities - Renewable,MI,,yahoo
+GKSL,Gujarat Kidney And Super Speciality,Medical Care Facilities,MI,,yahoo
+GKWLIMITED,GKW,Specialty Business Services,MI,,yahoo
+GLAND,Gland Pharma,Drug Manufacturers - Specialty & Generic,SC,,yahoo
+GLASSWALL,Glass Wall Systems (India),Engineering & Construction,MI,,yahoo
+GLAXO,GlaxoSmithKline Pharmaceuticals,Drug Manufacturers - General,MC,,yahoo
+GLENMARK,Glenmark Pharmaceuticals,Drug Manufacturers - Specialty & Generic,MC,,yahoo
+GLFL,Gujarat Lease Financing,Shell Companies,MI,,yahoo
+GLOBAL,Global Education,Education & Training Services,MI,,yahoo
+GLOBALE,Globale Tessile,Textile Manufacturing,MI,,yahoo
+GLOBALVECT,Global Vectra Helicorp,Airports & Air Services,MI,,yahoo
+GLOBE,GLOBE ENTERPRISES (INDIA) LIMITED,Textile Manufacturing,MI,,yahoo
+GLOBECIVIL,Globe Civil Projects,Engineering & Construction,MI,,yahoo
+GLOBUSSPR,Globus Spirits,Beverages - Wineries & Distilleries,MI,,yahoo
+GLOSTERLTD,Gloster,Textile Manufacturing,MI,,yahoo
+GLOTTIS,Glottis,Integrated Freight & Logistics,MI,,yahoo
+GMBREW,GM Breweries,Beverages - Wineries & Distilleries,MI,,yahoo
+GMDCLTD,Gujarat Mineral Development Corporation,Thermal Coal,SC,,yahoo
+GMMPFAUDLR,GMM Pfaudler,Specialty Industrial Machinery,MI,,yahoo
+GMRAIRPORT,GMR AIRPORTS LIMITED,Airports & Air Services,MC,,yahoo
+GMRP&UI,GMR Power and Urban Infra,Thermal Coal,MI,,yahoo
+GNA,GNA Axles,Auto Parts,MI,,yahoo
+GNFC,Gujarat Narmada Valley Fertilizers and Chemicals,Chemicals,MI,,yahoo
+GNRL,Gujarat Natural Resources,Oil & Gas E&P,MI,,yahoo
+GOACARBON,Goa Carbon,Specialty Chemicals,MI,,yahoo
+GOCLCORP,GOCL Corporation,Specialty Chemicals,MI,,yahoo
+GOCOLORS,Go Fashion (India),Apparel Retail,MI,,yahoo
+GODAVARIB,Godavari Biorefineries,Chemicals,MI,,yahoo
+GODFRYPHLP,Godfrey Phillips India,Tobacco,MC,,yahoo
+GODIGIT,Go Digit General Insurance,Insurance - Property & Casualty,MI,,yahoo
+GODREJAGRO,Godrej Agrovet,Packaged Foods,MI,,yahoo
+GODREJCP,Godrej Consumer Products,Household & Personal Products,LC,,yahoo
+GODREJIND,Godrej Industries,Conglomerates,MC,,yahoo
+GODREJPROP,Godrej Properties,Real Estate - Development,MC,,yahoo
+GOKEX,Gokaldas Exports,Apparel Manufacturing,MI,,yahoo
+GOKUL,Gokul Refoils and Solvent,Packaged Foods,MI,,yahoo
+GOKULAGRO,Gokul Agro Resources,Packaged Foods,MI,,yahoo
+GOLDIAM,Goldiam International,Luxury Goods,MI,,yahoo
+GOLDTECH,AION-TECH SOLUTIONS LIMITED,Information Technology Services,MI,,yahoo
+GOODLUCK,Goodluck India,Steel,MI,,yahoo
+GOODYEAR,Goodyear India,Auto Parts,MI,,yahoo
+GOPAL,Gopal Snacks,Packaged Foods,MI,,yahoo
+GOYALALUM,Goyal Aluminiums,Aluminum,MI,,yahoo
+GPIL,Godawari Power And Ispat limited,Steel,SC,,yahoo
+GPPL,Gujarat Pipavav Port,Marine Shipping,MI,,yahoo
+GPTHEALTH,GPT Healthcare,Medical Care Facilities,MI,,yahoo
+GPTINFRA,GPT Infraprojects,Engineering & Construction,MI,,yahoo
+GRADIENTE,Gradiente Infotainment,Entertainment,MI,,yahoo
+GRANDOAK,Grand Oak Canyons Distillery,Mortgage Finance,MI,,yahoo
+GRANULES,Granules India,Drug Manufacturers - Specialty & Generic,SC,,yahoo
+GRAPHITE,Graphite India,Electrical Equipment & Parts,SC,,yahoo
+GRASIM,Grasim Industries,Building Materials,LC,,yahoo
+GRAUWEIL,Grauer & Weil India,Specialty Chemicals,MI,,yahoo
+GRAVISSHO,Graviss Hospitality,Lodging,MI,,yahoo
+GRAVITA,Gravita India,Metal Fabrication,SC,,yahoo
+GREAVESCOT,Greaves Cotton,Specialty Industrial Machinery,MI,,yahoo
+GREENLAM,Greenlam Industries,Lumber & Wood Production,MI,,yahoo
+GREENPANEL,Greenpanel Industries,Lumber & Wood Production,MI,,yahoo
+GREENPLY,Greenply Industries,Lumber & Wood Production,MI,,yahoo
+GREENPOWER,Orient Green Power Company,Utilities - Independent Power Producers,MI,,yahoo
+GRINDWELL,Grindwell Norton,Building Products & Equipment,MI,,yahoo
+GRINFRA,G R Infraprojects,Engineering & Construction,MI,,yahoo
+GRMOVER,GRM Overseas,Packaged Foods,MI,,yahoo
+GROBTEA,The Grob Tea Company,Farm Products,MI,,yahoo
+GROWW,Billionbrains Garage Ventures,Capital Markets,MC,,yahoo
+GRPLTD,GRP,Auto Parts,MI,,yahoo
+GRSE,Garden Reach Shipbuilders & Engineers,Aerospace & Defense,SC,,yahoo
+GRWRHITECH,Garware Hi-Tech Films,Specialty Chemicals,MI,,yahoo
+GSFC,Gujarat State Fertilizers & Chemicals,Agricultural Inputs,MI,,yahoo
+GSLSU,Global Surfaces,Building Materials,MI,,yahoo
+GSPCROP,GSP Crop Science,Agricultural Inputs,MI,,yahoo
+GSPLTRANS,GSPL Transmission,Oil & Gas Midstream,MI,,yahoo
+GSS,GSS Infotech,Information Technology Services,MI,,yahoo
+GTECJAINX,G-TEC JAINX EDUCATION LIMITED,Education & Training Services,MI,,yahoo
+GTL,GTL,Telecom Services,MI,,yahoo
+GTLINFRA,GTL Infrastructure,Communication Equipment,MI,,yahoo
+GTPL,GTPL Hathway,Entertainment,MI,,yahoo
+GUFICBIO,Gufic Biosciences,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+GUJALKALI,Gujarat Alkalies and Chemicals,Chemicals,MI,,yahoo
+GUJAPOLLO,Gujarat Apollo Industries,Specialty Industrial Machinery,MI,,yahoo
+GUJENERGY,GUJARAT ENERGY LIMITED,Utilities - Regulated Gas,MI,,yahoo
+GUJRAFFIA,Gujarat Raffia Industries,Unclassified,MI,,nse
+GUJTHEM,Gujarat Themis Biosyn,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+GULFOILLUB,Gulf Oil Lubricants India,Specialty Chemicals,MI,,yahoo
+GULFPETRO,GP Petroleums,Oil & Gas Refining & Marketing,MI,,yahoo
+GULPOLY,Gulshan Polyols,Chemicals,MI,,yahoo
+GVKPIL,GVK Power & Infrastructure,Utilities - Independent Power Producers,MI,,yahoo
+GVPIL,GE Power India,Engineering & Construction,MI,,yahoo
+GVPTECH,GVP Infotech,Information Technology Services,MI,,yahoo
+GVT&D,GE Vernova T&D India,Specialty Industrial Machinery,MC,,yahoo
+GYFTR,Gyftr,Specialty Business Services,MI,,yahoo
+HAL,Hindustan Aeronautics,Aerospace & Defense,LC,,yahoo
+HALDER,Halder Venture,Farm Products,MI,,yahoo
+HALDYNGL,Haldyn Glass,Packaging & Containers,MI,,yahoo
+HALEOSLABS,HALEOS LABS LIMITED,Biotechnology,MI,,yahoo
+HAPPSTMNDS,Happiest Minds Technologies,Information Technology Services,MI,,yahoo
+HAPPYFORGE,Happy Forgings,Metal Fabrication,MI,,yahoo
+HARDWYN,Hardwyn India,Building Products & Equipment,MI,,yahoo
+HARIOMPIPE,Hariom Pipe Industries,Steel,MI,,yahoo
+HARRMALAYA,Harrisons  Malayalam,Farm Products,MI,,yahoo
+HARSHA,Harsha Engineers International,Tools & Accessories,MI,,yahoo
+HATHWAY,Hathway Cable & Datacom,Entertainment,MI,,yahoo
+HATSUN,Hatsun Agro Product,Packaged Foods,MI,,yahoo
+HAVELLS,Havells India,Electrical Equipment & Parts,MC,,yahoo
+HAVISHA,Sri Havisha Hospitality and Infrastructure,Lodging,MI,,yahoo
+HAWKINCOOK,Hawkins Cookers,"Furnishings, Fixtures & Appliances",MI,,yahoo
+HAZOOR,Hazoor Multi Projects,Real Estate - Development,MI,,yahoo
+HBESD,HB Estate Developers,Lodging,MI,,yahoo
+HBLENGINE,HBL Engineering,Electrical Equipment & Parts,SC,,yahoo
+HBPOR,HB Portfolio,Capital Markets,MI,,yahoo
+HBSL,HB Stockholdings,Capital Markets,MI,,yahoo
+HCC,Hindustan Construction Company,Engineering & Construction,MI,,yahoo
+HCG,Healthcare Global Enterprises,Medical Care Facilities,MI,,yahoo
+HCL-INSYS,HCL Infosystems,Electronics & Computer Distribution,MI,,yahoo
+HCLTECH,HCL Technologies,Information Technology Services,LC,,yahoo
+HDBFS,HDB Financial Services,Credit Services,MC,,yahoo
+HDFCAMC,HDFC Asset Management Company,Asset Management,LC,,yahoo
+HDFCBANK,HDFC Bank,Banks - Regional,LC,,yahoo
+HDFCLIFE,HDFC Life Insurance Company,Insurance - Life,LC,,yahoo
+HDFIRE,HD Fire Protect,Specialty Industrial Machinery,MI,,yahoo
+HEADSUP,Heads UP Ventures,Apparel Retail,MI,,yahoo
+HEALTHX,Health X Platform,Pharmaceutical Retailers,MI,,yahoo
+HECPROJECT,HEC Infra Projects,Engineering & Construction,MI,,yahoo
+HEGAM,HEG Advanced Materials,Electrical Equipment & Parts,SC,,yahoo
+HEIDELBERG,HeidelbergCement India,Building Materials,MI,,yahoo
+HEMIPROP,Hemisphere Properties India,Real Estate - Diversified,MI,,yahoo
+HERANBA,Heranba Industries,Agricultural Inputs,MI,,yahoo
+HERITGFOOD,Heritage Foods,Packaged Foods,MI,,yahoo
+HEROMOTOCO,Hero MotoCorp,Auto Manufacturers,MC,,yahoo
+HEROMOTORS,Hero Motors,Auto Parts,MI,,yahoo
+HESTERBIO,Hester Biosciences,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+HEXAGON,Hexagon Nutrition,Packaged Foods,MI,,yahoo
+HEXATRADEX,Hexa Tradex,Credit Services,MI,,yahoo
+HEXT,Hexaware Technologies,Information Technology Services,MC,,yahoo
+HFCL,HFCL,Communication Equipment,SC,,yahoo
+HGINFRA,H.G. Infra Engineering,Engineering & Construction,MI,,yahoo
+HGM,HandsOn Global Management (HGM),Information Technology Services,MI,,yahoo
+HGS,Hinduja Global Solutions,Specialty Business Services,MI,,yahoo
+HIKAL,Hikal,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+HILINFRA,Highway Infrastructure,Infrastructure Operations,MI,,yahoo
+HILTON,Hilton Metal Forging,Metal Fabrication,MI,,yahoo
+HIMATSEIDE,Himatsingka Seide,Textile Manufacturing,MI,,yahoo
+HINDADH,Hindustan Adhesives,Specialty Chemicals,MI,,yahoo
+HINDALCO,Hindalco Industries,Aluminum,LC,,yahoo
+HINDALUMI,Hind Aluminium Industries,Aluminum,MI,,yahoo
+HINDCOMPOS,Hindustan Composites,Auto Parts,MI,,yahoo
+HINDCON,Hindcon Chemicals,Specialty Chemicals,MI,,yahoo
+HINDCOPPER,Hindustan Copper,Copper,MC,,yahoo
+HINDOILEXP,Hindustan Oil Exploration Company,Oil & Gas E&P,MI,,yahoo
+HINDPETRO,Hindustan Petroleum Corporation,Oil & Gas Refining & Marketing,MC,,yahoo
+HINDUNILVR,Hindustan Unilever,Household & Personal Products,LC,,yahoo
+HINDWAREAP,Hindware Home Innovation,"Furnishings, Fixtures & Appliances",MI,,yahoo
+HINDZINC,Hindustan Zinc,Other Industrial Metals & Mining,LC,,yahoo
+HIRECT,Hirect,Electrical Equipment & Parts,MI,,yahoo
+HISARMETAL,Hisar Metal Industries,Steel,MI,,yahoo
+HITECH,Hi-Tech Pipes,Steel,MI,,yahoo
+HITECHCORP,Hitech Corporation,Packaging & Containers,MI,,yahoo
+HITECHGEAR,The Hi-Tech Gears,Auto Parts,MI,,yahoo
+HLEGLAS,HLE Glascoat,Specialty Industrial Machinery,MI,,yahoo
+HLVLTD,HLV LIMITED,Lodging,MI,,yahoo
+HMAAGRO,HMA Agro Industries,Packaged Foods,MI,,yahoo
+HMVL,Hindustan Media Ventures,Publishing,MI,,yahoo
+HNDFDS,Hindustan Foods,Conglomerates,MI,,yahoo
+HOMEFIRST,Home First Finance Company India,Mortgage Finance,SC,,yahoo
+HONASA,Honasa Consumer,Household & Personal Products,SC,,yahoo
+HONAUT,Honeywell Automation India,Electrical Equipment & Parts,SC,,yahoo
+HONDAPOWER,Honda India Power Products,Specialty Industrial Machinery,MI,,yahoo
+HORIZONIND,Horizon Industrial Parks,Real Estate - Development,MI,,yahoo
+HPAL,HP Adhesives,Specialty Chemicals,MI,,yahoo
+HPIL,Hindprakash Industries,Specialty Chemicals,MI,,yahoo
+HPL,HPL Electric & Power,Electrical Equipment & Parts,MI,,yahoo
+HRYNSHP,Hariyana Ship Breakers,Waste Management,MI,,yahoo
+HSCL,Himadri Speciality Chemical,Specialty Chemicals,SC,,yahoo
+HTEL,Hy-Tech Engineers,Specialty Industrial Machinery,MI,,yahoo
+HTMEDIA,HT Media,Publishing,MI,,yahoo
+HUBTOWN,Hubtown,Real Estate - Development,MI,,yahoo
+HUDCO,Housing & Urban Development Corporation,Credit Services,MC,,yahoo
+HUHTAMAKI,Huhtamaki India,Packaging & Containers,MI,,yahoo
+HYBRIDFIN,Hybrid Financial Services,Capital Markets,MI,,yahoo
+HYUNDAI,Hyundai Motor India,Auto Manufacturers,LC,,yahoo
+IBULLSLTD,Indiabulls,Real Estate - Development,MI,,yahoo
+ICDSLTD,ICDS,Real Estate Services,MI,,yahoo
+ICEMAKE,Ice Make Refrigeration,Specialty Industrial Machinery,MI,,yahoo
+ICICIAMC,ICICI Prudential Asset Management Company,Asset Management,MC,,yahoo
+ICICIBANK,ICICI Bank,Banks - Regional,LC,,yahoo
+ICICIGI,ICICI Lombard General Insurance Company,Insurance - Diversified,MC,,yahoo
+ICICILIFE,ICICI Life Insurance,Insurance - Life,MC,,yahoo
+ICIL,Indo Count Industries,Textile Manufacturing,MI,,yahoo
+ICRA,ICRA,Financial Data & Stock Exchanges,MI,,yahoo
+IDBI,IDBI Bank,Banks - Regional,SC,,yahoo
+IDEA,Vodafone Idea,Telecom Services,LC,,yahoo
+IDEAFORGE,Ideaforge Technology,Aerospace & Defense,MI,,yahoo
+IDFCFIRSTB,IDFC First Bank,Banks - Regional,MC,,yahoo
+IEX,Indian Energy Exchange,Capital Markets,SC,,yahoo
+IFBAGRO,IFB Agro Industries,Beverages - Wineries & Distilleries,MI,,yahoo
+IFBIND,IFB Industries,"Furnishings, Fixtures & Appliances",MI,,yahoo
+IFCI,IFCI,Credit Services,SC,,yahoo
+IFGLEXPOR,IFGL Refractories,Building Materials,MI,,yahoo
+IGARASHI,Igarashi Motors India,Auto Parts,MI,,yahoo
+IGCL,Indogulf Cropsciences,Agricultural Inputs,MI,,yahoo
+IGIL,International Gemological Institute,Other Precious Metals & Mining,SC,,yahoo
+IGL,Indraprastha Gas,Utilities - Regulated Gas,SC,,yahoo
+IGLSPIRITS,IGL Spirits,Beverages - Wineries & Distilleries,MI,,yahoo
+IGPL,IG Petrochemicals,Chemicals,MI,,yahoo
+IIFL,IIFL Finance,Credit Services,SC,,yahoo
+IIFLCAPS,IIFL Capital Services,Capital Markets,MI,,yahoo
+IIRM,IIRM Holdings India,Insurance Brokers,MI,,yahoo
+IITL,Industrial Investment Trust,Credit Services,MI,,yahoo
+IKIO,IKIO Technologies,Electronic Components,MI,,yahoo
+IKS,Inventurus Knowledge Solutions,Health Information Services,SC,,yahoo
+IMAGICAA,Imagicaaworld Entertainment,Entertainment,MI,,yahoo
+IMFA,Indian Metals & Ferro Alloys,Other Industrial Metals & Mining,MI,,yahoo
+IMPAL,India Motor Parts and Accessories,Auto Parts,MI,,yahoo
+INA,Insolation Energy,Unclassified,MI,,nse
+INCREDIBLE,INCREDIBLE INDUSTRIES LIMITED,Steel,MI,,yahoo
+INDBANK,Indbank Merchant Banking Services,Capital Markets,MI,,yahoo
+INDGN,Indegene,Health Information Services,MI,,yahoo
+INDHOTEL,The Indian Hotels Company,Lodging,MC,,yahoo
+INDIACEM,The India Cements,Building Materials,SC,,yahoo
+INDIAGLYCO,India Glycols,Chemicals,MI,,yahoo
+INDIAMART,Indiamart Intermesh,Internet Retail,SC,,yahoo
+INDIANB,Indian Bank,Banks - Regional,MC,,yahoo
+INDIANCARD,Indian Card Clothing Company,Textile Manufacturing,MI,,yahoo
+INDIANHUME,Indian Hume Pipe Company,Engineering & Construction,MI,,yahoo
+INDIASHLTR,India Shelter Finance Corporation,Mortgage Finance,MI,,yahoo
+INDIGO,InterGlobe Aviation,Airlines,LC,,yahoo
+INDIGOPNTS,Indigo Paints,Specialty Chemicals,MI,,yahoo
+INDIQUBE,Indiqube Spaces,Real Estate Services,MI,,yahoo
+INDNIPPON,India Nippon Electricals,Auto Parts,MI,,yahoo
+INDOAMIN,Indo Amines,Chemicals,MI,,yahoo
+INDOBORAX,Indo Borax & Chemicals,Chemicals,MI,,yahoo
+INDOCO,Indoco Remedies,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+INDOFARM,Indo Farm Equipment,Farm & Heavy Construction Machinery,MI,,yahoo
+INDOKEM,Indokem,Specialty Chemicals,MI,,yahoo
+INDOMIM,INDO-MIM,Metal Fabrication,MI,,yahoo
+INDORAMA,Indo Rama Synthetics (India),Textile Manufacturing,MI,,yahoo
+INDOSTAR,IndoStar Capital Finance,Credit Services,MI,,yahoo
+INDOTECH,Indo Tech Transformers,Electrical Equipment & Parts,MI,,yahoo
+INDOTHAI,Indo Thai Securities,Capital Markets,MI,,yahoo
+INDOUS,Indo Us Biotech,Agricultural Inputs,MI,,yahoo
+INDOWIND,Indowind Energy,Utilities - Renewable,MI,,yahoo
+INDPRUD,Industrial & Prudential Investment Company,Asset Management,MI,,yahoo
+INDRAMEDCO,Indraprastha Medical Corporation,Medical Care Facilities,MI,,yahoo
+INDSWFTLAB,Ind-Swift Laboratories,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+INDTERRAIN,Indian Terrain Fashions,Apparel Retail,MI,,yahoo
+INDTONER,Indian Toners & Developers,Specialty Chemicals,MI,,yahoo
+INDUSINDBK,IndusInd Bank,Banks - Regional,MC,,yahoo
+INDUSTOWER,Indus Towers,Telecom Services,MC,,yahoo
+INFOBEAN,InfoBeans Technologies,Software - Application,MI,,yahoo
+INFOMEDIA,Infomedia Press,Shell Companies,MI,,yahoo
+INFY,Infosys,Information Technology Services,LC,,yahoo
+INGERRAND,Ingersoll Rand (India),Specialty Industrial Machinery,MI,,yahoo
+INNOVACAP,Innova Captab,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+INNOVANA,Innovana Thinklabs,Software - Application,MI,,yahoo
+INNOVISION,Innovision,Staffing & Employment Services,MI,,yahoo
+INOXGREEN,Inox Green Energy Services,Utilities - Renewable,MI,,yahoo
+INOXINDIA,INOX India,Specialty Industrial Machinery,SC,,yahoo
+INOXWIND,Inox Wind,Specialty Industrial Machinery,SC,,yahoo
+INSECTICID,Insecticides (India),Agricultural Inputs,MI,,yahoo
+INSPIRISYS,Inspirisys Solutions,Information Technology Services,MI,,yahoo
+INTELLECT,Intellect Design Arena,Software - Application,SC,,yahoo
+INTENTECH,Intense Technologies,Software - Infrastructure,MI,,yahoo
+INTERARCH,Interarch Building Solutions,Engineering & Construction,MI,,yahoo
+INTLCONV,International Conveyors,Specialty Industrial Machinery,MI,,yahoo
+INVENTURE,Inventure Growth & Securities,Capital Markets,MI,,yahoo
+INVPRECQ,Investment & Precision Castings,Steel,MI,,yahoo
+IOB,Indian Overseas Bank,Banks - Regional,MC,,yahoo
+IOC,Indian Oil Corporation,Oil & Gas Refining & Marketing,LC,,yahoo
+IOLCP,IOL Chemicals and Pharmaceuticals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+IONEXCHANG,ION Exchange (India),Pollution & Treatment Controls,MI,,yahoo
+IPCALAB,IPCA Laboratories,Drug Manufacturers - Specialty & Generic,MC,,yahoo
+IPL,India Pesticides,Agricultural Inputs,MI,,yahoo
+IPRINGLTD,IP Rings,Auto Parts,MI,,yahoo
+IRB,IRB Infrastructure Developers,Infrastructure Operations,SC,,yahoo
+IRCON,Ircon International,Engineering & Construction,SC,,yahoo
+IRCTC,Indian Railway Catering And Tourism Corporation,Travel Services,MC,,yahoo
+IREDA,Indian Renewable Energy Development Agency,Credit Services,MC,,yahoo
+IRFC,Indian Railway Finance Corporation,Credit Services,LC,,yahoo
+IRIS,IRIS RegTech Solutions,Software - Application,MI,,yahoo
+IRISDOREME,Iris Clothings,Apparel Manufacturing,MI,,yahoo
+IRMENERGY,IRM Energy,Utilities - Regulated Gas,MI,,yahoo
+ISFT,Intrasoft Technologies,Internet Retail,MI,,yahoo
+ISGEC,Isgec Heavy Engineering,Specialty Industrial Machinery,MI,,yahoo
+ISHANCH,Ishan Dyes and Chemicals,Chemicals,MI,,yahoo
+ISTLTD,I S T,Auto Parts,MI,,yahoo
+ITC,ITC,Tobacco,LC,,yahoo
+ITCHOTELS,ITC Hotels,Resorts & Casinos,MC,,yahoo
+ITDC,India Tourism Development Corporation,Lodging,MI,,yahoo
+ITI,ITI,Communication Equipment,SC,,yahoo
+ITL,ITL Industries,Specialty Industrial Machinery,MI,,yahoo
+IVALUE,Ivalue Infosolutions,Information Technology Services,MI,,yahoo
+IVC,IL&FS Investment Managers,Financial Conglomerates,MI,,yahoo
+IVP,IVP,Specialty Chemicals,MI,,yahoo
+IWP,The Indian Wood Products Company,Lumber & Wood Production,MI,,yahoo
+IXIGO,Le Travenues Technology,Travel Services,MI,,yahoo
+IZMO,IZMO,Software - Application,MI,,yahoo
+J&KBANK,The Jammu & Kashmir Bank,Banks - Regional,SC,,yahoo
+JAGRAN,Jagran Prakashan,Publishing,MI,,yahoo
+JAGSNPHARM,Jagsonpal Pharmaceuticals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+JAIBALAJI,Jai Balaji Industries,Steel,MI,,yahoo
+JAICORPLTD,Jai Corp,Specialty Chemicals,MI,,yahoo
+JAINREC,Jain Resource Recycling,Other Industrial Metals & Mining,SC,,yahoo
+JAIPURKURT,Nandani Creation,Apparel Manufacturing,MI,,yahoo
+JAMNAAUTO,Jamna Auto Industries,Auto Parts,MI,,yahoo
+JARO,Jaro Institute of Technology Management and Research,Education & Training Services,MI,,yahoo
+JASH,Jash Engineering,Specialty Industrial Machinery,MI,,yahoo
+JAYAGROGN,Jayant Agro Organics,Specialty Chemicals,MI,,yahoo
+JAYBARMARU,Jay Bharat Maruti,Auto Parts,MI,,yahoo
+JAYKAY,Jaykay Enterprises,Specialty Business Services,MI,,yahoo
+JAYNECOIND,Jayaswal Neco Industries,Steel,MI,,yahoo
+JAYSREETEA,Jayshree Tea & Industries,Farm Products,MI,,yahoo
+JBMA,JBM Auto,Auto Parts,SC,,yahoo
+JENBURPH,Jenburkt Pharmaceuticals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+JETFREIGHT,Jet Freight Logistics,Integrated Freight & Logistics,MI,,yahoo
+JGCHEM,J.G.Chemicals,Other Industrial Metals & Mining,MI,,yahoo
+JHS,JHS Svendgaard Laboratories,Household & Personal Products,MI,,yahoo
+JINDALPHOT,Jindal Photo,Asset Management,MI,,yahoo
+JINDALPOLY,Jindal Poly Films,Packaging & Containers,MI,,yahoo
+JINDALSAW,Jindal Saw,Steel,SC,,yahoo
+JINDALSTEL,JINDAL STEEL LIMITED,Steel,LC,,yahoo
+JINDRILL,Jindal Drilling And Industries,Oil & Gas Equipment & Services,MI,,yahoo
+JINDWORLD,Jindal Worldwide,Textile Manufacturing,MI,,yahoo
+JIOFIN,Jio Financial Services,Asset Management,LC,,yahoo
+JISLDVREQS,Jain Irrigation Systems,Conglomerates,MI,,yahoo
+JISLJALEQS,Jain Irrigation Systems,Conglomerates,MI,,yahoo
+JITFINFRA,JITF Infralogistics,Engineering & Construction,MI,,yahoo
+JKCEMENT,JK Cement,Building Materials,MC,,yahoo
+JKIL,J.Kumar Infraprojects,Engineering & Construction,MI,,yahoo
+JKIPL,Jinkushal Industries,Industrial Distribution,MI,,yahoo
+JKLAKSHMI,JK Lakshmi Cement,Building Materials,MI,,yahoo
+JKPAPER,JK Paper,Paper & Paper Products,MI,,yahoo
+JKTYRE,JK Tyre & Industries,Auto Parts,SC,,yahoo
+JLHL,Jupiter Life Line Hospitals,Medical Care Facilities,MI,,yahoo
+JMA,Jullundur Motor Agency (Delhi),Auto Parts,MI,,yahoo
+JMFINANCIL,JM Financial,Capital Markets,SC,,yahoo
+JNKINDIA,JNK India,Specialty Industrial Machinery,MI,,yahoo
+JNPR,Juniper Green Energy,Utilities - Renewable,MI,,yahoo
+JOCIL,Jocil,Specialty Chemicals,MI,,yahoo
+JPL,Jio Platforms,Software - Infrastructure,MI,,yahoo
+JPOLYINVST,Jindal Poly Investment and Finance Company,Asset Management,MI,,yahoo
+JPPOWER,Jaiprakash Power Ventures,Utilities - Independent Power Producers,SC,,yahoo
+JSFB,Jana Small Finance Bank,Banks - Regional,MI,,yahoo
+JSIPL,Jindal Supreme (India),Steel,MI,,yahoo
+JSL,Jindal Stainless,Steel,MC,,yahoo
+JSLL,Jeena Sikho Lifecare,Medical Care Facilities,MI,,yahoo
+JSWCEMENT,JSW Cement,Building Materials,SC,,yahoo
+JSWDULUX,JSW Dulux,Specialty Chemicals,MI,,yahoo
+JSWENERGY,JSW Energy,Utilities - Independent Power Producers,MC,,yahoo
+JSWHL,JSW Holdings,Asset Management,MI,,yahoo
+JSWINFRA,JSW Infrastructure,Marine Shipping,MC,,yahoo
+JSWSTEEL,JSW Steel,Steel,LC,,yahoo
+JTEKTINDIA,Jtekt India,Auto Parts,MI,,yahoo
+JTLIND,JTL INDUSTRIES LIMITED,Steel,MI,,yahoo
+JUBLCPL,Jubilant Agri and Consumer Products,Specialty Chemicals,MI,,yahoo
+JUBLFOOD,Jubilant Foodworks,Restaurants,MC,,yahoo
+JUBLINGREA,Jubilant Ingrevia,Specialty Chemicals,SC,,yahoo
+JUBLPHARMA,Jubilant Pharmova,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+JUNIPER,Juniper Hotels,Lodging,MI,,yahoo
+JUSTDIAL,Just Dial,Internet Content & Information,MI,,yahoo
+JWL,Jupiter Wagons,Railroads,SC,,yahoo
+JYOTHYLAB,Jyothy Labs,Household & Personal Products,MI,,yahoo
+JYOTICNC,Jyoti CNC Automation,Specialty Industrial Machinery,SC,,yahoo
+JYOTIRES,Jyoti Resins & Adhesives,Specialty Chemicals,MI,,yahoo
+JYOTISTRUC,Jyoti Structures,Specialty Industrial Machinery,MI,,yahoo
+KABRAEXTRU,Kabra Extrusion Technik,Specialty Industrial Machinery,MI,,yahoo
+KAJARIACER,Kajaria Ceramics,Building Products & Equipment,SC,,yahoo
+KAKATCEM,Kakatiya Cement Sugar & Industries,Building Materials,MI,,yahoo
+KALAMANDIR,Sai Silks (Kalamandir),Apparel Retail,MI,,yahoo
+KALPATARU,Kalpataru,Real Estate - Development,MI,,yahoo
+KALYANI,Kalyani Commercials,Auto & Truck Dealerships,MI,,yahoo
+KALYANIFRG,Kalyani Forge,Auto Parts,MI,,yahoo
+KALYANKJIL,Kalyan Jewellers India,Luxury Goods,MC,,yahoo
+KAMAHOLD,Kama Holdings,Conglomerates,MI,,yahoo
+KAMANWALA,Kamanwala Housing Construction,Real Estate - Development,MI,,yahoo
+KAMATHOTEL,Kamat Hotels (I),Lodging,MI,,yahoo
+KAMDHENU,Kamdhenu,Steel,MI,,yahoo
+KAMOPAINTS,Kamdhenu Ventures,Steel,MI,,yahoo
+KANANIIND,Kanani Industries,Luxury Goods,MI,,yahoo
+KANCHI,Kanchi Karpooram,Specialty Chemicals,MI,,yahoo
+KANCOTEA,Kanco Tea & Industries,Farm Products,MI,,yahoo
+KANOHAR,Kanohar Electricals,Electrical Equipment & Parts,MI,,yahoo
+KANORICHEM,Kanoria Chemicals & Industries,Chemicals,MI,,yahoo
+KANPRPLA,Kanpur Plastipack,Packaging & Containers,MI,,yahoo
+KANSAINER,Kansai Nerolac Paints,Specialty Chemicals,MI,,yahoo
+KAPSTON,Kapston Services,Specialty Business Services,MI,,yahoo
+KARAMTARA,Karamtara Engineering,Solar,MI,,yahoo
+KARMAENG,Karma Energy,Utilities - Renewable,MI,,yahoo
+KARURVYSYA,Karur Vysya Bank,Banks - Regional,SC,,yahoo
+KAUSHALYA,Kaushalya Infrastructure Development Corporation,Engineering & Construction,MI,,yahoo
+KAVDEFENCE,Kavveri Defence & Wireless Technologies,Communication Equipment,MI,,yahoo
+KAYA,Kaya,Household & Personal Products,MI,,yahoo
+KAYNES,Kaynes Technology India,Electronic Components,SC,,yahoo
+KCP,KCP,Building Materials,MI,,yahoo
+KCPSUGIND,KCP Sugar and Industries Corporation,Confectioners,MI,,yahoo
+KDDL,KDDL,Luxury Goods,MI,,yahoo
+KDGREEN,KD Green Industries,Footwear & Accessories,MI,,yahoo
+KEC,KEC International,Engineering & Construction,SC,,yahoo
+KECL,Kirloskar Electric Company,Specialty Industrial Machinery,MI,,yahoo
+KEEPLEARN,DSJ Keep Learning,Education & Training Services,MI,,yahoo
+KEI,KEI Industries,Electrical Equipment & Parts,MC,,yahoo
+KELLTONTEC,Kellton Tech Solutions,Software - Application,MI,,yahoo
+KENNAMET,Kennametal India,Tools & Accessories,MI,,yahoo
+KERNEX,Kernex Microsystems (India),Software - Application,MI,,yahoo
+KESORAMIND,Kesoram Industries,Building Materials,MI,,yahoo
+KEYFINSERV,Keynote Financial Services,Capital Markets,MI,,yahoo
+KFINTECH,Kfin Technologies,Software - Application,SC,,yahoo
+KHADIM,Khadim India,Footwear & Accessories,MI,,yahoo
+KHAICHEM,Khaitan Chemicals & Fertilizers,Agricultural Inputs,MI,,yahoo
+KHAITANLTD,Khaitan (India),Industrial Distribution,MI,,yahoo
+KHANDSE,Khandwala Securities,Capital Markets,MI,,yahoo
+KHAZANCHI,Khazanchi Jewellers,Luxury Goods,MI,,yahoo
+KICL,Kalyani Investment Company,Asset Management,MI,,yahoo
+KILITCH,Kilitch Drugs (India),Drug Manufacturers - Specialty & Generic,MI,,yahoo
+KIMS,Krishna Institute of Medical Sciences,Medical Care Facilities,SC,,yahoo
+KINGFA,Kingfa Science & Technology (India),Specialty Chemicals,MI,,yahoo
+KIOCL,KIOCL,Steel,MI,,yahoo
+KIRANVYPAR,Kiran Vyapar,Capital Markets,MI,,yahoo
+KIRIINDUS,Kiri Industries,Specialty Chemicals,MI,,yahoo
+KIRLFER,Kirloskar Ferrous Industries,Metal Fabrication,MI,,yahoo
+KIRLOSBROS,Kirloskar Brothers,Specialty Industrial Machinery,SC,,yahoo
+KIRLOSENG,Kirloskar Oil Engines,Specialty Industrial Machinery,SC,,yahoo
+KIRLOSIND,Kirloskar Industries,Metal Fabrication,MI,,yahoo
+KIRLPNU,Kirloskar Pneumatic Company,Specialty Industrial Machinery,MI,,yahoo
+KISSHT,OnEMI Technology Solutions,Credit Services,MI,,yahoo
+KITEX,Kitex Garments,Apparel Manufacturing,MI,,yahoo
+KJMCFIN,KJMC Financial Services,Capital Markets,MI,,yahoo
+KKCL,Kewal Kiran Clothing,Apparel Manufacturing,MI,,yahoo
+KLBRENG-B,Kilburn Engineering,Specialty Industrial Machinery,MI,,yahoo
+KMCSHIL,K M C Speciality Hospitals (India),Medical Care Facilities,MI,,yahoo
+KMEW,Knowledge Marine & Engineering Works,Marine Shipping,MI,,yahoo
+KMSUGAR,K.M.Sugar Mills,Confectioners,MI,,yahoo
+KNACK,Knack Packaging,Packaging & Containers,MI,,yahoo
+KNAGRI,KN Agri Resources,Farm Products,MI,,yahoo
+KNRCON,KNR Constructions,Engineering & Construction,MI,,yahoo
+KOHINOOR,Kohinoor Foods,Packaged Foods,MI,,yahoo
+KOKUYOCMLN,Kokuyo Camlin,Business Equipment & Supplies,MI,,yahoo
+KOLTEPATIL,Kolte - Patil Developers,Real Estate - Development,MI,,yahoo
+KOPRAN,Kopran,Drug Manufacturers - General,MI,,yahoo
+KOTAKBANK,Kotak Mahindra Bank,Banks - Regional,LC,,yahoo
+KOTARISUG,Kothari Sugars And Chemicals,Confectioners,MI,,yahoo
+KOTHARIPET,Kothari Petrochemicals,Specialty Chemicals,MI,,yahoo
+KOTHARIPRO,Kothari Products,Conglomerates,MI,,yahoo
+KOTIC,Kothari Industrial Corporation,Agricultural Inputs,MI,,yahoo
+KOTYARK,Kotyark Industries,Specialty Chemicals,MI,,yahoo
+KOVAI,Kovai Medical Center & Hospital,Medical Care Facilities,MI,,yahoo
+KPEL,K.P. Energy,Engineering & Construction,MI,,yahoo
+KPIGREEN,KPI Green Energy,Utilities - Renewable,MI,,yahoo
+KPIL,Kalpataru Projects International,Engineering & Construction,SC,,yahoo
+KPITTECH,KPIT Technologies,Software - Application,SC,,yahoo
+KPL,Kwality Pharmaceuticals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+KPRMILL,K.P.R. Mill,Textile Manufacturing,MC,,yahoo
+KRBL,KRBL,Packaged Foods,MI,,yahoo
+KREBSBIO,Krebs Biochemicals and Industries,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+KRIDHANINF,Kridhan Infra,Steel,MI,,yahoo
+KRISHANA,Krishana Phoschem,Agricultural Inputs,MI,,yahoo
+KRISHIVAL,Krishival Foods,Packaged Foods,MI,,yahoo
+KRISHNADEF,Krishna Defence And Allied Industries,Specialty Industrial Machinery,MI,,yahoo
+KRITI,Kriti Industries (India),Building Products & Equipment,MI,,yahoo
+KRITIKA,Kritika Wires,Steel,MI,,yahoo
+KRITINUT,Kriti Nutrients,Packaged Foods,MI,,yahoo
+KRN,KRN Heat Exchanger and Refrigeration,Electronic Components,MI,,yahoo
+KRONOX,Kronox Lab Sciences,Specialty Chemicals,MI,,yahoo
+KROSS,Kross,Auto Parts,MI,,yahoo
+KRSNAA,Krsnaa Diagnostics,Diagnostics & Research,MI,,yahoo
+KRYSTAL,Krystal Integrated Services,Specialty Business Services,MI,,yahoo
+KSB,Ksb,Specialty Industrial Machinery,SC,,yahoo
+KSCL,Kaveri Seed Company,Agricultural Inputs,MI,,yahoo
+KSE,KSE,Packaged Foods,MI,,yahoo
+KSHINTL,KSH International,Electrical Equipment & Parts,MI,,yahoo
+KSHITIJPOL,Kshitij Polyline,Business Equipment & Supplies,MI,,yahoo
+KSL,Kalyani Steels,Steel,MI,,yahoo
+KSOLVES,Ksolves India,Software - Application,MI,,yahoo
+KSR,KSR Footwear,Footwear & Accessories,MI,,yahoo
+KTKBANK,The Karnataka Bank,Banks - Regional,MI,,yahoo
+KUANTUM,Kuantum Papers,Paper & Paper Products,MI,,yahoo
+KUSUMGAR,Kusumgar,Textile Manufacturing,MI,,yahoo
+KWIL,Kwality Wall's (India),Packaged Foods,MI,,yahoo
+LADDERUP,Ladderup Finance,Capital Markets,MI,,yahoo
+LAGNAM,Lagnam Spintex,Textile Manufacturing,MI,,yahoo
+LAHOTIOV,Lahoti Overseas,Textile Manufacturing,MI,,yahoo
+LAKSHMIMIL,Lakshmi Mills Company,Textile Manufacturing,MI,,yahoo
+LAL,Lorenzini Apparels,Apparel Manufacturing,MI,,yahoo
+LALITHAA,Lalithaa Jewellery Mart,Luxury Goods,MI,,yahoo
+LALPATHLAB,Dr. Lal Path Labs,Diagnostics & Research,SC,,yahoo
+LAMBODHARA,Lambodhara Textiles,Textile Manufacturing,MI,,yahoo
+LANCER,Lancer Container Lines,Integrated Freight & Logistics,MI,,yahoo
+LANCORHOL,Lancor Holdings,Real Estate - Development,MI,,yahoo
+LANDMARK,Landmark Cars,Auto & Truck Dealerships,MI,,yahoo
+LANDSMILL,Landsmill Green,Conglomerates,MI,,yahoo
+LAOPALA,La Opala RG,"Furnishings, Fixtures & Appliances",MI,,yahoo
+LASERPOWER,Laser Power & Infra,Electrical Equipment & Parts,MI,,yahoo
+LATENTVIEW,Latent View Analytics,Consulting Services,MI,,yahoo
+LATTEYS,Latteys Industries,Specialty Industrial Machinery,MI,,yahoo
+LAURUSLABS,Laurus Labs,Drug Manufacturers - Specialty & Generic,MC,,yahoo
+LAXMICOT,Laxmi Cotspin,Textile Manufacturing,MI,,yahoo
+LAXMIDENTL,Laxmi Dental,Medical Instruments & Supplies,MI,,yahoo
+LAXMIINDIA,Laxmi India Finance,Credit Services,MI,,yahoo
+LCCINFOTEC,LCC Infotech,Education & Training Services,MI,,yahoo
+LCCPROJECT,LCC Projects,Infrastructure Operations,MI,,yahoo
+LCL,Lohia Corp,Specialty Industrial Machinery,MI,,yahoo
+LEAPIND,LEAP India,Integrated Freight & Logistics,MI,,yahoo
+LEENEE,Lee & Nee Softwares Exports,Information Technology Services,MI,,yahoo
+LEMERITE,Le Merite Exports,Textile Manufacturing,MI,,yahoo
+LEMONTREE,Lemon Tree Hotels,Lodging,SC,,yahoo
+LENSKART,Lenskart Solutions,Medical Instruments & Supplies,MC,,yahoo
+LEXUS,Lexus Granito (India),Building Products & Equipment,MI,,yahoo
+LFIC,Lakshmi Finance & Industrial Corporation,Asset Management,MI,,yahoo
+LGBBROSLTD,LG Balakrishnan & Bros,Auto Parts,MI,,yahoo
+LGEINDIA,LG Electronics India,Consumer Electronics,MC,,yahoo
+LGHL,Laxmi Goldorna House,Luxury Goods,MI,,yahoo
+LIBAS,Libas Consumer Products,Apparel Manufacturing,MI,,yahoo
+LIBERTSHOE,Liberty Shoes,Footwear & Accessories,MI,,yahoo
+LICHSGFIN,LIC Housing Finance,Mortgage Finance,MC,,yahoo
+LICI,Life Insurance Corporation Of India,Insurance - Life,MC,,yahoo
+LIKHITHA,Likhitha Infrastructure,Oil & Gas Equipment & Services,MI,,yahoo
+LINC,Linc,Business Equipment & Supplies,MI,,yahoo
+LINCOLN,Lincoln Pharmaceuticals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+LINDEINDIA,Linde India,Specialty Chemicals,MC,,yahoo
+LKPSEC,LKP Securities,Capital Markets,MI,,yahoo
+LLOYDSENGG,LLOYDS ENGINEERING WORKS LIMITED,Specialty Industrial Machinery,MI,,yahoo
+LLOYDSENT,Lloyds Enterprises,Steel,MI,,yahoo
+LLOYDSME,Lloyds Metals And Energy,Steel,MC,,yahoo
+LMW,LMW,Specialty Industrial Machinery,MI,,yahoo
+LODHA,Lodha Developers,Real Estate - Development,MC,,yahoo
+LOKESHMACH,Lokesh Machines,Specialty Industrial Machinery,MI,,yahoo
+LORDSCHLO,Lords Chloro Alkali,Chemicals,MI,,yahoo
+LOTUSCHO,Lotus Chocolate Company,Confectioners,MI,,yahoo
+LOTUSDEV,Sri Lotus Developers and Realty,Engineering & Construction,MI,,yahoo
+LOTUSEYE,Lotus Eye Hospital and Institute,Medical Care Facilities,MI,,yahoo
+LOVABLE,Lovable Lingerie,Apparel Manufacturing,MI,,yahoo
+LOYALTEX,Loyal Textile Mills,Textile Manufacturing,MI,,yahoo
+LPDC,Landmark Property Development Company,Real Estate Services,MI,,yahoo
+LT,Larsen & Toubro,Engineering & Construction,LC,,yahoo
+LTF,L&T Finance,Credit Services,MC,,yahoo
+LTFOODS,LT Foods,Packaged Foods,SC,,yahoo
+LTM,LTM,Information Technology Services,LC,,yahoo
+LTTS,L&T Technology Services,Information Technology Services,MC,,yahoo
+LUMAXIND,Lumax Industries,Auto Parts,MI,,yahoo
+LUMAXTECH,Lumax Auto Technologies,Auto Parts,MI,,yahoo
+LUMINO,Lumino Industries,Electrical Equipment & Parts,MI,,yahoo
+LUPIN,Lupin,Drug Manufacturers - Specialty & Generic,MC,,yahoo
+LUXIND,Lux Industries,Apparel Manufacturing,MI,,yahoo
+LXCHEM,Laxmi Organic Industries,Specialty Chemicals,MI,,yahoo
+LYKALABS,Lyka Labs,Biotechnology,MI,,yahoo
+M&M,Mahindra & Mahindra,Auto Manufacturers,LC,,yahoo
+M&MFIN,Mahindra & Mahindra Financial Services,Credit Services,MC,,yahoo
+MAANALU,Maan Aluminium,Aluminum,MI,,yahoo
+MACPOWER,Macpower CNC Machines,Specialty Industrial Machinery,MI,,yahoo
+MADHAV,Madhav Marbles and Granites,Building Products & Equipment,MI,,yahoo
+MADHAVIPL,Madhav Infra Projects,Engineering & Construction,MI,,yahoo
+MADHUCON,Madhucon Projects,Engineering & Construction,MI,,yahoo
+MADRASFERT,Madras Fertilizers,Agricultural Inputs,MI,,yahoo
+MAFATIND,Mafatlal Industries,Textile Manufacturing,MI,,yahoo
+MAGADSUGAR,Magadh Sugar & Energy,Confectioners,MI,,yahoo
+MAGNUM,Magnum Ventures,Paper & Paper Products,MI,,yahoo
+MAHABANK,Bank of Maharashtra,Banks - Regional,MC,,yahoo
+MAHAPEXLTD,Maha Rashtra Apex Corporation,Credit Services,MI,,yahoo
+MAHASTEEL,Mahamaya Steel Industries,Steel,MI,,yahoo
+MAHEPC,Mahindra EPC Irrigation,Farm & Heavy Construction Machinery,MI,,yahoo
+MAHESHWARI,Maheshwari Logistics,Integrated Freight & Logistics,MI,,yahoo
+MAHLIFE,Mahindra Lifespace Developers,Real Estate - Development,MI,,yahoo
+MAHLOG,Mahindra Logistics,Integrated Freight & Logistics,MI,,yahoo
+MAHSCOOTER,Maharashtra Scooters,Asset Management,MI,,yahoo
+MAHSEAMLES,Maharashtra Seamless,Steel,MI,,yahoo
+MAITHANALL,Maithan Alloys,Steel,MI,,yahoo
+MAJESAUT,Majestic Auto,Real Estate Services,MI,,yahoo
+MAKERSL,Makers Laboratories,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+MALLCOM,Mallcom (India),Security & Protection Services,MI,,yahoo
+MALUPAPER,Malu Paper Mills,Paper & Paper Products,MI,,yahoo
+MAMATA,Mamata Machinery,Specialty Industrial Machinery,MI,,yahoo
+MANAKALUCO,Manaksia Aluminium Company,Aluminum,MI,,yahoo
+MANAKCOAT,Manaksia Coated Metals & Industries,Metal Fabrication,MI,,yahoo
+MANAKSIA,Manaksia,Metal Fabrication,MI,,yahoo
+MANAKSTEEL,Manaksia Steels,Steel,MI,,yahoo
+MANALIPETC,Manali Petrochemicals,Specialty Chemicals,MI,,yahoo
+MANAPPURAM,Manappuram Finance,Credit Services,SC,,yahoo
+MANBA,Manba Finance,Credit Services,MI,,yahoo
+MANCREDIT,Mangal Credit and Fincorp,Credit Services,MI,,yahoo
+MANGALAM,Mangalam Drugs And Organics,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+MANGLMCEM,Mangalam Cement,Building Materials,MI,,yahoo
+MANIKA,Manika Plastech,Packaging & Containers,MI,,yahoo
+MANINDS,Man Industries (India),Steel,MI,,yahoo
+MANINFRA,Man Infraconstruction,Engineering & Construction,MI,,yahoo
+MANIPALHOS,Manipal Health Enterprises,Medical Care Facilities,MI,,yahoo
+MANKIND,Mankind Pharma,Drug Manufacturers - Specialty & Generic,MC,,yahoo
+MANOMAY,Manomay Tex India,Textile Manufacturing,MI,,yahoo
+MANORAMA,Manorama Industries,Packaged Foods,MI,,yahoo
+MANORG,Mangalam Organics,Specialty Chemicals,MI,,yahoo
+MANUGRAPH,Manugraph India,Specialty Industrial Machinery,MI,,yahoo
+MANYAVAR,Vedant Fashions,Apparel Manufacturing,MI,,yahoo
+MAPMYINDIA,C.E. Info Systems,Software - Infrastructure,MI,,yahoo
+MARALOVER,Maral Overseas,Textile Manufacturing,MI,,yahoo
+MARATHON,Marathon Nextgen Realty,Real Estate - Development,MI,,yahoo
+MARICO,Marico,Household & Personal Products,MC,,yahoo
+MARINE,Marine Electricals (India),Electrical Equipment & Parts,MI,,yahoo
+MARKOLINES,Markolines Pavement Technologies,Infrastructure Operations,MI,,yahoo
+MARKSANS,Marksans Pharma,Drug Manufacturers - General,MI,,yahoo
+MARSONS,Marsons,Electrical Equipment & Parts,MI,,yahoo
+MARUTI,Maruti Suzuki India,Auto Manufacturers,LC,,yahoo
+MASFIN,MAS Financial Services,Credit Services,MI,,yahoo
+MASKINVEST,Mask Investments,Capital Markets,MI,,yahoo
+MASTEK,Mastek,Information Technology Services,MI,,yahoo
+MASTERTR,Master Trust,Capital Markets,MI,,yahoo
+MATRIMONY,Matrimony.Com,Internet Content & Information,MI,,yahoo
+MAWANASUG,Mawana Sugars,Confectioners,MI,,yahoo
+MAXESTATES,Max Estates,Real Estate - Development,MI,,yahoo
+MAXHEALTH,Max Healthcare Institute,Medical Care Facilities,LC,,yahoo
+MAXIND,Max India,Medical Care Facilities,MI,,yahoo
+MAYURUNIQ,Mayur Uniquoters,Textile Manufacturing,MI,,yahoo
+MAZDA,Mazda,Specialty Industrial Machinery,MI,,yahoo
+MAZDOCK,Mazagon Dock Shipbuilders,Aerospace & Defense,LC,,yahoo
+MBAPL,Madhya Bharat Agro Products,Agricultural Inputs,MI,,yahoo
+MBECL,Mcnally Bharat Engineering Company,Engineering & Construction,MI,,yahoo
+MBEL,M & B Engineering,Engineering & Construction,MI,,yahoo
+MBLINFRA,MBL Infrastructure,Engineering & Construction,MI,,yahoo
+MCCHRLS-B,Mac Charles India,Conglomerates,MI,,yahoo
+MCL,M TEK COPPER LIMITED,Copper,MI,,yahoo
+MCLEODRUSS,Mcleod Russel India,Packaged Foods,MI,,yahoo
+MCLOUD,Magellanic Cloud,Information Technology Services,MI,,yahoo
+MCX,Multi Commodity Exchange of India,Financial Data & Stock Exchanges,MC,,yahoo
+MEDANTA,Global Health,Medical Care Facilities,MC,,yahoo
+MEDIASSIST,Medi Assist Healthcare Services,Healthcare Plans,MI,,yahoo
+MEDICAMEQ,Medicamen Biotech,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+MEDICAPQ,Medi Caps,Real Estate - Diversified,MI,,yahoo
+MEDICO,Medico Remedies,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+MEDPLUS,Medplus Health Services,Pharmaceutical Retailers,MI,,yahoo
+MEESHO,Meesho,Internet Retail,MC,,yahoo
+MEGASTAR,Megastar Foods,Packaged Foods,MI,,yahoo
+MEIL,Mangal Electrical Industries,Electrical Equipment & Parts,MI,,yahoo
+MELSTAR,Melstar Information Technologies,Shell Companies,MI,,yahoo
+MENNPIS,Menon Pistons,Auto Parts,MI,,yahoo
+MENONBE,Menon Bearings,Auto Parts,MI,,yahoo
+MERCANTILE,Mercantile Ventures,Real Estate Services,MI,,yahoo
+MERCURYEV,Mercury Ev-Tech,Auto Manufacturers,MI,,yahoo
+METROBRAND,Metro Brands,Apparel Retail,MI,,yahoo
+METROGLOBL,Metroglobal,Conglomerates,MI,,yahoo
+METROPOLIS,Metropolis Healthcare,Diagnostics & Research,MI,,yahoo
+MFML,Mahalaxmi Fabric Mills,Textile Manufacturing,MI,,yahoo
+MFSL,Max Financial Services,Insurance - Life,MC,,yahoo
+MGEL,Mangalam Global Enterprise,Farm Products,MI,,yahoo
+MGL,Mahanagar Gas,Utilities - Regulated Gas,SC,,yahoo
+MHLXMIRU,Mahalaxmi Rubtech,Textile Manufacturing,MI,,yahoo
+MHRIL,Mahindra Holidays & Resorts India,Resorts & Casinos,MI,,yahoo
+MICEL,MIC Electronics,Electronic Components,MI,,yahoo
+MIDHANI,Mishra Dhatu Nigam,Steel,MI,,yahoo
+MIDWESTLTD,Midwest,Building Materials,MI,,yahoo
+MIIL,Meghna Infracon Infrastructure,Real Estate - Development,MI,,yahoo
+MILKYMIST,Milky Mist Dairy Food,Packaged Foods,MI,,yahoo
+MINALIND,Minal Industries,Luxury Goods,MI,,yahoo
+MINDACORP,Minda Corporation,Auto Parts,SC,,yahoo
+MINDTECK,Mindteck (India),Information Technology Services,MI,,yahoo
+MIRZAINT,Mirza International,Footwear & Accessories,MI,,yahoo
+MITCON,MITCON Consultancy & Engineering Services,Engineering & Construction,MI,,yahoo
+MITTAL,Mittal Life Style,Textile Manufacturing,MI,,yahoo
+MKEXIM,M.K. Exim (India),Household & Personal Products,MI,,yahoo
+MKJEWELS,M. K. Sons Fine Jewels,Luxury Goods,MI,,yahoo
+MKPL,M K Proteins,Packaged Foods,MI,,yahoo
+MLKFOOD,Milkfood,Packaged Foods,MI,,yahoo
+MMFL,MM Forgings,Metal Fabrication,MI,,yahoo
+MMP,MMP Industries,Aluminum,MI,,yahoo
+MMTC,MMTC,Conglomerates,SC,,yahoo
+MMWL,Media Matrix Worldwide,Entertainment,MI,,yahoo
+MOBIKWIK,One Mobikwik Systems,Software - Infrastructure,MI,,yahoo
+MODINATUR,Modi Naturals,Packaged Foods,MI,,yahoo
+MODIRUBBER,Modi Rubber,Real Estate Services,MI,,yahoo
+MODIS,Modis Navnirman,Real Estate - Development,MI,,yahoo
+MODISONLTD,MODISON LIMITED,Electrical Equipment & Parts,MI,,yahoo
+MODTHREAD,Modern Threads (India),Textile Manufacturing,MI,,yahoo
+MOHITE,Mohite Industries,Textile Manufacturing,MI,,yahoo
+MOHITIND,Mohit Industries,Textile Manufacturing,MI,,yahoo
+MOIL,MOIL,Other Industrial Metals & Mining,MI,,yahoo
+MOKSH,Moksh Ornaments,Luxury Goods,MI,,yahoo
+MOL,Meghmani Organics,Agricultural Inputs,MI,,yahoo
+MOLBIO,Molbio Diagnostics,Medical Devices,MI,,yahoo
+MOLDTECH,Mold-Tek Technologies,Engineering & Construction,MI,,yahoo
+MOLDTKPAC,Mold-Tek Packaging,Packaging & Containers,MI,,yahoo
+MOMSBELIEF,Rays of Belief,Medical Care Facilities,MI,,yahoo
+MONARCH,Monarch Networth Capital,Capital Markets,MI,,yahoo
+MONEYBOXX,Moneyboxx Finance,Credit Services,MI,,yahoo
+MONEYVIEW,Moneyview,Software - Application,MI,,yahoo
+MONTECARLO,Monte Carlo Fashions,Apparel Manufacturing,MI,,yahoo
+MOREPENLAB,Morepen Laboratories,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+MOSCHIP,Moschip Technologies,Semiconductor Equipment & Materials,MI,,yahoo
+MOTHERSON,Samvardhana Motherson International,Auto Parts,LC,,yahoo
+MOTILALOFS,Motilal Oswal Financial Services,Capital Markets,MC,,yahoo
+MOTISONS,Motisons Jewellers,Luxury Goods,MI,,yahoo
+MOTOGENFIN,The Motor & General Finance,Real Estate Services,MI,,yahoo
+MPDL,MPDL,Real Estate - Development,MI,,yahoo
+MPHASIS,MphasiS,Information Technology Services,MC,,yahoo
+MPIMANIPAL,Manipal Payment and Identity Solutions,Software - Infrastructure,MI,,yahoo
+MPSLTD,MPS,Publishing,MI,,yahoo
+MRF,MRF,Auto Parts,MC,,yahoo
+MRPL,Mangalore Refinery and Petrochemicals,Oil & Gas Refining & Marketing,SC,,yahoo
+MSL,Mangalam Seeds,Agricultural Inputs,MI,,yahoo
+MSPL,MSP Steel & Power,Steel,MI,,yahoo
+MSTCLTD,Mstc,Conglomerates,MI,,yahoo
+MSUMI,Motherson Sumi Wiring India,Auto Parts,SC,,yahoo
+MTARTECH,Mtar Technologies,Specialty Industrial Machinery,SC,,yahoo
+MTEDUCARE,MT Educare,Education & Training Services,MI,,yahoo
+MTNL,Mahanagar Telephone Nigam,Telecom Services,MI,,yahoo
+MUFIN,Mufin Green Finance,Credit Services,MI,,yahoo
+MUFTI,Credo Brands Marketing,Apparel Retail,MI,,yahoo
+MUKANDLTD,Mukand,Steel,MI,,yahoo
+MUKESHB,Mukesh Babu Financial Services,Capital Markets,MI,,yahoo
+MUKKA,Mukka Proteins,Packaged Foods,MI,,yahoo
+MUKTAARTS,Mukta Arts,Entertainment,MI,,yahoo
+MUNJALAU,Munjal Auto Industries,Auto Parts,MI,,yahoo
+MUNJALSHOW,Munjal Showa,Auto Parts,MI,,yahoo
+MURUDCERA,Murudeshwar Ceramics,Building Products & Equipment,MI,,yahoo
+MUTHOOTCAP,Muthoot Capital Services,Credit Services,MI,,yahoo
+MUTHOOTFIN,Muthoot Finance,Credit Services,LC,,yahoo
+MUTHOOTMF,Muthoot Microfin,Credit Services,MI,,yahoo
+MVELECTRO,MV Electrosystems,Electrical Equipment & Parts,MI,,yahoo
+MVGJL,Manoj Vaibhav Gems N Jewellers,Luxury Goods,MI,,yahoo
+MWL,Mangalam Worldwide,Steel,MI,,yahoo
+MYSORPETRO,Mysore Petro Chemicals,Chemicals,MI,,yahoo
+NACLIND,NACL Industries,Agricultural Inputs,MI,,yahoo
+NAGREEKCAP,Nagreeka Capital & Infrastructure,Asset Management,MI,,yahoo
+NAGREEKEXP,Nagreeka Exports,Textile Manufacturing,MI,,yahoo
+NAHARCAP,Nahar Capital and Financial Services,Capital Markets,MI,,yahoo
+NAHARINDUS,Nahar Industrial Enterprises,Textile Manufacturing,MI,,yahoo
+NAHARPOLY,Nahar Poly Films,Packaging & Containers,MI,,yahoo
+NAHARSPING,Nahar Spinning Mills,Textile Manufacturing,MI,,yahoo
+NAM-INDIA,Nippon Life India Asset Management,Asset Management,MC,,yahoo
+NARMADA,Narmada Agrobase,Agricultural Inputs,MI,,yahoo
+NATCAPSUQ,Natural Capsules,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+NATCOPHARM,Natco Pharma,Drug Manufacturers - Specialty & Generic,SC,,yahoo
+NATHBIOGEN,Nath Bio-Genes (India),Agricultural Inputs,MI,,yahoo
+NATIONALUM,National Aluminium Company,Aluminum,MC,,yahoo
+NATIONSTD,National Standard (India),Real Estate - Development,MI,,yahoo
+NAUKRI,Info Edge (India),Internet Content & Information,MC,,yahoo
+NAVA,NAVA LIMITED,Conglomerates,SC,,yahoo
+NAVINFLUOR,Navin Fluorine International,Chemicals,SC,,yahoo
+NAVKARCORP,Navkar Corporation,Integrated Freight & Logistics,MI,,yahoo
+NAVKARURB,Navkar Urbanstructure,Building Materials,MI,,yahoo
+NAVNETEDUL,Navneet Education,Publishing,MI,,yahoo
+NAZARA,Nazara Technologies,Electronic Gaming & Multimedia,MI,,yahoo
+NBCC,NBCC (India),Engineering & Construction,SC,,yahoo
+NBIFIN,N. B. I. Industrial Finance Company,Capital Markets,MI,,yahoo
+NCC,NCC,Engineering & Construction,SC,,yahoo
+NCLIND,NCL Industries,Building Materials,MI,,yahoo
+NDGL,Naga Dhunseri Group,Capital Markets,MI,,yahoo
+NDL,Nandan Denim,Textile Manufacturing,MI,,yahoo
+NDLVENTURE,NDL Ventures,Entertainment,MI,,yahoo
+NDRAUTO,Ndr Auto Components,Auto Parts,MI,,yahoo
+NDTV,New Delhi Television,Broadcasting,MI,,yahoo
+NEAGI,Neelamalai Agro Industries,Farm Products,MI,,yahoo
+NECCLTD,North Eastern Carrying Corporation,Trucking,MI,,yahoo
+NECLIFE,Nectar Lifesciences,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+NELCAST,Nelcast,Metal Fabrication,MI,,yahoo
+NELCO,NELCO,Communication Equipment,MI,,yahoo
+NEOGEN,Neogen Chemicals,Specialty Chemicals,MI,,yahoo
+NEPHROPLUS,Nephrocare Health Services,Medical Care Facilities,MI,,yahoo
+NESCO,Nesco,Conglomerates,MI,,yahoo
+NESTLEIND,Nestle India,Packaged Foods,LC,,yahoo
+NETWEB,Netweb Technologies India,Computer Hardware,SC,,yahoo
+NETWORK18,Network18 Media & Investments,Entertainment,MI,,yahoo
+NEUEON,Neueon Corporation,Steel,MI,,yahoo
+NEULANDLAB,Neuland Laboratories,Drug Manufacturers - Specialty & Generic,SC,,yahoo
+NEWGEN,Newgen Software Technologies,Software - Infrastructure,MI,,yahoo
+NEXTMEDIA,Next Mediaworks,Broadcasting,MI,,yahoo
+NFL,National Fertilizers,Agricultural Inputs,MI,,yahoo
+NGIL,Nakoda Group of Industries,Packaged Foods,MI,,yahoo
+NGLFINE,NGL Fine-Chem,Drug Manufacturers - General,MI,,yahoo
+NH,Narayana Hrudayalaya,Medical Care Facilities,MC,,yahoo
+NHPC,NHPC,Utilities - Renewable,MC,,yahoo
+NIACL,The New India Assurance Company,Insurance - Diversified,SC,,yahoo
+NIBE,NIBE,Aerospace & Defense,MI,,yahoo
+NIBL,NRB Industrial Bearings,Tools & Accessories,MI,,yahoo
+NICCOPAR,Nicco Parks & Resorts,Leisure,MI,,yahoo
+NIITLTD,NIIT,Education & Training Services,MI,,yahoo
+NIITMTS,NIIT Learning Systems,Education & Training Services,MI,,yahoo
+NILAINFRA,Nila Infrastructures,Real Estate - Development,MI,,yahoo
+NILASPACES,Nila Spaces,Real Estate - Development,MI,,yahoo
+NILE,Nile,Other Industrial Metals & Mining,MI,,yahoo
+NILKAMAL,Nilkamal,"Furnishings, Fixtures & Appliances",MI,,yahoo
+NIMBSPROJ,Nimbus Projects,Real Estate - Development,MI,,yahoo
+NINSYS,NINtec Systems,Information Technology Services,MI,,yahoo
+NIPPOBATRY,Indo-National,Electrical Equipment & Parts,MI,,yahoo
+NIRAJ,Niraj Cement Structurals,Engineering & Construction,MI,,yahoo
+NIRAJISPAT,Niraj Ispat Industries,Apparel Manufacturing,MI,,yahoo
+NIRLON,Nirlon,Real Estate Services,MI,,yahoo
+NITCO,Nitco,Building Products & Equipment,MI,,yahoo
+NITINSPIN,Nitin Spinners,Textile Manufacturing,MI,,yahoo
+NITIRAJ,Nitiraj Engineers,Scientific & Technical Instruments,MI,,yahoo
+NITTAGELA,Nitta Gelatin India,Specialty Chemicals,MI,,yahoo
+NITYAS,Nityas Gems and Jewellery,Luxury Goods,MI,,yahoo
+NIVABUPA,Niva Bupa Health Insurance Company,Insurance - Life,MI,,yahoo
+NKIND,NK Industries,Household & Personal Products,MI,,yahoo
+NLCINDIA,NLC India,Utilities - Regulated Electric,MC,,yahoo
+NMDC,NMDC,Steel,MC,,yahoo
+NOCIL,NOCIL,Specialty Chemicals,MI,,yahoo
+NOIDATOLL,Noida Toll Bridge Company,Infrastructure Operations,MI,,yahoo
+NORBTEAEXP,Norben Tea & Exports,Farm Products,MI,,yahoo
+NORTHARC,Northern Arc Capital,Credit Services,MI,,yahoo
+NOVAAGRI,Nova Agritech,Agricultural Inputs,MI,,yahoo
+NPST,Network People Services Technologies,Software - Application,MI,,yahoo
+NRAIL,N R Agarwal Industries,Paper & Paper Products,MI,,yahoo
+NRBBEARING,NRB Bearing,Auto Parts,MI,,yahoo
+NRL,Nupur Recyclers,Waste Management,MI,,yahoo
+NSIL,Nalwa Sons Investments,Asset Management,MI,,yahoo
+NSLNISP,NMDC Steel,Steel,SC,,yahoo
+NTCIND,NTC Industries,Tobacco,MI,,yahoo
+NTPC,NTPC,Utilities - Regulated Electric,LC,,yahoo
+NTPCGREEN,NTPC Green Energy,Utilities - Renewable,MC,,yahoo
+NUCLEUS,Nucleus Software Exports,Software - Application,MI,,yahoo
+NURECA,Nureca,Medical Devices,MI,,yahoo
+NUVAMA,Nuvama Wealth Management,Asset Management,SC,,yahoo
+NUVOCO,Nuvoco Vistas Corporation,Building Materials,SC,,yahoo
+NYKAA,FSN E-Commerce Ventures,Internet Retail,MC,,yahoo
+OAL,Oriental Aromatics,Specialty Chemicals,MI,,yahoo
+OBCL,OBCL,Trucking,MI,,yahoo
+OBEROIRLTY,Oberoi Realty,Real Estate - Development,MC,,yahoo
+OCCLLTD,OCCL,Chemicals,MI,,yahoo
+ODIGMA,Odigma Consultancy Solutions,Advertising Agencies,MI,,yahoo
+ODYCORP,Odyssey Corporation,Capital Markets,MI,,yahoo
+OFSS,Oracle Financial Services Software,Software - Infrastructure,MC,,yahoo
+OIL,Oil India,Oil & Gas Integrated,MC,,yahoo
+OILCOUNTUB,Oil Country Tubular,Oil & Gas Equipment & Services,MI,,yahoo
+OLAELEC,Ola Electric Mobility,Auto Manufacturers,SC,,yahoo
+OLECTRA,Olectra Greentech,Farm & Heavy Construction Machinery,SC,,yahoo
+OMAXAUTO,Omax Autos,Auto Parts,MI,,yahoo
+OMAXE,Omaxe,Real Estate - Development,MI,,yahoo
+OMFREIGHT,Om Freight Forwarders,Integrated Freight & Logistics,MI,,yahoo
+OMINFRAL,OM INFRA LIMITED,Engineering & Construction,MI,,yahoo
+OMNI,Omnitech Engineering,Specialty Industrial Machinery,MI,,yahoo
+OMPOWER,Om Power Transmission,Engineering & Construction,MI,,yahoo
+ONEGLOBAL,One Global Service Provider,Pharmaceutical Retailers,MI,,yahoo
+ONELIFECAP,Onelife Capital Advisors,Capital Markets,MI,,yahoo
+ONEPOINT,One Point One Solutions,Specialty Business Services,MI,,yahoo
+ONESOURCE,Onesource Specialty Pharma,Biotechnology,SC,,yahoo
+ONGC,Oil & Natural Gas Corporation,Oil & Gas Integrated,LC,,yahoo
+ONIDA,Onida Electronics,"Furnishings, Fixtures & Appliances",MI,,yahoo
+ONIXSOLAR,Onix Solar Energy,Solar,MI,,yahoo
+ONMOBILE,OnMobile Global,Telecom Services,MI,,yahoo
+ONWARDTEC,Onward Technologies,Information Technology Services,MI,,yahoo
+OPTIEMUS,Optiemus Infracom,Electronics & Computer Distribution,MI,,yahoo
+OPTIFIN,Optimus Finance,Chemicals,MI,,yahoo
+ORBTEXP,Orbit Exports,Textile Manufacturing,MI,,yahoo
+ORCHASP,Orchasp,Software - Application,MI,,yahoo
+ORCHPHARMA,Orchid Pharma,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+ORICONENT,Oricon Enterprises,Packaging & Containers,MI,,yahoo
+ORIENTALTL,Oriental Trimex,Building Products & Equipment,MI,,yahoo
+ORIENTBELL,Orient Bell,Building Products & Equipment,MI,,yahoo
+ORIENTCABL,Orient Cables (India),Electrical Equipment & Parts,MI,,yahoo
+ORIENTCEM,Orient Cement,Building Materials,MI,,yahoo
+ORIENTCER,ORIENT CERATECH LIMITED,Specialty Chemicals,MI,,yahoo
+ORIENTELEC,Orient Electric,"Furnishings, Fixtures & Appliances",MI,,yahoo
+ORIENTHOT,Oriental Hotels,Lodging,MI,,yahoo
+ORIENTLTD,Orient Press,Packaging & Containers,MI,,yahoo
+ORIENTPPR,Orient Paper & Industries,Paper & Paper Products,MI,,yahoo
+ORIENTTECH,Orient Technologies,Information Technology Services,MI,,yahoo
+ORIRAIL,Oriental Rail Infrastructure,Railroads,MI,,yahoo
+ORISSAMINE,The Orissa Minerals Development Company,Steel,MI,,yahoo
+ORKLAINDIA,Orkla India,Packaged Foods,MI,,yahoo
+ORTINGLOBE,ORTIN GLOBAL LIMITED,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+OSWALAGRO,Oswal Agro Mills,Real Estate - Development,MI,,yahoo
+OSWALGREEN,Oswal Greentech,Asset Management,MI,,yahoo
+OSWALPUMPS,Oswal Pumps,Electrical Equipment & Parts,MI,,yahoo
+OSWALSEEDS,ShreeOswal Seeds And Chemicals,Agricultural Inputs,MI,,yahoo
+PACEDIGITK,Pace Digitek,Unclassified,MI,,nse
+PACIFICI,Pacific Industries,Building Materials,MI,,yahoo
+PAGEIND,Page Industries,Apparel Manufacturing,MC,,yahoo
+PAISALO,Paisalo Digital,Credit Services,MI,,yahoo
+PAKKA,PAKKA LIMITED,Paper & Paper Products,MI,,yahoo
+PALASHSECU,Palash Securities,Asset Management,MI,,yahoo
+PALREDTEC,Palred Technologies,Consumer Electronics,MI,,yahoo
+PANACEABIO,Panacea Biotec,Biotechnology,MI,,yahoo
+PANACHE,Panache Digilife,Communication Equipment,MI,,yahoo
+PANAMAPET,Panama Petrochem,Oil & Gas Refining & Marketing,MI,,yahoo
+PANCHMAHQ,Panchmahal Steel,Steel,MI,,yahoo
+PANORAMA,Panorama Studios International,Entertainment,MI,,yahoo
+PANSARI,Pansari Developers,Real Estate - Development,MI,,yahoo
+PAR,Par Drugs And Chemicals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+PARACABLES,Paramount Communications,Communication Equipment,MI,,yahoo
+PARADEEP,Paradeep Phosphates,Agricultural Inputs,SC,,yahoo
+PARAGMILK,Parag Milk Foods,Packaged Foods,MI,,yahoo
+PARAS,Paras Defence and Space Technologies,Aerospace & Defense,MI,,yahoo
+PARASHLTH,Paras Healthcare,Medical Care Facilities,MI,,yahoo
+PARASPETRO,Paras Petrofils,Textile Manufacturing,MI,,yahoo
+PARIN,Parin Enterprises,"Furnishings, Fixtures & Appliances",MI,,yahoo
+PARKHOSPS,Park Medi World,Medical Care Facilities,MI,,yahoo
+PARKHOTELS,Apeejay Surrendra Park Hotels,Lodging,MI,,yahoo
+PARNAXLAB,Parnax Lab,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+PASHUPATI,Pashupati Cotspin,Textile Manufacturing,MI,,yahoo
+PASUPTAC,Pasupati Acrylon,Textile Manufacturing,MI,,yahoo
+PATANJALI,Patanjali Foods,Packaged Foods,MC,,yahoo
+PATELENG,Patel Engineering,Engineering & Construction,MI,,yahoo
+PATELRMART,Patel Retail,Department Stores,MI,,yahoo
+PATINTLOG,Patel Integrated Logistics,Integrated Freight & Logistics,MI,,yahoo
+PAUSHAKLTD,Paushak,Specialty Chemicals,MI,,yahoo
+PAVNAIND,Pavna Industries,Auto Parts,MI,,yahoo
+PAYTM,One 97 Communications,Software - Infrastructure,MC,,yahoo
+PBMPOLY,PBM Polytex,Textile Manufacturing,MI,,yahoo
+PCBL,PCBL Chemical,Specialty Chemicals,SC,,yahoo
+PCJEWELLER,PC Jeweller,Luxury Goods,MI,,yahoo
+PDMJEPAPER,Pudumjee Paper Products,Paper & Paper Products,MI,,yahoo
+PDSL,PDS,Specialty Business Services,MI,,yahoo
+PEARLPOLY,Pearl Polymers,Packaging & Containers,MI,,yahoo
+PENIND,Pennar Industries,Specialty Industrial Machinery,MI,,yahoo
+PENINLAND,Peninsula Land,Real Estate - Development,MI,,yahoo
+PERMAGN,Permanent Magnets,Electrical Equipment & Parts,MI,,yahoo
+PERNIASPOP,Purple Style Labs,Apparel Retail,MI,,yahoo
+PERSISTENT,Persistent Systems,Information Technology Services,MC,,yahoo
+PETRONET,Petronet LNG,Oil & Gas Refining & Marketing,MC,,yahoo
+PFC,Power Finance Corporation,Credit Services,LC,,yahoo
+PFIZER,Pfizer,Drug Manufacturers - General,MI,,yahoo
+PFOCUS,Prime Focus,Entertainment,SC,,yahoo
+PFS,PTC India Financial Services,Credit Services,MI,,yahoo
+PGEL,PG Electroplast,Electronic Components,SC,,yahoo
+PGHH,Procter & Gamble Hygiene and Health Care,Household & Personal Products,MI,,yahoo
+PGHL,Procter & Gamble Health,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+PGIL,Pearl Global Industries,Apparel Manufacturing,MI,,yahoo
+PHOENIXLTD,The Phoenix Mills,Real Estate - Diversified,MC,,yahoo
+PHOENXINTL,Phoenix International,Real Estate Services,MI,,yahoo
+PICCADIL,Piccadily Agro Industries,Beverages - Wineries & Distilleries,MI,,yahoo
+PIDILITIND,Pidilite Industries,Specialty Chemicals,LC,,yahoo
+PIGL,Power & Instrumentation (Gujarat),Engineering & Construction,MI,,yahoo
+PIIND,PI Industries,Agricultural Inputs,MC,,yahoo
+PILANIINVS,Pilani Investment and Industries Corporation,Asset Management,MI,,yahoo
+PILITA,PIL ITALICA LIFESTYLE LIMITED,"Furnishings, Fixtures & Appliances",MI,,yahoo
+PINELABS,Pine Labs,Software - Infrastructure,SC,,yahoo
+PIONEEREMB,Pioneer Embroideries,Textile Manufacturing,MI,,yahoo
+PIONRINV,Pioneer Investcorp,Capital Markets,MI,,yahoo
+PIRAMALFIN,Piramal Finance,Credit Services,MC,,yahoo
+PITTIENG,Pitti Engineering,Metal Fabrication,MI,,yahoo
+PIXTRANS,Pix Transmissions,Specialty Industrial Machinery,MI,,yahoo
+PKTEA,The Peria Karamalai Tea & Produce Company,Farm Products,MI,,yahoo
+PLASTIBLEN,Plastiblends India,Specialty Chemicals,MI,,yahoo
+PLATIND,Platinum Industries,Specialty Chemicals,MI,,yahoo
+PLAZACABLE,Plaza Wires,Electrical Equipment & Parts,MI,,yahoo
+PML,Paul Merchants,Capital Markets,MI,,yahoo
+PNB,Punjab National Bank,Banks - Regional,LC,,yahoo
+PNBGILTS,PNB Gilts,Capital Markets,MI,,yahoo
+PNBHOUSING,PNB Housing Finance,Mortgage Finance,SC,,yahoo
+PNC,PNC Media and Entertainment,Entertainment,MI,,yahoo
+PNCINFRA,PNC Infratech,Engineering & Construction,MI,,yahoo
+PNGJL,P N Gadgil Jewellers,Luxury Goods,MI,,yahoo
+PNGSREVA,PNGS Reva Diamond Jewellery,Luxury Goods,MI,,yahoo
+POCL,Pondy Oxides & Chemicals,Unclassified,MI,,nse
+PODDARMENT,Poddar Pigments,Specialty Chemicals,MI,,yahoo
+POEL,POCL Enterprises,Chemicals,MI,,yahoo
+POKARNA,Pokarna,Building Products & Equipment,MI,,yahoo
+POLICYBZR,PB Fintech,Insurance Brokers,MC,,yahoo
+POLYCAB,Polycab India,Electrical Equipment & Parts,LC,,yahoo
+POLYMED,Poly Medicure,Medical Instruments & Supplies,SC,,yahoo
+POLYPLEX,Polyplex Corporation,Specialty Chemicals,MI,,yahoo
+POLYSPIN,Polyspin Exports,Packaging & Containers,MI,,yahoo
+PONNIERODE,Ponni Sugars (Erode),Confectioners,MI,,yahoo
+POONAWALLA,Poonawalla Fincorp,Credit Services,SC,,yahoo
+POWERGRID,Power Grid Corporation of India,Utilities - Regulated Electric,LC,,yahoo
+POWERICA,Powerica,Specialty Industrial Machinery,MI,,yahoo
+POWERINDIA,Hitachi Energy India,Electrical Equipment & Parts,LC,,yahoo
+POWERMECH,Power Mech Projects,Engineering & Construction,MI,,yahoo
+PPAP,PPAP Automotive,Auto Parts,MI,,yahoo
+PPL,Prakash Pipes,Building Products & Equipment,MI,,yahoo
+PPLPHARMA,Piramal Pharma,Drug Manufacturers - Specialty & Generic,SC,,yahoo
+PRABHA,Prabha Energy,Oil & Gas E&P,MI,,yahoo
+PRADPME,Pradeep Metals,Metal Fabrication,MI,,yahoo
+PRAENG,Prajay Engineers Syndicate,Real Estate - Development,MI,,yahoo
+PRAJIND,Praj Industries,Engineering & Construction,MI,,yahoo
+PRAKASH,Prakash Industries,Steel,MI,,yahoo
+PRAKASHSTL,Prakash Steelage,Steel,MI,,yahoo
+PRANAV,Pranav Constructions,Real Estate - Development,MI,,yahoo
+PRASOLCHEM,Prasol Chemicals,Specialty Chemicals,MI,,yahoo
+PRAVEG,Praveg,Advertising Agencies,MI,,yahoo
+PRAXIS,Praxis Home Retail,Specialty Retail,MI,,yahoo
+PRECAM,Precision Camshafts,Auto Parts,MI,,yahoo
+PRECOT,Precot,Textile Manufacturing,MI,,yahoo
+PRECWIRE,Precision Wires India,Electrical Equipment & Parts,MI,,yahoo
+PREMCO,Premco Global,Textile Manufacturing,MI,,yahoo
+PREMEXPLN,Premier Explosives,Specialty Chemicals,MI,,yahoo
+PREMIER,Premier,Specialty Industrial Machinery,MI,,yahoo
+PREMIERENE,Premier Energies,Solar,MC,,yahoo
+PREMIERPOL,Premier Polyfilm,Specialty Chemicals,MI,,yahoo
+PRESTIGE,Prestige Estates Projects,Real Estate - Diversified,MC,,yahoo
+PRICOLLTD,Pricol,Auto Parts,MI,,yahoo
+PRIMESECU,Prime Securities,Capital Markets,MI,,yahoo
+PRIMO,Primo Chemicals,Chemicals,MI,,yahoo
+PRINCEPIPE,Prince Pipes And Fittings,Building Products & Equipment,MI,,yahoo
+PRIORITY,Priority Jewels,Luxury Goods,MI,,yahoo
+PRISMX,Prismx Global Ventures,Capital Markets,MI,,yahoo
+PRITI,Priti International,"Furnishings, Fixtures & Appliances",MI,,yahoo
+PRITIKAUTO,Pritika Auto Industries,Specialty Industrial Machinery,MI,,yahoo
+PRIVISCL,Privi Speciality Chemicals,Specialty Chemicals,SC,,yahoo
+PROSTARM,Prostarm Info Systems,Electrical Equipment & Parts,MI,,yahoo
+PROTEAN,Protean eGov Technologies,Information Technology Services,MI,,yahoo
+PROZONER,Prozone Realty,Real Estate - Diversified,MI,,yahoo
+PRSMJOHNSN,Prism Johnson,Building Materials,MI,,yahoo
+PRUDENT,Prudent Corporate Advisory Services,Asset Management,MI,,yahoo
+PRUDMOULI,Prudential Sugar Corporation,Confectioners,MI,,yahoo
+PSB,Punjab & Sind Bank,Banks - Regional,MI,,yahoo
+PSPPROJECT,PSP Projects,Engineering & Construction,MI,,yahoo
+PTC,PTC India,Utilities - Independent Power Producers,MI,,yahoo
+PTCIL,PTC Industries,Metal Fabrication,SC,,yahoo
+PTL,PTL Enterprises,Real Estate Services,MI,,yahoo
+PUNJABCHEM,Punjab Chemicals & Crop Protection,Chemicals,MI,,yahoo
+PURVA,Puravankara,Real Estate - Development,MI,,yahoo
+PVP,PVP Ventures,Conglomerates,MI,,yahoo
+PVRINOX,PVR INOX,Entertainment,SC,,yahoo
+PVSL,Popular Vehicles and Services,Auto & Truck Dealerships,MI,,yahoo
+PWL,Physicswallah,Education & Training Services,SC,,yahoo
+PYRAMID,Pyramid Technoplast,Packaging & Containers,MI,,yahoo
+QMSMEDI,QMS Medical Allied Services,Medical Instruments & Supplies,MI,,yahoo
+QPOWER,Quality Power Electrical Equipments,Electrical Equipment & Parts,MI,,yahoo
+QUADFUTURE,Quadrant Future Tek,Railroads,MI,,yahoo
+QUESS,Quess Corp,Staffing & Employment Services,MI,,yahoo
+QUICKHEAL,Quick Heal Technologies,Software - Application,MI,,yahoo
+QUINT,Quint Digital,Entertainment,MI,,yahoo
+QUINTEGRA,Quintegra Solutions,Information Technology Services,MI,,yahoo
+RACE,Race Eco Chain,Waste Management,MI,,yahoo
+RACLGEAR,RACL Geartech,Auto Parts,MI,,yahoo
+RADAAN,Radaan Mediaworks India,Entertainment,MI,,yahoo
+RADHIKAJWE,Radhika Jeweltech,Luxury Goods,MI,,yahoo
+RADIANTCMS,Radiant Cash Management Services,Specialty Business Services,MI,,yahoo
+RADICO,Radico Khaitan,Beverages - Wineries & Distilleries,MC,,yahoo
+RADIOCITY,Music Broadcast,Broadcasting,MI,,yahoo
+RAILTEL,Railtel Corporation Of India,Telecom Services,SC,,yahoo
+RAIN,Rain Industries,Specialty Chemicals,MI,,yahoo
+RAINBOW,Rainbow Childrens Medicare,Medical Care Facilities,SC,,yahoo
+RAJMET,Rajnandini Metal,Copper,MI,,yahoo
+RAJOOENG,Rajoo Engineers,Specialty Industrial Machinery,MI,,yahoo
+RAJPALAYAM,Rajapalayam Mills,Textile Manufacturing,MI,,yahoo
+RAJRATAN,Rajratan Global Wire,Steel,MI,,yahoo
+RAJRILTD,Raj Rayon Industries,Textile Manufacturing,MI,,yahoo
+RAJSREESUG,Rajshree Sugars & Chemicals,Confectioners,MI,,yahoo
+RAJTV,Raj Television Network,Broadcasting,MI,,yahoo
+RALLIS,Rallis India,Agricultural Inputs,MI,,yahoo
+RAMANEWS,Shree Rama Newsprint,Beverages - Non-Alcoholic,MI,,yahoo
+RAMAPHO,Rama Phosphates,Agricultural Inputs,MI,,yahoo
+RAMASTEEL,Rama Steel Tubes,Steel,MI,,yahoo
+RAMBHAJO,Advit Jewels,Luxury Goods,MI,,yahoo
+RAMCOCEM,The Ramco Cements,Building Materials,SC,,yahoo
+RAMCOIND,Ramco Industries,Building Products & Equipment,MI,,yahoo
+RAMCOSYS,Ramco Systems,Software - Application,MI,,yahoo
+RAMKY,Ramky Infrastructure,Engineering & Construction,MI,,yahoo
+RAMRAT,Ram Ratna Wires,Electrical Equipment & Parts,MI,,yahoo
+RANASUG,Rana Sugars,Confectioners,MI,,yahoo
+RANEHOLDIN,Rane Holdings,Auto Parts,MI,,yahoo
+RATEGAIN,Rategain Travel Technologies,Software - Application,MI,,yahoo
+RATNAMANI,Ratnamani Metals & Tubes,Steel,MI,,yahoo
+RATNAVEER,Ratnaveer Precision Engineering,Steel,MI,,yahoo
+RAYMOND,Raymond,Specialty Industrial Machinery,MI,,yahoo
+RAYMONDLSL,Raymond Lifestyle,Apparel Manufacturing,MI,,yahoo
+RAYMONDREL,Raymond Realty,Real Estate - Development,MI,,yahoo
+RBA,Restaurant Brands Asia,Restaurants,MI,,yahoo
+RBLBANK,RBL Bank,Banks - Regional,SC,,yahoo
+RBZJEWEL,RBZ Jewellers,Luxury Goods,MI,,yahoo
+RCF,Rashtriya Chemicals and Fertilizers,Agricultural Inputs,MI,,yahoo
+RCOM,Reliance Communications,Telecom Services,MI,,yahoo
+RECLTD,REC,Credit Services,MC,,yahoo
+REDINGTON,Redington,Information Technology Services,SC,,yahoo
+REDTAPE,Redtape,Footwear & Accessories,MI,,yahoo
+REFEX,Refex Industries,Thermal Coal,MI,,yahoo
+REGAAL,Regaal Resources,Packaged Foods,MI,,yahoo
+REGENCERAM,Regency Ceramics,Building Products & Equipment,MI,,yahoo
+RELAXO,Relaxo Footwears,Footwear & Accessories,MI,,yahoo
+RELCHEMQ,Reliance Chemotex Industries,Textile Manufacturing,MI,,yahoo
+RELIABLE,Reliable Data Services,Information Technology Services,MI,,yahoo
+RELIANCE,Reliance Industries,Oil & Gas Refining & Marketing,LC,,yahoo
+RELIGARE,Religare Enterprises,Insurance - Life,MI,,yahoo
+RELINFRA,Reliance Infrastructure,Utilities - Independent Power Producers,MI,,yahoo
+RELTD,Ravindra Energy,Solar,MI,,yahoo
+REMSONSIND,Remsons Industries,Auto Parts,MI,,yahoo
+RENTOMOJO,Rentomojo,Rental & Leasing Services,MI,,yahoo
+RENUKA,Shree Renuka Sugars,Confectioners,MI,,yahoo
+REPCOHOME,Repco Home Finance,Mortgage Finance,MI,,yahoo
+REPL,Rudrabhishek Enterprises,Consulting Services,MI,,yahoo
+REPRO,Repro India,Specialty Business Services,MI,,yahoo
+RESPONIND,Responsive Industries,Specialty Chemicals,MI,,yahoo
+RETAIL,JHS Svendgaard Retail Ventures,Grocery Stores,MI,,yahoo
+RGL,Renaissance Global,Luxury Goods,MI,,yahoo
+RHETAN,Rhetan TMT,Steel,MI,,yahoo
+RHIM,RHI MAGNESITA INDIA LIMITED,Metal Fabrication,SC,,yahoo
+RHL,Robust Hotels,Lodging,MI,,yahoo
+RICOAUTO,Rico Auto Industries,Auto Parts,MI,,yahoo
+RIIL,Reliance Industrial Infrastructure,Engineering & Construction,MI,,yahoo
+RIR,RIR Power Electronics,Semiconductors,MI,,yahoo
+RISHABH,Rishabh Instruments,Scientific & Technical Instruments,MI,,yahoo
+RITCO,Ritco Logistics,Integrated Freight & Logistics,MI,,yahoo
+RITES,RITES,Engineering & Construction,SC,,yahoo
+RKDL,Ravi Kumar Distilleries,Beverages - Wineries & Distilleries,MI,,yahoo
+RKEC,RKEC Projects,Engineering & Construction,MI,,yahoo
+RKFORGE,Ramkrishna Forgings,Metal Fabrication,SC,,yahoo
+RKSWAMY,R K Swamy,Advertising Agencies,MI,,yahoo
+RMC,RMC Switchgears,Electrical Equipment & Parts,MI,,yahoo
+RMDRIP,R M Drip and Sprinklers Systems,Farm & Heavy Construction Machinery,MI,,yahoo
+RML,Rane (Madras),Auto Parts,MI,,yahoo
+RNBDENIMS,R&B Denims,Textile Manufacturing,MI,,yahoo
+ROHLTD,Royal Orchid Hotels,Lodging,MI,,yahoo
+ROLEXRINGS,Rolex Rings,Metal Fabrication,MI,,yahoo
+ROLLT,Rollatainers,Real Estate Services,MI,,yahoo
+ROML,Raj Oil Mills,Packaged Foods,MI,,yahoo
+ROSSARI,Rossari Biotech,Specialty Chemicals,MI,,yahoo
+ROSSELLIND,Rossell India,Farm Products,MI,,yahoo
+ROSSTECH,Rossell Techsys,Aerospace & Defense,MI,,yahoo
+ROTO,Roto Pumps,Specialty Industrial Machinery,MI,,yahoo
+ROUTE,ROUTE MOBILE LIMITED,Telecom Services,MI,,yahoo
+RPEL,Raghav Productivity Enhancers,Chemicals,MI,,yahoo
+RPGLIFE,RPG Life Sciences,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+RPOWER,Reliance Power,Utilities - Independent Power Producers,SC,,yahoo
+RPPINFRA,R.P.P. Infra Projects,Engineering & Construction,MI,,yahoo
+RPPL,Rajshree Polypack,Packaging & Containers,MI,,yahoo
+RPSGVENT,RPSG VENTURES LIMITED,Information Technology Services,MI,,yahoo
+RPTECH,Rashi Peripherals,Electronics & Computer Distribution,MI,,yahoo
+RRECL,RDB Real Estate Constructions,Real Estate Services,MI,,yahoo
+RRIL,RRIL,Textile Manufacturing,MI,,yahoo
+RRKABEL,R R Kabel,Electrical Equipment & Parts,SC,,yahoo
+RSDFIN,RSD Finance,Asset Management,MI,,yahoo
+RSL,Rajputana Stainless,Steel,MI,,yahoo
+RSSOFTWARE,R. S. Software (India),Information Technology Services,MI,,yahoo
+RSWM,RSWM,Textile Manufacturing,MI,,yahoo
+RSYSTEMS,R Systems International,Information Technology Services,MI,,yahoo
+RTNINDIA,RattanIndia Enterprises,Internet Retail,MI,,yahoo
+RTNPOWER,RattanIndia Power,Utilities - Independent Power Producers,MI,,yahoo
+RTSPOWR,RTS Power Corporation,Electrical Equipment & Parts,MI,,yahoo
+RUBFILA,Rubfila International,Specialty Chemicals,MI,,yahoo
+RUBICON,Rubicon Research,Drug Manufacturers - General,SC,,yahoo
+RUBYMILLS,The Ruby Mills,Textile Manufacturing,MI,,yahoo
+RUCHINFRA,Ruchi Infrastructure,Specialty Business Services,MI,,yahoo
+RUCHIRA,Ruchira Papers,Paper & Paper Products,MI,,yahoo
+RUDRA,Rudra Global Infra Products,Steel,MI,,yahoo
+RUNWALENTR,Runwal Enterprises,Real Estate - Development,MI,,yahoo
+RUPA,Rupa & Company,Apparel Manufacturing,MI,,yahoo
+RUSHIL,Rushil Decor,"Furnishings, Fixtures & Appliances",MI,,yahoo
+RUSTOMJEE,Keystone Realtors,Real Estate - Development,MI,,yahoo
+RVHL,Ravinder Heights,Real Estate - Development,MI,,yahoo
+RVNL,Rail Vikas Nigam,Engineering & Construction,MC,,yahoo
+RVTH,Revathi Equipment India,Farm & Heavy Construction Machinery,MI,,yahoo
+S&SPOWER,S&S Power Switchgears,Electrical Equipment & Parts,MI,,yahoo
+SAATVIKGL,Saatvik Green Energy,Solar,MI,,yahoo
+SAB,SAB Industries,Engineering & Construction,MI,,yahoo
+SADBHAV,Sadbhav Engineering,Engineering & Construction,MI,,yahoo
+SADBHIN,Sadbhav Infrastructure Project,Engineering & Construction,MI,,yahoo
+SADHNANIQ,Sadhana Nitrochem,Chemicals,MI,,yahoo
+SAFARI,Safari Industries (India),Footwear & Accessories,MI,,yahoo
+SAGARDEEP,Sagardeep Alloys,Copper,MI,,yahoo
+SAGCEM,Sagar Cements,Building Materials,MI,,yahoo
+SAGILITY,SAGILITY LIMITED,Health Information Services,SC,,yahoo
+SAHLIBHFI,Shalibhadra Finance,Credit Services,MI,,yahoo
+SAHYADRI,Sahyadri Industries,Building Products & Equipment,MI,,yahoo
+SAICAPI,Sai Capital,Capital Markets,MI,,yahoo
+SAIL,Steel Authority of India,Steel,MC,,yahoo
+SAILIFE,Sai Life Sciences,Diagnostics & Research,SC,,yahoo
+SAIPARENT,Sai Parenterals,Drug Manufacturers - General,MI,,yahoo
+SAKAR,Sakar Healthcare,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+SAKHTISUG,Sakthi Sugars,Confectioners,MI,,yahoo
+SAKSOFT,Saksoft,Information Technology Services,MI,,yahoo
+SAKUMA,Sakuma Exports,Farm Products,MI,,yahoo
+SALASAR,Salasar Techno Engineering,Steel,MI,,yahoo
+SALONA,Salona Cotspin,Textile Manufacturing,MI,,yahoo
+SALSTEEL,S.A.L. Steel,Steel,MI,,yahoo
+SALZERELEC,Salzer Electronics,Electrical Equipment & Parts,MI,,yahoo
+SAMBANDAM,Sambandam Spinning Mills,Textile Manufacturing,MI,,yahoo
+SAMBHAAV,Sambhaav Media,Publishing,MI,,yahoo
+SAMBHV,Sambhv Steel Tubes,Steel,MI,,yahoo
+SAMHI,Samhi Hotels,Lodging,MI,,yahoo
+SAMMAANCAP,Sammaan Capital,Mortgage Finance,SC,,yahoo
+SAMPANN,Sampann Utpadan India,Specialty Chemicals,MI,,yahoo
+SANATHAN,Sanathan Textiles,Textile Manufacturing,MI,,yahoo
+SANDESH,The Sandesh,Publishing,MI,,yahoo
+SANDHAR,Sandhar Technologies,Auto Parts,MI,,yahoo
+SANDUMA,Sandur Manganese & Iron Ores,Steel,MI,,yahoo
+SANGAMIND,Sangam (India),Textile Manufacturing,MI,,yahoo
+SANGHVIMOV,Sanghvi Movers,Rental & Leasing Services,MI,,yahoo
+SANOFI,Sanofi India,Drug Manufacturers - General,MI,,yahoo
+SANOFICONR,Sanofi Consumer Healthcare India,Drug Manufacturers - General,MI,,yahoo
+SANSERA,Sansera Engineering,Auto Parts,SC,,yahoo
+SANSTAR,Sanstar,Chemicals,MI,,yahoo
+SAPPHIRE,Sapphire Foods India,Restaurants,MI,,yahoo
+SAPPL,Shree Ajit Pulp & Paper,Paper & Paper Products,MI,,yahoo
+SARDAEN,Sarda Energy & Minerals,Steel,SC,,yahoo
+SAREGAMA,Saregama India,Entertainment,MI,,yahoo
+SARLAPOLY,Sarla Performance Fibers,Textile Manufacturing,MI,,yahoo
+SARVESHWAR,Sarveshwar Foods,Packaged Foods,MI,,yahoo
+SASKEN,Sasken Technologies,Information Technology Services,MI,,yahoo
+SATIA,Satia Industries,Paper & Paper Products,MI,,yahoo
+SATIN,Satin Creditcare Network,Credit Services,MI,,yahoo
+SAURASHCEM,Saurashtra Cement,Building Materials,MI,,yahoo
+SAYAJIHOTL,Sayaji Hotels,Lodging,MI,,yahoo
+SAYAJIIND,Sayaji Industries,Farm Products,MI,,yahoo
+SBC,SBC Exports,Apparel Manufacturing,MI,,yahoo
+SBCL,Shivalik Bimetal Controls,Metal Fabrication,MI,,yahoo
+SBFC,SBFC Finance,Credit Services,MI,,yahoo
+SBGLP,Suratwwala Business Group,Real Estate - Development,MI,,yahoo
+SBICARD,SBI Cards and Payment Services,Credit Services,MC,,yahoo
+SBIFUNDS,SBI Funds Management,Asset Management,MI,,yahoo
+SBILIFE,SBI Life Insurance Company,Insurance - Life,LC,,yahoo
+SBIN,State Bank of India,Banks - Regional,LC,,yahoo
+SCANSTL,Scan Steels,Steel,MI,,yahoo
+SCHAEFFLER,Schaeffler India,Auto Parts,MC,,yahoo
+SCHAND,S Chand And Company,Publishing,MI,,yahoo
+SCHNEIDER,Schneider Electric Infrastructure,Electrical Equipment & Parts,SC,,yahoo
+SCI,Shipping Corporation Of India,Marine Shipping,SC,,yahoo
+SCILAL,Shipping Corporation of India Land and Assets,Real Estate Services,MI,,yahoo
+SCODATUBES,Scoda Tubes,Steel,MI,,yahoo
+SCPL,Sheetal Cool Products,Packaged Foods,MI,,yahoo
+SDBL,Som Distilleries & Breweries,Beverages - Brewers,MI,,yahoo
+SEAMECLTD,Seamec,Marine Shipping,MI,,yahoo
+SECMARK,SecMark Consultancy,Consulting Services,MI,,yahoo
+SECURKLOUD,SECUREKLOUD TECHNOLOGIES LIMITED,Software - Application,MI,,yahoo
+SEDEMAC,SEDEMAC Mechatronics,Auto Parts,MI,,yahoo
+SEIL,Shanti Educational Initiatives,Education & Training Services,MI,,yahoo
+SEJALLTD,Sejal Glass,Building Products & Equipment,MI,,yahoo
+SEKURITIND,Saint Gobain Sekurit India,Auto Parts,MI,,yahoo
+SEMAC,Semac Construction,Engineering & Construction,MI,,yahoo
+SENCO,Senco Gold,Luxury Goods,MI,,yahoo
+SENORES,Senores Pharmaceuticals,Drug Manufacturers - General,MI,,yahoo
+SEPC,SEPC,Engineering & Construction,MI,,yahoo
+SERVOTECH,Servotech Renewable Power System,Electrical Equipment & Parts,MI,,yahoo
+SESHAPAPER,Seshasayee Paper and Boards,Paper & Paper Products,MI,,yahoo
+SETCO,Setco Automotive,Auto Parts,MI,,yahoo
+SETL,Standard Engineering Technology,Specialty Industrial Machinery,MI,,yahoo
+SEYAIND,Seya Industries,Specialty Chemicals,MI,,yahoo
+SFCTECH,SFC Environmental Technologies,Pollution & Treatment Controls,MI,,yahoo
+SFL,Sheela Foam,"Furnishings, Fixtures & Appliances",MI,,yahoo
+SGFIN,SG Finserve,Capital Markets,MI,,yahoo
+SGIL,Synergy Green Industries,Metal Fabrication,MI,,yahoo
+SGL,STL Global,Textile Manufacturing,MI,,yahoo
+SGLRES,SGL Resources,Software - Application,MI,,yahoo
+SGMART,SG Mart,Industrial Distribution,MI,,yahoo
+SGRL,Shree Ganesh Remedies,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+SHADOWFAX,Shadowfax Technologies,Integrated Freight & Logistics,MI,,yahoo
+SHAH,Shah Metacorp,Steel,MI,,yahoo
+SHAHALLOYS,Shah Alloys,Steel,MI,,yahoo
+SHAHINVEST,Shah Investor's Home,Capital Markets,MI,,yahoo
+SHAILY,Shaily Engineering Plastics,Specialty Chemicals,MI,,yahoo
+SHAKTIPUMP,Shakti Pumps (India),Specialty Industrial Machinery,MI,,yahoo
+SHALBY,Shalby,Medical Care Facilities,MI,,yahoo
+SHALPAINTS,Shalimar Paints,Specialty Chemicals,MI,,yahoo
+SHANKARA,Shankara Building Products,Home Improvement Retail,MI,,yahoo
+SHANKESH,Shankesh Jewellers,Luxury Goods,MI,,yahoo
+SHANTI,Shanti Overseas (India),Farm Products,MI,,yahoo
+SHANTIGEAR,Shanthi Gears,Specialty Industrial Machinery,MI,,yahoo
+SHANTIGOLD,Shanti Gold International,Luxury Goods,MI,,yahoo
+SHARDACROP,Sharda Cropchem,Agricultural Inputs,MI,,yahoo
+SHARDAMOTR,Sharda Motor Industries,Auto Parts,MI,,yahoo
+SHARDUL,Shardul Securities,Capital Markets,MI,,yahoo
+SHAREINDIA,Share India Securities,Capital Markets,MI,,yahoo
+SHBAJRG,Shri Bajrang Alliance,Steel,MI,,yahoo
+SHEKHAWATI,Shekhawati Industries,Textile Manufacturing,MI,,yahoo
+SHEMAROO,Shemaroo Entertainment,Entertainment,MI,,yahoo
+SHERVANI,Shervani Industrial Syndicate,Real Estate - Development,MI,,yahoo
+SHILCTECH,Shilchar Technologies,Electrical Equipment & Parts,MI,,yahoo
+SHILGRAVQ,Shilp Gravures,Specialty Industrial Machinery,MI,,yahoo
+SHILPAMED,Shilpa Medicare,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+SHINDL,Sharat Industries,Farm Products,MI,,yahoo
+SHIPROCKET,Shiprocket,Software - Application,MI,,yahoo
+SHIVAAGRO,Shiva Global Agro Industries,Agricultural Inputs,MI,,yahoo
+SHIVACEM,Shiva Cement,Building Materials,MI,,yahoo
+SHIVALIK,Shivalik Rasayan,Agricultural Inputs,MI,,yahoo
+SHIVAMAUTO,Shivam Autotech,Auto Parts,MI,,yahoo
+SHIVAMILLS,Shiva Mills,Textile Manufacturing,MI,,yahoo
+SHIVATEX,Shiva Texyarn,Textile Manufacturing,MI,,yahoo
+SHIVAUM,Shiv Aum Steels,Steel,MI,,yahoo
+SHK,S H Kelkar and Company,Specialty Chemicals,MI,,yahoo
+SHOPERSTOP,Shoppers Stop,Department Stores,MI,,yahoo
+SHRADDHA,Shraddha Prime Projects,Real Estate - Development,MI,,yahoo
+SHRADHA,Shradha Realty,Real Estate - Development,MI,,yahoo
+SHREDIGCEM,Shree Digvijay Cement Co.Ltd,Building Materials,MI,,yahoo
+SHREECEM,SHREE CEMENT LIMITED,Building Materials,MC,,yahoo
+SHREEJISPG,Shreeji Shipping Global,Marine Shipping,MI,,yahoo
+SHREEPUSHK,Shree Pushkar Chemicals & Fertilisers,Specialty Chemicals,MI,,yahoo
+SHREERAMA,Shree Rama Multi-Tech,Packaging & Containers,MI,,yahoo
+SHREYANIND,Shreyans Industries,Paper & Paper Products,MI,,yahoo
+SHRIKRISH,Shri Krishna Devcon,Real Estate - Development,MI,,yahoo
+SHRINGARMS,Shringar House of Mangalsutra,Luxury Goods,MI,,yahoo
+SHRIPISTON,SPR Auto Technologies,Auto Parts,SC,,yahoo
+SHRIRAMFIN,Shriram Finance,Credit Services,LC,,yahoo
+SHRIRAMPPS,Shriram Properties,Real Estate - Development,MI,,yahoo
+SHRJAGP,Shri Jagdamba Polymers,Textile Manufacturing,MI,,yahoo
+SHUKRAPHAR,Shukra Pharmaceuticals,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+SHYAMCENT,Shyam Century Ferrous,Steel,MI,,yahoo
+SHYAMMETL,Shyam Metalics and Energy,Steel,SC,,yahoo
+SHYAMTEL,Shyam Telecom,Communication Equipment,MI,,yahoo
+SICAGEN,Sicagen India,Steel,MI,,yahoo
+SICALLOG,Sical Logistics,Integrated Freight & Logistics,MI,,yahoo
+SIEL,Superior Industrial Enterprises,Packaging & Containers,MI,,yahoo
+SIEMENS,Siemens,Specialty Industrial Machinery,LC,,yahoo
+SIGACHI,Sigachi Industries,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+SIGIND,Signet Industries,Conglomerates,MI,,yahoo
+SIGMA,Sigma Solve,Information Technology Services,MI,,yahoo
+SIGMAADV,SIGMA ADVANCED SYSTEMS LIMITED,Aerospace & Defense,MI,,yahoo
+SIGNATURE,Signatureglobal (India),Real Estate - Development,SC,,yahoo
+SIGNPOST,Signpost India,Advertising Agencies,MI,,yahoo
+SIKA,Sika Interplant Systems,Aerospace & Defense,MI,,yahoo
+SIKKO,Sikko Industries,Agricultural Inputs,MI,,yahoo
+SIL,Standard Industries,Textile Manufacturing,MI,,yahoo
+SILGO,Silgo Retail,Luxury Goods,MI,,yahoo
+SILINV,SIL Investments,Asset Management,MI,,yahoo
+SILVERTUC,Silver Touch Technologies,Information Technology Services,MI,,yahoo
+SIMPLEXINF,Simplex Infrastructures,Engineering & Construction,MI,,yahoo
+SIMPLXREA,Simplex Realty,Real Estate - Development,MI,,yahoo
+SINCLAIR,Sinclairs Hotels,Lodging,MI,,yahoo
+SINDHUTRAD,Sindhu Trade Links,Conglomerates,MI,,yahoo
+SINGERIND,Singer India,Unclassified,MI,,nse
+SINTERCOM,Sintercom India,Auto Parts,MI,,yahoo
+SIRCA,Sirca Paints India,Specialty Chemicals,MI,,yahoo
+SIS,SIS LIMITED,Security & Protection Services,MI,,yahoo
+SIYSIL,Siyaram Silk Mills,Textile Manufacturing,MI,,yahoo
+SJS,S.J.S. Enterprises,Auto Parts,MI,,yahoo
+SJVN,SJVN,Utilities - Renewable,SC,,yahoo
+SKFINDIA,SKF India,Tools & Accessories,MI,,yahoo
+SKFINDUS,SKF India (Industrial),Tools & Accessories,MI,,yahoo
+SKIPPER,Skipper,Engineering & Construction,MI,,yahoo
+SKMEGGPROD,SKM Egg Products Export (India),Packaged Foods,MI,,yahoo
+SKYGOLD,SKY GOLD AND DIAMONDS LIMITED,Luxury Goods,MI,,yahoo
+SKYWAYS,Skyways Air Services,Integrated Freight & Logistics,MI,,yahoo
+SMARTLINK,Smartlink Holdings,Communication Equipment,MI,,yahoo
+SMARTWORKS,Smartworks Coworking Spaces,Real Estate Services,MI,,yahoo
+SMCGLOBAL,SMC Global Securities,Capital Markets,MI,,yahoo
+SMLMAH,SML Mahindra,Auto Manufacturers,MI,,yahoo
+SMLT,Sarthak Metals,Metal Fabrication,MI,,yahoo
+SMSPHARMA,SMS Pharmaceuticals,Drug Manufacturers - General,MI,,yahoo
+SMT,Sahajanand Medical Technologies,Medical Devices,MI,,yahoo
+SNOWMAN,Snowman Logistics,Integrated Freight & Logistics,MI,,yahoo
+SOBHA,Sobha,Real Estate - Development,SC,,yahoo
+SOFTTECH,Softtech Engineers,Software - Application,MI,,yahoo
+SOLARA,Solara Active Pharma Sciences,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+SOLARINDS,Solar Industries India,Specialty Chemicals,LC,,yahoo
+SOLARWORLD,Solarworld Energy Solutions,Solar,MI,,yahoo
+SOLEX,Solex Energy,Solar,MI,,yahoo
+SOMANYCERA,Somany Ceramics,Building Products & Equipment,MI,,yahoo
+SOMATEX,Soma Textiles & Industries,Engineering & Construction,MI,,yahoo
+SOMICONVEY,Somi Conveyor Beltings,Specialty Industrial Machinery,MI,,yahoo
+SONA,Sonaselection India,Textile Manufacturing,MI,,yahoo
+SONACOMS,Sona BLW Precision Forgings,Auto Parts,SC,,yahoo
+SONAL,Sonal Mercantile,Credit Services,MI,,yahoo
+SONAMLTD,SONAM LIMITED,"Furnishings, Fixtures & Appliances",MI,,yahoo
+SONATSOFTW,Sonata Software,Information Technology Services,MI,,yahoo
+SOTL,Savita Oil Technologies,Specialty Chemicals,MI,,yahoo
+SOUTHBANK,The South Indian Bank,Banks - Regional,MI,,yahoo
+SOUTHWEST,South West Pinnacle Exploration,Oil & Gas Equipment & Services,MI,,yahoo
+SPAL,S. P. Apparels,Apparel Manufacturing,MI,,yahoo
+SPANDANA,Spandana Sphoorty Financial,Credit Services,MI,,yahoo
+SPARC,Sun Pharma Advanced Research Company,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+SPCENET,Spacenet Enterprises India,Capital Markets,MI,,yahoo
+SPECIALITY,Speciality Restaurants,Restaurants,MI,,yahoo
+SPECTRUM,Spectrum Electrical Industries,Electrical Equipment & Parts,MI,,yahoo
+SPELS,SPEL Semiconductor,Semiconductors,MI,,yahoo
+SPENCERS,Spencer's Retail,Department Stores,MI,,yahoo
+SPIC,Southern Petrochemicals Industries Corporation,Agricultural Inputs,MI,,yahoo
+SPLIL,SPL Industries,Apparel Manufacturing,MI,,yahoo
+SPLPETRO,Supreme Petrochem,Specialty Chemicals,MI,,yahoo
+SPMLINFRA,SPML Infra,Engineering & Construction,MI,,yahoo
+SPORTKING,Sportking India,Textile Manufacturing,MI,,yahoo
+SRD,Shankar Lal Rampal Dye-Chem,Specialty Chemicals,MI,,yahoo
+SREEL,Sreeleathers,Footwear & Accessories,MI,,yahoo
+SRF,SRF,Conglomerates,MC,,yahoo
+SRGHFL,SRG Housing Finance,Mortgage Finance,MI,,yahoo
+SRHHYPOLTD,Sree Rayalaseema Hi-Strength Hypo,Chemicals,MI,,yahoo
+SRIKPRIND,Sri KPR Industries,Building Products & Equipment,MI,,yahoo
+SRIT,SRIT India,Information Technology Services,MI,,yahoo
+SRM,SRM Contractors,Engineering & Construction,MI,,yahoo
+SRTL,Shree Ram Twistex,Textile Manufacturing,MI,,yahoo
+SSDL,Saraswati Saree Depot,Apparel Retail,MI,,yahoo
+SSRETAIL,SS Retail,Specialty Retail,MI,,yahoo
+SSWL,Steel Strips Wheels,Auto Parts,MI,,yahoo
+STALLION,Stallion India Fluorochemicals,Specialty Chemicals,MI,,yahoo
+STANLEY,Stanley Lifestyles,"Furnishings, Fixtures & Appliances",MI,,yahoo
+STAR,Strides Pharma Science,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+STARCEMENT,Star Cement,Building Materials,MI,,yahoo
+STARHEALTH,Star Health and Allied Insurance Company,Insurance - Life,SC,,yahoo
+STARPAPER,Star Paper Mills,Paper & Paper Products,MI,,yahoo
+STARTECK,Starteck Finance,Credit Services,MI,,yahoo
+STCINDIA,The State Trading Corporation of India,Conglomerates,MI,,yahoo
+STEAMHOUSE,Steamhouse India,Utilities - Regulated Gas,MI,,yahoo
+STEELCAS,Steelcast,Steel,MI,,yahoo
+STEELCITY,Steel City Securities,Capital Markets,MI,,yahoo
+STEELXIND,STEEL EXCHANGE INDIA LIMITED,Steel,MI,,yahoo
+STEL,Stel Holdings,Asset Management,MI,,yahoo
+STERTOOLS,Sterling Tools,Tools & Accessories,MI,,yahoo
+STLNETWORK,STL Networks,Telecom Services,MI,,yahoo
+STLSTRINF,Steel Strips Infrastructures,Real Estate Services,MI,,yahoo
+STLTECH,Sterlite Technologies,Communication Equipment,SC,,yahoo
+STOVEKRAFT,Stove Kraft,"Furnishings, Fixtures & Appliances",MI,,yahoo
+STUDDS,Studds Accessories,Auto Parts,MI,,yahoo
+STYL,Seshaasai Technologies,Software - Infrastructure,MI,,yahoo
+STYLAMIND,Stylam Industries,"Furnishings, Fixtures & Appliances",MI,,yahoo
+STYLEBAAZA,Baazar Style Retail,Apparel Retail,MI,,yahoo
+STYRENIX,Styrenix Performance Materials,Chemicals,MI,,yahoo
+SUBEXLTD,Subex,Software - Application,MI,,yahoo
+SUBROS,Subros,Auto Parts,MI,,yahoo
+SUDARCOLOR,Sudarshan Colorants India,Specialty Chemicals,MI,,yahoo
+SUDARSCHEM,Sudarshan Chemical Industries,Specialty Chemicals,MI,,yahoo
+SUDARSHAN,Sudarshan Pharma Industries,Chemicals,MI,,yahoo
+SUDEEPPHRM,Sudeep Pharma,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+SUKHJITS,Sukhjit Starch & Chemicals,Specialty Chemicals,MI,,yahoo
+SULA,Sula Vineyards,Beverages - Wineries & Distilleries,MI,,yahoo
+SUMEDHA,Sumedha Fiscal Services,Capital Markets,MI,,yahoo
+SUMEETINDS,Sumeet Industries,Textile Manufacturing,MI,,yahoo
+SUMICHEM,Sumitomo Chemical India,Agricultural Inputs,SC,,yahoo
+SUMIT,Sumit Woods,Real Estate - Development,MI,,yahoo
+SUMMITSEC,Summit Securities,Capital Markets,MI,,yahoo
+SUNCLAY,Sundaram Clayton,Metal Fabrication,MI,,yahoo
+SUNDARAM,Sundaram Multi Pap,Paper & Paper Products,MI,,yahoo
+SUNDARMFIN,Sundaram Finance,Credit Services,MC,,yahoo
+SUNDRMBRAK,Sundaram Brake Linings,Auto Parts,MI,,yahoo
+SUNDRMFAST,Sundram Fasteners,Auto Parts,MI,,yahoo
+SUNDROP,Sundrop Brands,Packaged Foods,MI,,yahoo
+SUNFLAG,Sunflag Iron And Steel Company,Steel,MI,,yahoo
+SUNLOC,Sunil Healthcare,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+SUNPHARMA,Sun Pharmaceutical Industries,Drug Manufacturers - Specialty & Generic,LC,,yahoo
+SUNRAKSHAK,Sunrakshakk Industries India,Textile Manufacturing,MI,,yahoo
+SUNSHIEL,Sunshield Chemicals,Specialty Chemicals,MI,,yahoo
+SUNSHINE,Sunshine Pictures,Entertainment,MI,,yahoo
+SUNTECK,Sunteck Realty,Real Estate - Development,MI,,yahoo
+SUNTV,Sun TV Network,Broadcasting,SC,,yahoo
+SUPERHOUSE,Superhouse,Footwear & Accessories,MI,,yahoo
+SUPERSPIN,Super Spinning Mills,Textile Manufacturing,MI,,yahoo
+SUPRAJIT,Suprajit Engineering,Auto Parts,MI,,yahoo
+SUPREME,Supreme Holdings & Hospitality (India),Real Estate - Development,MI,,yahoo
+SUPREMEIND,Supreme Industries,Building Products & Equipment,MC,,yahoo
+SUPREMEINF,Supreme Infrastructure India,Engineering & Construction,MI,,yahoo
+SUPRIYA,Supriya Lifescience,Biotechnology,MI,,yahoo
+SUPTANERY,Super Tannery,Footwear & Accessories,MI,,yahoo
+SURAJEST,Suraj Estate Developers,Real Estate - Development,MI,,yahoo
+SURAJLTD,Suraj,Steel,MI,,yahoo
+SURAKSHA,Suraksha Diagnostic,Diagnostics & Research,MI,,yahoo
+SURANASOL,Surana Solar,Solar,MI,,yahoo
+SURANAT&P,Surana Telecom and Power,Utilities - Independent Power Producers,MI,,yahoo
+SURYALA,Suryalata Spinning Mills,Textile Manufacturing,MI,,yahoo
+SURYALAXMI,Suryalakshmi Cotton Mills,Textile Manufacturing,MI,,yahoo
+SURYAROSNI,Surya Roshni,Steel,MI,,yahoo
+SURYODAY,Suryoday Small Finance Bank,Banks - Regional,MI,,yahoo
+SUTLEJTEX,Sutlej Textiles and Industries,Textile Manufacturing,MI,,yahoo
+SUVEN,Suven Life Sciences,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+SUVIDHAA,Suvidhaa Infoserve,Information Technology Services,MI,,yahoo
+SUYOG,Suyog Telematics,Telecom Services,MI,,yahoo
+SUZLON,Suzlon Energy,Specialty Industrial Machinery,MC,,yahoo
+SVGLOBAL,S V Global Mill,Real Estate Services,MI,,yahoo
+SVLL,Shree Vasu Logistics,Trucking,MI,,yahoo
+SVPGLOB,SVP GLOBAL TEXTILES LIMITED,Textile Manufacturing,MI,,yahoo
+SWANCORP,SWAN CORP LIMITED,Conglomerates,SC,,yahoo
+SWANDEF,Swan Defence and Heavy Industries,Aerospace & Defense,MI,,yahoo
+SWARAJ,Swaraj Suiting,Textile Manufacturing,MI,,yahoo
+SWARAJENG,Swaraj Engines,Farm & Heavy Construction Machinery,MI,,yahoo
+SWARNSAR,Swarnsarita Jewels India,Luxury Goods,MI,,yahoo
+SWASTIKAIN,Swastika Infra,Engineering & Construction,MI,,yahoo
+SWELECTES,Swelect Energy Systems,Unclassified,MI,,nse
+SWIGGY,Swiggy,Consumer Services,MC,,nse
+SWISSMLTRY,Swiss Military Consumer Goods,Unclassified,MI,,nse
+SWSOLAR,Sterling and Wilson Renewable Energy,Construction,MI,,nse
+SYMBIOTEC,Symbiotec Pharmalab,Drug Manufacturers - General,MI,,yahoo
+SYMPHONY,Symphony,Unclassified,MI,,nse
+SYNCOMF,Syncom Formulations (India),Drug Manufacturers - Specialty & Generic,MI,,yahoo
+SYNGENE,Syngene International,Healthcare,SC,,nse
+SYRMA,Syrma SGS Technology,Electronic Components,SC,,yahoo
+SYSTMTXC,Systematix Corporate Services,Capital Markets,MI,,yahoo
+TAALTECH,Taal Tech,Airports & Air Services,MI,,yahoo
+TAINWALCHM,Tainwala Chemical and Plastic (I),Asset Management,MI,,yahoo
+TAJGVK,Taj GVK Hotels & Resorts,Lodging,MI,,yahoo
+TAKE,TAKE,Health Information Services,MI,,yahoo
+TALBROAUTO,Talbros Automotive Components,Auto Parts,MI,,yahoo
+TAMBOLIIN,Tamboli Industries,Metal Fabrication,MI,,yahoo
+TANAA,Taneja Aerospace & Aviation,Aerospace & Defense,MI,,yahoo
+TANLA,Tanla Platforms,Software - Application,MI,,yahoo
+TARACHAND,Tara Chand InfraLogistic Solutions,Farm & Heavy Construction Machinery,MI,,yahoo
+TARAPUR,Tarapur Transformers,Specialty Industrial Machinery,MI,,yahoo
+TARC,TARC,Real Estate - Development,MI,,yahoo
+TARIL,Transformers And Rectifiers (India),Electrical Equipment & Parts,SC,,yahoo
+TARMAT,Tarmat,Engineering & Construction,MI,,yahoo
+TARSONS,Tarsons Products,Medical Instruments & Supplies,MI,,yahoo
+TASTYBITE,Tasty Bite Eatables,Packaged Foods,MI,,yahoo
+TATACAP,Tata Capital,Credit Services,LC,,yahoo
+TATACHEM,Tata Chemicals,Chemicals,SC,,yahoo
+TATACOMM,Tata Communications,Telecom Services,MC,,yahoo
+TATACONSUM,TATA CONSUMER PRODUCTS LIMITED,Packaged Foods,LC,,yahoo
+TATAELXSI,Tata Elxsi,Software - Application,SC,,yahoo
+TATAINVEST,Tata Investment Corporation,Asset Management,MC,,yahoo
+TATAPOWER,Tata Power Company,Utilities - Independent Power Producers,LC,,yahoo
+TATASTEEL,Tata Steel,Steel,LC,,yahoo
+TATATECH,Tata Technologies,Information Technology Services,SC,,yahoo
+TATVA,Tatva Chintan Pharma Chem,Specialty Chemicals,MI,,yahoo
+TBOTEK,TBO Tek,Travel Services,SC,,yahoo
+TBZ,Tribhovandas Bhimji Zaveri,Luxury Goods,MI,,yahoo
+TCC,TCC Concept,Unclassified,MI,,nse
+TCI,Transport Corporation of India,Integrated Freight & Logistics,MI,,yahoo
+TCIEXP,TCI Express,Integrated Freight & Logistics,MI,,yahoo
+TCIFINANCE,TCI Finance,Credit Services,MI,,yahoo
+TCPLPACK,TCPL Packaging,Packaging & Containers,MI,,yahoo
+TCS,Tata Consultancy Services,Information Technology Services,LC,,yahoo
+TDPOWERSYS,TD Power Systems,Specialty Industrial Machinery,SC,,yahoo
+TEAMGTY,Team India Guaranty,Asset Management,MI,,yahoo
+TEAMLEASE,Teamlease Services,Staffing & Employment Services,MI,,yahoo
+TECHM,Tech Mahindra,Information Technology Services,LC,,yahoo
+TECHNOCRAF,Technocraft Ventures,Infrastructure Operations,MI,,yahoo
+TECHNOE,Techno Electric & Engineering Company,Engineering & Construction,SC,,yahoo
+TECHNVISN,TechNVision Ventures,Software - Application,MI,,yahoo
+TECILCHEM,TECIL Chemicals and Hydro Power,Shell Companies,MI,,yahoo
+TEGA,Tega Industries,Specialty Industrial Machinery,SC,,yahoo
+TEJASNET,Tejas Networks,Communication Equipment,SC,,yahoo
+TEMBO,Tembo Global Industries,Metal Fabrication,MI,,yahoo
+TEMPSENS,Tempsens Instruments (India),Scientific & Technical Instruments,MI,,yahoo
+TENNIND,Tenneco Clean Air India,Auto Parts,SC,,yahoo
+TERAI,Terai Tea Company,Farm Products,MI,,yahoo
+TERASOFT,Tera Software,Information Technology Services,MI,,yahoo
+TEXINFRA,Texmaco Infrastructure & Holdings,Real Estate Services,MI,,yahoo
+TEXMOPIPES,Texmo Pipes and Products,Building Products & Equipment,MI,,yahoo
+TEXRAIL,Texmaco Rail & Engineering,Railroads,MI,,yahoo
+TFCILTD,Tourism Finance Corporation of India,Credit Services,MI,,yahoo
+TFL,Transwarranty Finance,Mortgage Finance,MI,,yahoo
+TGBHOTELS,TGB Banquets And Hotels,Lodging,MI,,yahoo
+TGVSL,TGV Sraac,Chemicals,MI,,yahoo
+THACKER,Thacker & Company,Asset Management,MI,,yahoo
+THAKDEV,Thakkers Developers,Real Estate - Development,MI,,yahoo
+THANGAMAYL,Thangamayil Jewellery,Luxury Goods,SC,,yahoo
+THEINVEST,The Investment Trust Of India,Capital Markets,MI,,yahoo
+THEJO,Thejo Engineering,Specialty Industrial Machinery,MI,,yahoo
+THELEELA,Leela Palaces Hotels & Resorts,Lodging,MI,,yahoo
+THEMISMED,Themis Medicare,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+THERMAX,Thermax,Conglomerates,MC,,yahoo
+THOMASCOOK,Thomas Cook  (India),Travel Services,MI,,yahoo
+THOMASCOTT,Thomas Scott (India),Textile Manufacturing,MI,,yahoo
+THYROCARE,Thyrocare Technologies,Diagnostics & Research,MI,,yahoo
+TI,Tilaknagar Industries,Beverages - Wineries & Distilleries,MI,,yahoo
+TICL,Twamev Construction and Infrastructure,Engineering & Construction,MI,,yahoo
+TIGERLOGS,Tiger Logistics (India),Integrated Freight & Logistics,MI,,yahoo
+TIIL,Technocraft Industries (India),Tools & Accessories,MI,,yahoo
+TIINDIA,Tube Investments of India,Conglomerates,MC,,yahoo
+TIJARIA,Tijaria Polypipes,Building Products & Equipment,MI,,yahoo
+TIKONA,Tikona Communication,Telecom Services,MI,,yahoo
+TIL,TIL,Farm & Heavy Construction Machinery,MI,,yahoo
+TIMETECHNO,Time Technoplast,Packaging & Containers,MI,,yahoo
+TIMEX,Timex Group India,Luxury Goods,MI,,yahoo
+TIMKEN,Timken India,Tools & Accessories,SC,,yahoo
+TINNARUBR,Tinna Rubber and Infrastructure,Specialty Chemicals,MI,,yahoo
+TIPSFILMS,Tips Films,Entertainment,MI,,yahoo
+TIPSMUSIC,Tips Music,Entertainment,MI,,yahoo
+TIRUMALCHM,Thirumalai Chemicals,Specialty Chemicals,MI,,yahoo
+TIRUPATIFL,Tirupati Forge,Metal Fabrication,MI,,yahoo
+TITAGARH,TITAGARH RAIL SYSTEMS LIMITED,Railroads,SC,,yahoo
+TITAN,Titan Company,Luxury Goods,LC,,yahoo
+TMB,Tamilnad Mercantile Bank,Banks - Regional,MI,,yahoo
+TMCV,Tata Motors,Auto Manufacturers,LC,,yahoo
+TMPV,Tata Motors Passenger Vehicles,Auto Manufacturers,LC,,yahoo
+TNPETRO,Tamilnadu PetroProducts,Specialty Chemicals,MI,,yahoo
+TNPL,Tamil Nadu Newsprint & Papers,Paper & Paper Products,MI,,yahoo
+TNTELE,Tamilnadu Telecommunication,Communication Equipment,MI,,yahoo
+TOKYOPLAST,Tokyo Plast International,Packaging & Containers,MI,,yahoo
+TOLINS,Tolins Tyres,Auto Parts,MI,,yahoo
+TONBO,Tonbo Imaging India,Aerospace & Defense,MI,,yahoo
+TORNTPHARM,Torrent Pharmaceuticals,Drug Manufacturers - Specialty & Generic,LC,,yahoo
+TORNTPOWER,Torrent Power,Utilities - Independent Power Producers,MC,,yahoo
+TOTAL,Total Transport Systems,Integrated Freight & Logistics,MI,,yahoo
+TOUCHWOOD,Touchwood Entertainment,Advertising Agencies,MI,,yahoo
+TOYAMSL,Toyam Sports,Conglomerates,MI,,yahoo
+TPHQ,Teamo Productions HQ,Engineering & Construction,MI,,yahoo
+TPLPLASTEH,TPL Plastech,Packaging & Containers,MI,,yahoo
+TRACXN,Tracxn Technologies,Software - Application,MI,,yahoo
+TRANSCOR,Transcorp International,Capital Markets,MI,,yahoo
+TRANSPEK,Transpek Industry,Chemicals,MI,,yahoo
+TRANSRAILL,Transrail Lighting,Engineering & Construction,MI,,yahoo
+TRANSWORLD,TRANSWORLD SHIPPING LINES LIMITED,Marine Shipping,MI,,yahoo
+TRAVELFOOD,Travel Food Services,Restaurants,MI,,yahoo
+TREEHOUSE,Tree House Education & Accessories,Education & Training Services,MI,,yahoo
+TREJHARA,TREJHARA SOLUTIONS LIMITED,Software - Application,MI,,yahoo
+TREL,Transindia Real Estate,Real Estate Services,MI,,yahoo
+TRENT,Trent,Apparel Retail,LC,,yahoo
+TRF,TRF,Specialty Industrial Machinery,MI,,yahoo
+TRIDENT,Trident,Textile Manufacturing,SC,,yahoo
+TRIGYN,Trigyn Technologies,Information Technology Services,MI,,yahoo
+TRITONV,Triton Valves,Auto Parts,MI,,yahoo
+TRITURBINE,Triveni Turbine,Specialty Industrial Machinery,SC,,yahoo
+TRIVENI,Triveni Engineering & Industries,Confectioners,MI,,yahoo
+TRIVENIPT,Triveni Power Transmission,Specialty Industrial Machinery,MI,,yahoo
+TRU,TruCap Finance,Credit Services,MI,,yahoo
+TRUALT,TruAlt Bioenergy,Oil & Gas Refining & Marketing,MI,,yahoo
+TSFINV,TSF INVESTMENTS LIMITED,Asset Management,MI,,yahoo
+TTKHLTCARE,TTK Healthcare,Drug Manufacturers - General,MI,,yahoo
+TTKPRESTIG,TTK Prestige,"Furnishings, Fixtures & Appliances",MI,,yahoo
+TTL,T T,Textile Manufacturing,MI,,yahoo
+TTML,Tata Teleservices (Maharashtra),Telecom Services,SC,,yahoo
+TURTLEMINT,Turtlemint Fintech Solutions,Insurance Brokers,MI,,yahoo
+TUTIALKA,Tuticorin Alkali Chemicals & Fertilizers,Agricultural Inputs,MI,,yahoo
+TVSELECT,TVS Electronics,Computer Hardware,MI,,yahoo
+TVSHLTD,TVS Holdings,Auto Manufacturers,MI,,yahoo
+TVSMOTOR,TVS Motor Company,Auto Manufacturers,LC,,yahoo
+TVSSCS,TVS Supply Chain Solutions,Integrated Freight & Logistics,MI,,yahoo
+TVSSRICHAK,TVS Srichakra,Auto Parts,MI,,yahoo
+TVTODAY,TV Today Network,Broadcasting,MI,,yahoo
+TVVISION,TV Vision,Broadcasting,MI,,yahoo
+UBL,United Breweries,Beverages - Brewers,MC,,yahoo
+UCAL,UCAL LIMITED,Auto Parts,MI,,yahoo
+UCOBANK,UCO Bank,Banks - Regional,SC,,yahoo
+UDAYJEW,Uday Jewellery Industries,Luxury Goods,MI,,yahoo
+UDS,Updater Services,Specialty Business Services,MI,,yahoo
+UEL,Ujaas Energy,Solar,MI,,yahoo
+UFBL,United Foodbrands,Restaurants,MI,,yahoo
+UFLEX,UFLEX,Packaging & Containers,MI,,yahoo
+UFO,UFO Moviez India,Entertainment,MI,,yahoo
+UGARSUGAR,The Ugar Sugar Works,Confectioners,MI,,yahoo
+UGROCAP,Ugro Capital,Credit Services,MI,,yahoo
+UJJIVANSFB,Ujjivan Small Finance Bank,Banks - Regional,MI,,yahoo
+ULTRACEMCO,UltraTech Cement,Building Materials,LC,,yahoo
+ULTRAMAR,Ultramarine & Pigments,Specialty Chemicals,MI,,yahoo
+UMAEXPORTS,Uma Exports,Farm Products,MI,,yahoo
+UMESLTD,Usha Martin Education & Solutions,Education & Training Services,MI,,yahoo
+UMIYA-MRO,UMIYA BUILDCON LIMITED,Communication Equipment,MI,,yahoo
+UNICHEMLAB,Unichem Laboratories,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+UNIDT,United Drilling Tools,Oil & Gas Equipment & Services,MI,,yahoo
+UNIECOM,Unicommerce Esolutions,Software - Application,MI,,yahoo
+UNIENTER,Uniphos Enterprises,Chemicals,MI,,yahoo
+UNIINFO,Uniinfo Telecom Services,Telecom Services,MI,,yahoo
+UNIMECH,Unimech Aerospace and Manufacturing,Aerospace & Defense,MI,,yahoo
+UNIONBANK,Union Bank of India,Banks - Regional,LC,,yahoo
+UNIPARTS,Uniparts India,Farm & Heavy Construction Machinery,MI,,yahoo
+UNITDSPR,United Spirits,Beverages - Wineries & Distilleries,MC,,yahoo
+UNITECH,Unitech,Real Estate - Diversified,MI,,yahoo
+UNITEDPOLY,United Polyfab Gujarat,Textile Manufacturing,MI,,yahoo
+UNITEDTEA,The United Nilgiri Tea Estates Company,Farm Products,MI,,yahoo
+UNIVASTU,Univastu India,Engineering & Construction,MI,,yahoo
+UNIVCABLES,Universal Cables,Electrical Equipment & Parts,MI,,yahoo
+UNIVPHOTO,Universus Photo Imagings,Medical Devices,MI,,yahoo
+UNOMINDA,UNO Minda,Auto Parts,MC,,yahoo
+UPHOT,U P Hotels,Lodging,MI,,yahoo
+UPL,UPL,Agricultural Inputs,MC,,yahoo
+URAVIDEF,Uravi Defence and Technology,Auto Parts,MI,,yahoo
+URBANCO,Urban Company,Software - Application,SC,,yahoo
+URJA,Urja Global,Solar,MI,,yahoo
+USHAMART,Usha Martin,Steel,SC,,yahoo
+USK,Udayshivakumar Infra,Engineering & Construction,MI,,yahoo
+UTIAMC,UTI Asset Management Company,Asset Management,SC,,yahoo
+UTKARSHBNK,Utkarsh Small Finance Bank,Banks - Regional,MI,,yahoo
+UTLSOLAR,Fujiyama Power Systems,Solar,MI,,yahoo
+UTTAMSUGAR,Uttam Sugar Mills,Confectioners,MI,,yahoo
+UYFINCORP,U. Y. Fincorp,Credit Services,MI,,yahoo
+V2RETAIL,V2 Retail,Apparel Retail,MI,,yahoo
+VADILALIND,Vadilal Industries,Packaged Foods,MI,,yahoo
+VADILENT,Vadilal Enterprises,Food Distribution,MI,,yahoo
+VAIBHAVGBL,Vaibhav Global,Luxury Goods,MI,,yahoo
+VAISHALI,Vaishali Pharma,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+VAKRANGEE,Vakrangee,Information Technology Services,MI,,yahoo
+VALIANTLAB,Valiant Laboratories,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+VALIANTORG,Valiant Organics,Chemicals,MI,,yahoo
+VAML,Vedanta Aluminium Metal,Aluminum,LC,,yahoo
+VARDHACRLC,Vardhman Acrylics,Textile Manufacturing,MI,,yahoo
+VARDMNPOLY,Vardhman Polytex,Textile Manufacturing,MI,,yahoo
+VARMORA,Varmora Granito,Building Materials,MI,,yahoo
+VARROC,Varroc Engineering,Auto Parts,MI,,yahoo
+VASCONEQ,Vascon Engineers,Engineering & Construction,MI,,yahoo
+VASUPRADA,Shri Vasuprada Plantations,Farm Products,MI,,yahoo
+VASWANI,Vaswani Industries,Steel,MI,,yahoo
+VBL,Varun Beverages,Beverages - Non-Alcoholic,LC,,yahoo
+VCL,Vaxtex Cotfab,Textile Manufacturing,MI,,yahoo
+VEDAVAAG,VEDAVAAG Systems,Information Technology Services,MI,,yahoo
+VEDL,Vedanta,Other Industrial Metals & Mining,LC,,yahoo
+VEDPOWER,Vedanta Power,Utilities - Independent Power Producers,SC,,yahoo
+VEEDOL,Veedol Corporation,Specialty Chemicals,MI,,yahoo
+VEEFIN,Veefin Solutions,Software - Infrastructure,MI,,yahoo
+VEEGALAND,Veegaland Developers,Real Estate - Diversified,MI,,yahoo
+VELJAN,Veljan Denison,Specialty Industrial Machinery,MI,,yahoo
+VENKEYS,Venky's (India),Farm Products,MI,,yahoo
+VENTIVE,Ventive Hospitality,Lodging,MI,,yahoo
+VENUSPIPES,Venus Pipes & Tubes,Steel,MI,,yahoo
+VENUSREM,Venus Remedies,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+VERANDA,Veranda Learning Solutions,Education & Training Services,MI,,yahoo
+VERTOZ,Vertoz,Software - Infrastructure,MI,,yahoo
+VESUVIUS,Vesuvius India,Specialty Industrial Machinery,MI,,yahoo
+VETO,Veto Switchgears And Cables,Electrical Equipment & Parts,MI,,yahoo
+VGCL,Vibrant Global Capital,Capital Markets,MI,,yahoo
+VGL,VARVEE GLOBAL LIMITED,Textile Manufacturing,MI,,yahoo
+VGUARD,V-Guard Industries,Electrical Equipment & Parts,MI,,yahoo
+VHL,Vardhman Holdings,Asset Management,MI,,yahoo
+VHLTD,Viceroy Hotels,Lodging,MI,,yahoo
+VIDHIING,Vidhi Specialty Food Ingredients,Specialty Chemicals,MI,,yahoo
+VIDYAWIRES,Vidya Wires,Electrical Equipment & Parts,MI,,yahoo
+VIJAYA,Vijaya Diagnostic Centre,Diagnostics & Research,SC,,yahoo
+VIJIFIN,Viji Finance,Credit Services,MI,,yahoo
+VIJSOLX,Vijay Solvex,Packaged Foods,MI,,yahoo
+VIKASECO,Vikas EcoTech,Specialty Chemicals,MI,,yahoo
+VIKASLIFE,Vikas Lifecare,Farm Products,MI,,yahoo
+VIKRAMSOLR,Vikram Solar,Solar,MI,,yahoo
+VIKRAN,Vikran Engineering,Engineering & Construction,MI,,yahoo
+VIMTALABS,Vimta Labs,Diagnostics & Research,MI,,yahoo
+VINATIORGA,Vinati Organics,Specialty Chemicals,MI,,yahoo
+VINCOFE,Vintage Coffee And Beverages,Beverages - Non-Alcoholic,MI,,yahoo
+VINDHYATEL,Vindhya Telelinks,Engineering & Construction,MI,,yahoo
+VINEETLAB,Vineet Laboratories,Chemicals,MI,,yahoo
+VINNY,Vinny Overseas,Textile Manufacturing,MI,,yahoo
+VINYLINDIA,Vinyl Chemicals (India),Specialty Chemicals,MI,,yahoo
+VIPCLOTHNG,VIP Clothing,Apparel Manufacturing,MI,,yahoo
+VIPIND,VIP Industries,Footwear & Accessories,MI,,yahoo
+VIPULLTD,Vipul,Real Estate - Diversified,MI,,yahoo
+VIRAT,Virat Industries,Apparel Manufacturing,MI,,yahoo
+VIRINCHI,Virinchi,Software - Application,MI,,yahoo
+VIRTUALG,Virtual Global Education,Education & Training Services,MI,,yahoo
+VISACHROME,VISA Chrome,Steel,MI,,yahoo
+VISAKAIND,Visaka Industries,Building Products & Equipment,MI,,yahoo
+VISHAL,Vishal Fabrics,Textile Manufacturing,MI,,yahoo
+VISHNU,Vishnu Chemicals,Specialty Chemicals,MI,,yahoo
+VISHWARAJ,Vishwaraj Sugar Industries,Confectioners,MI,,yahoo
+VISL,Vedanta Iron and Steel,Steel,SC,,yahoo
+VITAL,Vital Chemtech,Specialty Chemicals,MI,,yahoo
+VIVIANA,Viviana Power Tech,Engineering & Construction,MI,,yahoo
+VIVIDHA,Visagar Polytex,Textile Manufacturing,MI,,yahoo
+VIVOBIOT,Vivo Bio Tech,Biotechnology,MI,,yahoo
+VIYASH,Viyash Scientific,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+VLEGOV,VL E-Governance & IT Solutions,Information Technology Services,MI,,yahoo
+VLSFINANCE,VLS Finance,Capital Markets,MI,,yahoo
+VMART,V-Mart Retail,Department Stores,MI,,yahoo
+VMM,Vishal Mega Mart,Department Stores,MC,,yahoo
+VMSTMT,VMS TMT,Steel,MI,,yahoo
+VNL,Vishal Nirmiti,Building Materials,MI,,yahoo
+VOEPL,Virtuoso Optoelectronics,Consumer Electronics,MI,,yahoo
+VOGL,Vedanta Oil and Gas,Other Industrial Metals & Mining,SC,,yahoo
+VOITHPAPR,Voith Paper Fabrics India,Paper & Paper Products,MI,,yahoo
+VOLTAMP,Voltamp Transformers,Electrical Equipment & Parts,MI,,yahoo
+VOLTAS,Voltas,"Furnishings, Fixtures & Appliances",MC,,yahoo
+VPRPL,Vishnu Prakash R Punglia,Engineering & Construction,MI,,yahoo
+VRAJ,Vraj Iron and Steel,Steel,MI,,yahoo
+VRLLOG,VRL Logistics,Trucking,MI,,yahoo
+VSSL,Vardhman Special Steels,Steel,MI,,yahoo
+VSTIND,VST Industries,Tobacco,MI,,yahoo
+VSTL,Vibhor Steel Tubes,Steel,MI,,yahoo
+VSTTILLERS,V.S.T Tillers Tractors,Farm & Heavy Construction Machinery,MI,,yahoo
+VTL,Vardhman Textiles,Textile Manufacturing,SC,,yahoo
+VTMLTD,VTM,Textile Manufacturing,MI,,yahoo
+WAAREEENER,Waaree Energies,Solar,MC,,yahoo
+WAAREEINDO,Indosolar,Solar,MI,,yahoo
+WAAREERTL,Waaree Renewable Technologies,Engineering & Construction,MI,,yahoo
+WABAG,VA Tech Wabag,Engineering & Construction,MI,,yahoo
+WAKEFIT,Wakefit Innovations,"Furnishings, Fixtures & Appliances",MI,,yahoo
+WALCHANNAG,Walchandnagar Industries,Engineering & Construction,MI,,yahoo
+WANBURY,Wanbury,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+WATERBASE,Waterbase,Packaged Foods,MI,,yahoo
+WCIL,Western Carriers (India),Integrated Freight & Logistics,MI,,yahoo
+WEALTH,Wealth First Portfolio Managers,Capital Markets,MI,,yahoo
+WEBELSOLAR,Websol Energy System,Solar,MI,,yahoo
+WEIZMANIND,Weizmann,Textile Manufacturing,MI,,yahoo
+WEL,Wonder Electricals,"Furnishings, Fixtures & Appliances",MI,,yahoo
+WELCORP,Welspun Corp,Steel,SC,,yahoo
+WELENT,Welspun Enterprises,Engineering & Construction,MI,,yahoo
+WELINV,Welspun Investments and Commercials,Capital Markets,MI,,yahoo
+WELSPLSOL,Welspun Specialty Solutions,Steel,MI,,yahoo
+WELSPUNLIV,Welspun Living,Textile Manufacturing,SC,,yahoo
+WENDT,Wendt (India),Tools & Accessories,MI,,yahoo
+WESTLIFE,WESTLIFE FOODWORLD LIMITED,Restaurants,MI,,yahoo
+WEWIN,WE WIN LIMITED,Information Technology Services,MI,,yahoo
+WEWORK,WeWork India Management,Real Estate Services,MI,,yahoo
+WHBRADY,WH Brady & Company,Industrial Distribution,MI,,yahoo
+WHEELS,Wheels India,Auto Parts,MI,,yahoo
+WHIRLPOOL,Whirlpool of India,"Furnishings, Fixtures & Appliances",SC,,yahoo
+WILLAMAGOR,Williamson Magor & Company,Credit Services,MI,,yahoo
+WINDLAS,Windlas Biotech,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+WINDMACHIN,Windsor Machines,Specialty Industrial Machinery,MI,,yahoo
+WIPL,The Western India Plywoods,Lumber & Wood Production,MI,,yahoo
+WIPRO,Wipro,Information Technology Services,LC,,yahoo
+WOCKPHARMA,Wockhardt,Drug Manufacturers - Specialty & Generic,SC,,yahoo
+WONDERLA,Wonderla Holidays,Leisure,MI,,yahoo
+WORTHPERI,Worth Peripherals,Packaging & Containers,MI,,yahoo
+WPIL,WPIL,Specialty Industrial Machinery,MI,,yahoo
+WSI,W S Industries (I),Engineering & Construction,MI,,yahoo
+WSTCSTPAPR,West Coast Paper Mills,Paper & Paper Products,MI,,yahoo
+XCHANGING,Xchanging Solutions,Information Technology Services,MI,,yahoo
+XELPMOC,Xelpmoc Design And Tech,Information Technology Services,MI,,yahoo
+XPROINDIA,Xpro India,Specialty Chemicals,MI,,yahoo
+XTGLOBAL,Xtglobal Infotech,Software - Application,MI,,yahoo
+XTRANET,Xtranet Technologies,Information Technology Services,MI,,yahoo
+YASHO,Yasho Industries,Specialty Chemicals,MI,,yahoo
+YATHARTH,Yatharth Hospital & Trauma Care Services,Medical Care Facilities,MI,,yahoo
+YATRA,Yatra Online,Travel Services,MI,,yahoo
+YESBANK,Yes Bank,Banks - Regional,MC,,yahoo
+YOGI,Yogi,Industrial Distribution,MI,,yahoo
+YUKEN,Yuken India,Specialty Industrial Machinery,MI,,yahoo
+ZAGGLE,Zaggle Prepaid Ocean Services,Software - Infrastructure,MI,,yahoo
+ZEEL,Zee Entertainment Enterprises,Broadcasting,SC,,yahoo
+ZEELEARN,Zee Learn,Education & Training Services,MI,,yahoo
+ZEEMEDIA,Zee Media Corporation,Broadcasting,MI,,yahoo
+ZENITHEXPO,Zenith Exports,Textile Manufacturing,MI,,yahoo
+ZENITHSTL,Zenith Steel Pipes & Industries,Steel,MI,,yahoo
+ZENSARTECH,Zensar Technologies,Information Technology Services,SC,,yahoo
+ZENTEC,Zen Technologies,Aerospace & Defense,SC,,yahoo
+ZETWERK,Zetwerk Manufacturing Businesses,Metal Fabrication,MI,,yahoo
+ZFCVINDIA,ZF Commercial Vehicle Control Systems India,Auto Parts,SC,,yahoo
+ZFSTEERING,ZF Steering Gear (India),Auto Parts,MI,,yahoo
+ZIMLAB,Zim Laboratories,Drug Manufacturers - Specialty & Generic,MI,,yahoo
+ZODIAC,Zodiac Energy,Unclassified,MI,,nse
+ZODIACLOTH,Zodiac Clothing Company,Apparel Manufacturing,MI,,yahoo
+ZOTA,Zota Health Care LImited,Biotechnology,MI,,yahoo
+ZSARACOM,Saraswati Commercial India,Asset Management,MI,,yahoo
+ZUARI,Zuari Agro Chemicals,Agricultural Inputs,MI,,yahoo
+ZUARIIND,ZUARI INDUSTRIES LIMITED,Conglomerates,MI,,yahoo
+ZYDUSLIFE,Zydus Lifesciences,Drug Manufacturers - Specialty & Generic,LC,,yahoo
+ZYDUSWELL,Zydus Wellness,Packaged Foods,SC,,yahoo

@@ -98,8 +98,11 @@ run the pipeline from a cron job or the same GitHub Action.
 
 - **Brand and colours**: edit the tokens at the top of `assets/styles.css` (`--grad`, `--ink`,
   `--brand` and so on), the name in the HTML files, and `assets/logo.svg`.
-- **More stocks** (for example the full Nifty 500): add rows to `pipeline/universe_in.csv`.
-  `cap` is one of `LC`, `MC`, `SC`, `MI`. Add a `yahoo` column to override a symbol (e.g. a `.BO` listing).
+- **Stock list**: the Indian universe is every NSE main-board stock (series EQ/BE), rebuilt by
+  `pipeline/update_universe.py` before each nightly build. Cap buckets follow index membership
+  (Nifty 100 = LC, Midcap 150 = MC, Smallcap 250 = SC, the rest = MI). Sectors are Yahoo's industry,
+  looked up once per new listing. Earnings dates are fetched for LC/MC/SC stocks only (one slow request each).
+  Put a symbol in the `yahoo` column of `universe_in.csv` to override it (e.g. a `.BO` listing). The US list is in `universe_us.csv`.
 - **New scan**: add an entry to `PRESETS` in `assets/app.js`. It is a label plus a test function on a row.
 - **New column**: compute it in `compute_stock()` and add an entry to `COLS` in `assets/app.js`.
 - **Paid or real-time data**: replace `download_ohlcv()` and `fetch_earnings()` in the pipeline.

@@ -53,7 +53,7 @@ MARKETS = {
     },
 }
 MIN_BARS = {"daily": 60, "weekly": 30}
-HIST_LEN = 140          # bars of close/EMA history shipped for the chart modal
+
 BREADTH_LEN = 60        # bars of breadth history for drill-down charts
 
 
@@ -124,8 +124,12 @@ def read_universe(path: Path):
         return [r for r in csv.DictReader(f) if r.get("ticker")]
 
 
-def download_ohlcv(symbols: list[str], period="2y", retries=2) -> dict[str, pd.DataFrame]:
-    out = _download(symbols, period)
+def download_ohlcv(symbols: list[str], period="2y", retries=2, chunk=200) -> dict[str, pd.DataFrame]:
+    out = {}
+    for i in range(0, len(symbols), chunk):  # batches keep Yahoo from throttling large universes
+        out.update(_download(symbols[i:i + chunk], period))
+        if len(symbols) > chunk:
+            print(f"  downloaded {min(i + chunk, len(symbols))}/{len(symbols)}", flush=True)
     for _ in range(retries):  # Yahoo drops a few symbols per batch at random; retry those
         missing = [s for s in symbols if s not in out]
         if not missing:
@@ -145,18 +149,20 @@ def fill_from_intraday(frames: dict[str, pd.DataFrame]):
     with the official daily bar automatically (every run rebuilds from scratch)."""
     if not frames:
         return
-    try:
-        raw = yf.download(list(frames), period="5d", interval="1h", group_by="ticker",
-                          auto_adjust=True, threads=True, progress=False)
-    except Exception as e:
-        print(f"  ! hourly fallback unavailable: {e}", file=sys.stderr)
-        return
+    syms, parts = list(frames), []
+    for i in range(0, len(syms), 200):
+        try:
+            parts.append(yf.download(syms[i:i + 200], period="5d", interval="1h", group_by="ticker",
+                                     auto_adjust=True, threads=True, progress=False))
+        except Exception as e:
+            print(f"  ! hourly fallback unavailable for a batch: {e}", file=sys.stderr)
     filled = 0
     for sym, daily in frames.items():
         try:
+            raw = next(p for p in parts if isinstance(p.columns, pd.MultiIndex) and sym in p.columns.get_level_values(0)) if len(syms) > 1 else parts[0]
             h = raw[sym] if isinstance(raw.columns, pd.MultiIndex) else raw
             h = h[["Open", "High", "Low", "Close", "Volume"]].dropna(subset=["Close"])
-        except KeyError:
+        except (KeyError, StopIteration, IndexError):
             continue
         if h.empty or daily.empty:
             continue
@@ -301,10 +307,6 @@ def compute_stock(meta: dict, df: pd.DataFrame, daily: pd.DataFrame, tf: str, ea
         "darvas": darvas, "fractal": fractal,
         "turnover": rnd(price * float(v.iloc[-1]), 0),
         "cmf": rnd(cmf, 2),
-        "series": [rnd(x, 2) for x in c.iloc[-HIST_LEN:]],
-        "e20s": [rnd(x, 2) for x in e20.iloc[-HIST_LEN:]],
-        "e50s": [rnd(x, 2) for x in e50.iloc[-HIST_LEN:]],
-        "e200s": [rnd(x, 2) for x in e200.iloc[-HIST_LEN:]],
         "_close": c,  # removed before writing
     }
 
@@ -436,9 +438,12 @@ def build_market(market: str, with_earnings: bool, out_dir: Path):
 
     earnings = {}
     if with_earnings:
-        print(f"[{market}] fetching earnings dates …", flush=True)
-        with ThreadPoolExecutor(max_workers=8) as ex:
-            for t, res in zip(sym, ex.map(fetch_earnings, sym.values())):
+        # Earnings dates are one slow, rate-limited request per stock: fetch them for index
+        # members (large/mid/small cap) only; micro caps show "--" in the earnings columns.
+        targets = {u["ticker"]: sym[u["ticker"]] for u in universe if u["cap"] != "MI"}
+        print(f"[{market}] fetching earnings dates for {len(targets)} stocks …", flush=True)
+        with ThreadPoolExecutor(max_workers=4) as ex:
+            for t, res in zip(targets, ex.map(fetch_earnings, targets.values())):
                 earnings[t] = res
     idx = indices(cfg["indices"], cfg["tz"], cfg["close"])
 
