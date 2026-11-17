@@ -306,8 +306,10 @@
   // ---------- URL hash (share) ----------
   function writeHash() {
     const s = { m: state.market, t: state.tf, v: state.view, c: state.cap, s: state.sector, p: state.presets, f: Object.fromEntries(Object.entries(state.filters).filter(([, v]) => v !== "" && v !== false)), o: state.sort };
-    const h = "#" + encodeURIComponent(JSON.stringify(s));
-    history.replaceState(null, "", h.length > 3 ? h : location.pathname);
+    // Keep the address clean on the default screen; only encode settings worth sharing.
+    const isDefault = s.m === "IN" && s.t === "daily" && s.v === "stocks" && !s.c && !s.s && !s.p.length
+      && !Object.keys(s.f).length && s.o.key === "chg" && s.o.dir === -1;
+    history.replaceState(null, "", isDefault ? location.pathname : "#" + encodeURIComponent(JSON.stringify(s)));
   }
   function readHash() {
     if (!location.hash) return;
@@ -527,6 +529,13 @@
 
   // ---------- search suggest ----------
   let hl = -1;
+  /** Open a stock picked from search: clear the search so the table isn't left filtered to it. */
+  function openFromSearch(ticker) {
+    $("#suggest").hidden = true; hl = -1;
+    $("#search").value = ""; $("#search").blur();
+    if (state.q) { state.q = ""; render(); }
+    openStock(ticker);
+  }
   function renderSuggest() {
     const q = state.q.trim().toLowerCase(), box = $("#suggest");
     if (!q) { box.hidden = true; return; }
@@ -563,7 +572,11 @@
       if (d.sort) { state.sort = state.sort.key === d.sort ? { key: d.sort, dir: -state.sort.dir } : { key: d.sort, dir: ["ticker", "sector", "crossAgo", "nextEarn"].includes(d.sort) ? 1 : -1 }; return render(); }
       if (d.ssort) { sectorSort = sectorSort.key === d.ssort ? { key: d.ssort, dir: -sectorSort.dir } : { key: d.ssort, dir: ["rank", "sector"].includes(d.ssort) ? 1 : -1 }; return renderSectors(); }
       if (d.sector) { state.sector = d.sector; state.view = "stocks"; return render(); }
-      if (d.open) { if ($("#modal").hidden === false && !t.closest(".eye")) closeModal(); $("#suggest").hidden = true; return openStock(d.open); }
+      if (d.open) {
+        if ($("#modal").hidden === false && !t.closest(".eye")) closeModal();
+        if (t.closest("#suggest")) return openFromSearch(d.open);
+        $("#suggest").hidden = true; return openStock(d.open);
+      }
       if (d.wl != null) { const L = lists[+d.wl].items, i = L.indexOf(d.t); i >= 0 ? L.splice(i, 1) : L.push(d.t); store.set("lists", lists); t.setAttribute("aria-pressed", i < 0); if (state.list >= 0) render(); return; }
       if (d.nav) return openStock(d.nav);
       if (d.ai) return showAnalysis(d.ai, t);
@@ -626,7 +639,8 @@
         const items = $$("#suggest button");
         if (e.key === "ArrowDown") { e.preventDefault(); hl = Math.min(items.length - 1, hl + 1); renderSuggest(); }
         if (e.key === "ArrowUp") { e.preventDefault(); hl = Math.max(-1, hl - 1); renderSuggest(); }
-        if (e.key === "Enter" && items[hl]) { e.preventDefault(); openStock(items[hl].dataset.open); $("#suggest").hidden = true; }
+        const pick = items[hl] || items[0];  // Enter opens the highlighted match, or the top one
+        if (e.key === "Enter" && pick) { e.preventDefault(); openFromSearch(pick.dataset.open); }
       }
       if (e.key === "Enter" && e.target.dataset && e.target.dataset.sort) e.target.click();
       if (e.key === "Enter" && e.target.id === "tplName") $('[data-act="confirm-template"]').click();

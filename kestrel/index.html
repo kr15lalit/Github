@@ -27,6 +27,7 @@
     <a class="brand" href="index.html?stay=1"><img src="assets/logo.svg" alt="" /><span>Kes<b>trel</b></span></a>
     <nav aria-label="Primary">
       <a class="on" href="index.html?stay=1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg>Overview</a>
+      <a href="guide.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>Guide</a>
       <a href="screener.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>Screener</a>
       <a href="screener.html?view=sectors"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v9l7 4"/><circle cx="12" cy="12" r="9"/></svg>Sector rotation</a>
       <a href="screener.html?open=health"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Market health</a>
@@ -41,9 +42,14 @@
         <div class="kicker">Indian &amp; US equities · Technical screener · <span id="sessionLbl">End of day</span></div>
         <h1>Spot strength <span class="grad-text">before the crowd.</span></h1>
         <p class="lead">Market breadth, trend and momentum scans, base breakouts, Stage 2 scoring, sector rotation and relative-strength ranks — computed every evening, in one fast workspace.</p>
+        <div class="lp-search" role="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="lpSearch" type="search" autocomplete="off" placeholder="Search any stock — e.g. Prince Pipes, TCS, Adobe" aria-label="Search any stock and open its chart" />
+          <div class="suggest" id="lpSuggest" hidden></div>
+        </div>
         <div class="cta">
           <a class="btn pill-light" href="screener.html">Open the screener →</a>
-          <a class="btn pill-outline" href="#features">See what it does</a>
+          <a class="btn pill-outline" href="guide.html">How to use it</a>
         </div>
         <div class="lp-stats" aria-live="polite">
           <div><b id="stStocks">—</b><span>Stocks scanned</span></div>
@@ -132,7 +138,50 @@
     addEventListener("scroll", () => { top.hidden = scrollY < 600; }, { passive: true });
     top.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
 
+    // ---- Search any stock → open its chart in the screener ----
+    const pool = [];
+    const addPool = (data, m) => data.rows.forEach((r) => pool.push({ t: r.ticker, n: r.name, chg: r.chg, turn: r.turnover, m }));
+    let usLoaded = false, hl = -1;
+    const squash = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+    const escH = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const go = (x) => { location.href = `screener.html?${x.m === "US" ? "market=US&" : ""}stock=${encodeURIComponent(x.t)}`; };
+    function matches(q) {
+      const qs = squash(q);
+      const score = (x) => {
+        const t = x.t.toLowerCase(), n = x.n.toLowerCase();
+        if (t === q) return 0;
+        if (t.startsWith(q)) return 1;
+        if (n.startsWith(q) || n.includes(" " + q)) return 2;
+        if (n.includes(q) || (qs.length > 2 && (squash(n).includes(qs) || squash(t).includes(qs)))) return 3;
+        return -1;
+      };
+      return pool.map((x) => [score(x), x]).filter(([s]) => s >= 0).sort((a, b) => a[0] - b[0] || b[1].turn - a[1].turn).slice(0, 8).map(([, x]) => x);
+    }
+    function showSuggest() {
+      const q = $("#lpSearch").value.trim().toLowerCase(), box = $("#lpSuggest");
+      if (!q) { box.hidden = true; return; }
+      const m = matches(q);
+      box.innerHTML = m.length ? m.map((x, i) => `<button data-i="${i}" class="${i === hl ? "hl" : ""}"><span class="t">${escH(x.t)}</span><span class="n">${escH(x.n)}</span><span class="mk">${x.m === "US" ? "US" : "NSE"}</span></button>`).join("")
+        : `<div class="suggest-empty">No stock matches “${escH(q)}”. Very new listings appear after about 60 trading days.</div>`;
+      box._m = m; box.hidden = false;
+    }
+    $("#lpSearch").addEventListener("focus", async () => {
+      if (usLoaded) return; usLoaded = true;
+      try { addPool(await D.load("US", "daily"), "US"); } catch (e) { /* US list optional */ }
+    });
+    $("#lpSearch").addEventListener("input", () => { hl = -1; showSuggest(); });
+    $("#lpSearch").addEventListener("keydown", (e) => {
+      const m = $("#lpSuggest")._m || [];
+      if (e.key === "ArrowDown") { e.preventDefault(); hl = Math.min(m.length - 1, hl + 1); showSuggest(); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); hl = Math.max(-1, hl - 1); showSuggest(); }
+      else if (e.key === "Enter" && m.length) { e.preventDefault(); go(m[hl >= 0 ? hl : 0]); }
+      else if (e.key === "Escape") $("#lpSuggest").hidden = true;
+    });
+    $("#lpSuggest").addEventListener("click", (e) => { const btn = e.target.closest("button[data-i]"); if (btn) go($("#lpSuggest")._m[+btn.dataset.i]); });
+    document.addEventListener("click", (e) => { if (!e.target.closest(".lp-search")) $("#lpSuggest").hidden = true; });
+
     const d = await D.load("IN", "daily");
+    addPool(d, "IN");
     const b = Object.fromEntries(d.breadth.map((x) => [x.key, x]));
     const sess = d.session.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" });
     $("#sessionLbl").textContent = (d.source === "demo" ? "Demo data · " : "Data as of ") + sess + (d.provisional ? " (provisional)" : "");

@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d0d0f" />
+  <title>Kestrel Guide</title>
+  <meta name="description" content="Step-by-step guide to using the Kestrel screener: market health, Weinstein stages, every indicator and column, scans, sector rotation, charts, AI analysis and a daily routine." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("kestrel-theme")||"light"}catch(e){}</script>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-nav">
+    <a class="brand" href="index.html?stay=1"><img src="assets/logo.svg" alt="" /><span>Kes<b>trel</b></span></a>
+    <nav aria-label="Primary">
+      <a href="index.html?stay=1">Overview</a>
+      <a href="screener.html">Screener</a>
+      <a class="on" href="guide.html">Guide</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="inner wide">
+      <div class="kicker" style="color:#9a9aa8">Learn · From first visit to daily routine</div>
+      <h1>How to read <span class="grad-text">Kestrel</span></h1>
+      <p class="hero-sub">Everything on the site explained step by step: the market check, the four stages of a stock, every indicator and column, the scans, charts, AI analysis, and a routine that ties it together.</p>
+    </div>
+  </section>
+
+  <div class="guide">
+    <aside class="toc" aria-label="Contents">
+      <div class="kicker">Contents</div>
+      <ol>
+        <li><a href="#start">Start here</a></li>
+        <li><a href="#data">Where the data comes from</a></li>
+        <li><a href="#market">Step 1 · Market health</a></li>
+        <li><a href="#stages">The four stages</a></li>
+        <li><a href="#sectors">Step 2 · Sector rotation</a></li>
+        <li><a href="#scans">Step 3 · Scans &amp; filters</a></li>
+        <li><a href="#columns">Every column explained</a></li>
+        <li><a href="#indicators">Indicators in depth</a></li>
+        <li><a href="#chart">Step 4 · The chart</a></li>
+        <li><a href="#ai">AI analysis</a></li>
+        <li><a href="#eye">Kestrel Eye</a></li>
+        <li><a href="#lists">Watchlists, notes &amp; templates</a></li>
+        <li><a href="#recipes">Proven recipes</a></li>
+        <li><a href="#routine">Daily &amp; weekly routine</a></li>
+        <li><a href="#risk">Managing risk</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#glossary">Glossary</a></li>
+      </ol>
+    </aside>
+
+    <main id="main-content" class="guide-body">
+
+      <!-- ===================================================== -->
+      <section id="start">
+        <h2><span class="num">00</span>Start here</h2>
+        <p>Kestrel answers one question each evening: <strong>which stocks are worth a closer look tomorrow?</strong> It measures every NSE main-board stock (about 2,500) on trend, momentum, structure and relative strength, so you study a shortlist instead of hundreds of charts.</p>
+        <p>Work from the <strong>top down</strong>. Most stocks follow the market, and stocks in strong sectors do better than stocks in weak ones:</p>
+        <div class="flow">
+          <div><b>1</b><span>Market</span><small>Is it a good time to buy at all?</small></div>
+          <div><b>2</b><span>Sectors</span><small>Where is money flowing?</small></div>
+          <div><b>3</b><span>Stocks</span><small>Which names lead those sectors?</small></div>
+          <div><b>4</b><span>Chart</span><small>Is there a low-risk setup now?</small></div>
+        </div>
+        <div class="callout"><b>Kestrel is a research tool, not a tip service.</b> It measures what charts show; it does not predict prices or tell you what to buy. Everything here is educational, not investment advice.</div>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="data">
+        <h2><span class="num">01</span>Where the data comes from</h2>
+        <ul>
+          <li><strong>End-of-day prices</strong> from Yahoo Finance, refreshed three times every weekday (about 6:15 pm, 3:45 am and 9:05 am IST). The date at the top of the results tells you which session you're looking at.</li>
+          <li><strong>PROVISIONAL badge:</strong> sometimes Yahoo publishes the official daily figures hours late. Kestrel then builds the day from hourly prices so you aren't left a day behind. The close can differ slightly from NSE's official close, and the day's volume is incomplete, so the volume-spike column shows "--". The next refresh replaces it automatically.</li>
+          <li><strong>Universe:</strong> every NSE stock in series EQ and BE, rebuilt nightly from NSE's official list, plus a list of major US stocks (switch with <span class="k">IN / US</span>). Stocks need about 60 trading days of history before they appear.</li>
+          <li><strong>Market-cap buckets</strong> follow NSE index membership: <span class="cap LC">LC</span> large cap = Nifty 100, <span class="cap MC">MC</span> mid cap = Midcap 150, <span class="cap SC">SC</span> small cap = Smallcap 250, <span class="cap MI">Mic</span> micro cap = everything else.</li>
+          <li><strong>Earnings dates</strong> are fetched for large, mid and small caps; micro caps show "--" in those columns.</li>
+        </ul>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="market">
+        <h2><span class="num">02</span>Step 1 · Check market health</h2>
+        <p>The seven tiles at the top of the screener measure <strong>breadth</strong>: how many stocks are participating. Indices like the Nifty can rise on a few heavyweights while most stocks fall. Breadth shows what's really happening underneath.</p>
+        <table class="gt">
+          <thead><tr><th>Tile</th><th>What it measures</th><th>How to read it</th></tr></thead>
+          <tbody>
+            <tr><td><b>Advance / decline</b></td><td>(Stocks up − stocks down) ÷ all stocks, last session</td><td>Positive = more stocks rose. One day is noise; look at the trend in its chart.</td></tr>
+            <tr><td><b>Above 20 EMA</b></td><td>% of stocks above their 20-day average</td><td>Short-term health. Above 60% strong, 40–60% mixed, below 40% weak. Readings above ~85% or below ~15% are often stretched and tend to reverse.</td></tr>
+            <tr><td><b>Above 200 EMA</b></td><td>% of stocks in long-term uptrends</td><td>The most important tile. Above 60% = healthy bull phase; below 40% = most stocks in downtrends, so be very selective.</td></tr>
+            <tr><td><b>RSI above 60</b></td><td>% of stocks with strong momentum</td><td>Rising means momentum is broadening. Above 40% is a strong market.</td></tr>
+            <tr><td><b>Above daily pivot</b></td><td>% trading above yesterday's pivot point</td><td>Very short-term buying pressure; useful as a tiebreaker only.</td></tr>
+            <tr><td><b>Near 52-week high</b></td><td>% within 5% of their yearly high</td><td>How many true leaders exist. Above 20–25% is a strong market; under 10% means leadership is thin.</td></tr>
+            <tr><td><b>Recent breakout</b></td><td>% that broke out of a base in the last 20 sessions</td><td>Rising alongside the others = breakouts are working. High but falling = breakouts are failing.</td></tr>
+          </tbody>
+        </table>
+        <p>The small arrow and "pts" figure show the change over the last 5 sessions. <strong>Direction matters as much as level:</strong> 45% and rising is better than 55% and falling. Click any tile for its 60-session history chart.</p>
+        <div class="callout tip"><b>Turn breadth into a decision</b>
+          <ul>
+            <li><b>Green light:</b> 200-EMA breadth above 60% and rising. Act on good setups normally.</li>
+            <li><b>Yellow light:</b> 40–60%, or rising from low levels. Smaller positions, only the strongest stocks.</li>
+            <li><b>Red light:</b> below 40% and falling. Mostly watch, protect capital, build watchlists for later.</li>
+          </ul></div>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="stages">
+        <h2><span class="num">03</span>The four stages of a stock</h2>
+        <p>Popularised by Stan Weinstein, the <strong>stage model</strong> says every stock cycles through four phases. Knowing which stage a stock is in is the single most useful thing you can learn from a chart: <strong>you want to own Stage 2 and avoid Stage 4.</strong></p>
+        <figure class="stage-fig">
+          <svg viewBox="0 0 800 260" role="img" aria-label="Price cycle through Stage 1 base, Stage 2 advance, Stage 3 top and Stage 4 decline">
+            <rect x="20" y="10" width="170" height="220" class="s1"/><rect x="190" y="10" width="220" height="220" class="s2"/><rect x="410" y="10" width="170" height="220" class="s3"/><rect x="580" y="10" width="200" height="220" class="s4"/>
+            <path d="M20 190 C60 175 90 200 120 185 S170 195 190 180 C230 160 260 120 300 110 S360 70 410 55 C440 45 470 70 500 52 S560 70 580 62 C620 90 650 140 690 160 S750 200 780 205" class="price"/>
+            <path d="M20 195 C80 190 140 190 190 185 C260 165 330 115 410 75 C470 60 530 62 580 72 C650 110 720 160 780 190" class="ma"/>
+            <text x="105" y="34">STAGE 1</text><text x="300" y="34">STAGE 2</text><text x="495" y="34">STAGE 3</text><text x="680" y="34">STAGE 4</text>
+            <text x="105" y="250" class="sub">Basing</text><text x="300" y="250" class="sub">Advancing</text><text x="495" y="250" class="sub">Topping</text><text x="680" y="250" class="sub">Declining</text>
+          </svg>
+          <figcaption><span class="lg price"></span>Price <span class="lg ma"></span>Long-term moving average (Weinstein used the 30-week; Kestrel's closest daily equivalents are the 50 and 200 EMAs)</figcaption>
+        </figure>
+        <div class="stages">
+          <div class="st s1"><b>Stage 1 · Basing</b><p>After a decline, the stock goes sideways. The long average flattens and price chops around it. Volume is often low. <em>Watch, don't buy yet.</em> Look for tightening ranges and the EMAs converging.</p></div>
+          <div class="st s2"><b>Stage 2 · Advancing</b><p>Price breaks out of the base on strong volume, then makes higher highs and higher lows above a <b>rising</b> long average. Pullbacks find support at the 20 and 50 EMAs. <em>This is where the big gains happen.</em></p></div>
+          <div class="st s3"><b>Stage 3 · Topping</b><p>The advance stalls. Price swings wildly around a flattening average; high-volume down days appear. <em>Tighten stops, take profits, don't add.</em></p></div>
+          <div class="st s4"><b>Stage 4 · Declining</b><p>Price breaks below the base and stays below a <b>falling</b> average; every rally fails. <em>Avoid, however cheap it looks.</em> Big one-day bounces here are usually traps.</p></div>
+        </div>
+        <h3>Kestrel's Stage 2 score (0–7)</h3>
+        <p>The <b>Stage 2</b> column scores each stock on seven checks inspired by Weinstein and Mark Minervini's "trend template". Each check met adds one bar:</p>
+        <ol class="checks">
+          <li>Price is above the <b>50-day EMA</b>.</li>
+          <li>Price is above the <b>200-day EMA</b>.</li>
+          <li>The <b>50 EMA is above the 200 EMA</b> (medium trend above long trend).</li>
+          <li>The <b>200 EMA is rising</b> (higher than 20 sessions ago).</li>
+          <li>Price is at least <b>30% above its 52-week low</b> (it has really moved off the bottom).</li>
+          <li>Price is within <b>25% of its 52-week high</b> (it's near the top of its range, not broken).</li>
+          <li><b>RSI is above 50</b> (momentum is positive).</li>
+        </ol>
+        <table class="gt slim">
+          <thead><tr><th>Score</th><th>Usual meaning</th></tr></thead>
+          <tbody>
+            <tr><td><b>6–7</b></td><td>Confirmed Stage 2 uptrend. This is your hunting ground.</td></tr>
+            <tr><td><b>4–5</b></td><td>Late Stage 1 turning up, or Stage 3 weakening. Check the chart: is the 200 EMA turning up or rolling over?</td></tr>
+            <tr><td><b>0–3</b></td><td>Stage 4 or early Stage 1. Avoid for buying.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="sectors">
+        <h2><span class="num">04</span>Step 2 · Find the strong sectors</h2>
+        <p>Switch the toolbar from <span class="k">Stocks</span> to <span class="k">Sectors</span>. Sectors are ranked by a blend of average RS and how many of their stocks are above the 20 and 200 EMAs.</p>
+        <table class="gt">
+          <thead><tr><th>Column</th><th>What to look for</th></tr></thead>
+          <tbody>
+            <tr><td><b>Rank</b></td><td>Top 5–10 = where strength is. Notice sectors climbing the ranks week after week.</td></tr>
+            <tr><td><b>Avg 1D%</b></td><td>Today's move. Useful for spotting rotation days, but don't over-weight one day.</td></tr>
+            <tr><td><b>Avg RS</b></td><td>Average relative-strength rank of its stocks. Above 60 = the group outperforms.</td></tr>
+            <tr><td><b>% &gt; 20 EMA / % &gt; 200 EMA</b></td><td>Breadth inside the sector. Healthy groups have most stocks above both.</td></tr>
+            <tr><td><b>Adv / Dec</b></td><td>Stocks up vs down today.</td></tr>
+            <tr><td><b>Turnover share</b></td><td>The sector's share of all money traded. A rising share means attention and money are moving in.</td></tr>
+            <tr><td><b>CMF</b></td><td>Average Chaikin Money Flow. Positive = buying pressure (closes near the day's highs on volume).</td></tr>
+            <tr><td><b>Breakouts</b></td><td>How many of its stocks broke out recently. Several at once is a strong sign of a group move.</td></tr>
+            <tr><td><b>Leaders by RS</b></td><td>Its three strongest stocks. Click one to open its chart.</td></tr>
+          </tbody>
+        </table>
+        <p>Click a sector's name to screen just its stocks. Strong stocks in strong sectors are the best odds.</p>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="scans">
+        <h2><span class="num">05</span>Step 3 · Scans, filters and the table</h2>
+        <h3>Toolbar</h3>
+        <ul>
+          <li><b>Market cap / Sector</b> narrow the universe. Large and mid caps move more steadily; micro caps move faster, fail faster, and can be hard to trade in size.</li>
+          <li><b>Daily / Weekly</b> recalculates every indicator on weekly bars. Weekly removes day-to-day noise: a stock that looks good on both is far more convincing.</li>
+          <li><b>Market Health</b> shows or hides the breadth tiles. <b>Columns</b> hides column groups you don't use.</li>
+        </ul>
+        <h3>Recommended scans</h3>
+        <p>Click a scan to apply it; click several and they <strong>combine</strong> (a stock must pass all of them).</p>
+        <table class="gt">
+          <thead><tr><th>Scan</th><th>Finds</th><th>Good for</th></tr></thead>
+          <tbody>
+            <tr><td><b>EMAs Aligned</b></td><td>Price &gt; 10 &gt; 20 &gt; 50 &gt; 200 EMA</td><td>The cleanest uptrends. A great base for most searches.</td></tr>
+            <tr><td><b>EMAs Converge</b></td><td>10, 20 and 50 EMAs within 2.5% of each other</td><td>"Coiled springs": volatility has contracted; a bigger move often follows. Direction still needs confirming.</td></tr>
+            <tr><td><b>RSI &gt; MA</b></td><td>RSI above 50 and above its own average</td><td>Momentum turning up or accelerating.</td></tr>
+            <tr><td><b>Breakout stocks</b></td><td>Closed above a 40-session base in the last 20 sessions</td><td>Fresh moves. Check BO gain% (how far it already ran) and BO vol (how convincing).</td></tr>
+            <tr><td><b>Crossed Pivot</b></td><td>Trading above the daily pivot point</td><td>Short-term strength; pair with a trend scan.</td></tr>
+            <tr><td><b>IPO stocks</b></td><td>Listed within roughly the last year</td><td>New companies often make their biggest moves early (and are volatile).</td></tr>
+            <tr><td><b>Fractal Breakout</b></td><td>Closed above the most recent "up-fractal" high</td><td>Breaks of the latest swing high, a short-term trend continuation signal.</td></tr>
+            <tr><td><b>Darvas Box</b></td><td>Broke out of a tight 20-session box (under 15% tall) near 52-week highs</td><td>Nicolas Darvas's method: strong stocks pausing in tight boxes, then breaking up.</td></tr>
+            <tr><td><b>Stage 2 (6+/7)</b></td><td>Stage 2 score of 6 or 7</td><td>Confirmed uptrends only.</td></tr>
+            <tr><td><b>RS Leaders</b></td><td>RS rank 80 or above</td><td>The market's top 20% performers.</td></tr>
+          </tbody>
+        </table>
+        <h3>Custom filters</h3>
+        <p>The <b>Filters</b> panel adds exact ranges: price, change %, RSI, volume spike, distance from 52-week high, maximum distance above the 20 EMA, Stage 2 score, RS rank, turnover, plus checkboxes for above the 50/200 EMA, a fresh 10×20 EMA cross and results due within 14 days. Each active filter appears as a chip under the results; click a chip to remove it.</p>
+        <div class="callout tip"><b>Always add a liquidity filter.</b> Set <b>Turnover ≥ 5–10 ₹ Cr</b> to skip stocks you can't buy or sell easily. Thinly traded stocks produce misleading signals and wide price gaps.</div>
+        <h3>Sorting, sharing, exporting</h3>
+        <ul>
+          <li>Click any column header to sort; click again to reverse. The default is the day's biggest gainers.</li>
+          <li><b>Share active filters</b> copies a link that reopens the exact same screen for anyone.</li>
+          <li><b>Copy tickers</b> copies every matching ticker in TradingView format (NSE:TCS,…) to paste into a TradingView watchlist.</li>
+          <li><b>Search</b> (press <span class="k">/</span>) opens any stock's chart: type a name or ticker and press Enter.</li>
+        </ul>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="columns">
+        <h2><span class="num">06</span>Every column explained</h2>
+        <table class="gt">
+          <thead><tr><th>Column</th><th>Meaning</th><th>What "good" usually looks like</th></tr></thead>
+          <tbody>
+            <tr class="grp"><td colspan="3">Core</td></tr>
+            <tr><td><b>Watch</b></td><td>Three coloured dots = your three watchlists</td><td>Click a dot to add or remove the stock.</td></tr>
+            <tr><td><b>Cap</b></td><td>Market-cap bucket (LC, MC, SC, Mic)</td><td>Match it to your risk appetite.</td></tr>
+            <tr><td><b>Ticker / Sector</b></td><td>NSE symbol (click for chart) and industry</td><td>Leaders cluster in the top sectors.</td></tr>
+            <tr class="grp"><td colspan="3">Price &amp; volume</td></tr>
+            <tr><td><b>Price</b></td><td>Last close</td><td>Under-₹20 stocks are often illiquid and erratic.</td></tr>
+            <tr><td><b>1D% / 1W%</b></td><td>Change vs the previous close (week on the weekly view)</td><td>Big gains are only meaningful with a good trend behind them.</td></tr>
+            <tr><td><b>RSI + dot</b></td><td>14-period RSI; dot green when RSI is above its average</td><td>50–70 healthy; above 75 stretched; below 40 weak.</td></tr>
+            <tr><td><b>Vol spike</b></td><td>Latest volume ÷ average of the previous 9 sessions</td><td>2x or more on an up day = strong demand. On a down day = warning.</td></tr>
+            <tr><td><b>Gap</b></td><td>Open vs previous close</td><td>Gaps up on news that hold through the day are strong; gaps that fade are weak.</td></tr>
+            <tr><td><b>52W high</b></td><td>% below the 52-week high</td><td>Leaders sit within 0 to −15%. Below −40% = broken.</td></tr>
+            <tr class="grp"><td colspan="3">EMAs</td></tr>
+            <tr><td><b>EMAs (10/20/50/200)</b></td><td>Green = price above that EMA, red = below</td><td>All green = clean uptrend.</td></tr>
+            <tr><td><b>% from 20 EMA</b></td><td>How far price is above or below its 20 EMA</td><td>0–5% = near support (lower-risk entries). Above 10% = extended, don't chase.</td></tr>
+            <tr><td><b>EMA cross</b></td><td>Sessions since the 10 EMA crossed above the 20 EMA</td><td>Under ~10 = a trend has just turned up.</td></tr>
+            <tr class="grp"><td colspan="3">Pivots</td></tr>
+            <tr><td><b>D-pivot / W-pivot</b></td><td>Where price sits among yesterday's (or last week's) pivot levels</td><td>Above PP = buyers in control. "Above R2" = short-term extended.</td></tr>
+            <tr class="grp"><td colspan="3">Breakouts</td></tr>
+            <tr><td><b>BO gain%</b></td><td>% move since the breakout close, and how many sessions ago</td><td>0–5% = still near the breakout point. Negative = slipping back (risk of failure).</td></tr>
+            <tr><td><b>BO vol</b></td><td>Breakout-day volume vs its 20-session average</td><td>1.5x or more = convincing; under 1.2x = weak breakout.</td></tr>
+            <tr><td><b>Stage 2</b></td><td>The 7-point trend checklist (see <a href="#stages">stages</a>)</td><td>6–7.</td></tr>
+            <tr class="grp"><td colspan="3">Relative strength</td></tr>
+            <tr><td><b>RS</b></td><td>Percentile rank (1–99) of 3/6/12-month performance against every other stock</td><td>80+ = leader. Below 30 = laggard.</td></tr>
+            <tr><td><b>RS history</b></td><td>RS rank 30, 15 and 5 sessions ago, and now</td><td>Rising sequence = improving (often before price shows it).</td></tr>
+            <tr class="grp"><td colspan="3">Earnings reaction</td></tr>
+            <tr><td><b>Last earn. / −1D% / E-day% / +1D%</b></td><td>Last results date and the moves the day before, on the day and the day after</td><td>A strong reaction that holds (positive E-day and +1D) shows institutions buying.</td></tr>
+            <tr><td><b>Next earn.</b></td><td>Next results date</td><td>Results can move a stock 10% either way. Know the date before buying.</td></tr>
+            <tr class="grp"><td colspan="3">Liquidity &amp; research</td></tr>
+            <tr><td><b>Turnover</b></td><td>Value traded in the last session</td><td>Higher = easier to trade.</td></tr>
+            <tr><td><b>CMF</b></td><td>Chaikin Money Flow (20)</td><td>Above 0 = accumulation; below 0 = distribution.</td></tr>
+            <tr><td><b>Notes</b></td><td>Your private note for the stock</td><td>Write why you're watching and what would make you act.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="indicators">
+        <h2><span class="num">07</span>Indicators in depth</h2>
+
+        <h3>Moving averages (EMA 10, 20, 50, 200)</h3>
+        <p>A moving average smooths price to show its direction. Kestrel uses <b>exponential</b> moving averages (EMAs), which weight recent days more and react faster than simple averages.</p>
+        <ul>
+          <li><b>10 EMA</b>: the very short-term pace. Strong momentum stocks ride it.</li>
+          <li><b>20 EMA</b>: the short-term trend (about one month). In healthy uptrends, pullbacks often stop near it.</li>
+          <li><b>50 EMA</b>: the medium trend (about a quarter). Institutions watch it; a decisive break below it is often a warning.</li>
+          <li><b>200 EMA</b>: the long-term trend (about a year). Above and rising = bull territory; below and falling = bear territory.</li>
+        </ul>
+        <p><b>Alignment</b> (10 &gt; 20 &gt; 50 &gt; 200) shows every timeframe agreeing. <b>Convergence</b> (10/20/50 squeezed together) shows a pause where a big move is building. A <b>10×20 cross</b> is an early sign that the short-term trend has turned up; it's more meaningful when the stock is already above its 200 EMA.</p>
+
+        <h3>RSI: Relative Strength Index (14)</h3>
+        <p>RSI measures the speed of recent gains against recent losses, on a 0–100 scale (Wilder's 14-period method).</p>
+        <ul>
+          <li><b>Above 50</b>: gains are outpacing losses, so momentum is positive. Stage 2 stocks mostly hold 40–50 on pullbacks.</li>
+          <li><b>60–75</b>: strong momentum. Leaders often live here for weeks.</li>
+          <li><b>Above 75</b>: stretched. Not a sell signal in a strong trend, but a poor moment to start buying.</li>
+          <li><b>Below 40</b>: weak; below 30 is deeply oversold, which in a downtrend usually just means "falling".</li>
+          <li><b>RSI vs its average</b> (the dot): RSI rising above its own 14-period average shows momentum is turning up.</li>
+        </ul>
+        <div class="callout"><b>RSI is not the same as Relative Strength (RS).</b> RSI compares a stock with its own recent past. <b>RS rank</b> compares it with every other stock in the market. You want both strong.</div>
+
+        <h3>Relative Strength rank (RS 1–99)</h3>
+        <p>Kestrel calculates each stock's weighted return over 3, 6 and 12 months (40% / 30% / 30%) and ranks it against all others. RS 90 means it outperformed 90% of stocks. Historically, the biggest winners usually have RS above 80 <em>before</em> their largest moves. A stock whose RS is rising (e.g. 45 → 60 → 72 → 85) while the market is weak is showing real buying interest.</p>
+
+        <h3>Volume and the volume spike</h3>
+        <p>Volume shows conviction. Price rising on heavy volume suggests large investors buying; falling on heavy volume suggests selling (distribution). Quiet, low-volume pullbacks inside an uptrend are healthy. Breakouts on less than average volume often fail.</p>
+
+        <h3>Pivot points</h3>
+        <p>Floor pivots are calculated from the previous bar's high (H), low (L) and close (C):</p>
+        <div class="formula">PP = (H + L + C) ÷ 3 &nbsp;·&nbsp; R1 = 2·PP − L &nbsp;·&nbsp; S1 = 2·PP − H &nbsp;·&nbsp; R2 = PP + (H − L) &nbsp;·&nbsp; S2 = PP − (H − L)</div>
+        <p>Kestrel shows which zone price is in, from "Below S2" up to "Above R2". Day traders use these as intraday support and resistance; for swing traders they show short-term control (above PP = buyers in charge).</p>
+
+        <h3>Breakouts and bases</h3>
+        <p>A <b>base</b> is a sideways period where sellers are absorbed. Kestrel flags a <b>breakout</b> when the close moves above the highest close of the previous 40 sessions, and the base wasn't too deep (under 35% from top to bottom). The best breakouts come from tight bases, on volume at least 1.5x normal, in Stage 2 stocks with high RS. A breakout that falls back below the breakout level within a few days is a warning sign.</p>
+
+        <h3>Darvas box &amp; fractals</h3>
+        <p>A <b>Darvas box</b> is a tight range (here, the last 20 sessions within 15%) near the 52-week high; a close above the box top is the signal. A <b>fractal</b> (Bill Williams) is a swing high with two lower highs on each side; a close above the most recent one shows the short-term trend resuming.</p>
+
+        <h3>Chaikin Money Flow (CMF 20)</h3>
+        <p>CMF measures where each day closes within its range, weighted by volume, over 20 sessions. Closing near the highs on big volume pushes it up. Above 0 = accumulation, below 0 = distribution. Use it to confirm, not to trigger.</p>
+
+        <h3>Earnings reaction</h3>
+        <p>How the market reacted to the last results says a lot about investor appetite. A gap up that holds (or keeps rising the next day) often starts or extends a Stage 2 move. A sharp fall on results is a red flag even if the chart looked fine before.</p>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="chart">
+        <h2><span class="num">08</span>Step 4 · Read the chart</h2>
+        <p>Click any ticker, or search for any stock, to open its chart.</p>
+        <ul>
+          <li><b>Candles / Line</b>: candles show each day's open, high, low and close (green = closed higher than the previous day, red = lower).</li>
+          <li><b>Daily / Weekly</b> and <b>3M / 6M / 1Y / All</b> change the timeframe. Scroll to zoom, drag to move back in time.</li>
+          <li><b>EMA 20 / 50 / 200, Volume, RSI</b> toggle on and off; your choices are remembered.</li>
+          <li><b>Dashed line</b> = 52-week high. <b>Arrow "Breakout"</b> = the breakout day. <b>"E"</b> = last results day.</li>
+          <li>The line above the chart shows open, high, low, close, volume, EMAs and RSI for whichever day your mouse is over.</li>
+          <li><b>‹ ›</b> or the <span class="k">←</span> <span class="k">→</span> keys flip to the previous / next stock in your current results, so you can review a whole scan quickly.</li>
+        </ul>
+        <div class="callout tip"><b>A 30-second chart check</b>
+          <ol>
+            <li>Which stage? (price vs a rising or falling 50/200 EMA)</li>
+            <li>Where is it now? (near support at the 20/50 EMA, or extended far above?)</li>
+            <li>What did volume do on the last up-move and the last pullback?</li>
+            <li>Where would you be wrong? (a level below which the idea fails, which becomes your stop)</li>
+          </ol></div>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="ai">
+        <h2><span class="num">09</span>AI analysis</h2>
+        <p>The <b>✨ AI analysis</b> button under each chart shows a written read of that stock, generated each evening:</p>
+        <ul>
+          <li><b>AI analysis</b> (when available): summary, trend, setup, volume and momentum, key support and resistance levels, risks, and what to watch. Price levels are checked against the actual data; any the AI invents are removed.</li>
+          <li><b>Kestrel read</b> (always available): a plain-English summary built directly from the indicators by fixed rules, so it can't make anything up.</li>
+        </ul>
+        <p>Use it as a second pair of eyes to check your own reading, not as a decision. It describes the chart and never says buy or sell.</p>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="eye">
+        <h2><span class="num">10</span>Kestrel Eye</h2>
+        <p>Kestrel Eye plots every stock in your current results: <b>left to right</b> is RS rank, <b>up and down</b> is how much RS changed over the last 5 sessions. Bubble colour is today's move, bubble size how big it was.</p>
+        <div class="quad">
+          <div class="q2"><b>Improving</b><span>Weak but gaining. Early candidates; watch for them to cross right.</span></div>
+          <div class="q1"><b>Leading</b><span>Strong and getting stronger. Most of your best ideas come from here.</span></div>
+          <div class="q3"><b>Lagging</b><span>Weak and weakening. Avoid.</span></div>
+          <div class="q4"><b>Weakening</b><span>Strong but fading. Tighten stops; leadership may be rotating out.</span></div>
+        </div>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="lists">
+        <h2><span class="num">11</span>Watchlists, notes &amp; templates</h2>
+        <ul>
+          <li><b>Watchlists:</b> three lists (rename them in the Watchlists panel, e.g. "Ready", "Setting up", "Holdings"). Add stocks with the coloured dots; <b>Show</b> filters the table to that list.</li>
+          <li><b>Notes:</b> one note per stock, from the Notes column or the chart window. Record the setup, the level that would trigger action, and where the idea is wrong.</li>
+          <li><b>My filters:</b> save any combination of scans, filters, cap, sector and sort as a named template you can reload with one click.</li>
+          <li><b>My data:</b> everything is stored in your browser only. Use <b>Download backup</b> regularly, and <b>Restore</b> it on another device or browser.</li>
+        </ul>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="recipes">
+        <h2><span class="num">12</span>Proven recipes</h2>
+        <p>Combine scans and filters, then save each one with <b>My filters → Save current screen</b>.</p>
+        <div class="recipes">
+          <div class="rc"><b>Leaders pulling back</b><span class="when">Lower-risk entries in strong trends</span><ol><li>Scans: <i>Stage 2 (6+/7)</i> + <i>RS Leaders</i></li><li>Filter: Max % above 20 EMA = 5</li><li>Filter: Turnover ≥ 10 ₹ Cr</li><li>Sort by RS. Check the chart: quiet volume on the pullback is ideal.</li></ol></div>
+          <div class="rc"><b>Fresh, convincing breakouts</b><span class="when">Catching the start of a move</span><ol><li>Scan: <i>Breakout stocks</i></li><li>Filter: RS rank ≥ 70, Stage 2 ≥ 5</li><li>Sort by <b>BO vol</b>, highest first</li><li>Prefer BO gain% under 5% (still near the breakout point)</li></ol></div>
+          <div class="rc"><b>Coiled springs</b><span class="when">Setups before they break out</span><ol><li>Scan: <i>EMAs Converge</i></li><li>Filters: RS ≥ 70, Within % of 52W high = −15, Above 200 EMA</li><li>Add to a "Setting up" watchlist; act when it breaks out on volume</li></ol></div>
+          <div class="rc"><b>Turning up from a base</b><span class="when">Early Stage 2 candidates</span><ol><li>Scan: <i>RSI &gt; MA</i></li><li>Filters: 10×20 EMA cross in last 5 bars, Above 200 EMA</li><li>Check RS history is rising</li></ol></div>
+          <div class="rc"><b>Sector leaders</b><span class="when">Riding group moves</span><ol><li>Sectors view: pick a top-5 sector climbing in rank</li><li>Click it, then sort by RS</li><li>Look for 6–7 Stage 2 scores near 52-week highs</li></ol></div>
+          <div class="rc"><b>Results winners</b><span class="when">Post-earnings strength</span><ol><li>Sort by <b>E-day%</b>, highest first</li><li>Keep those whose +1D% was also positive and Stage 2 ≥ 6</li><li>Watch for an orderly pullback toward the 20 EMA</li></ol></div>
+        </div>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="routine">
+        <h2><span class="num">13</span>Daily &amp; weekly routine</h2>
+        <div class="routine">
+          <div><h3>Every evening · 15 minutes</h3><ol>
+            <li><b>Market health:</b> green, yellow or red light? Decide how active to be tomorrow.</li>
+            <li><b>Sectors:</b> note the top 3–5 and any big movers in rank.</li>
+            <li><b>Run your saved templates</b> (filtered to top sectors when the market is mixed).</li>
+            <li><b>Flip through results</b> with ← → in the chart. Add the best to a watchlist and write a note with your trigger and invalidation levels.</li>
+            <li><b>Check Weekly</b> on your finalists: the weekly trend should agree.</li>
+            <li><b>Check Next earn.</b> for each finalist.</li>
+          </ol></div>
+          <div><h3>Every weekend · 30 minutes</h3><ol>
+            <li>Switch to <b>Weekly</b> and look at breadth and sector ranks: what changed this week?</li>
+            <li>Open <b>Kestrel Eye</b> on your watchlists: who moved into Leading, who into Weakening?</li>
+            <li>Remove stocks that broke down; promote ones that set up.</li>
+            <li>Review your holdings' stages. Anything in Stage 3 or 4 needs a plan.</li>
+            <li>Download a backup under <b>My data</b>.</li>
+          </ol></div>
+        </div>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="risk">
+        <h2><span class="num">14</span>Managing risk</h2>
+        <p>No screen picks only winners. What protects you is how much you lose when you're wrong.</p>
+        <ul>
+          <li><b>Decide your exit before you enter.</b> A logical stop is just below a level that should hold if the idea is right: the 20 or 50 EMA, the breakout level, or the last swing low.</li>
+          <li><b>Size from the stop.</b> A common rule is to risk at most 1% of your capital per idea. Example: ₹5,00,000 capital → risk ₹5,000. Entry ₹500, stop ₹470 (₹30 risk per share) → buy at most 166 shares.</li>
+          <li><b>Don't chase extended stocks.</b> If % from 20 EMA is above 10%, the stop is far away and the risk is large; wait for a pullback or a new base.</li>
+          <li><b>Respect the market.</b> In "red light" breadth, even good setups fail more often: trade smaller or not at all.</li>
+          <li><b>Know the events.</b> Results days can gap through any stop.</li>
+        </ul>
+        <div class="callout"><b>Disclaimer.</b> Kestrel is for education and research. It is not investment advice or a recommendation to buy or sell any security. Markets carry risk; consult a SEBI-registered adviser before investing.</div>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="mistakes">
+        <h2><span class="num">15</span>Common mistakes</h2>
+        <ul class="x">
+          <li><b>Buying the day's biggest gainer.</b> The top of the 1D% sort is often micro caps spiking inside downtrends. Always check Stage 2 and RS first.</li>
+          <li><b>Treating oversold as cheap.</b> Low RSI in Stage 4 usually means "still falling", not "bargain".</li>
+          <li><b>Ignoring liquidity.</b> Signals in stocks with tiny turnover are unreliable, and exits can be costly.</li>
+          <li><b>Ignoring the market.</b> Most breakouts fail when breadth is weak.</li>
+          <li><b>Too many filters.</b> If nothing passes, the market may simply be offering nothing. Waiting is a position too.</li>
+          <li><b>No written plan.</b> Use notes: trigger, stop, and why. It turns hunches into a process you can review.</li>
+        </ul>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="faq">
+        <h2><span class="num">16</span>FAQ</h2>
+        <details><summary>Why can't I find a stock?</summary><p>Kestrel covers NSE main-board stocks (series EQ and BE). Brand-new listings appear after about 60 trading days; SME-platform and BSE-only companies aren't included.</p></details>
+        <details><summary>Why does the date say PROVISIONAL?</summary><p>Yahoo hadn't published the official daily figures yet, so the day was built from hourly prices. It's replaced automatically at the next refresh.</p></details>
+        <details><summary>Why do micro caps show "--" for earnings?</summary><p>Results dates are fetched for large, mid and small caps only, to keep the nightly update fast.</p></details>
+        <details><summary>Is the data real-time?</summary><p>No. It's end-of-day, refreshed three times each weekday. Kestrel tells you what to watch tomorrow, not what's happening this minute.</p></details>
+        <details><summary>Where are my watchlists stored?</summary><p>In your browser only. Clearing site data or switching browsers loses them, so use <b>My data → Download backup</b>.</p></details>
+        <details><summary>Daily or weekly?</summary><p>Daily for timing, weekly for the bigger picture. The best candidates look good on both.</p></details>
+      </section>
+
+      <!-- ===================================================== -->
+      <section id="glossary">
+        <h2><span class="num">17</span>Glossary</h2>
+        <dl class="gloss">
+          <dt>Base</dt><dd>A sideways period after a move, where supply is absorbed before the next leg.</dd>
+          <dt>Breadth</dt><dd>How many stocks participate in a market move.</dd>
+          <dt>Breakout</dt><dd>A close above a base's resistance level.</dd>
+          <dt>Distribution</dt><dd>Heavy selling by large investors, often seen as high-volume down days near tops.</dd>
+          <dt>Accumulation</dt><dd>Steady buying by large investors, often seen as high-volume up days and quiet pullbacks.</dd>
+          <dt>EMA</dt><dd>Exponential moving average; weights recent prices more.</dd>
+          <dt>Extended</dt><dd>Far above its moving averages; higher risk to buy.</dd>
+          <dt>Pullback</dt><dd>A temporary dip within a trend.</dd>
+          <dt>RS rank</dt><dd>Performance percentile versus all other stocks.</dd>
+          <dt>RSI</dt><dd>Momentum oscillator comparing recent gains and losses (0–100).</dd>
+          <dt>Stage 2</dt><dd>The advancing phase of a stock's cycle: price above a rising long-term average.</dd>
+          <dt>Support / Resistance</dt><dd>Price areas where buying (support) or selling (resistance) has tended to appear.</dd>
+          <dt>Turnover</dt><dd>The value of shares traded in a session.</dd>
+        </dl>
+        <p class="end-cta"><a class="btn primary lg" href="screener.html">Open the screener →</a></p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-foot guide-foot">
+    <span>Kestrel is an educational research tool. Not investment advice.</span>
+    <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  </footer>
+  <script>
+  // Highlight the contents entry for the section in view.
+  (function () {
+    const links = [...document.querySelectorAll(".toc a")];
+    const map = new Map(links.map((a) => [a.getAttribute("href").slice(1), a]));
+    if (!("IntersectionObserver" in window)) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { links.forEach((a) => a.classList.remove("on")); const a = map.get(e.target.id); if (a) a.classList.add("on"); }
+      });
+    }, { rootMargin: "-20% 0px -70% 0px" });
+    document.querySelectorAll(".guide-body section[id]").forEach((s) => io.observe(s));
+  })();
+  </script>
+</body>
+</html>
