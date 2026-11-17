@@ -530,9 +530,23 @@
   function renderSuggest() {
     const q = state.q.trim().toLowerCase(), box = $("#suggest");
     if (!q) { box.hidden = true; return; }
-    const m = data.rows.filter((r) => r.ticker.toLowerCase().startsWith(q) || r.name.toLowerCase().includes(q)).slice(0, 8);
-    box.innerHTML = m.map((r, i) => `<button data-open="${esc(r.ticker)}" class="${i === hl ? "hl" : ""}"><span class="t">${esc(r.ticker)}</span><span class="n">${esc(r.name)}</span><span class="${cls(r.chg)}">${sgn(r.chg)}</span></button>`).join("");
-    box.hidden = !m.length;
+    // Rank: exact ticker, ticker prefix, a word of the name starting with the query, then any substring.
+    const squash = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+    const qs = squash(q);
+    const score = (r) => {
+      const t = r.ticker.toLowerCase(), n = r.name.toLowerCase();
+      if (t === q) return 0;
+      if (t.startsWith(q)) return 1;
+      if (n.startsWith(q) || n.includes(" " + q)) return 2;
+      if (n.includes(q) || (qs.length > 2 && (squash(n).includes(qs) || squash(t).includes(qs)))) return 3;
+      return -1;
+    };
+    const m = data.rows.map((r) => [score(r), r]).filter(([s]) => s >= 0)
+      .sort((a, b) => a[0] - b[0] || b[1].turnover - a[1].turnover).slice(0, 8).map(([, r]) => r);
+    box.innerHTML = m.length
+      ? m.map((r, i) => `<button data-open="${esc(r.ticker)}" class="${i === hl ? "hl" : ""}"><span class="t">${esc(r.ticker)}</span><span class="n">${esc(r.name)}</span><span class="${cls(r.chg)}">${sgn(r.chg)}</span></button>`).join("")
+      : `<div class="suggest-empty">No stock matches “${esc(state.q.trim())}” among ${data.rows.length.toLocaleString()} ${state.market === "US" ? "US" : "NSE"} stocks. Very new listings appear after about 60 trading days.</div>`;
+    box.hidden = false;
   }
 
   // ---------- events ----------

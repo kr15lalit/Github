@@ -94,7 +94,10 @@
     const { row, market, settings, legendEl } = opts;
     let bars, approx = false;
     try { bars = await loadBars(market, row.ticker); }
-    catch (e) { bars = barsFromCloses(row.series, opts.sessionDate); approx = true; }
+    catch (e) {
+      if (!row.series) throw new Error("price history for this stock isn't available yet");
+      bars = barsFromCloses(row.series, opts.sessionDate); approx = true;
+    }
     if (opts.tf === "weekly") bars = toWeekly(bars);
     if (!bars.length) throw new Error("No price history");
 
