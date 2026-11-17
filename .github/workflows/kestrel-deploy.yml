@@ -22,7 +22,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -35,6 +35,12 @@ jobs:
       - name: Build market data
         # If Yahoo is down the committed data/*.json stays in place and the site still deploys.
         run: python kestrel/pipeline/build_data.py || echo "::warning::Data refresh failed; deploying previous data"
+      - name: Build stock analyses (rule-based + free Gemini AI when GEMINI_API_KEY is set)
+        # Add the key under Settings → Secrets and variables → Actions → GEMINI_API_KEY (free at aistudio.google.com).
+        # Without it, every stock still gets the rule-based read. AI failures never block the deploy.
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python kestrel/pipeline/analysis.py || echo "::warning::Analysis step failed; deploying without new analyses"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
