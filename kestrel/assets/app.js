@@ -322,11 +322,11 @@
 
   // ---------- modal helpers ----------
   function openModal(html, small) {
-    const box = $("#modalBox"); box.className = "modal" + (small ? " sm" : ""); box.innerHTML = html;
+    const box = $("#modalBox"); box.className = "modal" + (small === "xl" ? " xl" : small ? " sm" : ""); box.innerHTML = html;
     $("#modal").hidden = false;
     setTimeout(() => (box.querySelector("[autofocus]") || box.querySelector("button, input, textarea"))?.focus(), 0);
   }
-  function closeModal() { $("#modal").hidden = true; endTour(); }
+  function closeModal() { destroyChart(); $("#modal").hidden = true; endTour(); }
   const modalHead = (title, sub) => `<div class="modal-head"><div><h3 id="modalTitle">${title}</h3>${sub ? `<p>${sub}</p>` : ""}</div><button class="btn icon ghost" data-close aria-label="Close">✕</button></div>`;
   function toast(msg) { const t = document.createElement("div"); t.className = "toast"; t.textContent = msg; document.body.appendChild(t); setTimeout(() => t.remove(), 1800); }
   async function copy(text, msg) { try { await navigator.clipboard.writeText(text); toast(msg); } catch (e) { prompt("Copy:", text); } }
@@ -349,19 +349,53 @@
       ${ref}${area}${lines}
       <text x="${P.l}" y="${H - 6}">${esc(opts.startLabel || "")}</text><text x="${W - P.r}" y="${H - 6}" text-anchor="end">${esc(opts.endLabel || "")}</text></svg>`;
   }
-  function openStock(t) {
+  // ---------- stock chart popup ----------
+  let chartSettings = { type: "candles", range: "6M", ema20: true, ema50: true, ema200: true, volume: true, rsi: true, ...store.get("chart", {}) };
+  let chartHandle = null, chartList = [], chartTf = "daily";
+  function destroyChart() { if (chartHandle) { chartHandle.destroy(); chartHandle = null; } }
+  function chartToolbar() {
+    const seg = (key, opts) => `<div class="seg" role="group">${opts.map(([v, l]) => `<button data-cset="${key}" data-cval="${v}" aria-pressed="${(key === "tf" ? chartTf : chartSettings[key]) === v}">${l}</button>`).join("")}</div>`;
+    const tog = (key, label, color) => `<button class="chip" data-ctog="${key}" aria-pressed="${!!chartSettings[key]}">${color ? `<i style="display:inline-block;width:10px;height:3px;border-radius:2px;background:${color}"></i>` : ""}${label}</button>`;
+    return `<div class="chart-tools">${seg("type", [["candles", "Candles"], ["line", "Line"]])}${seg("tf", [["daily", "Daily"], ["weekly", "Weekly"]])}${seg("range", [["3M", "3M"], ["6M", "6M"], ["1Y", "1Y"], ["ALL", "All"]])}
+      <span class="chart-toggles">${tog("ema20", "EMA 20", "#2f9e6b")}${tog("ema50", "EMA 50", "#2563d9")}${tog("ema200", "EMA 200", "#e0912f")}${tog("volume", "Volume")}${tog("rsi", "RSI")}</span></div>`;
+  }
+  async function drawChart(r) {
+    destroyChart();
+    const box = $("#stockChart"); if (!box) return;
+    box.innerHTML = '<div class="chart-loading">Loading chart…</div>';
+    try {
+      const h = await window.Kestrel.chart.render(box, { market: state.market, row: r, tf: chartTf, sessionDate: data.session, settings: chartSettings, legendEl: $("#chartLegend") });
+      if ($("#stockChart") !== box) { h.destroy(); return; } // popup changed while loading
+      const ld = box.querySelector(".chart-loading"); if (ld) ld.parentNode.removeChild(ld);
+      chartHandle = h;
+    } catch (e) {
+      box.innerHTML = `<div class="chart-loading">Couldn't load the interactive chart (${esc(e.message)}). Check your internet connection.</div>`;
+    }
+  }
+  function openStock(t, list) {
     const r = data.rows.find((x) => x.ticker === t); if (!r) return;
+    const wasOpen = !$("#modal").hidden && !!$("#stockChart");
+    if (list) chartList = list;
+    else if (!wasOpen || !chartList.includes(t)) chartList = state.view === "stocks" ? filtered().map((x) => x.ticker) : [t];
+    if (!chartList.includes(t)) chartList = [t];
+    if (!wasOpen) chartTf = state.tf;
+    const i = chartList.indexOf(t), prev = chartList[i - 1], next = chartList[i + 1];
     const tvSym = state.market === "US" ? r.ticker : "NSE:" + r.ticker.replace("&", "_").replace("-", "_");
-    openModal(modalHead(`${esc(r.ticker)} <span class="cap ${r.cap}" style="vertical-align:2px">${r.cap === "MI" ? "Mic" : r.cap}</span>`, `${esc(r.name)} · ${esc(r.sector)}`) + `<div class="modal-body">
-      <div style="display:flex;align-items:baseline;gap:12px"><span style="font-size:28px;font-weight:800">${cur()}${nf(r.price, 2)}</span>${pill(r.chg)}</div>
-      ${lineChart([{ data: r.series, color: "var(--text)", w: 1.8 }, { data: r.e20s, color: "#2f9e6b" }, { data: r.e50s, color: "#2463b8" }, { data: r.e200s, color: "#e0912f", dash: true }], { area: true, label: r.ticker + " price", startLabel: `${r.series.length} ${state.tf === "weekly" ? "weeks" : "sessions"} ago`, endLabel: D.fmtShort(data.session) })}
-      <div class="legend"><span><i style="background:var(--text)"></i>Close</span><span><i style="background:#2f9e6b"></i>20 EMA</span><span><i style="background:#2463b8"></i>50 EMA</span><span><i style="background:#e0912f"></i>200 EMA</span></div>
-      <div class="stats">
-        <div><span>RSI (14)</span><b>${r.rsi}</b></div><div><span>RS rank</span><b>${r.rs ?? "--"}</b></div><div><span>Stage 2</span><b>${r.stage2}/7</b></div><div><span>From 52W high</span><b>${sgn(r.from52)}</b></div>
-        <div><span>Vol spike</span><b>${nf(r.volSpike)}x</b></div><div><span>Daily pivot</span><b>${r.dPivot}</b></div><div><span>Breakout</span><b>${r.bo ? sgn(r.bo.gain) + " since" : "None"}</b></div><div><span>Next earnings</span><b>${fmtDate(r.nextEarn)}</b></div>
-      </div>
-      <h4 style="margin:16px 0 6px">Notes</h4><textarea class="note" id="noteText" placeholder="Your thesis, levels to watch, reasons to exit…">${esc(notes[r.ticker] || "")}</textarea>
-    </div><div class="modal-foot"><a class="btn" href="https://www.tradingview.com/chart/?symbol=${encodeURIComponent(tvSym)}" target="_blank" rel="noopener">Open in TradingView ↗</a><button class="btn primary" data-save-note="${esc(r.ticker)}">Save note</button></div>`);
+    destroyChart();
+    openModal(`<div class="modal-head"><div><h3 id="modalTitle">${esc(r.ticker)} <span class="cap ${r.cap}" style="vertical-align:2px">${r.cap === "MI" ? "Mic" : r.cap}</span> <span style="font-weight:800;margin-left:8px">${cur()}${nf(r.price, 2)}</span> ${pill(r.chg)}</h3><p>${esc(r.name)} · ${esc(r.sector)}</p></div>
+      <div style="display:flex;gap:6px;align-items:center"><span class="caption">${i + 1} / ${chartList.length}</span><button class="btn icon" data-nav="${esc(prev || "")}" data-dir="prev" ${prev ? "" : "disabled"} aria-label="Previous stock" title="Previous (←)">‹</button><button class="btn icon" data-nav="${esc(next || "")}" data-dir="next" ${next ? "" : "disabled"} aria-label="Next stock" title="Next (→)">›</button><button class="btn icon ghost" data-close aria-label="Close">✕</button></div></div>
+      <div class="modal-body">
+        ${chartToolbar()}
+        <div class="chart-legend" id="chartLegend"></div>
+        <div class="stock-chart" id="stockChart"></div>
+        <div class="stats">
+          <div><span>RSI (14)</span><b>${r.rsi}</b></div><div><span>RS rank</span><b>${r.rs ?? "--"}</b></div><div><span>Stage 2</span><b>${r.stage2}/7</b></div><div><span>From 52W high</span><b>${sgn(r.from52)}</b></div>
+          <div><span>Vol spike</span><b>${nf(r.volSpike)}x</b></div><div><span>Daily pivot</span><b>${r.dPivot}</b></div><div><span>Breakout</span><b>${r.bo ? sgn(r.bo.gain) + " since" : "None"}</b></div><div><span>Next earnings</span><b>${fmtDate(r.nextEarn)}</b></div>
+        </div>
+        <h4 style="margin:16px 0 6px">Notes</h4><textarea class="note" id="noteText" placeholder="Your thesis, levels to watch, reasons to exit…">${esc(notes[r.ticker] || "")}</textarea>
+      </div><div class="modal-foot"><span class="caption" style="margin-right:auto">Scroll to zoom · drag to pan · ← → for previous / next stock</span><a class="btn" href="https://www.tradingview.com/chart/?symbol=${encodeURIComponent(tvSym)}" target="_blank" rel="noopener">TradingView ↗</a><button class="btn primary" data-save-note="${esc(r.ticker)}">Save note</button></div>`, "xl");
+    $("#modalBox").dataset.ticker = r.ticker;
+    drawChart(r);
   }
   function openBreadth(key) {
     const b = data.breadth.find((x) => x.key === key);
@@ -455,6 +489,9 @@
       if (d.sector) { state.sector = d.sector; state.view = "stocks"; return render(); }
       if (d.open) { if ($("#modal").hidden === false && !t.closest(".eye")) closeModal(); $("#suggest").hidden = true; return openStock(d.open); }
       if (d.wl != null) { const L = lists[+d.wl].items, i = L.indexOf(d.t); i >= 0 ? L.splice(i, 1) : L.push(d.t); store.set("lists", lists); t.setAttribute("aria-pressed", i < 0); if (state.list >= 0) render(); return; }
+      if (d.nav) return openStock(d.nav);
+      if (d.cset) { if (d.cset === "tf") chartTf = d.cval; else { chartSettings[d.cset] = d.cval; store.set("chart", chartSettings); } $$(`[data-cset="${d.cset}"]`).forEach((b) => b.setAttribute("aria-pressed", b.dataset.cval === d.cval)); const r = data.rows.find((x) => x.ticker === $("#modalBox").dataset.ticker); return r && drawChart(r); }
+      if (d.ctog) { chartSettings[d.ctog] = !chartSettings[d.ctog]; store.set("chart", chartSettings); t.setAttribute("aria-pressed", chartSettings[d.ctog]); const r = data.rows.find((x) => x.ticker === $("#modalBox").dataset.ticker); return r && drawChart(r); }
       if (d.note) return openNote(d.note);
       if (d.saveNote) { const v = $("#noteText").value.trim(); if (v) notes[d.saveNote] = v; else delete notes[d.saveNote]; store.set("notes", notes); closeModal(); toast("Note saved"); return render(); }
       if (d.breadth) return openBreadth(d.breadth);
@@ -505,6 +542,9 @@
     document.addEventListener("keydown", (e) => {
       if (e.key === "/" && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) { e.preventDefault(); $("#search").focus(); }
       if (e.key === "Escape") { if (!$("#modal").hidden) closeModal(); $("#suggest").hidden = true; }
+      if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && $("#stockChart") && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) {
+        const b = $(`[data-dir="${e.key === "ArrowLeft" ? "prev" : "next"}"]`); if (b && b.dataset.nav) { e.preventDefault(); openStock(b.dataset.nav); }
+      }
       if (document.activeElement.id === "search") {
         const items = $$("#suggest button");
         if (e.key === "ArrowDown") { e.preventDefault(); hl = Math.min(items.length - 1, hl + 1); renderSuggest(); }

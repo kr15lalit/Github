@@ -15,10 +15,12 @@ kestrel/
 ├── privacy.html, terms.html   Legal templates (fill in before launch)
 ├── assets/
 │   ├── styles.css        Theme. All colours and fonts are tokens at the top
-│   ├── app.js            Screener logic: filters, sorting, panels, charts, watchlists
+│   ├── app.js            Screener logic: filters, sorting, panels, watchlists
+│   ├── chart.js          Interactive candlestick chart (loads on first use)
 │   ├── data.js           Loads data/*.json; falls back to synthetic demo data
 │   └── logo.svg
-├── data/                 Generated: IN-daily, IN-weekly, US-daily, US-weekly .json
+├── data/                 Generated: IN/US daily + weekly .json, plus charts/<MARKET>/<TICKER>.json
+│                         (per-stock OHLCV for the chart; not committed, built by the pipeline)
 └── pipeline/
     ├── build_data.py     Downloads OHLCV and computes all metrics
     ├── universe_in.csv   Stocks to scan (ticker,name,sector,cap). Edit freely
@@ -36,7 +38,7 @@ kestrel/
 | **Custom filters** | Price, change, RSI, volume spike, distance from 52W high and 20 EMA, Stage 2, RS, turnover, EMA position, recent cross, upcoming earnings |
 | **Sectors view** | Sectors ranked by RS and trend participation, with advance/decline, turnover share, CMF, breakout count and RS leaders |
 | **Kestrel Eye** | RS rank vs. RS change map (leading / weakening / lagging / improving) of your current screen |
-| **Stock drawer** | Price with 20/50/200 EMAs, key stats, notes, link to TradingView |
+| **Interactive chart** | Click any ticker: candlesticks or line, daily/weekly, 3M–All ranges, EMA 20/50/200, volume, RSI pane, 52W-high line, breakout and earnings markers, zoom/pan, ← → to flip through your results. Built with TradingView's open-source Lightweight Charts |
 | **Your data** | 3 named watchlists, per-stock notes and saved filter templates, kept in browser storage, with backup/restore to a JSON file |
 | **Sharing** | "Share active filters" copies a link that reproduces the exact screen. "Copy tickers" exports in TradingView format |
 | **Also** | Daily/weekly timeframes, IN/US markets, dark mode, `/` to search, guided tour, mobile layout |

@@ -20,6 +20,8 @@ import argparse
 import csv
 import json
 import math
+import re
+import shutil
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date
@@ -354,6 +356,33 @@ def drop_unfinished_bar(frames: dict, tz: str, close_hhmm: str):
             frames[k] = df.iloc[:-1]
 
 
+def chart_file_name(ticker: str) -> str:
+    """Filesystem/URL-safe name; must match chartFile() in assets/app.js (e.g. M&M -> M_M)."""
+    return re.sub(r"[^A-Za-z0-9-]", "_", ticker) + ".json"
+
+
+def write_charts(market: str, universe, sym, daily, out_dir: Path):
+    """One small OHLCV file per stock for the in-site candlestick chart (loaded on demand)."""
+    folder = out_dir / "charts" / market
+    shutil.rmtree(folder, ignore_errors=True)
+    folder.mkdir(parents=True)
+    n = 0
+    for u in universe:
+        df = daily.get(sym[u["ticker"]])
+        if df is None or len(df) < 2:
+            continue
+        dec = 1 if df["Close"].iloc[-1] > 1000 else 2
+        payload = {
+            "t": [d.strftime("%Y-%m-%d") for d in df.index],
+            "o": [rnd(x, dec) for x in df["Open"]], "h": [rnd(x, dec) for x in df["High"]],
+            "l": [rnd(x, dec) for x in df["Low"]], "c": [rnd(x, dec) for x in df["Close"]],
+            "v": [int(x) if x == x else 0 for x in df["Volume"]],
+        }
+        (folder / chart_file_name(u["ticker"])).write_text(json.dumps(payload, separators=(",", ":")), encoding="utf-8")
+        n += 1
+    print(f"[{market}] wrote {n} chart files → {folder.relative_to(ROOT)}", flush=True)
+
+
 def build_market(market: str, with_earnings: bool, out_dir: Path):
     cfg = MARKETS[market]
     universe = read_universe(cfg["universe"])
@@ -362,6 +391,7 @@ def build_market(market: str, with_earnings: bool, out_dir: Path):
     daily = download_ohlcv(list(sym.values()))
     print(f"[{market}] got data for {len(daily)} / {len(sym)}", flush=True)
     drop_unfinished_bar(daily, cfg["tz"], cfg["close"])
+    write_charts(market, universe, sym, daily, out_dir)
 
     earnings = {}
     if with_earnings:
