@@ -131,7 +131,48 @@ def download_ohlcv(symbols: list[str], period="2y", retries=2) -> dict[str, pd.D
         if not missing:
             break
         out.update(_download(missing, period, threads=False))
+    fill_from_intraday(out)
     return out
+
+
+# symbol -> set of dates whose daily bar was built from hourly data (Yahoo had not published it yet)
+PROVISIONAL: dict[str, set] = {}
+
+
+def fill_from_intraday(frames: dict[str, pd.DataFrame]):
+    """Yahoo sometimes leaves the latest daily bar empty for hours after the close while its hourly
+    bars are complete. Build any missing recent daily bars from hourly data; later runs replace them
+    with the official daily bar automatically (every run rebuilds from scratch)."""
+    if not frames:
+        return
+    try:
+        raw = yf.download(list(frames), period="5d", interval="1h", group_by="ticker",
+                          auto_adjust=True, threads=True, progress=False)
+    except Exception as e:
+        print(f"  ! hourly fallback unavailable: {e}", file=sys.stderr)
+        return
+    filled = 0
+    for sym, daily in frames.items():
+        try:
+            h = raw[sym] if isinstance(raw.columns, pd.MultiIndex) else raw
+            h = h[["Open", "High", "Low", "Close", "Volume"]].dropna(subset=["Close"])
+        except KeyError:
+            continue
+        if h.empty or daily.empty:
+            continue
+        idx = pd.to_datetime(h.index)
+        h.index = idx.tz_localize(None) if idx.tz is not None else idx  # exchange-local wall time
+        last = daily.index[-1].normalize()
+        new = h[h.index.normalize() > last]
+        if new.empty:
+            continue
+        bars = new.groupby(new.index.normalize()).agg(
+            {"Open": "first", "High": "max", "Low": "min", "Close": "last", "Volume": "sum"})
+        frames[sym] = pd.concat([daily, bars]).sort_index()
+        PROVISIONAL.setdefault(sym, set()).update(bars.index)
+        filled += 1
+    if filled:
+        print(f"  built {filled} provisional daily bars from hourly data (official daily bar not published yet)", flush=True)
 
 
 def _download(symbols, period, threads=True):
@@ -426,6 +467,13 @@ def build_market(market: str, with_earnings: bool, out_dir: Path):
             del r["_close"]
         payload = {"session": session.strftime("%Y-%m-%d"), "generated": pd.Timestamp.now("UTC").isoformat(),
                    "indices": idx, "breadth": breadth(frames, weekly), "rows": rows}
+        prov_tickers = {u["ticker"] for u in universe if session.normalize() in PROVISIONAL.get(sym[u["ticker"]], set())}
+        for r in rows:
+            if r["ticker"] in prov_tickers:
+                r["volSpike"] = None  # hourly volume undercounts the day; don't show a misleading ratio
+        prov = len(prov_tickers)
+        if prov:  # latest session partly built from hourly data; the site shows a "provisional" badge
+            payload["provisional"] = {"date": session.strftime("%Y-%m-%d"), "stocks": prov}
         path = out_dir / f"{market}-{tf}.json"
         path.write_text(json.dumps(payload, separators=(",", ":")), encoding="utf-8")
         print(f"[{market}/{tf}] wrote {len(rows)} stocks → {path.relative_to(ROOT)}", flush=True)
