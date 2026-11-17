@@ -135,7 +135,7 @@
     const d = await D.load("IN", "daily");
     const b = Object.fromEntries(d.breadth.map((x) => [x.key, x]));
     const sess = d.session.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" });
-    $("#sessionLbl").textContent = (d.source === "demo" ? "Demo data · " : "Data as of ") + sess;
+    $("#sessionLbl").textContent = (d.source === "demo" ? "Demo data · " : "Data as of ") + sess + (d.provisional ? " (provisional)" : "");
     $("#sessionLbl2").textContent = sess;
     $("#stStocks").textContent = d.rows.length;
     $("#stBo").textContent = d.rows.filter((r) => r.bo).length;

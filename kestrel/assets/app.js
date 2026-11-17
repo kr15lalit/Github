@@ -61,7 +61,7 @@
     { k: "price", g: "pv", label: () => `Price (${cur()})`, sub: () => data ? D.fmtShort(data.session) : "", sort: (r) => r.price, render: (r) => nf(r.price, r.price >= 1000 ? 1 : 2) },
     { k: "chg", g: "pv", label: () => state.tf === "weekly" ? "1W%" : "1D%", sort: (r) => r.chg, render: (r) => pill(r.chg), help: "Change versus previous close" },
     { k: "rsi", g: "pv", label: "RSI", sort: (r) => r.rsi, render: (r) => `${r.rsi}<span class="dot ${r.rsiAboveMA ? "up" : "dn"}" title="RSI ${r.rsiAboveMA ? "above" : "below"} its average"></span>`, help: "14-period Wilder RSI. Dot: green when above its 14-period average." },
-    { k: "volSpike", g: "pv", label: "Vol spike", sub: "1D / 9D avg", sort: (r) => r.volSpike, render: (r) => `<span class="${r.volSpike >= 2 ? "pos" : ""}">${nf(r.volSpike)}x</span>`, help: "Latest volume ÷ average of the 9 prior bars" },
+    { k: "volSpike", g: "pv", label: "Vol spike", sub: "1D / 9D avg", sort: (r) => r.volSpike, render: (r) => r.volSpike == null ? `<span class="caption" title="Not available: today's volume is provisional">--</span>` : `<span class="${r.volSpike >= 2 ? "pos" : ""}">${nf(r.volSpike)}x</span>`, help: "Latest volume ÷ average of the 9 prior bars" },
     { k: "gap", g: "pv", label: "Gap", sub: "opening", sort: (r) => r.gap, render: (r) => `<span class="pill outline">${sgn(r.gap)}</span>` },
     { k: "from52", g: "pv", label: "52W high", sub: "distance", sort: (r) => r.from52, render: (r) => `<span class="${r.from52 > -5 ? "pos" : ""}">${sgn(r.from52)}</span>` },
 
@@ -193,7 +193,7 @@
     const head = `<thead><tr class="groups">${groupRow}</tr><tr class="cols">${cols.map((c) => `<th class="${thCls(c)}" ${stickyStyle(c)} ${c.sort ? `data-sort="${c.k}" tabindex="0" aria-sort="${state.sort.key === c.k ? (state.sort.dir > 0 ? "ascending" : "descending") : "none"}"` : ""} ${c.help ? `title="${esc(c.help)}"` : ""}>${c.sort ? `<span class="arrow">${state.sort.key === c.k ? (state.sort.dir > 0 ? "↑" : "↓") : "⇅"}</span>` : ""}${esc(val(c.label))}${c.sub ? `<span class="sub">${esc(val(c.sub))}</span>` : ""}</th>`).join("")}</tr></thead>`;
     const body = rows.slice(0, state.limit).map((r, i) => `<tr>${cols.map((c) => `<td class="${c.cls || ""} ${c.sticky ? "sticky" : ""} ${c.last ? "sticky-last" : ""}" ${stickyStyle(c)}>${c.render(r, i)}</td>`).join("")}</tr>`).join("");
     $("#grid").innerHTML = head + `<tbody>${body || `<tr><td class="l" colspan="${cols.length}" style="height:80px;color:var(--muted)">No stocks match these filters. Try removing a scan or widening a range.</td></tr>`}</tbody>`;
-    $("#metaLeft").innerHTML = `${D.fmtISO(data.session)} · <b>${rows.length}</b> stocks match${data.source === "demo" ? ` <span class="demo-flag" title="No data/*.json found — showing synthetic values. Run pipeline/build_data.py.">DEMO DATA</span>` : ""}`;
+    $("#metaLeft").innerHTML = `${D.fmtISO(data.session)}${provBadge()} · <b>${rows.length}</b> stocks match${data.source === "demo" ? ` <span class="demo-flag" title="No data/*.json found — showing synthetic values. Run pipeline/build_data.py.">DEMO DATA</span>` : ""}`;
     $("#metaRight").innerHTML = `Active sort: <b>${esc(val(COLS.find((c) => c.k === state.sort.key)?.label))} ${state.sort.dir > 0 ? "asc" : "desc"}</b>`;
     $("#showing").textContent = `Showing ${Math.min(state.limit, rows.length)} of ${rows.length}`;
     $("#moreBtn").hidden = rows.length <= state.limit;
@@ -221,6 +221,9 @@
     { k: "adv", label: "Adv / Dec", cls: "c" }, { k: "turn", label: "Turnover share" }, { k: "cmf", label: "CMF (avg)" }, { k: "bo", label: "Breakouts" }, { k: "leaders", label: "Leaders by RS", cls: "l" },
   ];
   let sectorSort = { key: "rank", dir: 1 };
+  function provBadge() {
+    return data.provisional ? ` <span class="demo-flag" title="Yahoo hasn't published the official daily bar for ${esc(data.provisional.date)} yet, so it was built from hourly data. Closes may differ slightly from the official close and volume is incomplete. It is replaced automatically on the next refresh.">PROVISIONAL</span>` : "";
+  }
   function renderSectors() {
     const rows = sectorAgg();
     rows.sort((a, b) => { const x = a[sectorSort.key], y = b[sectorSort.key]; return (typeof x === "string" ? x.localeCompare(y) : x - y) * sectorSort.dir; });
@@ -230,7 +233,7 @@
       <td>${pill(+s.chg.toFixed(2))}</td><td><span class="pill ${rankCls(s.rs)}">${nf(s.rs, 0)}</span></td><td>${bar(s.e20, "var(--pos)")}</td><td>${bar(s.e200, "var(--brand)")}</td>
       <td class="c"><span class="pos">${s.adv}</span> / <span class="neg">${s.dec}</span></td><td>${nf(s.turn)}%</td><td class="${cls(s.cmf)}">${nf(s.cmf, 2)}</td><td>${s.bo}</td>
       <td class="l">${s.leaders.map((t) => `<button class="chip" data-open="${esc(t)}" style="height:22px">${esc(t)}</button>`).join(" ")}</td></tr>`).join("")}</tbody>`;
-    $("#metaLeft").innerHTML = `${D.fmtISO(data.session)} · <b>${rows.length}</b> sectors${data.source === "demo" ? ` <span class="demo-flag">DEMO DATA</span>` : ""}`;
+    $("#metaLeft").innerHTML = `${D.fmtISO(data.session)}${provBadge()} · <b>${rows.length}</b> sectors${data.source === "demo" ? ` <span class="demo-flag">DEMO DATA</span>` : ""}`;
     $("#metaRight").textContent = "Click a sector to screen its stocks";
     $("#showing").textContent = ""; $("#moreBtn").hidden = true;
     $("#activeFilters").innerHTML = "";
@@ -392,7 +395,7 @@
         <section class="ai-panel" id="aiPanel" hidden aria-live="polite"></section>
         <div class="stats">
           <div><span>RSI (14)</span><b>${r.rsi}</b></div><div><span>RS rank</span><b>${r.rs ?? "--"}</b></div><div><span>Stage 2</span><b>${r.stage2}/7</b></div><div><span>From 52W high</span><b>${sgn(r.from52)}</b></div>
-          <div><span>Vol spike</span><b>${nf(r.volSpike)}x</b></div><div><span>Daily pivot</span><b>${r.dPivot}</b></div><div><span>Breakout</span><b>${r.bo ? sgn(r.bo.gain) + " since" : "None"}</b></div><div><span>Next earnings</span><b>${fmtDate(r.nextEarn)}</b></div>
+          <div><span>Vol spike</span><b>${r.volSpike == null ? "--" : nf(r.volSpike) + "x"}</b></div><div><span>Daily pivot</span><b>${r.dPivot}</b></div><div><span>Breakout</span><b>${r.bo ? sgn(r.bo.gain) + " since" : "None"}</b></div><div><span>Next earnings</span><b>${fmtDate(r.nextEarn)}</b></div>
         </div>
         <h4 style="margin:16px 0 6px">Notes</h4><textarea class="note" id="noteText" placeholder="Your thesis, levels to watch, reasons to exit…">${esc(notes[r.ticker] || "")}</textarea>
       </div><div class="modal-foot"><span class="caption" style="margin-right:auto">Scroll to zoom · drag to pan · ← → for previous / next stock</span><a class="btn" href="https://www.tradingview.com/chart/?symbol=${encodeURIComponent(tvSym)}" target="_blank" rel="noopener">TradingView ↗</a><button class="btn primary" data-save-note="${esc(r.ticker)}">Save note</button></div>`, "xl");

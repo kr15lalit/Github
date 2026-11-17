@@ -4,7 +4,11 @@ name: Kestrel — refresh data & deploy
 
 on:
   schedule:
-    - cron: "17 22 * * 1-5"   # 22:17 UTC = after US close (and 03:47 IST next day, long after NSE close)
+    # GitHub may start scheduled runs hours late, and Yahoo publishes end-of-day data unevenly,
+    # so refresh several times; each run simply rebuilds from the latest data available.
+    - cron: "47 12 * * 1-5"   # 18:17 IST: same-evening NSE update
+    - cron: "17 22 * * 1-5"   # after US close (03:47 IST next day)
+    - cron: "37 3 * * 2-6"    # 09:07 IST morning catch-up before NSE opens
   push:
     branches: [main]
     paths: ["kestrel/**", ".github/workflows/kestrel-deploy.yml"]
