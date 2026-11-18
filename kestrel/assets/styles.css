@@ -639,3 +639,13 @@ ul.x li::before { content: "✕"; position: absolute; left: 4px; color: var(--ne
   .top-actions .btn.icon { width: 30px; padding: 0; }
   #tourBtn { display: none; } /* the Guide and playbook cover it on phones */
 }
+.site-nav .short { display: none; }
+@media (max-width: 600px) {
+  .site-nav { gap: 6px; padding: 0 10px; }
+  .site-nav .brand { margin-right: 0; }
+  .site-nav .brand span { display: none; } /* logo only */
+  .site-nav nav { gap: 0; }
+  .site-nav nav a { padding: 0 8px; font-size: 11px; letter-spacing: .06em; }
+  .site-nav nav a svg { display: none; }
+  .site-nav .long { display: none; } .site-nav .short { display: inline; }
+}
