@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d0d0f" />
+  <title>Cheat Filter</title>
+  <meta name="description" content="Today's quick check: market verdict, strong sectors, and swing setups that pass the playbook rules, with rule-based entry, stop and target levels." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("kestrel-theme")||"light"}catch(e){}</script>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-nav">
+    <a class="brand" href="index.html?stay=1"><img src="assets/logo.svg" alt="" /><span>Kes<b>trel</b></span></a>
+    <nav aria-label="Primary">
+      <a href="index.html?stay=1"><span class="long">Overview</span><span class="short">Home</span></a>
+      <a href="screener.html">Screener</a>
+      <a class="on" href="cheat.html"><span class="long">Cheat Filter</span><span class="short">Cheat</span></a>
+      <a href="playbook.html"><span class="long">Swing playbook</span><span class="short">Playbook</span></a>
+      <a href="guide.html">Guide</a>
+    </nav>
+  </header>
+
+  <section class="page-hero cf-hero">
+    <div class="inner wide">
+      <div class="kicker" style="color:#9a9aa8">Cheat Filter · <span id="cfDate">Loading…</span></div>
+      <h1>Today's <span class="grad-text">quick check</span></h1>
+      <p class="hero-sub">The <a href="playbook.html" class="on-dark">Swing playbook</a> run automatically: market verdict, strong sectors, and the stocks that pass its rules, with levels calculated by fixed rules.</p>
+    </div>
+  </section>
+
+  <main id="main-content" class="cf">
+    <!-- Step 1: market verdict -->
+    <section class="cf-verdict" id="verdict" aria-live="polite"><div class="ai-loading"><span class="ai-spin"></span> Reading the market…</div></section>
+
+    <!-- Step 2: sectors -->
+    <section class="cf-block">
+      <div class="cf-h"><h2><span class="num">2</span>Strong sectors</h2><span class="caption">Avg RS &gt; 60 · % above 20 EMA &gt; 60% · CMF &gt; 0 · at least 3 stocks</span></div>
+      <div class="cf-sectors" id="sectors"></div>
+    </section>
+
+    <!-- Steps 3–7: setups -->
+    <section class="cf-block">
+      <div class="cf-h"><h2><span class="num">3</span>Setups that pass the rules</h2>
+        <div class="cf-size">
+          <label class="field">Capital (₹)<input type="number" id="cap" min="0" step="any" /></label>
+          <label class="field">Risk per trade (%)<input type="number" id="risk" min="0.1" max="5" step="0.1" /></label>
+        </div>
+      </div>
+      <div class="seg cf-tabs" role="tablist">
+        <button role="tab" data-tab="pull" aria-pressed="true">Pullbacks <b id="nPull">–</b></button>
+        <button role="tab" data-tab="bo" aria-pressed="false">Breakouts <b id="nBo">–</b></button>
+      </div>
+      <p class="caption cf-rule" id="ruleText"></p>
+      <div id="redGate" hidden class="cf-gate"><p><b>The market is not suitable for new swing trades right now,</b> so the setups below are hidden. Most of them fail in a falling market. Use them only to build a watchlist for when conditions improve.</p><button class="btn" id="showAnyway">Show setups anyway</button></div>
+      <div class="cf-list" id="list"><div class="ai-loading"><span class="ai-spin"></span> Checking every stock…</div></div>
+    </section>
+
+    <section class="cf-block cf-how">
+      <h2>How the levels are calculated</h2>
+      <ul>
+        <li><b>Entry trigger:</b> just above the latest session's high. For a pullback, a close above the previous day's high shows buyers stepping back in.</li>
+        <li><b>Stop-loss (pullbacks):</b> 1% below the lower of the 20-day EMA and the lowest low of the last 5 sessions.</li>
+        <li><b>Stop-loss (breakouts):</b> 2% below the breakout level (the top of the base it broke out of).</li>
+        <li><b>Targets:</b> 2x and 3x the risk (entry minus stop). <b>Quantity</b> risks your chosen % of capital.</li>
+        <li><b>Score:</b> the playbook's 10-point checklist, checked automatically. Still open the chart and check the pattern yourself (Step 4 of the playbook).</li>
+      </ul>
+      <div class="callout"><b>Rule-based screen output, not investment advice.</b> These are mechanical calculations from end-of-day data, not recommendations to buy or sell. They can be wrong, gaps can jump past stops, and past patterns don't guarantee future results. Do your own research, and consult a SEBI-registered adviser before investing.</div>
+    </section>
+  </main>
+
+  <footer class="site-foot guide-foot">
+    <span>Kestrel is an educational research tool. Not investment advice.</span>
+    <nav><a href="playbook.html">Swing playbook</a><a href="guide.html">Guide</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script>
+  (async function () {
+    "use strict";
+    const D = Kestrel.data, $ = (s) => document.querySelector(s), $$ = (s) => [...document.querySelectorAll(s)];
+    const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const store = { get(k, d) { try { const v = localStorage.getItem("kestrel-" + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+                    set(k, v) { try { localStorage.setItem("kestrel-" + k, JSON.stringify(v)); } catch (e) {} } };
+    const inr = (n, d = 2) => "₹" + Number(n).toLocaleString("en-IN", { minimumFractionDigits: d, maximumFractionDigits: d });
+    const tick = (p, up) => (up ? Math.ceil(p * 20) : Math.floor(p * 20)) / 20; // NSE tick ₹0.05
+    const TURN_MIN = 10 * 1e7; // ₹10 Cr
+
+    // ---------- load ----------
+    let daily, weekly;
+    try { [daily, weekly] = await Promise.all([D.load("IN", "daily"), D.load("IN", "weekly").catch(() => null)]); }
+    catch (e) { $("#verdict").innerHTML = '<p class="warn">Couldn\'t load market data. Please refresh.</p>'; return; }
+    const session = daily.session;
+    $("#cfDate").textContent = "Data to " + session.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" }) + (daily.provisional ? " (provisional)" : "") + (daily.source === "demo" ? " · DEMO DATA" : "");
+    const wk = new Map((weekly ? weekly.rows : []).map((r) => [r.ticker, r]));
+
+    // ---------- Step 1: market verdict ----------
+    const B = Object.fromEntries(daily.breadth.map((b) => [b.key, b]));
+    const e200 = B.e200, e20 = B.e20;
+    let mood;
+    if (e200.value >= 50 && e200.delta >= 0 && e20.delta >= 0) mood = "green";
+    else if ((e200.value < 40 && e200.delta < 0) || (e200.value < 50 && e200.delta < 0 && e20.delta < 0)) mood = "red";
+    else mood = "yellow";
+    const MOOD = {
+      green: ["Market supportive", "Breadth is healthy and improving. Act on good setups normally."],
+      yellow: ["Mixed market: be selective", "Conditions are only partly supportive. Trade smaller, and only take setups scoring 8+ in the strongest sectors."],
+      red: ["Market not suitable for new swing trades", "Most stocks are below their long-term averages and breadth is falling. Protect capital: no new trades, or only very small ones."],
+    };
+    const arrow = (d) => `<span class="${d >= 0 ? "pos" : "neg"}">${d >= 0 ? "↗" : "↘"} ${Math.abs(d).toFixed(1)} pts</span>`;
+    $("#verdict").className = "cf-verdict " + mood;
+    $("#verdict").innerHTML = `<div class="cf-light"><span></span><span></span><span></span></div>
+      <div class="cf-vtext"><div class="kicker">Step 1 · Market check</div><h2>${MOOD[mood][0]}</h2><p>${MOOD[mood][1]}</p></div>
+      <div class="cf-metrics">
+        <div><span>Above 200 EMA</span><b>${e200.value.toFixed(1)}%</b>${arrow(e200.delta)}<small>want ≥ 50% and rising</small></div>
+        <div><span>Above 20 EMA</span><b>${e20.value.toFixed(1)}%</b>${arrow(e20.delta)}<small>want rising</small></div>
+      </div>`;
+
+    // ---------- Step 2: strong sectors ----------
+    const bySec = {};
+    daily.rows.forEach((r) => (bySec[r.sector] = bySec[r.sector] || []).push(r));
+    const secs = Object.entries(bySec).map(([name, rs]) => {
+      const n = rs.length, avg = (f) => rs.reduce((s, r) => s + (f(r) || 0), 0) / n;
+      const rsAvg = avg((r) => r.rs), p20 = rs.filter((r) => r.emas[20]).length / n * 100, p200 = rs.filter((r) => r.emas[200]).length / n * 100;
+      return { name, n, rsAvg, p20, cmf: avg((r) => r.cmf), score: rsAvg * 0.5 + p20 * 0.25 + p200 * 0.25 };
+    }).filter((s) => s.n >= 3 && s.rsAvg > 60 && s.p20 > 60 && s.cmf > 0).sort((a, b) => b.score - a.score).slice(0, 5);
+    const strong = new Set(secs.map((s) => s.name));
+    $("#sectors").innerHTML = secs.length
+      ? secs.map((s, i) => `<a class="cf-sec" href="screener.html#${encodeURIComponent(JSON.stringify({ m: "IN", t: "daily", v: "stocks", c: [], s: s.name, p: [], f: {}, o: { key: "rs", dir: -1 } }))}"><b>${i + 1}</b><span>${esc(s.name)}</span><small>RS ${s.rsAvg.toFixed(0)} · ${s.p20.toFixed(0)}% &gt; 20 EMA · ${s.n} stocks</small></a>`).join("")
+      : '<p class="caption">No sector meets all three rules today: another sign of a weak market.</p>';
+
+    // ---------- Steps 3–7 ----------
+    const big = (r) => r.cap !== "MI";
+    const earnDays = (r) => r.nextEarn ? Math.round((r.nextEarn - session) / 864e5) : null;
+    const rules = {
+      pull: { text: "Large + Mid + Small cap · Stage 2 ≥ 6 · RS ≥ 80 · Turnover ≥ ₹10 Cr · ≤ 5% above 20 EMA · within 15% of 52-week high · RSI 50–70",
+        test: (r) => big(r) && r.stage2 >= 6 && (r.rs || 0) >= 80 && r.turnover >= TURN_MIN && r.from20 <= 5 && r.from52 >= -15 && r.rsi >= 50 && r.rsi <= 70 },
+      bo: { text: "Large + Mid + Small cap · Breakout in last 20 sessions · RS ≥ 70 · Stage 2 ≥ 5 · Turnover ≥ ₹10 Cr · breakout volume ≥ 1.5x · less than 5% above the breakout, not back below it",
+        test: (r) => big(r) && r.bo && (r.rs || 0) >= 70 && r.stage2 >= 5 && r.turnover >= TURN_MIN && (r.bo.vol || 0) >= 1.5 && r.bo.gain >= -1 && r.bo.gain < 5 },
+    };
+    const cands = { pull: daily.rows.filter(rules.pull.test), bo: daily.rows.filter(rules.bo.test) };
+    $("#nPull").textContent = cands.pull.length; $("#nBo").textContent = cands.bo.length;
+
+    const barsCache = {};
+    const fileOf = (t) => t.replace(/[^A-Za-z0-9-]/g, "_") + ".json";
+    const loadBars = (t) => barsCache[t] || (barsCache[t] = fetch("data/charts/IN/" + fileOf(t)).then((r) => r.ok ? r.json() : null).catch(() => null));
+    const emaLast = (v, p) => { const k = 2 / (p + 1); let e = v[0]; for (const x of v) e = x * k + e * (1 - k); return e; };
+
+    async function levels(r, kind) {
+      const b = await loadBars(r.ticker);
+      if (!b || b.c.length < 30) return null;
+      const n = b.c.length, hi = b.h[n - 1];
+      const entry = tick(hi * 1.001, true);
+      let stop, basis;
+      if (kind === "bo" && r.bo && r.bo.date) {
+        const i = b.t.indexOf(r.bo.date);
+        const base = i > 40 ? Math.max(...b.c.slice(i - 40, i)) : null;
+        if (base) { stop = tick(base * 0.98, false); basis = `2% below the breakout level ${inr(base)}`; }
+      }
+      if (!stop) {
+        const e20 = emaLast(b.c, 20), low5 = Math.min(...b.l.slice(-5));
+        const sup = Math.min(e20, low5);
+        stop = tick(sup * 0.99, false);
+        basis = `1% below the ${e20 <= low5 ? "20-day EMA" : "5-day low"} (${inr(sup)})`;
+      }
+      if (stop >= entry) return null;
+      const risk = entry - stop, riskPct = risk / entry * 100;
+      const hi52 = Math.max(...b.h.slice(-252));
+      return { entry, stop, basis, risk, riskPct, t1: entry + 2 * risk, t2: entry + 3 * risk, hi52 };
+    }
+
+    function score(r, kind, lv) {
+      const ed = earnDays(r), h = r.rsHist || [];
+      const w = wk.get(r.ticker);
+      const checks = [
+        ["Market: above 200 EMA ≥ 50% and rising", e200.value >= 50 && e200.delta >= 0],
+        ["Sector in today's top 5", strong.has(r.sector)],
+        ["Stage 2 score 6–7", r.stage2 >= 6],
+        ["RS 80+ and rising", (r.rs || 0) >= 80 && h[3] != null && h[0] != null && h[3] >= h[0]],
+        ["Within 15% of 52-week high", r.from52 >= -15],
+        ["0–5% above the 20 EMA", r.from20 >= 0 && r.from20 <= 5],
+        ["RSI 50–65 and turning up", r.rsi >= 50 && r.rsi <= 65 && r.rsiAboveMA],
+        kind === "bo" ? ["Breakout on 1.5x+ volume", (r.bo && r.bo.vol || 0) >= 1.5] : ["Calm volume (not a high-volume day)", r.volSpike == null || r.volSpike <= 1.3],
+        ["No results within 2 weeks", ed == null || ed < 0 || ed > 14],
+        ["Stop within 8% (2:1 reward-to-risk)", !!lv && lv.riskPct <= 8],
+      ];
+      const warn = [];
+      if (ed != null && ed >= 0 && ed <= 14) warn.push(`Results in ${ed} day${ed === 1 ? "" : "s"} (${D.fmtShort(r.nextEarn)})`);
+      if (lv && lv.riskPct > 8) warn.push(`Stop is ${lv.riskPct.toFixed(1)}% away: too wide, consider skipping`);
+      if (lv && lv.hi52 > lv.entry * 1.005 && lv.hi52 < lv.t1) warn.push(`52-week high ${inr(lv.hi52)} sits before target 1, may act as resistance`);
+      if (w && !(w.emas[50] && w.emas[200])) warn.push("Weekly chart not confirmed (below its weekly 50/200 EMA)");
+      if (!lv) warn.push("Levels unavailable: price history missing");
+      return { checks, n: checks.filter((c) => c[1]).length, warn };
+    }
+
+    // ---------- render ----------
+    $("#cap").value = store.get("cf-capital", 500000);
+    $("#risk").value = store.get("cf-risk", 1);
+    let tab = "pull", revealed = mood !== "red", built = { pull: null, bo: null };
+
+    async function build(kind) {
+      if (built[kind]) return built[kind];
+      const out = [];
+      const list = cands[kind];
+      for (let i = 0; i < list.length; i += 8) { // fetch price files in small batches
+        const part = await Promise.all(list.slice(i, i + 8).map(async (r) => { const lv = await levels(r, kind); return { r, lv, s: score(r, kind, lv) }; }));
+        out.push(...part);
+      }
+      out.sort((a, b) => b.s.n - a.s.n || (b.r.rs || 0) - (a.r.rs || 0));
+      return (built[kind] = out);
+    }
+
+    function card({ r, lv, s }) {
+      const capital = +$("#cap").value || 0, riskPct = +$("#risk").value || 0;
+      const qty = lv && capital > 0 && riskPct > 0 ? Math.min(Math.floor(capital * riskPct / 100 / lv.risk), Math.floor(capital / lv.entry)) : null;
+      const grade = s.n >= 8 ? "good" : s.n >= 6 ? "ok" : "weak";
+      return `<article class="cf-card ${grade}">
+        <header>
+          <div class="cf-score"><b>${s.n}</b><span>/10</span></div>
+          <div class="cf-id"><a class="tk" href="screener.html?stock=${encodeURIComponent(r.ticker)}">${esc(r.ticker)}</a> <span class="cap ${r.cap}">${r.cap}</span>${strong.has(r.sector) ? ' <span class="cf-star" title="In one of today\'s strongest sectors">★ strong sector</span>' : ""}
+            <div class="caption">${esc(r.name)} · ${esc(r.sector)}</div></div>
+          <div class="cf-px"><b>${inr(r.price)}</b><span class="${r.chg >= 0 ? "pos" : "neg"}">${r.chg >= 0 ? "+" : ""}${r.chg}%</span><small>RS ${r.rs ?? "--"} · RSI ${r.rsi}</small></div>
+        </header>
+        ${lv ? `<div class="cf-levels">
+          <div><span>Entry trigger</span><b>above ${inr(lv.entry)}</b></div>
+          <div class="sl"><span>Stop-loss</span><b>${inr(lv.stop)}</b><small>−${lv.riskPct.toFixed(1)}%</small></div>
+          <div class="tg"><span>Target 1 (2x)</span><b>${inr(lv.t1)}</b><small>+${(lv.riskPct * 2).toFixed(1)}%</small></div>
+          <div class="tg"><span>Target 2 (3x)</span><b>${inr(lv.t2)}</b><small>+${(lv.riskPct * 3).toFixed(1)}%</small></div>
+          <div class="qty"><span>Quantity</span><b>${qty != null ? qty.toLocaleString("en-IN") : "--"}</b><small>${qty != null ? inr(qty * lv.entry, 0) : ""}</small></div>
+        </div><p class="caption cf-basis">Stop: ${esc(lv.basis)}.</p>` : ""}
+        ${s.warn.length ? `<ul class="cf-warn">${s.warn.map((w) => `<li>${esc(w)}</li>`).join("")}</ul>` : ""}
+        <details class="cf-checks"><summary>Checklist ${s.n}/10</summary><ul>${s.checks.map(([t, ok]) => `<li class="${ok ? "ok" : "no"}">${ok ? "✓" : "✕"} ${esc(t)}</li>`).join("")}</ul></details>
+        <div class="cf-actions"><a class="btn" href="screener.html?stock=${encodeURIComponent(r.ticker)}">Open chart</a><button class="btn ghost" data-watch="${esc(r.ticker)}">☆ Add to watchlist</button></div>
+      </article>`;
+    }
+
+    async function render() {
+      $$(".cf-tabs [data-tab]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.tab === tab));
+      $("#ruleText").textContent = "Rules: " + rules[tab].text;
+      $("#redGate").hidden = revealed;
+      const box = $("#list");
+      if (!revealed) { box.innerHTML = ""; return; }
+      box.innerHTML = '<div class="ai-loading"><span class="ai-spin"></span> Calculating levels…</div>';
+      const items = await build(tab);
+      if (!items.length) { box.innerHTML = `<p class="cf-empty">No stock passes the ${tab === "pull" ? "pullback" : "breakout"} rules today. That's useful information too: waiting is a position.</p>`; return; }
+      const good = items.filter((x) => x.s.n >= 8).length;
+      box.innerHTML = `<p class="caption">${items.length} stock${items.length === 1 ? "" : "s"} pass the rules; ${good} score 8 or more. Sorted by score, then RS.</p>` + items.map(card).join("");
+      markWatched();
+    }
+
+    // watchlist: same storage the screener uses (first list)
+    function lists() { return store.get("lists", [{ name: "Watchlist 1", items: [] }, { name: "Watchlist 2", items: [] }, { name: "Watchlist 3", items: [] }]); }
+    function markWatched() { const L = lists()[0]; $$("[data-watch]").forEach((b) => { const on = L.items.includes(b.dataset.watch); b.textContent = on ? `★ In ${L.name}` : "☆ Add to watchlist"; b.classList.toggle("active", on); }); }
+    document.addEventListener("click", (e) => {
+      const t = e.target.closest("[data-tab],[data-watch],#showAnyway"); if (!t) return;
+      if (t.dataset.tab) { tab = t.dataset.tab; return render(); }
+      if (t.id === "showAnyway") { revealed = true; return render(); }
+      if (t.dataset.watch) { const all = lists(), L = all[0], i = L.items.indexOf(t.dataset.watch); i >= 0 ? L.items.splice(i, 1) : L.items.push(t.dataset.watch); store.set("lists", all); markWatched(); }
+    });
+    let deb;
+    ["#cap", "#risk"].forEach((id) => $(id).addEventListener("input", () => { store.set("cf-capital", +$("#cap").value); store.set("cf-risk", +$("#risk").value); clearTimeout(deb); deb = setTimeout(render, 250); }));
+    render();
+  })();
+  </script>
+</body>
+</html>

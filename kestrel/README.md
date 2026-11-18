@@ -40,6 +40,7 @@ kestrel/
 | **Kestrel Eye** | RS rank vs. RS change map (leading / weakening / lagging / improving) of your current screen |
 | **Interactive chart** | Click any ticker: candlesticks or line, daily/weekly, 3M–All ranges, EMA 20/50/200, volume, RSI pane, 52W-high line, breakout and earnings markers, zoom/pan, ← → to flip through your results. Built with TradingView's open-source Lightweight Charts |
 | **Your data** | 3 named watchlists, per-stock notes and saved filter templates, kept in browser storage, with backup/restore to a JSON file |
+| **Cheat Filter** (`cheat.html`) | Runs the swing playbook automatically: green/yellow/red market verdict (with a warning gate when the market is unsuitable), top-5 strong sectors, pullback and breakout setups that pass the rules, each with an automatic 10-point score and rule-based entry, stop, 2x/3x targets and quantity from your capital and risk % |
 | **AI analysis** | "✨ AI analysis" button in every stock popup. Shows a Gemini-written chart read (trend, setup, volume/momentum, key levels, risks, what to watch) when available, otherwise Kestrel's rule-based read. Pre-generated nightly, so it's instant and costs nothing per click |
 | **Sharing** | "Share active filters" copies a link that reproduces the exact screen. "Copy tickers" exports in TradingView format |
 | **Also** | Daily/weekly timeframes, IN/US markets, dark mode, `/` to search, guided tour, mobile layout |
