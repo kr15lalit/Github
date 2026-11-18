@@ -579,3 +579,63 @@ ul.x li::before { content: "✕"; position: absolute; left: 4px; color: var(--ne
   .gt td { min-width: 170px; }
   .gt td:first-child { white-space: normal; min-width: 120px; }
 }
+
+/* =====================================================================
+   Swing playbook page
+   ===================================================================== */
+.pb-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+.pb-note { color: #9a9aa8; font-size: 14px; margin: 12px 0 0; }
+.pb { max-width: 980px; margin: 0 auto; padding: 36px 40px 10px; font-size: 16.5px; line-height: 1.65; }
+.pb-steps { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 18px; }
+.pb-steps > li { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 20px 24px 14px; position: relative; overflow: hidden; scroll-margin-top: 84px; }
+.pb-steps > li::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--grad); }
+.pb-steps h2 { display: flex; align-items: center; gap: 14px; margin: 0 0 6px; font: 800 23px/1.2 var(--font); }
+.pb-steps h2 .num { flex: none; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; background: var(--grad); color: #fff; font: 800 17px var(--font); }
+.pb-steps h2 small { font: 600 12px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+.pb-steps ul, .pb-steps ol { padding-left: 22px; }
+.pb-steps li li { margin: 5px 0; }
+.warn { color: var(--neg); font-weight: 600; }
+.amber { color: var(--amber); }
+.pb-two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 8px 0 8px; }
+.calc { margin: 16px 0 6px; padding: 18px 20px; border-radius: 16px; background: var(--surface-2); border: 1px solid var(--border); }
+.calc h3 { margin: 0 0 12px; font-size: 18px; }
+.calc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.calc .field input { height: 40px; font-size: 16px; }
+.calc-res { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+.calc-res div { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px 12px; }
+.calc-res span { display: block; font-size: 12.5px; color: var(--muted); font-weight: 600; }
+.calc-res b { font-size: 18px; font-variant-numeric: tabular-nums; }
+.calc-res small { font-size: 12.5px; color: var(--muted); font-weight: 600; }
+.calc-res .big { background: var(--brand-soft); border-color: transparent; }
+.calc-res .big b { font-size: 24px; color: var(--brand); }
+.calc-out .warn { margin: 10px 0 0; }
+.ck-card { margin: 30px 0 0; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 22px 24px; }
+.check-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.check-head h2 { margin: 0; font: 800 23px var(--font); }
+.score { font-weight: 700; color: var(--muted); display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.score b { font: 900 34px var(--font); color: var(--text); }
+.score span { font-size: 14px; margin-left: 8px; }
+.ck { padding-left: 0; list-style: none; counter-reset: ck; margin: 12px 0 16px; display: grid; gap: 6px; }
+.ck li { counter-increment: ck; }
+.ck label { display: flex; gap: 12px; align-items: center; padding: 10px 14px; border: 1px solid var(--border); border-radius: 12px; cursor: pointer; }
+.ck label::before { content: counter(ck); font: 700 12px var(--mono); color: var(--faint); width: 18px; }
+.ck input { width: 18px; height: 18px; accent-color: var(--brand); flex: none; order: 2; }
+.ck label:has(input:checked) { background: var(--pos-bg); border-color: transparent; }
+.habit { margin: 30px 0 0; padding: 0 2px; }
+.habit h2 { font: 800 23px var(--font); margin: 0 0 6px; }
+.habit .btn { margin: 8px 8px 0 0; }
+.btn .short { display: none; }
+@media (max-width: 860px) {
+  .pb { padding: 22px 16px 6px; }
+  .pb-two { grid-template-columns: 1fr; }
+  .calc-grid { grid-template-columns: 1fr 1fr; }
+  .calc-res { grid-template-columns: 1fr 1fr; }
+  .pb-steps > li { padding: 16px 16px 10px; }
+}
+@media (max-width: 760px) { .btn .long { display: none; } .btn .short { display: inline; } }
+@media (max-width: 760px) {
+  .top-actions { gap: 4px; }
+  .top-actions .btn { padding: 0 9px; }
+  .top-actions .btn.icon { width: 30px; padding: 0; }
+  #tourBtn { display: none; } /* the Guide and playbook cover it on phones */
+}
