@@ -19,12 +19,35 @@
   // ---------- state ----------
   const DEFAULT_FILTERS = { priceMin: "", priceMax: "", chgMin: "", chgMax: "", rsiMin: "", rsiMax: "", volMin: "", from52Min: "", from20Max: "", stageMin: "", rsMin: "", turnMin: "", above50: false, above200: false, crossRecent: false, nearEarn: false };
   const state = {
-    market: "IN", tf: "daily", view: "stocks", cap: "", sector: "", q: "",
+    market: "IN", tf: "daily", view: "stocks", cap: [], sector: "", q: "",
     presets: [], filters: { ...DEFAULT_FILTERS }, list: -1,
     sort: { key: "chg", dir: -1 }, limit: 100,
     hidden: store.get("hiddenGroups", []), health: store.get("health", true),
   };
   let data = null;
+
+  // Market-cap multi-select: state.cap is a list of buckets; empty means all.
+  const CAPS = ["LC", "MC", "SC", "MI"];
+  const CAP_NAMES = { LC: "Large", MC: "Mid", SC: "Small", MI: "Micro" };
+  const normCap = (v) => {
+    const list = (Array.isArray(v) ? v : v ? [v] : []).filter((x, i, a) => CAPS.includes(x) && a.indexOf(x) === i);
+    return list.length === CAPS.length ? [] : CAPS.filter((c) => list.includes(c));
+  };
+  const capLabel = (list) => !list.length ? "All market cap" : list.length === 1 ? CAP_NAMES[list[0]] + " cap" : list.map((c) => CAP_NAMES[c]).join(" + ");
+  function renderCap() {
+    $$("#capMenu [data-cap]").forEach((b) => { b.checked = !state.cap.length || state.cap.includes(b.dataset.cap); });
+    $("#capSummary").textContent = capLabel(state.cap);
+    $("#capBtn").classList.toggle("on", state.cap.length > 0);
+  }
+  function setCapMenu(open) {
+    const m = $("#capMenu"); if (!m) return;
+    m.hidden = !open; $("#capBtn").setAttribute("aria-expanded", open);
+    if (open) { // keep the menu on screen (on phones the button can sit near the right edge)
+      m.style.left = "0px";
+      const over = m.getBoundingClientRect().right - (window.innerWidth - 8);
+      if (over > 0) m.style.left = -over + "px";
+    }
+  }
 
   // ---------- presets (recommended scans) ----------
   const PRESETS = [
@@ -104,7 +127,7 @@
     const listSet = state.list >= 0 ? new Set(lists[state.list].items) : null;
     const today = data.session;
     let rows = data.rows.filter((r) => {
-      if (state.cap && r.cap !== state.cap) return false;
+      if (state.cap.length && !state.cap.includes(r.cap)) return false;
       if (state.sector && r.sector !== state.sector) return false;
       if (listSet && !listSet.has(r.ticker)) return false;
       if (q && !(r.ticker.toLowerCase().includes(q) || r.name.toLowerCase().includes(q) || r.sector.toLowerCase().includes(q))) return false;
@@ -167,7 +190,7 @@
     const secs = [...new Set(data.rows.map((r) => r.sector))].sort();
     if (state.sector && !secs.includes(state.sector)) state.sector = "";
     $("#secSel").innerHTML = `<option value="">All sectors</option>` + secs.map((s) => `<option ${s === state.sector ? "selected" : ""}>${esc(s)}</option>`).join("");
-    $("#capSel").value = state.cap;
+    renderCap();
   }
   function renderPresets() {
     const box = $("#presets");
@@ -202,7 +225,7 @@
   }
 
   function sectorAgg() {
-    const base = data.rows.filter((r) => !state.cap || r.cap === state.cap);
+    const base = data.rows.filter((r) => !state.cap.length || state.cap.includes(r.cap));
     const totalTurn = base.reduce((s, r) => s + r.turnover, 0) || 1;
     const by = {};
     base.forEach((r) => { (by[r.sector] = by[r.sector] || []).push(r); });
@@ -273,7 +296,7 @@
     $("#panel-columns").innerHTML = `<h4>Column groups</h4><div class="col-groups">${Object.entries(GROUPS).filter(([g]) => g !== "core").map(([g, l]) => `<label class="check"><input type="checkbox" data-group="${g}" ${state.hidden.includes(g) ? "" : "checked"}/> ${l}</label>`).join("")}</div>`;
   }
   function renderSavedPanel() {
-    $("#panel-saved").innerHTML = `<h4>Saved filter templates</h4>${templates.length ? `<div class="list-rows">${templates.map((t, i) => `<div class="row"><button class="btn" data-load-tpl="${i}">${esc(t.name)}</button><span class="caption">${t.presets.length} scans · ${Object.values(t.filters).filter((v) => v !== "" && v !== false).length} filters${t.cap ? " · " + t.cap : ""}${t.sector ? " · " + esc(t.sector) : ""}</span><button class="btn ghost" data-del-tpl="${i}" aria-label="Delete ${esc(t.name)}">✕</button></div>`).join("")}</div>` : `<p class="empty">No templates yet. Set up scans and filters, then use “Save as template” in the Filters panel or below.</p>`}
+    $("#panel-saved").innerHTML = `<h4>Saved filter templates</h4>${templates.length ? `<div class="list-rows">${templates.map((t, i) => `<div class="row"><button class="btn" data-load-tpl="${i}">${esc(t.name)}</button><span class="caption">${t.presets.length} scans · ${Object.values(t.filters).filter((v) => v !== "" && v !== false).length} filters${normCap(t.cap).length ? " · " + capLabel(normCap(t.cap)) : ""}${t.sector ? " · " + esc(t.sector) : ""}</span><button class="btn ghost" data-del-tpl="${i}" aria-label="Delete ${esc(t.name)}">✕</button></div>`).join("")}</div>` : `<p class="empty">No templates yet. Set up scans and filters, then use “Save as template” in the Filters panel or below.</p>`}
       <div class="panel-actions"><button class="btn primary" data-act="save-template">Save current screen…</button></div>`;
   }
   function renderListsPanel() {
@@ -291,7 +314,7 @@
     $$("[data-market]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.market === state.market));
     $$("[data-tf]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.tf === state.tf));
     $$("[data-view]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.view === state.view));
-    $("#secSel").value = state.sector; $("#capSel").value = state.cap;
+    $("#secSel").value = state.sector; renderCap();
     renderPresets();
     if (state.view === "sectors") renderSectors(); else renderStocks();
     writeHash();
@@ -307,7 +330,7 @@
   function writeHash() {
     const s = { m: state.market, t: state.tf, v: state.view, c: state.cap, s: state.sector, p: state.presets, f: Object.fromEntries(Object.entries(state.filters).filter(([, v]) => v !== "" && v !== false)), o: state.sort };
     // Keep the address clean on the default screen; only encode settings worth sharing.
-    const isDefault = s.m === "IN" && s.t === "daily" && s.v === "stocks" && !s.c && !s.s && !s.p.length
+    const isDefault = s.m === "IN" && s.t === "daily" && s.v === "stocks" && !s.c.length && !s.s && !s.p.length
       && !Object.keys(s.f).length && s.o.key === "chg" && s.o.dir === -1;
     history.replaceState(null, "", isDefault ? location.pathname : "#" + encodeURIComponent(JSON.stringify(s)));
   }
@@ -318,7 +341,7 @@
       if (s.m) state.market = s.m === "US" ? "US" : "IN";
       if (s.t) state.tf = s.t === "weekly" ? "weekly" : "daily";
       if (s.v) state.view = s.v === "sectors" ? "sectors" : "stocks";
-      state.cap = s.c || ""; state.sector = s.s || "";
+      state.cap = normCap(s.c); state.sector = s.s || "";
       state.presets = Array.isArray(s.p) ? s.p : [];
       state.filters = { ...DEFAULT_FILTERS, ...(s.f || {}) };
       if (s.o && COLS.some((c) => c.k === s.o.key)) state.sort = s.o;
@@ -561,6 +584,10 @@
   // ---------- events ----------
   function bind() {
     document.addEventListener("click", async (e) => {
+      if (!e.target.closest("#capMs")) setCapMenu(false);
+      if (e.target.closest("#capBtn")) return setCapMenu($("#capMenu").hidden);
+      if (e.target.closest("[data-cap-all]")) { state.cap = []; state.limit = 100; renderCap(); return render(); }
+      if (e.target.closest("[data-cap-done]")) return setCapMenu(false);
       const t = e.target.closest("button, [data-open], [data-sort], [data-ssort], a, label"); if (!t) { $("#suggest").hidden = true; return; }
       const d = t.dataset;
       if (!t.closest(".search")) $("#suggest").hidden = true;
@@ -591,12 +618,12 @@
       if (d.showList != null) { const i = +d.showList; state.list = state.list === i ? -1 : i; state.view = "stocks"; renderListsPanel(); return render(); }
       if (d.copyList != null) return copy(lists[+d.copyList].items.join(","), "Watchlist copied");
       if (d.clearList != null) { if (confirm(`Remove all stocks from ${lists[+d.clearList].name}?`)) { lists[+d.clearList].items = []; store.set("lists", lists); renderListsPanel(); render(); } return; }
-      if (d.loadTpl != null) { const tp = templates[+d.loadTpl]; Object.assign(state, { presets: [...tp.presets], filters: { ...DEFAULT_FILTERS, ...tp.filters }, cap: tp.cap || "", sector: tp.sector || "", sort: tp.sort || state.sort, view: "stocks" }); toast(`Loaded “${tp.name}”`); return render(); }
+      if (d.loadTpl != null) { const tp = templates[+d.loadTpl]; Object.assign(state, { presets: [...tp.presets], filters: { ...DEFAULT_FILTERS, ...tp.filters }, cap: normCap(tp.cap), sector: tp.sector || "", sort: tp.sort || state.sort, view: "stocks" }); toast(`Loaded “${tp.name}”`); return render(); }
       if (d.delTpl != null) { templates.splice(+d.delTpl, 1); store.set("templates", templates); return renderSavedPanel(); }
       switch (d.act) {
         case "reset-filters": state.filters = { ...DEFAULT_FILTERS }; renderFiltersPanel(); return render();
         case "save-template": return saveTemplate();
-        case "confirm-template": { const name = $("#tplName").value.trim() || `Template ${templates.length + 1}`; templates.push({ name, presets: [...state.presets], filters: { ...state.filters }, cap: state.cap, sector: state.sector, sort: { ...state.sort } }); store.set("templates", templates); closeModal(); toast("Template saved"); if (!$("#panel-saved").hidden) renderSavedPanel(); return; }
+        case "confirm-template": { const name = $("#tplName").value.trim() || `Template ${templates.length + 1}`; templates.push({ name, presets: [...state.presets], filters: { ...state.filters }, cap: [...state.cap], sector: state.sector, sort: { ...state.sort } }); store.set("templates", templates); closeModal(); toast("Template saved"); if (!$("#panel-saved").hidden) renderSavedPanel(); return; }
         case "export": { const blob = new Blob([JSON.stringify({ lists, notes, templates }, null, 2)], { type: "application/json" }); const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "kestrel-backup.json"; a.click(); return; }
       }
       if (t.id === "copyBtn") { const rows = filtered(); return copy(rows.map((r) => state.market === "US" ? r.ticker : "NSE:" + r.ticker).join(","), `${rows.length} tickers copied (TradingView format)`); }
@@ -611,7 +638,11 @@
     $("#modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
     document.addEventListener("change", (e) => {
       const t = e.target;
-      if (t.id === "capSel") { state.cap = t.value; return render(); }
+      if (t.dataset.cap) {
+        const picked = $$("#capMenu [data-cap]").filter((b) => b.checked).map((b) => b.dataset.cap);
+        if (!picked.length) { t.checked = true; toast("Pick at least one market cap"); return; }
+        state.cap = normCap(picked); state.limit = 100; renderCap(); return render();
+      }
       if (t.id === "secSel") { state.sector = t.value; return render(); }
       if (t.dataset.group) { const g = t.dataset.group; state.hidden = t.checked ? state.hidden.filter((x) => x !== g) : [...state.hidden, g]; store.set("hiddenGroups", state.hidden); return render(); }
       if (t.dataset.f && t.type === "checkbox") { state.filters[t.dataset.f] = t.checked; return render(); }
@@ -631,7 +662,7 @@
     });
     document.addEventListener("keydown", (e) => {
       if (e.key === "/" && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) { e.preventDefault(); $("#search").focus(); }
-      if (e.key === "Escape") { if (!$("#modal").hidden) closeModal(); $("#suggest").hidden = true; }
+      if (e.key === "Escape") { setCapMenu(false); if (!$("#modal").hidden) closeModal(); $("#suggest").hidden = true; }
       if ((e.key === "ArrowLeft" || e.key === "ArrowRight") && $("#stockChart") && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) {
         const b = $(`[data-dir="${e.key === "ArrowLeft" ? "prev" : "next"}"]`); if (b && b.dataset.nav) { e.preventDefault(); openStock(b.dataset.nav); }
       }

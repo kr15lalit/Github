@@ -177,7 +177,7 @@
   (function () {
     const $ = (s) => document.querySelector(s);
     // One-click screens: the same hash format the screener writes for "Share active filters".
-    const screen = (cfg) => "screener.html#" + encodeURIComponent(JSON.stringify(Object.assign({ m: "IN", t: "daily", v: "stocks", c: "", s: "" }, cfg)));
+    const screen = (cfg) => "screener.html#" + encodeURIComponent(JSON.stringify(Object.assign({ m: "IN", t: "daily", v: "stocks", c: ["LC", "MC", "SC"], s: "" }, cfg)));
     $("#openPullback").href = screen({ p: ["stage2", "leaders"], f: { turnMin: "10", from20Max: "5", from52Min: "-15", rsiMin: "50", rsiMax: "70" }, o: { key: "rs", dir: -1 } });
     $("#openBreakout").href = screen({ p: ["bo"], f: { turnMin: "10", rsMin: "70", stageMin: "5" }, o: { key: "boVol", dir: -1 } });
 
