@@ -67,6 +67,7 @@
         <li><b>Stop-loss (pullbacks):</b> 1% below the lower of the 20-day EMA and the lowest low of the last 5 sessions.</li>
         <li><b>Stop-loss (breakouts):</b> 2% below the breakout level (the top of the base it broke out of).</li>
         <li><b>Targets:</b> 2x and 3x the risk (entry minus stop). <b>Quantity</b> risks your chosen % of capital.</li>
+        <li><b>Order rules:</b> buy with a stop-loss limit (SL-L) or GTT order at the trigger, limit 0.5% higher. Don't buy above entry + half the risk (gap-ups worsen reward-to-risk). Each order is valid for 3 sessions, and is cancelled if price hits the stop first. Place the stop-loss as soon as you're filled.</li>
         <li><b>Score:</b> the playbook's 10-point checklist, checked automatically. Still open the chart and check the pattern yourself (Step 4 of the playbook).</li>
       </ul>
       <div class="callout"><b>Rule-based screen output, not investment advice.</b> These are mechanical calculations from end-of-day data, not recommendations to buy or sell. They can be wrong, gaps can jump past stops, and past patterns don't guarantee future results. Do your own research, and consult a SEBI-registered adviser before investing.</div>
@@ -147,6 +148,8 @@
     const barsCache = {};
     const fileOf = (t) => t.replace(/[^A-Za-z0-9-]/g, "_") + ".json";
     const loadBars = (t) => barsCache[t] || (barsCache[t] = fetch("data/charts/IN/" + fileOf(t)).then((r) => r.ok ? r.json() : null).catch(() => null));
+    // Orders stay valid for 3 sessions (weekends skipped; market holidays aren't known here)
+    const validUntil = (() => { const d = new Date(session); let k = 0; while (k < 3) { d.setDate(d.getDate() + 1); if (d.getDay() % 6) k++; } return d; })();
     const emaLast = (v, p) => { const k = 2 / (p + 1); let e = v[0]; for (const x of v) e = x * k + e * (1 - k); return e; };
 
     async function levels(r, kind) {
@@ -169,7 +172,13 @@
       if (stop >= entry) return null;
       const risk = entry - stop, riskPct = risk / entry * 100;
       const hi52 = Math.max(...b.h.slice(-252));
-      return { entry, stop, basis, risk, riskPct, t1: entry + 2 * risk, t2: entry + 3 * risk, hi52 };
+      const close = b.c[n - 1];
+      return {
+        entry, stop, basis, risk, riskPct, t1: entry + 2 * risk, t2: entry + 3 * risk, hi52, close,
+        maxBuy: tick(entry + 0.5 * risk, false),               // skip if it opens above this (gap-up)
+        limit: tick(Math.min(entry * 1.005, entry + 0.5 * risk), true), // SL-L limit price
+        gapPct: (entry / close - 1) * 100,                      // how far the trigger sits above the close
+      };
     }
 
     function score(r, kind, lv) {
@@ -192,6 +201,7 @@
       if (lv && lv.riskPct > 8) warn.push(`Stop is ${lv.riskPct.toFixed(1)}% away: too wide, consider skipping`);
       if (lv && lv.hi52 > lv.entry * 1.005 && lv.hi52 < lv.t1) warn.push(`52-week high ${inr(lv.hi52)} sits before target 1, may act as resistance`);
       if (w && !(w.emas[50] && w.emas[200])) warn.push("Weekly chart not confirmed (below its weekly 50/200 EMA)");
+      if (lv && lv.gapPct > 2) warn.push(`Trigger is ${lv.gapPct.toFixed(1)}% above the close (it sold off from the day's high): weaker setup, check the chart`);
       if (!lv) warn.push("Levels unavailable: price history missing");
       return { checks, n: checks.filter((c) => c[1]).length, warn };
     }
@@ -230,7 +240,17 @@
           <div class="tg"><span>Target 1 (2x)</span><b>${inr(lv.t1)}</b><small>+${(lv.riskPct * 2).toFixed(1)}%</small></div>
           <div class="tg"><span>Target 2 (3x)</span><b>${inr(lv.t2)}</b><small>+${(lv.riskPct * 3).toFixed(1)}%</small></div>
           <div class="qty"><span>Quantity</span><b>${qty != null ? qty.toLocaleString("en-IN") : "--"}</b><small>${qty != null ? inr(qty * lv.entry, 0) : ""}</small></div>
-        </div><p class="caption cf-basis">Stop: ${esc(lv.basis)}.</p>` : ""}
+        </div><p class="caption cf-basis">Stop: ${esc(lv.basis)}.</p>
+        <div class="cf-order">
+          <div class="cf-order-h">How to place it</div>
+          <ol>
+            <li><b>Buy order:</b> SL-L buy (or GTT) · trigger <b>${inr(lv.entry)}</b> · limit <b>${inr(lv.limit)}</b></li>
+            <li><b>Don't buy above ${inr(lv.maxBuy)}.</b> If it opens higher (gap-up), skip: the stop is too far away.</li>
+            <li><b>Valid for 3 sessions,</b> until about ${D.fmtShort(validUntil)}. Not triggered by then? Cancel and re-check.</li>
+            <li><b>Cancel</b> if it falls to ${inr(lv.stop)} before triggering: the setup is broken.</li>
+            <li><b>Once filled,</b> place the stop-loss sell at ${inr(lv.stop)} straight away.</li>
+          </ol>
+        </div>` : ""}
         ${s.warn.length ? `<ul class="cf-warn">${s.warn.map((w) => `<li>${esc(w)}</li>`).join("")}</ul>` : ""}
         <details class="cf-checks"><summary>Checklist ${s.n}/10</summary><ul>${s.checks.map(([t, ok]) => `<li class="${ok ? "ok" : "no"}">${ok ? "✓" : "✕"} ${esc(t)}</li>`).join("")}</ul></details>
         <div class="cf-actions"><a class="btn" href="screener.html?stock=${encodeURIComponent(r.ticker)}">Open chart</a><button class="btn ghost" data-watch="${esc(r.ticker)}">☆ Add to watchlist</button></div>
