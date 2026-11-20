@@ -71,6 +71,31 @@ and any it invents are dropped. If the free quota runs out, the remaining stocks
 The AI is instructed to describe the chart only, with no buy/sell calls or price targets.
 Optional settings (as Actions variables or env): `GEMINI_MODEL`, `AI_MAX_STOCKS`, `AI_DELAY`, `AI_MARKETS`.
 
+## Intraday confirmations (15/30-minute bars, free)
+
+`pipeline/intraday.py` checks the Cheat Filter's candidates during market hours using Yahoo's
+15-minute bars (30-minute bars are built from them). A setup is only shown once it is **confirmed**:
+a 30-minute candle closes above the entry trigger after 9:45, above the day's VWAP, with volume at
+least 1.5x (breakouts) or 1x (pullbacks) its normal level for that time of day, plus a higher low for
+pullbacks. Gap-ups above the buy limit, 30-minute closes below the stop, and confirmations that fall
+back below the trigger are dropped. New confirmations pause if the Nifty is down 1% or more, and after
+3:30 pm each confirmed setup is marked held or failed.
+
+**Private (recommended):** on your own computer, during market hours:
+
+```bash
+python pipeline/private_live.py
+```
+
+It downloads the latest end-of-day files from the published site into a git-ignored `.live/` copy,
+serves it at http://localhost:8000/cheat.html and refreshes every 30 minutes until the close.
+
+**Public (optional, off by default):** `.github/workflows/kestrel-intraday.yml` runs the same check and
+publishes the result to the `live-data` branch, which `cheat.html` reads. It is not scheduled: trigger
+it from Actions, from a free external timer every 30 minutes (e.g. cron-job.org calling the
+`workflow_dispatch` API), or uncomment its schedule. Showing intraday NSE-based signals publicly raises
+NSE data-licensing and SEBI questions, so check those first.
+
 ## Run it locally
 
 ```bash

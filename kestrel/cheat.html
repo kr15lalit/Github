@@ -35,6 +35,7 @@
 
   <main id="main-content" class="cf">
     <!-- Step 1: market verdict -->
+    <section class="cf-live" id="liveBar" hidden aria-live="polite"></section>
     <section class="cf-verdict" id="verdict" aria-live="polite"><div class="ai-loading"><span class="ai-spin"></span> Reading the market…</div></section>
 
     <!-- Step 2: sectors -->
@@ -68,6 +69,7 @@
         <li><b>Stop-loss (breakouts):</b> 2% below the breakout level (the top of the base it broke out of).</li>
         <li><b>Targets:</b> 2x and 3x the risk (entry minus stop). <b>Quantity</b> risks your chosen % of capital.</li>
         <li><b>Order rules:</b> buy with a stop-loss limit (SL-L) or GTT order at the trigger, limit 0.5% higher. Don't buy above entry + half the risk (gap-ups worsen reward-to-risk). Each order is valid for 3 sessions, and is cancelled if price hits the stop first. Place the stop-loss as soon as you're filled.</li>
+        <li><b>Intraday confirmation</b> (on trading days, when intraday updates are running): a setup only shows once a 30-minute candle <b>closes</b> above the trigger after 9:45, above the day's VWAP, with volume at least 1.5x (breakouts) or 1x (pullbacks) its normal level for that time of day, and for pullbacks a higher low on the 15-minute chart. Setups that gap above the limit, close below the stop, or fall back below the trigger are dropped. New confirmations pause if the Nifty is down 1% or more. After the close, each is marked held or failed.</li>
         <li><b>Score:</b> the playbook's 10-point checklist, checked automatically. Still open the chart and check the pattern yourself (Step 4 of the playbook).</li>
       </ul>
       <div class="callout"><b>Rule-based screen output, not investment advice.</b> These are mechanical calculations from end-of-day data, not recommendations to buy or sell. They can be wrong, gaps can jump past stops, and past patterns don't guarantee future results. Do your own research, and consult a SEBI-registered adviser before investing.</div>
@@ -98,6 +100,37 @@
     const session = daily.session;
     $("#cfDate").textContent = "Data to " + session.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" }) + (daily.provisional ? " (provisional)" : "") + (daily.source === "demo" ? " · DEMO DATA" : "");
     const wk = new Map((weekly ? weekly.rows : []).map((r) => [r.ticker, r]));
+
+    // ---------- Intraday confirmations (written by pipeline/intraday.py) ----------
+    // A private run writes data/intraday/IN.json next to this page; the optional public job
+    // publishes the same file to the repo's live-data branch.
+    const LIVE_URL = "https://raw.githubusercontent.com/kr15lalit/Github/live-data/intraday/IN.json";
+    const istToday = new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" });
+    async function loadLive() {
+      for (const u of ["data/intraday/IN.json", LIVE_URL]) {
+        try {
+          const res = await fetch(u + "?t=" + Date.now(), { cache: "no-store" });
+          if (!res.ok) continue;
+          const j = await res.json();
+          if (j && j.date === istToday && j.dailySession === D.fmtISO(session)) return j;
+        } catch (e) { /* not available: stay in end-of-day mode */ }
+      }
+      return null;
+    }
+    const live = await loadLive();
+    const liveOf = (kind, t) => live && live.setups[kind] ? live.setups[kind][t] : null;
+    if (live) {
+      $("#cfDate").textContent += ` · ⚡ intraday as of ${live.asOfLabel} IST`;
+      const m = live.market || {};
+      const mins = Math.round((Date.now() - new Date(live.asOf).getTime()) / 60000);
+      $("#liveBar").hidden = false;
+      $("#liveBar").className = "cf-live" + (m.paused ? " paused" : "");
+      $("#liveBar").innerHTML = `<b>⚡ Intraday mode</b>
+        <span>Confirmations as of <b>${esc(live.asOfLabel)} IST</b>${mins > 45 && !live.closed ? ` <em>(${mins} min ago, may be stale)</em>` : ""}</span>
+        ${m.nifty ? `<span>Nifty ${m.nifty.toLocaleString("en-IN")} <b class="${m.chg >= 0 ? "pos" : "neg"}">${m.chg >= 0 ? "+" : ""}${m.chg}%</b> · ${m.aboveOpen ? "above" : "below"} today's open</span>` : ""}
+        <span>${live.closed ? "Market closed: final status of today's confirmations" : "Only setups confirmed on 30-minute closes are shown · updates every 30 min"}</span>
+        ${m.paused ? `<span class="warn">Nifty is down ${Math.abs(m.chg)}%: new confirmations are paused.</span>` : ""}`;
+    }
 
     // ---------- Step 1: market verdict ----------
     const B = Object.fromEntries(daily.breadth.map((b) => [b.key, b]));
@@ -234,6 +267,9 @@
             <div class="caption">${esc(r.name)} · ${esc(r.sector)}</div></div>
           <div class="cf-px"><b>${inr(r.price)}</b><span class="${r.chg >= 0 ? "pos" : "neg"}">${r.chg >= 0 ? "+" : ""}${r.chg}%</span><small>RS ${r.rs ?? "--"} · RSI ${r.rsi}</small></div>
         </header>
+        ${(() => { const L = liveOf(tab, r.ticker); if (!L || L.status !== "confirmed") return "";
+          const fin = L.final === "held" ? `<span class="cf-final held">Held at close ₹${L.finalClose}</span>` : L.final === "failed" ? `<span class="cf-final failed">Failed by close ₹${L.finalClose}</span>` : "";
+          return `<div class="cf-confirm">✅ <b>Confirmed at ${esc(L.at)}</b> · ${esc(L.note)} ${fin}<br><small>Price is already above the trigger: buy only up to <b>${inr(L.maxBuy)}</b>; above that, skip. Stop ${inr(L.stop)}.</small></div>`; })()}
         ${lv ? `<div class="cf-levels">
           <div><span>Entry trigger</span><b>above ${inr(lv.entry)}</b></div>
           <div class="sl"><span>Stop-loss</span><b>${inr(lv.stop)}</b><small>−${lv.riskPct.toFixed(1)}%</small></div>
@@ -259,13 +295,26 @@
 
     async function render() {
       $$(".cf-tabs [data-tab]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.tab === tab));
-      $("#ruleText").textContent = "Rules: " + rules[tab].text;
+      $("#ruleText").textContent = (live ? "Intraday: showing only setups confirmed today. Candidate rules: " : "Rules: ") + rules[tab].text;
       $("#redGate").hidden = revealed;
       const box = $("#list");
       if (!revealed) { box.innerHTML = ""; return; }
       box.innerHTML = '<div class="ai-loading"><span class="ai-spin"></span> Calculating levels…</div>';
       const items = await build(tab);
       if (!items.length) { box.innerHTML = `<p class="cf-empty">No stock passes the ${tab === "pull" ? "pullback" : "breakout"} rules today. That's useful information too: waiting is a position.</p>`; return; }
+      if (live) {
+        const st = (x) => (liveOf(tab, x.r.ticker) || {}).status || "watching";
+        const conf = items.filter((x) => st(x) === "confirmed");
+        const trig = items.filter((x) => st(x) === "triggered"), dropped = items.filter((x) => st(x) === "invalidated");
+        const watching = items.length - conf.length - trig.length - dropped.length;
+        const mini = (arr) => `<ul class="cf-mini">${arr.map((x) => `<li><a href="screener.html?stock=${encodeURIComponent(x.r.ticker)}">${esc(x.r.ticker)}</a> · ${esc((liveOf(tab, x.r.ticker) || {}).note || "")}</li>`).join("")}</ul>`;
+        box.innerHTML = `<div class="cf-tally"><span class="c"><b>${conf.length}</b> confirmed</span><span><b>${trig.length}</b> triggered, not confirmed</span><span><b>${watching}</b> watching</span><span class="d"><b>${dropped.length}</b> dropped</span></div>`
+          + (conf.length ? conf.map(card).join("") : `<p class="cf-empty">No ${tab === "pull" ? "pullback" : "breakout"} has confirmed yet today. Confirmation needs a 30-minute close above the trigger, above VWAP, with enough volume for the time of day.</p>`)
+          + (trig.length ? `<details class="cf-more"><summary>Triggered, waiting for confirmation (${trig.length})</summary>${mini(trig)}</details>` : "")
+          + (dropped.length ? `<details class="cf-more"><summary>Dropped today (${dropped.length})</summary>${mini(dropped)}</details>` : "");
+        markWatched();
+        return;
+      }
       const good = items.filter((x) => x.s.n >= 8).length;
       box.innerHTML = `<p class="caption">${items.length} stock${items.length === 1 ? "" : "s"} pass the rules; ${good} score 8 or more. Sorted by score, then RS.</p>` + items.map(card).join("");
       markWatched();

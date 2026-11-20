@@ -1,0 +1,52 @@
+# OPTIONAL: publishes intraday confirmations to the public Cheat Filter.
+#
+# Not scheduled on purpose: showing intraday NSE-based signals publicly raises NSE data-licensing
+# and SEBI questions (see kestrel/README.md). For private use, run pipeline/private_live.py instead.
+#
+# To turn it on, trigger this workflow every 30 minutes on weekdays from a free external timer
+# (e.g. cron-job.org calling the GitHub API's workflow_dispatch endpoint), or uncomment the schedule
+# below (GitHub may start scheduled runs late). Each run takes about 1–2 minutes.
+name: Kestrel — intraday confirmations (optional)
+
+on:
+  workflow_dispatch: {}
+  # schedule:
+  #   - cron: "18,48 4-9 * * 1-5"   # 09:48 … 15:18 IST, every 30 minutes
+  #   - cron: "10 10 * * 1-5"       # 15:40 IST, final held / failed check
+
+permissions:
+  contents: write   # to update the live-data branch
+
+concurrency:
+  group: kestrel-intraday
+  cancel-in-progress: false
+
+jobs:
+  intraday:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: kestrel/pipeline/requirements.txt
+      - name: Install pipeline dependencies
+        run: pip install -r kestrel/pipeline/requirements.txt
+      - name: Check today's setups on 15/30-minute bars
+        run: >
+          python kestrel/pipeline/intraday.py
+          --source "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          --out live/intraday/IN.json
+      - name: Publish to the live-data branch (read by cheat.html)
+        if: hashFiles('live/intraday/IN.json') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd live
+          git init -q -b live-data
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -qm "Intraday confirmations $(date -u +%FT%TZ)"
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" live-data
