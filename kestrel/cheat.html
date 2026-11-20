@@ -29,12 +29,13 @@
     <div class="inner wide">
       <div class="kicker" style="color:#9a9aa8">Cheat Filter · <span id="cfDate">Loading…</span></div>
       <h1>Today's <span class="grad-text">quick check</span></h1>
-      <p class="hero-sub">The <a href="playbook.html" class="on-dark">Swing playbook</a> run automatically: market verdict, strong sectors, and the stocks that pass its rules, with levels calculated by fixed rules.</p>
+      <p class="hero-sub" id="cfSub">The <a href="playbook.html" class="on-dark">Swing playbook</a> run automatically: market verdict, strong sectors, and the stocks that match its rules.</p>
     </div>
   </section>
 
   <main id="main-content" class="cf">
     <!-- Step 1: market verdict -->
+    <section class="cf-live" id="liveBar" hidden aria-live="polite"></section>
     <section class="cf-verdict" id="verdict" aria-live="polite"><div class="ai-loading"><span class="ai-spin"></span> Reading the market…</div></section>
 
     <!-- Step 2: sectors -->
@@ -46,10 +47,14 @@
     <!-- Steps 3–7: setups -->
     <section class="cf-block">
       <div class="cf-h"><h2><span class="num">3</span>Setups that pass the rules</h2>
-        <div class="cf-size">
+        <div class="cf-size" id="cfSize" hidden>
           <label class="field">Capital (₹)<input type="number" id="cap" min="0" step="any" /></label>
           <label class="field">Risk per trade (%)<input type="number" id="risk" min="0.1" max="5" step="0.1" /></label>
         </div>
+      </div>
+      <div class="seg cf-mode" id="modeTabs" role="tablist" aria-label="Mode" hidden>
+        <button role="tab" data-mode="intraday" aria-pressed="true">⚡ Intraday <small>confirmed today</small></button>
+        <button role="tab" data-mode="swing" aria-pressed="false">📅 Swing <small>end-of-day setups</small></button>
       </div>
       <div class="seg cf-tabs" role="tablist">
         <button role="tab" data-tab="pull" aria-pressed="true">Pullbacks <b id="nPull">–</b></button>
@@ -60,7 +65,13 @@
       <div class="cf-list" id="list"><div class="ai-loading"><span class="ai-spin"></span> Checking every stock…</div></div>
     </section>
 
-    <section class="cf-block cf-how">
+    <section class="cf-block cf-how" id="cfPublic">
+      <h2>About this page</h2>
+      <p>This page shows which stocks currently match the <a href="playbook.html">Swing playbook</a>'s rules, scored on its 10-point checklist. It does not give entry, stop-loss or target levels for any stock. To plan your own trade, follow the playbook's steps and use its position-size calculator, and always check the chart yourself.</p>
+      <div class="callout"><b>Screen output, not investment advice.</b> A stock matching these rules is not a recommendation to buy or sell it. Data is end-of-day and can be wrong. Do your own research, and consult a SEBI-registered adviser before investing.</div>
+    </section>
+
+    <section class="cf-block cf-how" id="cfHow" hidden>
       <h2>How the levels are calculated</h2>
       <ul>
         <li><b>Entry trigger:</b> just above the latest session's high. For a pullback, a close above the previous day's high shows buyers stepping back in.</li>
@@ -68,6 +79,7 @@
         <li><b>Stop-loss (breakouts):</b> 2% below the breakout level (the top of the base it broke out of).</li>
         <li><b>Targets:</b> 2x and 3x the risk (entry minus stop). <b>Quantity</b> risks your chosen % of capital.</li>
         <li><b>Order rules:</b> buy with a stop-loss limit (SL-L) or GTT order at the trigger, limit 0.5% higher. Don't buy above entry + half the risk (gap-ups worsen reward-to-risk). Each order is valid for 3 sessions, and is cancelled if price hits the stop first. Place the stop-loss as soon as you're filled.</li>
+        <li><b>Intraday confirmation</b> (on trading days, when intraday updates are running): a setup only shows once a 30-minute candle <b>closes</b> above the trigger after 9:45, above the day's VWAP, with volume at least 1.5x (breakouts) or 1x (pullbacks) its normal level for that time of day, and for pullbacks a higher low on the 15-minute chart. Setups that gap above the limit, close below the stop, or fall back below the trigger are dropped. New confirmations pause if the Nifty is down 1% or more. After the close, each is marked held or failed.</li>
         <li><b>Score:</b> the playbook's 10-point checklist, checked automatically. Still open the chart and check the pattern yourself (Step 4 of the playbook).</li>
       </ul>
       <div class="callout"><b>Rule-based screen output, not investment advice.</b> These are mechanical calculations from end-of-day data, not recommendations to buy or sell. They can be wrong, gaps can jump past stops, and past patterns don't guarantee future results. Do your own research, and consult a SEBI-registered adviser before investing.</div>
@@ -96,8 +108,44 @@
     try { [daily, weekly] = await Promise.all([D.load("IN", "daily"), D.load("IN", "weekly").catch(() => null)]); }
     catch (e) { $("#verdict").innerHTML = '<p class="warn">Couldn\'t load market data. Please refresh.</p>'; return; }
     const session = daily.session;
+    const isPrivate = await fetch("data/private.json", { cache: "no-store" }).then((r) => r.ok).catch(() => false);
     $("#cfDate").textContent = "Data to " + session.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" }) + (daily.provisional ? " (provisional)" : "") + (daily.source === "demo" ? " · DEMO DATA" : "");
     const wk = new Map((weekly ? weekly.rows : []).map((r) => [r.ticker, r]));
+
+    // ---------- Intraday confirmations (written by pipeline/intraday.py) ----------
+    // Only the private copy (pipeline/private_live.py) has data/private.json and the intraday file.
+    // The public site never shows trade levels or intraday confirmations.
+    const istToday = new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" });
+    async function loadLive() {
+      if (!isPrivate) return null;
+      for (const u of ["data/intraday/IN.json"]) {
+        try {
+          const res = await fetch(u + "?t=" + Date.now(), { cache: "no-store" });
+          if (!res.ok) continue;
+          const j = await res.json();
+          if (j && j.date === istToday && j.dailySession === D.fmtISO(session)) return j;
+        } catch (e) { /* not available: stay in end-of-day mode */ }
+      }
+      return null;
+    }
+    const live = await loadLive();
+    if (isPrivate) {
+      $("#cfSize").hidden = false; $("#cfHow").hidden = false; $("#cfPublic").hidden = true;
+      $("#cfSub").innerHTML = 'The <a href="playbook.html" class="on-dark">Swing playbook</a> run automatically: market verdict, strong sectors, and the stocks that pass its rules, with levels calculated by fixed rules. <b>Private copy.</b>';
+    }
+    const liveOf = (kind, t) => live && live.setups[kind] ? live.setups[kind][t] : null;
+    if (live) {
+      $("#cfDate").textContent += ` · ⚡ intraday as of ${live.asOfLabel} IST`;
+      const m = live.market || {};
+      const mins = Math.round((Date.now() - new Date(live.asOf).getTime()) / 60000);
+      $("#liveBar").hidden = false;
+      $("#liveBar").className = "cf-live" + (m.paused ? " paused" : "");
+      $("#liveBar").innerHTML = `<b>⚡ Intraday mode</b>
+        <span>Confirmations as of <b>${esc(live.asOfLabel)} IST</b>${mins > 45 && !live.closed ? ` <em>(${mins} min ago, may be stale)</em>` : ""}</span>
+        ${m.nifty ? `<span>Nifty ${m.nifty.toLocaleString("en-IN")} <b class="${m.chg >= 0 ? "pos" : "neg"}">${m.chg >= 0 ? "+" : ""}${m.chg}%</b> · ${m.aboveOpen ? "above" : "below"} today's open</span>` : ""}
+        <span>${live.closed ? "Market closed: final status of today's confirmations" : "Only setups confirmed on 30-minute closes are shown · updates every 30 min"}</span>
+        ${m.paused ? `<span class="warn">Nifty is down ${Math.abs(m.chg)}%: new confirmations are paused.</span>` : ""}`;
+    }
 
     // ---------- Step 1: market verdict ----------
     const B = Object.fromEntries(daily.breadth.map((b) => [b.key, b]));
@@ -198,11 +246,11 @@
       ];
       const warn = [];
       if (ed != null && ed >= 0 && ed <= 14) warn.push(`Results in ${ed} day${ed === 1 ? "" : "s"} (${D.fmtShort(r.nextEarn)})`);
-      if (lv && lv.riskPct > 8) warn.push(`Stop is ${lv.riskPct.toFixed(1)}% away: too wide, consider skipping`);
-      if (lv && lv.hi52 > lv.entry * 1.005 && lv.hi52 < lv.t1) warn.push(`52-week high ${inr(lv.hi52)} sits before target 1, may act as resistance`);
+      if (isPrivate && lv && lv.riskPct > 8) warn.push(`Stop is ${lv.riskPct.toFixed(1)}% away: too wide, consider skipping`);
+      if (isPrivate && lv && lv.hi52 > lv.entry * 1.005 && lv.hi52 < lv.t1) warn.push(`52-week high ${inr(lv.hi52)} sits before target 1, may act as resistance`);
       if (w && !(w.emas[50] && w.emas[200])) warn.push("Weekly chart not confirmed (below its weekly 50/200 EMA)");
-      if (lv && lv.gapPct > 2) warn.push(`Trigger is ${lv.gapPct.toFixed(1)}% above the close (it sold off from the day's high): weaker setup, check the chart`);
-      if (!lv) warn.push("Levels unavailable: price history missing");
+      if (isPrivate && lv && lv.gapPct > 2) warn.push(`Trigger is ${lv.gapPct.toFixed(1)}% above the close (it sold off from the day's high): weaker setup, check the chart`);
+      if (isPrivate && !lv) warn.push("Levels unavailable: price history missing");
       return { checks, n: checks.filter((c) => c[1]).length, warn };
     }
 
@@ -210,6 +258,8 @@
     $("#cap").value = store.get("cf-capital", 500000);
     $("#risk").value = store.get("cf-risk", 1);
     let tab = "pull", revealed = mood !== "red", built = { pull: null, bo: null };
+    let mode = live ? "intraday" : "swing";
+    if (live) $("#modeTabs").hidden = false;
 
     async function build(kind) {
       if (built[kind]) return built[kind];
@@ -234,7 +284,11 @@
             <div class="caption">${esc(r.name)} · ${esc(r.sector)}</div></div>
           <div class="cf-px"><b>${inr(r.price)}</b><span class="${r.chg >= 0 ? "pos" : "neg"}">${r.chg >= 0 ? "+" : ""}${r.chg}%</span><small>RS ${r.rs ?? "--"} · RSI ${r.rsi}</small></div>
         </header>
-        ${lv ? `<div class="cf-levels">
+        ${(() => { const L = liveOf(tab, r.ticker); if (!L || L.status !== "confirmed") return "";
+          if (mode === "swing") return `<div class="cf-badge-live">✅ Confirmed today at ${esc(L.at)}${L.final ? ` · ${L.final === "held" ? "held" : "failed"} at close` : ""}</div>`;
+          const fin = L.final === "held" ? `<span class="cf-final held">Held at close ₹${L.finalClose}</span>` : L.final === "failed" ? `<span class="cf-final failed">Failed by close ₹${L.finalClose}</span>` : "";
+          return `<div class="cf-confirm">✅ <b>Confirmed at ${esc(L.at)}</b> · ${esc(L.note)} ${fin}<br><small>Price is already above the trigger: buy only up to <b>${inr(L.maxBuy)}</b>; above that, skip. Stop ${inr(L.stop)}.</small></div>`; })()}
+        ${isPrivate && lv ? `<div class="cf-levels">
           <div><span>Entry trigger</span><b>above ${inr(lv.entry)}</b></div>
           <div class="sl"><span>Stop-loss</span><b>${inr(lv.stop)}</b><small>−${lv.riskPct.toFixed(1)}%</small></div>
           <div class="tg"><span>Target 1 (2x)</span><b>${inr(lv.t1)}</b><small>+${(lv.riskPct * 2).toFixed(1)}%</small></div>
@@ -259,13 +313,28 @@
 
     async function render() {
       $$(".cf-tabs [data-tab]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.tab === tab));
-      $("#ruleText").textContent = "Rules: " + rules[tab].text;
+      $$("#modeTabs [data-mode]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.mode === mode));
+      if (live) $("#liveBar").hidden = mode !== "intraday";
+      $("#ruleText").textContent = (live && mode === "intraday" ? "Intraday: showing only setups confirmed today on 30-minute closes. Candidate rules: " : live ? "Swing: setups from the last close (badges show today's confirmations). Rules: " : "Rules: ") + rules[tab].text;
       $("#redGate").hidden = revealed;
       const box = $("#list");
       if (!revealed) { box.innerHTML = ""; return; }
       box.innerHTML = '<div class="ai-loading"><span class="ai-spin"></span> Calculating levels…</div>';
       const items = await build(tab);
       if (!items.length) { box.innerHTML = `<p class="cf-empty">No stock passes the ${tab === "pull" ? "pullback" : "breakout"} rules today. That's useful information too: waiting is a position.</p>`; return; }
+      if (live && mode === "intraday") {
+        const st = (x) => (liveOf(tab, x.r.ticker) || {}).status || "watching";
+        const conf = items.filter((x) => st(x) === "confirmed");
+        const trig = items.filter((x) => st(x) === "triggered"), dropped = items.filter((x) => st(x) === "invalidated");
+        const watching = items.length - conf.length - trig.length - dropped.length;
+        const mini = (arr) => `<ul class="cf-mini">${arr.map((x) => `<li><a href="screener.html?stock=${encodeURIComponent(x.r.ticker)}">${esc(x.r.ticker)}</a> · ${esc((liveOf(tab, x.r.ticker) || {}).note || "")}</li>`).join("")}</ul>`;
+        box.innerHTML = `<div class="cf-tally"><span class="c"><b>${conf.length}</b> confirmed</span><span><b>${trig.length}</b> triggered, not confirmed</span><span><b>${watching}</b> watching</span><span class="d"><b>${dropped.length}</b> dropped</span></div>`
+          + (conf.length ? conf.map(card).join("") : `<p class="cf-empty">No ${tab === "pull" ? "pullback" : "breakout"} has confirmed yet today. Confirmation needs a 30-minute close above the trigger, above VWAP, with enough volume for the time of day.</p>`)
+          + (trig.length ? `<details class="cf-more"><summary>Triggered, waiting for confirmation (${trig.length})</summary>${mini(trig)}</details>` : "")
+          + (dropped.length ? `<details class="cf-more"><summary>Dropped today (${dropped.length})</summary>${mini(dropped)}</details>` : "");
+        markWatched();
+        return;
+      }
       const good = items.filter((x) => x.s.n >= 8).length;
       box.innerHTML = `<p class="caption">${items.length} stock${items.length === 1 ? "" : "s"} pass the rules; ${good} score 8 or more. Sorted by score, then RS.</p>` + items.map(card).join("");
       markWatched();
@@ -275,8 +344,9 @@
     function lists() { return store.get("lists", [{ name: "Watchlist 1", items: [] }, { name: "Watchlist 2", items: [] }, { name: "Watchlist 3", items: [] }]); }
     function markWatched() { const L = lists()[0]; $$("[data-watch]").forEach((b) => { const on = L.items.includes(b.dataset.watch); b.textContent = on ? `★ In ${L.name}` : "☆ Add to watchlist"; b.classList.toggle("active", on); }); }
     document.addEventListener("click", (e) => {
-      const t = e.target.closest("[data-tab],[data-watch],#showAnyway"); if (!t) return;
+      const t = e.target.closest("[data-tab],[data-mode],[data-watch],#showAnyway"); if (!t) return;
       if (t.dataset.tab) { tab = t.dataset.tab; return render(); }
+      if (t.dataset.mode) { mode = t.dataset.mode; return render(); }
       if (t.id === "showAnyway") { revealed = true; return render(); }
       if (t.dataset.watch) { const all = lists(), L = all[0], i = L.items.indexOf(t.dataset.watch); i >= 0 ? L.items.splice(i, 1) : L.items.push(t.dataset.watch); store.set("lists", all); markWatched(); }
     });

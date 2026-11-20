@@ -40,7 +40,7 @@ kestrel/
 | **Kestrel Eye** | RS rank vs. RS change map (leading / weakening / lagging / improving) of your current screen |
 | **Interactive chart** | Click any ticker: candlesticks or line, daily/weekly, 3M–All ranges, EMA 20/50/200, volume, RSI pane, 52W-high line, breakout and earnings markers, zoom/pan, ← → to flip through your results. Built with TradingView's open-source Lightweight Charts |
 | **Your data** | 3 named watchlists, per-stock notes and saved filter templates, kept in browser storage, with backup/restore to a JSON file |
-| **Cheat Filter** (`cheat.html`) | Runs the swing playbook automatically: green/yellow/red market verdict (with a warning gate when the market is unsuitable), top-5 strong sectors, pullback and breakout setups that pass the rules, each with an automatic 10-point score and rule-based entry, stop, 2x/3x targets and quantity from your capital and risk % |
+| **Cheat Filter** (`cheat.html`) | Runs the swing playbook automatically: green/yellow/red market verdict (with a warning gate when the market is unsuitable), top-5 strong sectors, and the pullback and breakout setups that match the rules, each scored on the 10-point checklist. **Public site:** matches, scores and warnings only, with no trade levels. **Private copy** (`pipeline/private_live.py`): adds rule-based entry, stop, 2x/3x targets, quantity, order instructions and intraday confirmations |
 | **AI analysis** | "✨ AI analysis" button in every stock popup. Shows a Gemini-written chart read (trend, setup, volume/momentum, key levels, risks, what to watch) when available, otherwise Kestrel's rule-based read. Pre-generated nightly, so it's instant and costs nothing per click |
 | **Sharing** | "Share active filters" copies a link that reproduces the exact screen. "Copy tickers" exports in TradingView format |
 | **Also** | Daily/weekly timeframes, IN/US markets, dark mode, `/` to search, guided tour, mobile layout |
@@ -70,6 +70,28 @@ The key only lives in GitHub Actions and never reaches the website. Price levels
 and any it invents are dropped. If the free quota runs out, the remaining stocks show the rule-based read.
 The AI is instructed to describe the chart only, with no buy/sell calls or price targets.
 Optional settings (as Actions variables or env): `GEMINI_MODEL`, `AI_MAX_STOCKS`, `AI_DELAY`, `AI_MARKETS`.
+
+## Private mode: trade levels and intraday confirmations
+
+Publishing entry, stop-loss and target levels for named stocks, or intraday "confirmed" calls, can
+require SEBI Research Analyst registration, and NSE / Yahoo terms restrict redistributing price data.
+So the **public site never shows them**. They exist only in a private copy on your own computer:
+
+```bash
+python pipeline/private_live.py
+```
+
+It downloads the latest end-of-day files from the published site into a git-ignored `.live/` copy,
+marks it private (`data/private.json`), serves it at http://localhost:8000/cheat.html and, during market
+hours, refreshes **intraday confirmations** every 30 minutes until the close.
+
+`pipeline/intraday.py` checks the Cheat Filter's candidates on Yahoo's 15-minute bars (30-minute bars
+are built from them). A setup is shown in the **⚡ Intraday** tab only once it is confirmed: a 30-minute
+candle closes above the entry trigger after 9:45, above the day's VWAP, with volume at least 1.5x
+(breakouts) or 1x (pullbacks) its normal level for that time of day, plus a higher low for pullbacks.
+Gap-ups above the buy limit, 30-minute closes below the stop, and confirmations that fall back below the
+trigger are dropped. New confirmations pause if the Nifty is down 1% or more, and after 3:30 pm each
+confirmed setup is marked held or failed. The **📅 Swing** tab keeps the full end-of-day list.
 
 ## Run it locally
 
