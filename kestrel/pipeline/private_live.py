@@ -68,6 +68,7 @@ def sync(site: str):
     for t in tickers:  # price history + analysis for the candidates (charts, levels, AI button)
         for sub in ("charts", "analysis"):
             fetch(f"{site}/data/{sub}/IN/{intraday.chart_file(t)}", LIVE / "data" / sub / "IN" / intraday.chart_file(t))
+    (LIVE / "data" / "private.json").write_text('{"private": true}', encoding="utf-8")  # unlocks levels + intraday in cheat.html
     print(f"Synced end-of-day data for {daily['session']} · {len(tickers)} Cheat Filter candidates", flush=True)
 
 

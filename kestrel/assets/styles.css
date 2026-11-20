@@ -785,3 +785,4 @@ a.on-dark { color: #fff; text-decoration: underline; text-decoration-color: #a33
 .cf-mode button[aria-pressed="true"] { background: var(--grad); color: #fff; }
 .cf-mode button[aria-pressed="true"] small { color: rgba(255,255,255,.85); }
 .cf-badge-live { display: inline-block; margin-top: 10px; font-size: 13px; font-weight: 700; color: var(--pos); background: var(--pos-bg); border-radius: 999px; padding: 3px 12px; }
+.cf-size[hidden], .cf-how[hidden] { display: none; }

@@ -29,7 +29,7 @@
     <div class="inner wide">
       <div class="kicker" style="color:#9a9aa8">Cheat Filter · <span id="cfDate">Loading…</span></div>
       <h1>Today's <span class="grad-text">quick check</span></h1>
-      <p class="hero-sub">The <a href="playbook.html" class="on-dark">Swing playbook</a> run automatically: market verdict, strong sectors, and the stocks that pass its rules, with levels calculated by fixed rules.</p>
+      <p class="hero-sub" id="cfSub">The <a href="playbook.html" class="on-dark">Swing playbook</a> run automatically: market verdict, strong sectors, and the stocks that match its rules.</p>
     </div>
   </section>
 
@@ -47,7 +47,7 @@
     <!-- Steps 3–7: setups -->
     <section class="cf-block">
       <div class="cf-h"><h2><span class="num">3</span>Setups that pass the rules</h2>
-        <div class="cf-size">
+        <div class="cf-size" id="cfSize" hidden>
           <label class="field">Capital (₹)<input type="number" id="cap" min="0" step="any" /></label>
           <label class="field">Risk per trade (%)<input type="number" id="risk" min="0.1" max="5" step="0.1" /></label>
         </div>
@@ -65,7 +65,13 @@
       <div class="cf-list" id="list"><div class="ai-loading"><span class="ai-spin"></span> Checking every stock…</div></div>
     </section>
 
-    <section class="cf-block cf-how">
+    <section class="cf-block cf-how" id="cfPublic">
+      <h2>About this page</h2>
+      <p>This page shows which stocks currently match the <a href="playbook.html">Swing playbook</a>'s rules, scored on its 10-point checklist. It does not give entry, stop-loss or target levels for any stock. To plan your own trade, follow the playbook's steps and use its position-size calculator, and always check the chart yourself.</p>
+      <div class="callout"><b>Screen output, not investment advice.</b> A stock matching these rules is not a recommendation to buy or sell it. Data is end-of-day and can be wrong. Do your own research, and consult a SEBI-registered adviser before investing.</div>
+    </section>
+
+    <section class="cf-block cf-how" id="cfHow" hidden>
       <h2>How the levels are calculated</h2>
       <ul>
         <li><b>Entry trigger:</b> just above the latest session's high. For a pullback, a close above the previous day's high shows buyers stepping back in.</li>
@@ -102,16 +108,17 @@
     try { [daily, weekly] = await Promise.all([D.load("IN", "daily"), D.load("IN", "weekly").catch(() => null)]); }
     catch (e) { $("#verdict").innerHTML = '<p class="warn">Couldn\'t load market data. Please refresh.</p>'; return; }
     const session = daily.session;
+    const isPrivate = await fetch("data/private.json", { cache: "no-store" }).then((r) => r.ok).catch(() => false);
     $("#cfDate").textContent = "Data to " + session.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" }) + (daily.provisional ? " (provisional)" : "") + (daily.source === "demo" ? " · DEMO DATA" : "");
     const wk = new Map((weekly ? weekly.rows : []).map((r) => [r.ticker, r]));
 
     // ---------- Intraday confirmations (written by pipeline/intraday.py) ----------
-    // A private run writes data/intraday/IN.json next to this page; the optional public job
-    // publishes the same file to the repo's live-data branch.
-    const LIVE_URL = "https://raw.githubusercontent.com/kr15lalit/Github/live-data/intraday/IN.json";
+    // Only the private copy (pipeline/private_live.py) has data/private.json and the intraday file.
+    // The public site never shows trade levels or intraday confirmations.
     const istToday = new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" });
     async function loadLive() {
-      for (const u of ["data/intraday/IN.json", LIVE_URL]) {
+      if (!isPrivate) return null;
+      for (const u of ["data/intraday/IN.json"]) {
         try {
           const res = await fetch(u + "?t=" + Date.now(), { cache: "no-store" });
           if (!res.ok) continue;
@@ -122,6 +129,10 @@
       return null;
     }
     const live = await loadLive();
+    if (isPrivate) {
+      $("#cfSize").hidden = false; $("#cfHow").hidden = false; $("#cfPublic").hidden = true;
+      $("#cfSub").innerHTML = 'The <a href="playbook.html" class="on-dark">Swing playbook</a> run automatically: market verdict, strong sectors, and the stocks that pass its rules, with levels calculated by fixed rules. <b>Private copy.</b>';
+    }
     const liveOf = (kind, t) => live && live.setups[kind] ? live.setups[kind][t] : null;
     if (live) {
       $("#cfDate").textContent += ` · ⚡ intraday as of ${live.asOfLabel} IST`;
@@ -235,11 +246,11 @@
       ];
       const warn = [];
       if (ed != null && ed >= 0 && ed <= 14) warn.push(`Results in ${ed} day${ed === 1 ? "" : "s"} (${D.fmtShort(r.nextEarn)})`);
-      if (lv && lv.riskPct > 8) warn.push(`Stop is ${lv.riskPct.toFixed(1)}% away: too wide, consider skipping`);
-      if (lv && lv.hi52 > lv.entry * 1.005 && lv.hi52 < lv.t1) warn.push(`52-week high ${inr(lv.hi52)} sits before target 1, may act as resistance`);
+      if (isPrivate && lv && lv.riskPct > 8) warn.push(`Stop is ${lv.riskPct.toFixed(1)}% away: too wide, consider skipping`);
+      if (isPrivate && lv && lv.hi52 > lv.entry * 1.005 && lv.hi52 < lv.t1) warn.push(`52-week high ${inr(lv.hi52)} sits before target 1, may act as resistance`);
       if (w && !(w.emas[50] && w.emas[200])) warn.push("Weekly chart not confirmed (below its weekly 50/200 EMA)");
-      if (lv && lv.gapPct > 2) warn.push(`Trigger is ${lv.gapPct.toFixed(1)}% above the close (it sold off from the day's high): weaker setup, check the chart`);
-      if (!lv) warn.push("Levels unavailable: price history missing");
+      if (isPrivate && lv && lv.gapPct > 2) warn.push(`Trigger is ${lv.gapPct.toFixed(1)}% above the close (it sold off from the day's high): weaker setup, check the chart`);
+      if (isPrivate && !lv) warn.push("Levels unavailable: price history missing");
       return { checks, n: checks.filter((c) => c[1]).length, warn };
     }
 
@@ -277,7 +288,7 @@
           if (mode === "swing") return `<div class="cf-badge-live">✅ Confirmed today at ${esc(L.at)}${L.final ? ` · ${L.final === "held" ? "held" : "failed"} at close` : ""}</div>`;
           const fin = L.final === "held" ? `<span class="cf-final held">Held at close ₹${L.finalClose}</span>` : L.final === "failed" ? `<span class="cf-final failed">Failed by close ₹${L.finalClose}</span>` : "";
           return `<div class="cf-confirm">✅ <b>Confirmed at ${esc(L.at)}</b> · ${esc(L.note)} ${fin}<br><small>Price is already above the trigger: buy only up to <b>${inr(L.maxBuy)}</b>; above that, skip. Stop ${inr(L.stop)}.</small></div>`; })()}
-        ${lv ? `<div class="cf-levels">
+        ${isPrivate && lv ? `<div class="cf-levels">
           <div><span>Entry trigger</span><b>above ${inr(lv.entry)}</b></div>
           <div class="sl"><span>Stop-loss</span><b>${inr(lv.stop)}</b><small>−${lv.riskPct.toFixed(1)}%</small></div>
           <div class="tg"><span>Target 1 (2x)</span><b>${inr(lv.t1)}</b><small>+${(lv.riskPct * 2).toFixed(1)}%</small></div>
