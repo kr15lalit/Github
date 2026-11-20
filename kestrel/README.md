@@ -81,6 +81,14 @@ So the **public site never shows them**. They exist only in a private copy on yo
 python pipeline/private_live.py
 ```
 
+**On your phone:** add `--phone`. It then also listens on your home Wi-Fi (and Tailscale, if you use it,
+which works from anywhere), asks for a password (random unless you pass `--password`), and prints the
+address to open on your phone. Use it only on your own Wi-Fi or Tailscale, never public Wi-Fi.
+
+```bash
+python pipeline/private_live.py --phone
+```
+
 It downloads the latest end-of-day files from the published site into a git-ignored `.live/` copy,
 marks it private (`data/private.json`), serves it at http://localhost:8000/cheat.html and, during market
 hours, refreshes **intraday confirmations** every 30 minutes until the close.

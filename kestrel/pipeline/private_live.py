@@ -11,15 +11,25 @@
 4. Stops by itself after the close. Press Ctrl+C to stop earlier.
 
 Nothing is published: the confirmations stay on your computer.
-Options: --site URL (default: your GitHub Pages site), --port 8000
+
+Use it on your phone:
+    python pipeline/private_live.py --phone
+It then also listens on your home network (and Tailscale, if installed), asks for a password,
+and prints the address to open on your phone. Without --phone it is reachable from this computer only.
+
+Options: --site URL (default: your GitHub Pages site), --port 8000, --phone, --password TEXT
 """
 from __future__ import annotations
 
 import argparse
+import base64
 import functools
+import hmac
 import http.server
 import json
+import secrets
 import shutil
+import socket
 import subprocess
 import sys
 import threading
@@ -72,12 +82,95 @@ def sync(site: str):
     print(f"Synced end-of-day data for {daily['session']} · {len(tickers)} Cheat Filter candidates", flush=True)
 
 
-def serve(port: int):
-    handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(LIVE))
-    handler.log_message = lambda *a, **k: None
-    srv = http.server.ThreadingHTTPServer(("127.0.0.1", port), handler)
+class Quiet(http.server.SimpleHTTPRequestHandler):
+    def log_message(self, *a, **k):
+        pass
+
+
+class PasswordProtected(Quiet):
+    """Asks the browser for a username/password (HTTP Basic auth) before serving anything."""
+    expected = ""  # set in serve()
+
+    def _ok(self):
+        header = self.headers.get("Authorization", "")
+        if not header.startswith("Basic "):
+            return False
+        try:
+            given = base64.b64decode(header[6:]).decode("utf-8")
+        except Exception:
+            return False
+        return hmac.compare_digest(given, self.expected)
+
+    def _deny(self):
+        self.send_response(401)
+        self.send_header("WWW-Authenticate", 'Basic realm="Kestrel private", charset="UTF-8"')
+        self.send_header("Content-Type", "text/plain; charset=utf-8")
+        self.end_headers()
+        self.wfile.write("Password required.".encode())
+
+    def do_GET(self):
+        return super().do_GET() if self._ok() else self._deny()
+
+    def do_HEAD(self):
+        return super().do_HEAD() if self._ok() else self._deny()
+
+
+def _all_ipv4():
+    ips = set()
+    try:  # the address used for outgoing traffic (no packet is actually sent)
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        ips.add(s.getsockname()[0])
+        s.close()
+    except OSError:
+        pass
+    try:
+        ips.update(socket.gethostbyname_ex(socket.gethostname())[2])
+    except OSError:
+        pass
+    return ips
+
+
+def local_addresses():
+    """IPv4 addresses other devices can use: home Wi-Fi (192.168.x / 10.x / 172.16-31.x) and Tailscale (100.64-127.x)."""
+    ips = _all_ipv4()
+    def kind(ip):
+        a, b = (int(x) for x in ip.split(".")[:2])
+        if a == 100 and 64 <= b <= 127:
+            return "Tailscale (works from anywhere on your Tailscale devices)"
+        if a == 192 and b == 168 or a == 10 or a == 172 and 16 <= b <= 31:
+            return "home Wi-Fi"
+        return None
+    return [(ip, kind(ip)) for ip in sorted(ips) if not ip.startswith("127.") and kind(ip)]
+
+
+def serve(port: int, phone: bool = False, password: str | None = None):
+    if not phone:
+        handler = functools.partial(Quiet, directory=str(LIVE))
+        srv = http.server.ThreadingHTTPServer(("127.0.0.1", port), handler)  # this computer only
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+        print(f"Private Kestrel running at http://localhost:{port}/cheat.html", flush=True)
+        return
+    password = password or secrets.token_urlsafe(6)
+    PasswordProtected.expected = f"kestrel:{password}"
+    handler = functools.partial(PasswordProtected, directory=str(LIVE))
+    srv = http.server.ThreadingHTTPServer(("0.0.0.0", port), handler)  # reachable from your other devices
     threading.Thread(target=srv.serve_forever, daemon=True).start()
-    print(f"Private Kestrel running at http://localhost:{port}/cheat.html", flush=True)
+    print("\nPhone access is ON (password protected).", flush=True)
+    print(f"  On this computer: http://localhost:{port}/cheat.html")
+    addrs = local_addresses()
+    for ip, kind in addrs:
+        print(f"  On your phone ({kind}): http://{ip}:{port}/cheat.html")
+    if not addrs:
+        others = sorted({ip for ip in _all_ipv4() if not ip.startswith("127.")})
+        for ip in others:
+            print(f"  On your phone (try): http://{ip}:{port}/cheat.html")
+        if not others:
+            print("  Couldn't detect this computer's network address: find its IP in your Wi-Fi settings,")
+            print(f"  then open http://<that-IP>:{port}/cheat.html on your phone.")
+    print(f"  Username: kestrel    Password: {password}")
+    print("  Use this only on your own home Wi-Fi or Tailscale, never on public Wi-Fi.")
+    print("  If your computer asks about firewall access, allow it on PRIVATE networks only.\n", flush=True)
 
 
 def schedule(now: pd.Timestamp):
@@ -100,10 +193,13 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--site", default=DEFAULT_SITE)
     ap.add_argument("--port", type=int, default=8000)
+    ap.add_argument("--phone", action="store_true",
+                    help="let your phone open it over home Wi-Fi or Tailscale (password protected)")
+    ap.add_argument("--password", help="password for --phone (default: a random one, shown when it starts)")
     a = ap.parse_args()
 
     sync(a.site.rstrip("/"))
-    serve(a.port)
+    serve(a.port, a.phone, a.password)
     now = pd.Timestamp.now(tz=IST)
     if now.weekday() >= 5:
         print("It's the weekend: showing end-of-day data only. Press Ctrl+C to stop.")
